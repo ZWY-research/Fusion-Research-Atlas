@@ -1,0 +1,409 @@
+{
+  "mission": {
+    "zh": "Fusion Research Atlas 是一个开放协作、由科学证据驱动、持续演化的聚变科学问题与研究进展图谱。",
+    "en": "Fusion Research Atlas is an open, collaborative and evolving atlas of scientific questions and research progress in fusion science, organized around scientific evidence."
+  },
+  "goals": [
+    {
+      "zh": "识别重要聚变科学现象",
+      "en": "Identify important phenomena in fusion science"
+    },
+    {
+      "zh": "梳理已有理论与实验认识",
+      "en": "Organize existing theoretical and experimental understanding"
+    },
+    {
+      "zh": "发现模型局限和科学问题",
+      "en": "Expose model limitations and scientific questions"
+    },
+    {
+      "zh": "研究竞争性物理机制",
+      "en": "Investigate competing physical mechanisms"
+    },
+    {
+      "zh": "建立可执行验证路径",
+      "en": "Develop executable verification paths"
+    },
+    {
+      "zh": "跟踪证据与科学认识变化",
+      "en": "Track changes in evidence and understanding"
+    },
+    {
+      "zh": "推进科学问题之间的联系研究",
+      "en": "Study connections between scientific questions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "transport",
+      "name": {
+        "zh": "粒子、热量与动量输运",
+        "en": "Particle, Heat & Momentum Transport"
+      },
+      "scope": {
+        "zh": "输运通量、源项及剖面演化",
+        "en": "Fluxes, sources and profile evolution."
+      },
+      "questions": [
+        {
+          "zh": "源项与向内对流如何影响密度峰化？",
+          "en": "How do sources and inward convection affect density peaking?"
+        }
+      ],
+      "hasSubgraph": true
+    },
+    {
+      "id": "turbulence",
+      "name": {
+        "zh": "湍流与微观不稳定性",
+        "en": "Turbulence & Microinstabilities"
+      },
+      "scope": {
+        "zh": "微观驱动、非线性相互作用与跨尺度耦合",
+        "en": "Microscopic drives, nonlinear interactions and cross-scale coupling."
+      },
+      "questions": [
+        {
+          "zh": "哪些不稳定性可以区分候选输运机制？",
+          "en": "Which instabilities distinguish candidate transport mechanisms?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "mhd",
+      "name": {
+        "zh": "MHD 与等离子体稳定性",
+        "en": "MHD & Plasma Stability"
+      },
+      "scope": {
+        "zh": "宏观平衡、稳定性与瞬态事件",
+        "en": "Macroscopic equilibrium, stability and transient events."
+      },
+      "questions": [
+        {
+          "zh": "哪些稳定性边界限制运行范围？",
+          "en": "Which stability boundaries limit the operating space?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "heating",
+      "name": {
+        "zh": "加热与电流驱动",
+        "en": "Heating & Current Drive"
+      },
+      "scope": {
+        "zh": "功率沉积、电流驱动效率与剖面响应",
+        "en": "Power deposition, current-drive efficiency and profile response."
+      },
+      "questions": [
+        {
+          "zh": "如何区分加热对剖面的不同作用？",
+          "en": "How can distinct heating effects on profiles be separated?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "edge",
+      "name": {
+        "zh": "边缘与等离子体壁相互作用",
+        "en": "Edge & Plasma-Wall Interaction"
+      },
+      "scope": {
+        "zh": "边界输运、排热与壁材料响应",
+        "en": "Boundary transport, exhaust and material response."
+      },
+      "questions": [
+        {
+          "zh": "边界条件怎样约束芯部研究？",
+          "en": "How do boundary conditions constrain core studies?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "burning",
+      "name": {
+        "zh": "燃烧等离子体物理",
+        "en": "Burning Plasma Physics"
+      },
+      "scope": {
+        "zh": "聚变产物、自加热与耦合效应",
+        "en": "Fusion products, self-heating and coupled effects."
+      },
+      "questions": [
+        {
+          "zh": "怎样检验自加热下的候选反馈？",
+          "en": "How can candidate feedbacks under self-heating be tested?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "diagnostics",
+      "name": {
+        "zh": "等离子体诊断与测量",
+        "en": "Plasma Diagnostics & Measurements"
+      },
+      "scope": {
+        "zh": "测量可观测性、标定与不确定度",
+        "en": "Observability, calibration and uncertainty."
+      },
+      "questions": [
+        {
+          "zh": "怎样的测量能区分竞争解释？",
+          "en": "Which measurements discriminate competing explanations?"
+        }
+      ],
+      "hasSubgraph": false
+    },
+    {
+      "id": "modeling",
+      "name": {
+        "zh": "集成建模与控制",
+        "en": "Integrated Modeling & Control"
+      },
+      "scope": {
+        "zh": "多物理耦合、预测验证与控制设计",
+        "en": "Coupled physics, predictive validation and control design."
+      },
+      "questions": [
+        {
+          "zh": "模型预测如何经独立数据检验？",
+          "en": "How can independent data test model predictions?"
+        }
+      ],
+      "hasSubgraph": false
+    }
+  ],
+  "methodology": [
+    {
+      "id": "phenomenon",
+      "name": {
+        "zh": "识别科学现象",
+        "en": "Phenomenon Identification"
+      },
+      "action": {
+        "zh": "明确可观测现象和指标。",
+        "en": "Define an observable phenomenon and metric."
+      },
+      "input": {
+        "zh": "诊断观察与不确定度",
+        "en": "Diagnostic observations and uncertainty"
+      },
+      "output": {
+        "zh": "限定条件的现象描述",
+        "en": "A condition-specific description"
+      },
+      "update": {
+        "zh": "重复观察与标定支持后更新。",
+        "en": "Update after repeatable observations and calibration support."
+      }
+    },
+    {
+      "id": "knowledge",
+      "name": {
+        "zh": "已有认识",
+        "en": "Existing Knowledge"
+      },
+      "action": {
+        "zh": "梳理理论、实验和适用条件。",
+        "en": "Review theory, experiments and applicability."
+      },
+      "input": {
+        "zh": "文献、物理规律与已有模型",
+        "en": "Literature, physical laws and existing models"
+      },
+      "output": {
+        "zh": "证据范围及模型假设",
+        "en": "Evidence scope and model assumptions"
+      },
+      "update": {
+        "zh": "新来源改变适用范围时修订。",
+        "en": "Revise when new sources change applicability."
+      }
+    },
+    {
+      "id": "questions",
+      "name": {
+        "zh": "科学问题",
+        "en": "Scientific Questions"
+      },
+      "action": {
+        "zh": "将模型不足转化为明确问题。",
+        "en": "Turn model limitations into explicit questions."
+      },
+      "input": {
+        "zh": "未解释现象与模型局限",
+        "en": "Unexplained observations and model limits"
+      },
+      "output": {
+        "zh": "带边界条件的研究问题",
+        "en": "A question with boundary conditions"
+      },
+      "update": {
+        "zh": "新的缺口或边界出现时修订。",
+        "en": "Revise when new gaps or boundaries emerge."
+      }
+    },
+    {
+      "id": "hypotheses",
+      "name": {
+        "zh": "竞争假设",
+        "en": "Competing Hypotheses"
+      },
+      "action": {
+        "zh": "提出可区分的机制预测。",
+        "en": "State distinguishable mechanism predictions."
+      },
+      "input": {
+        "zh": "理论框架与替代解释",
+        "en": "Theory and alternative explanations"
+      },
+      "output": {
+        "zh": "假设、预测及可能反例",
+        "en": "Hypotheses, predictions and possible counterexamples"
+      },
+      "update": {
+        "zh": "预测与证据冲突时修改或放弃。",
+        "en": "Modify or reject when predictions conflict with evidence."
+      }
+    },
+    {
+      "id": "assessment",
+      "name": {
+        "zh": "证据评估",
+        "en": "Evidence Assessment"
+      },
+      "action": {
+        "zh": "核对来源、物理条件和支持范围。",
+        "en": "Check provenance, conditions and support scope."
+      },
+      "input": {
+        "zh": "论文、实验、模拟或数学推导",
+        "en": "Papers, experiments, simulations or derivations"
+      },
+      "output": {
+        "zh": "支持、挑战与未知范围",
+        "en": "Support, challenges and unresolved scope"
+      },
+      "update": {
+        "zh": "证据或不确定度变化时重评。",
+        "en": "Reassess when evidence or uncertainty changes."
+      }
+    },
+    {
+      "id": "verification",
+      "name": {
+        "zh": "验证设计",
+        "en": "Verification Design"
+      },
+      "action": {
+        "zh": "设计能区分竞争解释的实验或模拟。",
+        "en": "Design experiments or simulations that discriminate explanations."
+      },
+      "input": {
+        "zh": "预测、误差模型与测量能力",
+        "en": "Predictions, error models and measurement capability"
+      },
+      "output": {
+        "zh": "可执行方案和判别准则",
+        "en": "An executable plan with decision criteria"
+      },
+      "update": {
+        "zh": "实际结果按预设准则检验假设。",
+        "en": "Test hypotheses against actual results and predefined criteria."
+      }
+    },
+    {
+      "id": "update",
+      "name": {
+        "zh": "认识更新",
+        "en": "Knowledge Update"
+      },
+      "action": {
+        "zh": "依据新证据保留或修正认识。",
+        "en": "Retain or revise understanding using new evidence."
+      },
+      "input": {
+        "zh": "结果、复核与相反证据",
+        "en": "Results, review and counterevidence"
+      },
+      "output": {
+        "zh": "带来源的修订记录",
+        "en": "A traceable revision record"
+      },
+      "update": {
+        "zh": "不以书目核验代替科学验证。",
+        "en": "Never replace scientific validation with metadata checks."
+      }
+    }
+  ],
+  "principles": [
+    {
+      "zh": "科学问题组织研究，物理规律奠定理论基础。",
+      "en": "Questions organize research; physical laws provide the theoretical foundation."
+    },
+    {
+      "zh": "实验、模拟、数学与文献构成不同证据。",
+      "en": "Experiments, simulations, mathematics and literature provide distinct evidence."
+    },
+    {
+      "zh": "新假设必须提出可区分、可证伪的预测。",
+      "en": "New hypotheses require distinguishable, falsifiable predictions."
+    },
+    {
+      "zh": "科学认识可以随新证据修正。",
+      "en": "Scientific understanding may be revised with new evidence."
+    }
+  ],
+  "participation": [
+    {
+      "id": "research-question",
+      "name": {
+        "zh": "研究问题",
+        "en": "Research Question"
+      },
+      "description": {
+        "zh": "提出具体问题及其研究范围。",
+        "en": "Propose a specific question and its research scope."
+      }
+    },
+    {
+      "id": "evidence-contribution",
+      "name": {
+        "zh": "证据贡献",
+        "en": "Evidence Contribution"
+      },
+      "description": {
+        "zh": "提供可追溯来源并说明支持范围。",
+        "en": "Provide traceable sources and their support scope."
+      }
+    },
+    {
+      "id": "scientific-challenge",
+      "name": {
+        "zh": "科学质疑",
+        "en": "Scientific Challenge"
+      },
+      "description": {
+        "zh": "提出相反证据或竞争解释。",
+        "en": "Offer counterevidence or a competing explanation."
+      }
+    },
+    {
+      "id": "verification-proposal",
+      "name": {
+        "zh": "验证提案",
+        "en": "Verification Proposal"
+      },
+      "description": {
+        "zh": "提出可执行且可区分机制的方案。",
+        "en": "Propose an executable plan that discriminates mechanisms."
+      }
+    }
+  ]
+}

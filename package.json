@@ -1,7 +1,7 @@
 {
   "name": "fusion-research-atlas",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,8 @@
     "typecheck": "tsc -b",
     "test": "node --experimental-strip-types --test tests/model.test.ts",
     "test:browser": "playwright test",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "verify:doi": "node --experimental-strip-types scripts/verify-dois.ts"
   },
   "dependencies": {
     "cytoscape": "^3.34.3",

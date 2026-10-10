@@ -1,178 +1,69 @@
-import { useEffect, useRef, useState } from "react";
-import cytoscape from "cytoscape";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  lazy,
+  Suspense,
+} from "react";
 import type { Core } from "cytoscape";
 import {
-  atlasSchema,
   colors,
   kinds,
-  kindLabels,
-  statuses,
-  statusLabels,
+  epistemicStatuses,
+  contentStatuses,
+  parseAtlas,
+  frameworkSchema,
+  text,
   visibleNodes,
 } from "./model";
-import type { Atlas } from "./model";
+import type { Atlas, Language } from "./model";
+import frameworkData from "./content/framework.json";
+import { ui, dual } from "./i18n";
+import { CitationList, SourceDetail } from "./Evidence";
+import { contributionUrl, repository } from "./collaboration";
 import "./App.css";
-
-function Graph({
-  atlas,
-  ids,
-  selected,
-  onSelect,
-  onReady,
-}: {
-  atlas: Atlas;
-  ids: string[];
-  selected: string;
-  onSelect: (id: string) => void;
-  onReady: (cy: Core | null) => void;
-}) {
-  const container = useRef<HTMLDivElement>(null),
-    cyRef = useRef<Core | null>(null);
-  useEffect(() => {
-    const cy = cytoscape({
-      container: container.current,
-      elements: [
-        ...atlas.nodes.map((n) => ({
-          data: {
-            id: n.id,
-            label: n.label,
-            kind: n.kind,
-            color: colors[n.kind],
-          },
-          position: n.position,
-        })),
-        ...atlas.edges.map((e) => ({ data: { ...e } })),
-      ],
-      layout: { name: "preset" },
-      minZoom: 0.3,
-      maxZoom: 2.5,
-      style: [
-        {
-          selector: "node",
-          style: {
-            "background-color": "data(color)",
-            label: "data(label)",
-            color: "#dce4f5",
-            "font-size": 18,
-            "text-wrap": "wrap",
-            "text-max-width": "155px",
-            "text-valign": "bottom",
-            "text-margin-y": 12,
-            width: 26,
-            height: 26,
-            "border-width": 5,
-            "border-color": "data(color)",
-            "border-opacity": 0.16,
-          },
-        },
-        {
-          selector: 'node[kind="question"]',
-          style: {
-            width: 48,
-            height: 48,
-            "font-size": 22,
-            "font-weight": "bold",
-          },
-        },
-        {
-          selector: "edge",
-          style: {
-            width: 1.4,
-            "line-color": "#44506a",
-            "target-arrow-color": "#44506a",
-            "target-arrow-shape": "triangle",
-            "curve-style": "bezier",
-            label: "data(label)",
-            "font-size": 12,
-            color: "#8997b1",
-            "text-rotation": "autorotate",
-            "text-background-color": "#111a2a",
-            "text-background-opacity": 0.9,
-            "text-background-padding": "3px",
-          },
-        },
-        {
-          selector: 'edge[status="hypothesis"]',
-          style: {
-            "line-style": "dashed",
-            "line-color": "#9377c1",
-            "target-arrow-color": "#9377c1",
-          },
-        },
-        { selector: ".dim", style: { opacity: 0.12 } },
-        {
-          selector: ".focus",
-          style: { "border-width": 8, "border-opacity": 0.6 },
-        },
-        {
-          selector: "edge.focus",
-          style: {
-            width: 3,
-            "line-color": "#91adff",
-            "target-arrow-color": "#91adff",
-            color: "#dbe5ff",
-          },
-        },
-        { selector: ".hidden", style: { display: "none" } },
-      ],
-    });
-    cy.on("tap", "node", (e) => onSelect(e.target.id()));
-    cyRef.current = cy;
-    onReady(cy);
-    const observer = new ResizeObserver(() => {
-      cy.resize();
-    });
-    observer.observe(container.current!);
-    cy.fit(undefined, 70);
-    return () => {
-      observer.disconnect();
-      onReady(null);
-      cy.destroy();
-      cyRef.current = null;
-    };
-  }, [atlas, onSelect, onReady]);
-  useEffect(() => {
-    const cy = cyRef.current;
-    if (!cy) return;
-    cy.elements().removeClass("hidden dim focus");
-    const allowed = new Set(ids);
-    cy.nodes().forEach((n) => {
-      if (!allowed.has(n.id())) n.addClass("hidden");
-    });
-    cy.edges().forEach((e) => {
-      if (!allowed.has(e.source().id()) || !allowed.has(e.target().id()))
-        e.addClass("hidden");
-    });
-    if (selected && allowed.has(selected)) {
-      const n = cy.getElementById(selected);
-      cy.elements(":visible").addClass("dim");
-      n.closedNeighborhood().filter(":visible").removeClass("dim");
-      n.addClass("focus");
-      n.connectedEdges().filter(":visible").addClass("focus");
-    }
-  }, [ids, selected]);
-  return (
-    <div
-      ref={container}
-      className="graph"
-      role="img"
-      aria-label="交互式科学关系图，亦可使用左侧节点列表浏览"
-      data-testid="graph"
-    />
-  );
+const Graph = lazy(() => import("./Graph"));
+const framework = frameworkSchema.parse(frameworkData);
+const panels = [
+  "atlas",
+  "about",
+  "domains",
+  "methodology",
+  "evidence",
+  "collaboration",
+] as const;
+type Panel = (typeof panels)[number];
+function hashId() {
+  try {
+    return decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return "";
+  }
 }
-import { useCallback } from "react";
+function initialLanguage(): Language {
+  try {
+    return localStorage.getItem("fra-language") === "en" ? "en" : "zh";
+  } catch {
+    return "zh";
+  }
+}
 export default function App() {
-  const [atlas, setAtlas] = useState<Atlas | null>(null),
-    [error, setError] = useState(""),
+  const [language, setLanguage] = useState<Language>(initialLanguage),
+    [panel, setPanel] = useState<Panel>("atlas"),
+    [atlas, setAtlas] = useState<Atlas | null>(null),
+    [error, setError] = useState(false),
+    [loading, setLoading] = useState(true),
+    [selected, setSelected] = useState(hashId),
+    [sourceId, setSourceId] = useState(""),
     [query, setQuery] = useState(""),
     [kind, setKind] = useState("all"),
-    [status, setStatus] = useState("all"),
-    [selected, setSelected] = useState(() =>
-      decodeURIComponent(location.hash.slice(1)),
-    ),
-    [loading, setLoading] = useState(true);
-  const cy = useRef<Core | null>(null);
+    [epistemic, setEpistemic] = useState("all"),
+    [content, setContent] = useState("all"),
+    [domain, setDomain] = useState("all");
+  const cy = useRef<Core | null>(null),
+    l = language;
+  const t = (key: Parameters<typeof ui>[0]) => ui(key, l);
   const onReady = useCallback((core: Core | null) => {
     cy.current = core;
   }, []);
@@ -181,21 +72,27 @@ export default function App() {
     location.hash = encodeURIComponent(id);
   }, []);
   useEffect(() => {
+    document.documentElement.lang = l === "zh" ? "zh-CN" : "en";
+    try {
+      localStorage.setItem("fra-language", l);
+    } catch {}
+  }, [l]);
+  useEffect(() => {
     const controller = new AbortController();
     fetch(import.meta.env.BASE_URL + "data/electron-density.json", {
       signal: controller.signal,
     })
       .then((r) => {
-        if (!r.ok) throw Error("图谱文件加载失败 (" + r.status + ")");
+        if (!r.ok) throw Error("Data HTTP " + r.status);
         return r.json();
       })
       .then((data) => {
-        setAtlas(atlasSchema.parse(data));
+        setAtlas(parseAtlas(data));
         setLoading(false);
       })
       .catch((e) => {
         if (e.name !== "AbortError") {
-          setError("无法加载图谱，请检查数据文件或网络。");
+          setError(true);
           setLoading(false);
         }
       });
@@ -203,28 +100,69 @@ export default function App() {
   }, []);
   useEffect(() => {
     const update = () => {
-      try {
-        setSelected(decodeURIComponent(location.hash.slice(1)));
-      } catch {
-        setSelected("");
-      }
+      setSelected(hashId());
+      setPanel("atlas");
     };
     window.addEventListener("hashchange", update);
     return () => window.removeEventListener("hashchange", update);
   }, []);
-  const visible = atlas ? visibleNodes(atlas, query, kind, status) : [],
-    ids = visible.map((n) => n.id);
-  const node = atlas?.nodes.find((n) => n.id === selected),
+  const visible = atlas
+      ? visibleNodes(atlas, query, kind, epistemic, domain, content)
+      : [],
+    ids = visible.map((n) => n.id),
+    node = atlas?.nodes.find((n) => n.id === selected),
+    edge = atlas?.edges.find((e) => e.id === selected),
     relations =
       atlas?.edges.filter(
         (e) => e.source === selected || e.target === selected,
-      ) || [];
+      ) || [],
+    source = atlas?.sources.find((s) => s.id === sourceId);
   const reset = () => {
     setQuery("");
     setKind("all");
-    setStatus("all");
+    setEpistemic("all");
+    setContent("all");
+    setDomain("all");
     select("");
   };
+  const openSource = (id: string) => {
+    setSourceId(id);
+    setPanel("evidence");
+  };
+  const statusControl = (
+    <>
+      <label className="field">
+        {t("epistemic")}
+        <select
+          aria-label={t("epistemic")}
+          value={epistemic}
+          onChange={(e) => setEpistemic(e.target.value)}
+        >
+          <option value="all">{t("all")}</option>
+          {epistemicStatuses.map((s) => (
+            <option key={s} value={s}>
+              {t(s)}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="field">
+        {t("content")}
+        <select
+          aria-label={t("content")}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        >
+          <option value="all">{t("all")}</option>
+          {contentStatuses.map((s) => (
+            <option key={s} value={s}>
+              {t(s)}
+            </option>
+          ))}
+        </select>
+      </label>
+    </>
+  );
   return (
     <div className="app">
       <header className="header">
@@ -232,271 +170,562 @@ export default function App() {
           <span className="brand-symbol">⌘</span>
           <span>
             FUSION <strong>RESEARCH ATLAS</strong>
-            <small>科学问题与证据图谱</small>
+            <small>
+              {l === "zh"
+                ? "科学问题与研究进展"
+                : "Scientific questions & research progress"}
+            </small>
           </span>
         </a>
-        <span className="version">V0.1 · 交互式研究原型</span>
+        <div className="header-right">
+          <span className="version">V0.2 · {t("prototype")}</span>
+          <div className="language-switch" aria-label="Language / 语言">
+            <button aria-pressed={l === "zh"} onClick={() => setLanguage("zh")}>
+              中文
+            </button>
+            <button aria-pressed={l === "en"} onClick={() => setLanguage("en")}>
+              English
+            </button>
+          </div>
+        </div>
       </header>
       <section className="intro">
         <div>
-          <div className="eyebrow">EXPLORE THE CONNECTIONS</div>
-          <h1>从科学问题，到可检验的证据。</h1>
-          <p>
-            电子密度输运与密度峰化 <span className="separator">/</span>{" "}
-            研究子图谱 001
+          <div className="eyebrow">QUESTIONS · MECHANISMS · EVIDENCE</div>
+          <h1>
+            {l === "zh"
+              ? "从科学问题，到可检验的证据。"
+              : "Connect scientific questions to testable evidence."}
+          </h1>
+          <p className="mission">
+            {framework.mission.zh}
+            <br />
+            <span lang="en">{framework.mission.en}</span>
           </p>
         </div>
-        <div className="intro-stat">
-          <strong>{atlas?.nodes.length ?? "—"}</strong> 个科学对象{" "}
-          <span>·</span> <strong>{atlas?.edges.length ?? "—"}</strong> 条关系
-        </div>
       </section>
-      <div className="notice">
-        <span>◈</span>{" "}
-        示例研究框架：不包含实验测量结果。虚线表示待验证假设；连线不代表已证实的因果关系。
+      <div className="quick-map">
+        <span>{t("focus")}</span>
+        <button onClick={() => setPanel("methodology")}>
+          {t("structure")} ↗
+        </button>
+        <button onClick={() => setPanel("evidence")}>{t("verify")} ↗</button>
+        <button onClick={() => setPanel("collaboration")}>
+          {t("participate")} ↗
+        </button>
       </div>
+      <nav className="section-nav" aria-label="Research navigation / 科研导航">
+        {panels.map((p) => (
+          <button
+            key={p}
+            aria-current={panel === p ? "page" : undefined}
+            className={panel === p ? "current" : ""}
+            onClick={() => setPanel(p)}
+          >
+            {dual(p)}
+          </button>
+        ))}
+      </nav>
       {loading ? (
-        <div className="state">正在加载图谱…</div>
+        <div className="state">{t("loading")}</div>
       ) : error ? (
         <div className="state" role="alert">
-          {error}
-          <button onClick={() => location.reload()}>重新加载</button>
+          {t("loadError")}
+          <button onClick={() => location.reload()}>{t("retry")}</button>
         </div>
       ) : (
         atlas && (
-          <main className="workspace">
-            <aside className="sidebar">
-              <div className="panel-heading">
-                <h2>探索图谱</h2>
-                <button onClick={reset}>重置</button>
-              </div>
-              <label className="field">
-                搜索科学对象
-                <input
-                  aria-label="搜索科学对象"
-                  placeholder="名称、机制或关键词…"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                />
-              </label>
-              <div className="filters">
-                <label className="field">
-                  对象类型
-                  <select
-                    aria-label="对象类型"
-                    value={kind}
-                    onChange={(e) => setKind(e.target.value)}
-                  >
-                    <option value="all">全部类型</option>
-                    {kinds.map((k) => (
-                      <option key={k} value={k}>
-                        {kindLabels[k]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="field">
-                  证据状态
-                  <select
-                    aria-label="证据状态"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                  >
-                    <option value="all">全部状态</option>
-                    {statuses.map((s) => (
-                      <option key={s} value={s}>
-                        {statusLabels[s]}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
-              <div className="list-title">
-                科学对象{" "}
-                <span data-testid="result-count">{visible.length}</span>
-              </div>
-              <div className="node-list">
-                {visible.map((n) => (
-                  <button
-                    data-testid={"node-" + n.id}
-                    key={n.id}
-                    aria-pressed={selected === n.id}
-                    className={
-                      "node-item " + (selected === n.id ? "active" : "")
-                    }
-                    onClick={() => select(n.id)}
-                  >
-                    <i style={{ background: colors[n.kind] }} />
-                    <span>
-                      {n.label}
-                      <small>{kindLabels[n.kind]}</small>
-                    </span>
-                    <span className="chevron">›</span>
-                  </button>
-                ))}
-                {!visible.length && (
-                  <p className="empty">没有匹配对象。请调整搜索或筛选。</p>
-                )}
-              </div>
-            </aside>
-            <section className="graph-panel">
-              <div className="graph-top">
-                <span>
-                  <i className="live-dot" />
-                  电子密度 · 证据网络
-                </span>
-                <span data-testid="visible-edges">
-                  {
-                    atlas.edges.filter(
-                      (e) => ids.includes(e.source) && ids.includes(e.target),
-                    ).length
-                  }{" "}
-                  条可见关系
-                </span>
-              </div>
-              <Graph
-                atlas={atlas}
-                ids={ids}
-                selected={selected}
-                onSelect={select}
-                onReady={onReady}
-              />
-              <div className="graph-tools">
-                <button
-                  aria-label="放大图谱"
-                  onClick={() =>
-                    cy.current?.zoom(Math.min(2.5, cy.current.zoom() * 1.2))
-                  }
-                >
-                  ＋
-                </button>
-                <button
-                  aria-label="缩小图谱"
-                  onClick={() =>
-                    cy.current?.zoom(Math.max(0.3, cy.current.zoom() / 1.2))
-                  }
-                >
-                  −
-                </button>
-                <button
-                  onClick={() =>
-                    cy.current?.fit(cy.current.elements(":visible"), 60)
-                  }
-                >
-                  适应视图
-                </button>
-                <button onClick={() => select("")}>取消高亮</button>
-              </div>
-              <div className="legend">
-                {kinds.map((k) => (
-                  <span key={k}>
-                    <i style={{ background: colors[k] }} />
-                    {kindLabels[k]}
-                  </span>
-                ))}
-                <span>┄ 待验证关系</span>
-              </div>
-              <div className="graph-hint">
-                拖动节点 · 滚轮缩放 · 点击查看关联
-              </div>
-            </section>
-            <aside className="detail" aria-live="polite">
-              {node ? (
-                <>
-                  <div className="eyebrow">
-                    OBJECT / {node.id.toUpperCase()}
-                  </div>
-                  <span
-                    className="type-pill"
-                    style={{ color: colors[node.kind] }}
-                  >
-                    {kindLabels[node.kind]}
-                  </span>
-                  <h2 data-testid="detail-title">{node.label}</h2>
-                  <div className="status">{statusLabels[node.status]}</div>
-                  <p className="summary">{node.summary}</p>
-                  <h3>科学语境</h3>
-                  <p>{node.details}</p>
-                  <div className="tags">
-                    {node.tags.map((t) => (
-                      <span key={t}>{t}</span>
-                    ))}
-                  </div>
-                  {!ids.includes(node.id) && (
-                    <p className="filter-note">
-                      该对象已被当前筛选隐藏。
-                      <button
-                        onClick={() => {
-                          setQuery("");
-                          setKind("all");
-                          setStatus("all");
-                        }}
-                      >
-                        清除筛选
-                      </button>
-                    </p>
-                  )}
-                  <h3>
-                    关联关系 <span>{relations.length}</span>
-                  </h3>
-                  <div className="relations">
-                    {relations.map((e) => {
-                      const other = atlas.nodes.find(
-                        (n) =>
-                          n.id ===
-                          (e.source === selected ? e.target : e.source),
-                      )!;
-                      return (
-                        <div className="relation" key={e.id}>
-                          <small>
-                            {e.source === selected ? "→" : "←"} {e.label} ·{" "}
-                            {statusLabels[e.status]}
-                          </small>
-                          <button onClick={() => select(other.id)}>
-                            {other.label} ↗
-                          </button>
-                          <p>{e.rationale}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <h3>证据与来源</h3>
-                  {node.sourceIds.length ? (
-                    node.sourceIds.map((id) => {
-                      const s = atlas.sources.find((s) => s.id === id)!;
-                      return (
-                        <div className="source" key={id}>
-                          <a href={s.url} target="_blank" rel="noreferrer">
-                            {s.title} ↗
-                          </a>
-                          <p>{s.scope}</p>
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <div className="source">
-                      无已核验文献或实验数据。此对象仅用于演示研究组织与验证路径，不能作为论文结论引用。
+          <>
+            {panel === "atlas" && (
+              <>
+                <div className="notice">◈ {text(atlas.disclaimer, l)}</div>
+                <main className="workspace">
+                  <aside className="sidebar">
+                    <div className="panel-heading">
+                      <h2>{t("atlas")}</h2>
+                      <button onClick={reset}>{t("reset")}</button>
                     </div>
-                  )}
-                </>
-              ) : (
-                <div className="detail-empty">
-                  <span>◎</span>
-                  <h2>沿着关系，探索问题。</h2>
-                  <p>点击图谱中的节点，查看科学语境、关联假设与证据状态。</p>
-                  <button onClick={() => select("q-density")}>
-                    从核心问题开始 →
-                  </button>
-                  {selected && <p>未找到链接中的节点。</p>}
+                    <label className="field">
+                      {t("search")}
+                      <input
+                        aria-label={t("search")}
+                        placeholder={t("query")}
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                      />
+                    </label>
+                    <div className="filters">
+                      <label className="field">
+                        {t("domain")}
+                        <select
+                          aria-label={t("domain")}
+                          value={domain}
+                          onChange={(e) => setDomain(e.target.value)}
+                        >
+                          <option value="all">{t("all")}</option>
+                          {framework.domains.map((d) => (
+                            <option key={d.id} value={d.id}>
+                              {text(d.name, l)}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      <label className="field">
+                        {t("kind")}
+                        <select
+                          aria-label={t("kind")}
+                          value={kind}
+                          onChange={(e) => setKind(e.target.value)}
+                        >
+                          <option value="all">{t("all")}</option>
+                          {kinds.map((k) => (
+                            <option key={k} value={k}>
+                              {k === "evidence"
+                                ? l === "zh"
+                                  ? "证据"
+                                  : "Evidence"
+                                : t(k)}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+                      {statusControl}
+                    </div>
+                    <div className="list-title">
+                      {t("objects")}{" "}
+                      <span data-testid="result-count">{visible.length}</span>
+                    </div>
+                    <div className="node-list">
+                      {visible.map((n) => (
+                        <button
+                          data-testid={"node-" + n.id}
+                          key={n.id}
+                          aria-pressed={selected === n.id}
+                          className={
+                            "node-item " + (selected === n.id ? "active" : "")
+                          }
+                          onClick={() => select(n.id)}
+                        >
+                          <i style={{ background: colors[n.kind] }} />
+                          <span>
+                            {text(n.label, l)}
+                            <small>
+                              {n.kind === "evidence"
+                                ? l === "zh"
+                                  ? "证据"
+                                  : "Evidence"
+                                : t(n.kind)}
+                            </small>
+                          </span>
+                        </button>
+                      ))}
+                      {!visible.length && (
+                        <p className="empty">{t("noResults")}</p>
+                      )}
+                    </div>
+                  </aside>
+                  <section className="graph-panel">
+                    <div className="graph-top">
+                      <span>
+                        <i className="live-dot" />
+                        {text(atlas.title, l)}
+                      </span>
+                      <span>
+                        {
+                          atlas.edges.filter(
+                            (e) =>
+                              ids.includes(e.source) && ids.includes(e.target),
+                          ).length
+                        }{" "}
+                        {t("relationships")}
+                      </span>
+                    </div>
+                    <Suspense
+                      fallback={<div className="state">{t("loading")}</div>}
+                    >
+                      <Graph
+                        atlas={atlas}
+                        ids={ids}
+                        selected={selected}
+                        language={l}
+                        onSelect={select}
+                        onReady={onReady}
+                      />
+                    </Suspense>
+                    <div className="graph-tools">
+                      <button
+                        aria-label={t("zoomIn")}
+                        onClick={() =>
+                          cy.current?.zoom(
+                            Math.min(2.5, cy.current.zoom() * 1.2),
+                          )
+                        }
+                      >
+                        ＋
+                      </button>
+                      <button
+                        aria-label={t("zoomOut")}
+                        onClick={() =>
+                          cy.current?.zoom(
+                            Math.max(0.3, cy.current.zoom() / 1.2),
+                          )
+                        }
+                      >
+                        −
+                      </button>
+                      <button
+                        onClick={() =>
+                          cy.current?.fit(cy.current.elements(":visible"), 45)
+                        }
+                      >
+                        {t("fit")}
+                      </button>
+                      <button onClick={() => select("")}>
+                        {t("unselect")}
+                      </button>
+                    </div>
+                    <div className="legend">
+                      {kinds.map((k) => (
+                        <span key={k}>
+                          <i style={{ background: colors[k] }} />
+                          {k === "evidence"
+                            ? l === "zh"
+                              ? "证据"
+                              : "Evidence"
+                            : t(k)}
+                        </span>
+                      ))}
+                      <span>{t("legend")}</span>
+                    </div>
+                    <div className="graph-hint">{t("hint")}</div>
+                  </section>
+                  <aside className="detail" aria-live="polite">
+                    {node ? (
+                      <>
+                        <div className="eyebrow">OBJECT / {node.id}</div>
+                        <h2 data-testid="detail-title">
+                          {text(node.label, l)}
+                        </h2>
+                        <div className="status">{t(node.epistemicStatus)}</div>
+                        <div className="badge">{t(node.contentStatus)}</div>
+                        <p className="summary">{text(node.summary, l)}</p>
+                        <h3>{t("context")}</h3>
+                        <p>{text(node.details, l)}</p>
+                        <div className="tags">
+                          {node.tags.map((tag, i) => (
+                            <span key={i}>{text(tag, l)}</span>
+                          ))}
+                        </div>
+                        {!ids.includes(node.id) && (
+                          <p>
+                            {t("hidden")}
+                            <button
+                              onClick={() => {
+                                setQuery("");
+                                setKind("all");
+                                setEpistemic("all");
+                                setContent("all");
+                                setDomain("all");
+                              }}
+                            >
+                              {t("clear")}
+                            </button>
+                          </p>
+                        )}
+                        <h3>
+                          {t("related")} ({relations.length})
+                        </h3>
+                        <div className="relations">
+                          {relations.map((e) => (
+                            <div className="relation" key={e.id}>
+                              <button
+                                data-testid={"edge-" + e.id}
+                                onClick={() => select(e.id)}
+                              >
+                                {e.source === selected ? "→" : "←"}{" "}
+                                {text(e.label, l)}
+                              </button>
+                              <small>
+                                {text(
+                                  atlas.nodes.find(
+                                    (n) =>
+                                      n.id ===
+                                      (e.source === selected
+                                        ? e.target
+                                        : e.source),
+                                  )!.label,
+                                  l,
+                                )}
+                              </small>
+                            </div>
+                          ))}
+                        </div>
+                        <h3>{t("sources")}</h3>
+                        <CitationList
+                          citations={node.citations}
+                          sources={atlas.sources}
+                          language={l}
+                          onSource={openSource}
+                        />
+                      </>
+                    ) : edge ? (
+                      <>
+                        <div className="eyebrow">RELATION / {edge.id}</div>
+                        <h2 data-testid="edge-title">{text(edge.label, l)}</h2>
+                        <div className="status">{t(edge.epistemicStatus)}</div>
+                        <div className="badge">{t(edge.contentStatus)}</div>
+                        <h3>{t("direction")}</h3>
+                        <div className="direction">
+                          <button onClick={() => select(edge.source)}>
+                            {text(
+                              atlas.nodes.find((n) => n.id === edge.source)!
+                                .label,
+                              l,
+                            )}
+                          </button>
+                          <span>→</span>
+                          <button onClick={() => select(edge.target)}>
+                            {text(
+                              atlas.nodes.find((n) => n.id === edge.target)!
+                                .label,
+                              l,
+                            )}
+                          </button>
+                        </div>
+                        <h3>{t("meaning")}</h3>
+                        <p>{text(edge.rationale, l)}</p>
+                        <code>{edge.relation}</code>
+                        <h3>{t("basis")}</h3>
+                        <CitationList
+                          citations={edge.citations}
+                          sources={atlas.sources}
+                          language={l}
+                          onSource={openSource}
+                        />
+                        <p>{t("noCounter")}</p>
+                      </>
+                    ) : (
+                      <div className="detail-empty">
+                        <span>◎</span>
+                        <h2>{t("select")}</h2>
+                        <button onClick={() => select("q-density")}>
+                          {t("start")} →
+                        </button>
+                        {selected && <p>{t("notFound")}</p>}
+                      </div>
+                    )}
+                  </aside>
+                </main>
+              </>
+            )}
+            {panel === "about" && (
+              <main className="content-panel">
+                <div className="section-heading">
+                  <span className="eyebrow">01 / PURPOSE</span>
+                  <h2>{dual("about")}</h2>
+                  <p>{text(framework.mission, l)}</p>
                 </div>
-              )}
-            </aside>
-          </main>
+                <div className="about-grid">
+                  <section>
+                    <h3>{l === "zh" ? "研究目标" : "Research goals"}</h3>
+                    <ol className="goals">
+                      {framework.goals.map((g, i) => (
+                        <li key={i}>{text(g, l)}</li>
+                      ))}
+                    </ol>
+                  </section>
+                  <section>
+                    <h3>{l === "zh" ? "科学立场" : "Scientific principles"}</h3>
+                    {framework.principles.map((p, i) => (
+                      <p key={i}>{text(p, l)}</p>
+                    ))}
+                    <div className="notice">{t("disclaimer")}</div>
+                    <p>{t("focus")}</p>
+                    <p>
+                      {l === "zh"
+                        ? "其他领域是未来研究范围，尚未完成正式子图谱。"
+                        : "Other domains are future scope, with no completed dedicated subgraphs."}
+                    </p>
+                    <button
+                      className="primary"
+                      onClick={() => setPanel("atlas")}
+                    >
+                      {t("atlas")} →
+                    </button>
+                  </section>
+                </div>
+              </main>
+            )}
+            {panel === "domains" && (
+              <main className="content-panel">
+                <div className="section-heading">
+                  <span className="eyebrow">02 / SCIENTIFIC SCOPE</span>
+                  <h2>{dual("domains")}</h2>
+                  <p>
+                    {l === "zh"
+                      ? "领域、对象类型和认识状态独立；同一问题可关联多个领域。"
+                      : "Domains, object types and epistemic states are independent; questions may span multiple domains."}
+                  </p>
+                </div>
+                <div className="domain-grid">
+                  {framework.domains.map((d) => (
+                    <article
+                      className="domain-card"
+                      key={d.id}
+                      data-testid={"domain-" + d.id}
+                    >
+                      <span
+                        className={d.hasSubgraph ? "badge available" : "badge"}
+                      >
+                        {t(d.hasSubgraph ? "available" : "future")}
+                      </span>
+                      <h3>
+                        {d.name.zh}
+                        <small>{d.name.en}</small>
+                      </h3>
+                      <p>{text(d.scope, l)}</p>
+                      <h4>{t("typical")}</h4>
+                      <p>{text(d.questions[0], l)}</p>
+                      {d.hasSubgraph && (
+                        <button
+                          className="primary"
+                          onClick={() => {
+                            setDomain(d.id);
+                            setPanel("atlas");
+                          }}
+                        >
+                          {t("explore")} →
+                        </button>
+                      )}
+                    </article>
+                  ))}
+                </div>
+              </main>
+            )}
+            {panel === "methodology" && (
+              <main className="content-panel">
+                <div className="section-heading">
+                  <span className="eyebrow">03 / RESEARCH LOGIC</span>
+                  <h2>{dual("methodology")}</h2>
+                  <p>
+                    {l === "zh"
+                      ? "从现象到可区分的预测，以实际证据修订认识。流程帮助研究，不替代物理判断。"
+                      : "From phenomena to distinguishable predictions, revise understanding through actual evidence. A workflow supports research; it does not replace physical judgment."}
+                  </p>
+                </div>
+                <div className="method-grid">
+                  {framework.methodology.map((s, i) => (
+                    <article className="method-card" key={s.id}>
+                      <span className="step-number">0{i + 1}</span>
+                      <h3>
+                        {s.name.zh}
+                        <small>{s.name.en}</small>
+                      </h3>
+                      <p>{text(s.action, l)}</p>
+                      <dl>
+                        <dt>{t("input")}</dt>
+                        <dd>{text(s.input, l)}</dd>
+                        <dt>{t("output")}</dt>
+                        <dd>{text(s.output, l)}</dd>
+                        <dt>{t("update")}</dt>
+                        <dd>{text(s.update, l)}</dd>
+                      </dl>
+                    </article>
+                  ))}
+                </div>
+                <div className="principle-row">
+                  {framework.principles.map((p, i) => (
+                    <span key={i}>{text(p, l)}</span>
+                  ))}
+                </div>
+              </main>
+            )}
+            {panel === "evidence" && (
+              <main className="content-panel">
+                <div className="section-heading">
+                  <span className="eyebrow">04 / PROVENANCE</span>
+                  <h2>{dual("evidence")}</h2>
+                  <p>{t("evidenceWarning")}</p>
+                </div>
+                <div className="evidence-layout">
+                  <aside className="evidence-sidebar">
+                    <h3>
+                      {t("sources")} ({atlas.sources.length})
+                    </h3>
+                    {atlas.sources.map((s) => (
+                      <button
+                        key={s.id}
+                        className={sourceId === s.id ? "selected-paper" : ""}
+                        onClick={() => setSourceId(s.id)}
+                      >
+                        {s.year} · {s.title}
+                      </button>
+                    ))}
+                    <h3>{t("standards")}</h3>
+                    <p>
+                      {l === "zh"
+                        ? "分别核对书目、摘要/全文、具体主张及独立验证。检查物理条件、模型假设、不确定度和相反证据。"
+                        : "Check metadata, abstract/full text, specific claims and independent validation separately. Assess physical conditions, model assumptions, uncertainty and counterevidence."}
+                    </p>
+                    <p>
+                      {l === "zh"
+                        ? "网站使用离线核验记录，不依赖实时 DOI 查询。"
+                        : "The site uses offline verification records; live DOI services are not required."}
+                    </p>
+                  </aside>
+                  <section className="evidence-records">
+                    {(source ? [source] : atlas.sources).map((s) => (
+                      <SourceDetail key={s.id} source={s} language={l} />
+                    ))}
+                  </section>
+                </div>
+              </main>
+            )}
+            {panel === "collaboration" && (
+              <main className="content-panel">
+                <div className="section-heading">
+                  <span className="eyebrow">
+                    05 / INTERNATIONAL PARTICIPATION
+                  </span>
+                  <h2>{dual("collaboration")}</h2>
+                  <p>
+                    {l === "zh"
+                      ? "欢迎研究人员以中文或英文参与。请提交清晰问题、可追溯来源和具体物理适用范围。"
+                      : "Researchers are welcome to contribute in English or Chinese. Submit clear questions, traceable sources and specific physical conditions."}
+                  </p>
+                </div>
+                <div className="collaboration-grid">
+                  {framework.participation.map((p) => (
+                    <article className="domain-card" key={p.id}>
+                      <h3>
+                        {p.name.zh}
+                        <small>{p.name.en}</small>
+                      </h3>
+                      <p>{text(p.description, l)}</p>
+                      <a
+                        data-testid={"contribute-" + p.id}
+                        className="primary"
+                        href={contributionUrl(p.id)}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {t("contribute")} ↗
+                      </a>
+                    </article>
+                  ))}
+                </div>
+                <p className="collab-note">{t("collabNote")}</p>
+                <a href={repository} target="_blank" rel="noreferrer">
+                  {t("github")} ↗
+                </a>
+              </main>
+            )}
+          </>
         )
       )}
       <footer>
-        <span>FUSION RESEARCH ATLAS</span>
-        <span>公开示例数据 · 证据透明 · 可持续扩展</span>
+        <span>FUSION RESEARCH ATLAS · V0.2</span>
+        <span>{t("disclaimer")}</span>
       </footer>
     </div>
   );

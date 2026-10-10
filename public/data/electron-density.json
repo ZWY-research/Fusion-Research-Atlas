@@ -1,18 +1,232 @@
 {
-  "schemaVersion": "0.1",
-  "title": "电子密度输运与密度峰化",
-  "disclaimer": "所有对象均为明确标记的研究组织示例；不含真实实验数据与已核验文献证据。",
-  "sources": [],
+  "schemaVersion": "0.2",
+  "title": {
+    "zh": "电子密度输运与密度峰化",
+    "en": "Electron density transport & density peaking"
+  },
+  "disclaimer": {
+    "zh": "示例研究框架，不含本项目实验结果。文献仅提供摘要范围的背景；书目核验不代表机制已验证。",
+    "en": "Demonstration framework, with no project measurements. Literature supplies abstract-level context; metadata checks do not verify mechanisms."
+  },
+  "sources": [
+    {
+      "doi": "10.1103/physrevlett.90.205003",
+      "title": "Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas",
+      "authors": [
+        "C. Angioni",
+        "A. G. Peeters",
+        "G. V. Pereverzev",
+        "F. Ryter",
+        "G. Tardini"
+      ],
+      "journal": "Physical Review Letters",
+      "year": 2003,
+      "id": "paper-angioni-2003",
+      "titleTranslation": {
+        "zh": "托卡马克等离子体中的密度峰化、反常箍缩与碰撞性",
+        "en": "Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas"
+      },
+      "collectiveAuthors": ["ASDEX Upgrade Team"],
+      "volume": "90",
+      "issue": "20",
+      "pages": "205003",
+      "doiUnavailableReason": null,
+      "url": "https://doi.org/10.1103/physrevlett.90.205003",
+      "sourceType": "journal_article",
+      "researchConditions": {
+        "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+        "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+      },
+      "reportedFindings": [
+        {
+          "id": "finding-2003",
+          "statement": {
+            "zh": "作者在所研究托卡马克条件下报告：碰撞性增加时密度峰化下降。",
+            "en": "The authors report lower density peaking at higher collisionality in the studied tokamak conditions."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "scope": "abstract",
+          "conditions": {
+            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+          },
+          "limitations": {
+            "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
+            "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+          }
+        }
+      ],
+      "limitations": {
+        "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
+        "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+      },
+      "verificationStatus": {
+        "metadata": "checked",
+        "abstract": "checked",
+        "fullText": "not_checked",
+        "claim": "not_checked",
+        "independent": "not_checked"
+      },
+      "verifiedAt": "2026-10-10",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1103/physrevlett.90.205003",
+        "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.205003"
+      ],
+      "readingScope": "abstract",
+      "contentStatus": "research_record"
+    },
+    {
+      "doi": "10.1088/0029-5515/47/9/033",
+      "title": "Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations",
+      "authors": [
+        "C. Angioni",
+        "H. Weisen",
+        "O.J.W.F. Kardaun",
+        "M. Maslov",
+        "A. Zabolotsky",
+        "C. Fuchs",
+        "L. Garzotti",
+        "C. Giroud",
+        "B. Kurzan",
+        "P. Mantica",
+        "A.G. Peeters",
+        "J. Stober"
+      ],
+      "journal": "Nuclear Fusion",
+      "year": 2007,
+      "id": "paper-angioni-2007",
+      "titleTranslation": {
+        "zh": "基于 AUG 与 JET 联合数据库的 H-mode 密度峰化标度",
+        "en": "Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations"
+      },
+      "collectiveAuthors": [
+        "ASDEX Upgrade Team",
+        "contributors to the EFDA-JET Workprogramme"
+      ],
+      "volume": "47",
+      "issue": "9",
+      "pages": "1326-1335",
+      "doiUnavailableReason": null,
+      "url": "https://doi.org/10.1088/0029-5515/47/9/033",
+      "sourceType": "journal_article",
+      "researchConditions": {
+        "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+        "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+      },
+      "reportedFindings": [
+        {
+          "id": "finding-2007",
+          "statement": {
+            "zh": "AUG/JET 数据库回归强调碰撞性；NBI 粒子源不能解释全部峰化变化。",
+            "en": "AUG/JET regressions emphasize collisionality; the NBI source does not explain all peaking variation."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "scope": "abstract",
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "limitations": {
+            "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
+            "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+          }
+        }
+      ],
+      "limitations": {
+        "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
+        "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+      },
+      "verificationStatus": {
+        "metadata": "checked",
+        "abstract": "checked",
+        "fullText": "not_checked",
+        "claim": "not_checked",
+        "independent": "not_checked"
+      },
+      "verifiedAt": "2026-10-10",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1088/0029-5515/47/9/033",
+        "https://iopscience.iop.org/article/10.1088/0029-5515/47/9/033"
+      ],
+      "readingScope": "abstract",
+      "contentStatus": "research_record"
+    }
+  ],
   "nodes": [
     {
       "id": "q-density",
-      "label": "密度峰化由什么决定？",
+      "label": {
+        "zh": "密度峰化由什么决定？",
+        "en": "What determines density peaking?"
+      },
       "kind": "question",
-      "status": "example",
-      "summary": "区分粒子源、扩散与对流对密度剖面的贡献。",
-      "details": "研究组织示例：限定放电条件后再讨论输运机制，不能由密度峰化单独推断粒子通量。",
-      "tags": ["电子密度", "输运"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "summary": {
+        "zh": "区分粒子源、扩散与对流对密度剖面的贡献。",
+        "en": "Separate contributions from particle sources, diffusion and convection to the density profile."
+      },
+      "details": {
+        "zh": "研究组织示例：限定放电条件后再讨论输运机制，不能由密度峰化单独推断粒子通量。",
+        "en": "Research design example: specify discharge conditions before interpreting transport mechanisms. Density peaking alone does not determine particle flux."
+      },
+      "tags": [
+        {
+          "zh": "电子密度",
+          "en": "electron density"
+        },
+        {
+          "zh": "输运",
+          "en": "transport"
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": 0,
         "y": 0
@@ -20,13 +234,68 @@
     },
     {
       "id": "p-peaking",
-      "label": "芯部密度峰化",
+      "label": {
+        "zh": "芯部密度峰化",
+        "en": "Core density peaking"
+      },
       "kind": "phenomenon",
-      "status": "example",
-      "summary": "描述中心密度相对参考密度的增强。",
-      "details": "待观察的现象类别，并非本项目测量结果。峰化因子的定义、空间范围与时间窗必须先固定。",
-      "tags": ["密度剖面"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "unassessed",
+      "domainIds": ["transport"],
+      "summary": {
+        "zh": "描述中心密度相对参考密度的增强。",
+        "en": "Describe enhanced central density relative to a defined reference."
+      },
+      "details": {
+        "zh": "待观察的现象类别，并非本项目测量结果。峰化因子的定义、空间范围与时间窗必须先固定。",
+        "en": "A phenomenon to investigate, not a measurement made by this project. Fix the peaking definition, spatial range and time window first."
+      },
+      "tags": [
+        {
+          "zh": "密度剖面",
+          "en": "density profile"
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": 0,
         "y": -260
@@ -34,13 +303,33 @@
     },
     {
       "id": "k-balance",
-      "label": "粒子守恒与源项",
+      "label": {
+        "zh": "粒子守恒与源项",
+        "en": "Particle balance and sources"
+      },
       "kind": "knowledge",
-      "status": "example",
-      "summary": "以守恒框架组织密度演化、粒子通量和粒子源。",
-      "details": "示例模型框架：∂n/∂t + ∇·Γ = S；须说明通量面平均、几何和粒子种类等约定，不能直接把电子与离子源混同。",
-      "tags": ["连续性", "源项"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "modeling"],
+      "summary": {
+        "zh": "以守恒框架组织密度演化、粒子通量和粒子源。",
+        "en": "Organize density evolution, particle flux and particle sources using conservation."
+      },
+      "details": {
+        "zh": "示例模型框架：∂n/∂t + ∇·Γ = S；须说明通量面平均、几何和粒子种类等约定，不能直接把电子与离子源混同。",
+        "en": "Illustrative framework: ∂n/∂t + ∇·Γ = S. Specify geometry, flux-surface averaging and particle species; electron and ion sources are not interchangeable."
+      },
+      "tags": [
+        {
+          "zh": "连续性",
+          "en": "continuity"
+        },
+        {
+          "zh": "源项",
+          "en": "source term"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -330,
         "y": -180
@@ -48,13 +337,37 @@
     },
     {
       "id": "k-flux",
-      "label": "扩散与对流分解",
+      "label": {
+        "zh": "扩散与对流分解",
+        "en": "Diffusion–convection decomposition"
+      },
       "kind": "knowledge",
-      "status": "example",
-      "summary": "在简化框架下用 Γ = −D∇n + Vn 组织讨论。",
-      "details": "这里只展示建模语言，D 与 V 不能从一条稳态密度剖面唯一确定。方向约定为径向向外为正。",
-      "tags": ["D", "V", "粒子通量"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "modeling"],
+      "summary": {
+        "zh": "在简化框架下用 Γ = −D∇n + Vn 组织讨论。",
+        "en": "Use Γ = −D∇n + Vn as a simplified modeling framework."
+      },
+      "details": {
+        "zh": "这里只展示建模语言，D 与 V 不能从一条稳态密度剖面唯一确定。方向约定为径向向外为正。",
+        "en": "This is modeling language, not a measured result. One steady density profile cannot uniquely determine D and V. The radial outward direction is positive."
+      },
+      "tags": [
+        {
+          "zh": "D",
+          "en": "D"
+        },
+        {
+          "zh": "V",
+          "en": "V"
+        },
+        {
+          "zh": "粒子通量",
+          "en": "particle flux"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -390,
         "y": 70
@@ -62,13 +375,72 @@
     },
     {
       "id": "h-pinch",
-      "label": "向内对流贡献假设",
+      "label": {
+        "zh": "向内对流贡献假设",
+        "en": "Inward convection hypothesis"
+      },
       "kind": "hypothesis",
-      "status": "hypothesis",
-      "summary": "检验有效向内对流是否能解释部分峰化。",
-      "details": "V < 0 在向外为正的约定下表示向内；该假设尚未在任何具体放电上验证，也不意味着所有条件下均存在向内对流。",
-      "tags": ["pinch", "对流"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport", "turbulence"],
+      "summary": {
+        "zh": "检验有效向内对流是否能解释部分峰化。",
+        "en": "Test whether effective inward convection could explain part of the peaking."
+      },
+      "details": {
+        "zh": "V < 0 在向外为正的约定下表示向内；该假设尚未在任何具体放电上验证，也不意味着所有条件下均存在向内对流。",
+        "en": "V < 0 denotes inward convection under an outward-positive convention. This hypothesis is not verified for any specific discharge and is not a universal mechanism."
+      },
+      "tags": [
+        {
+          "zh": "pinch",
+          "en": "pinch"
+        },
+        {
+          "zh": "对流",
+          "en": "convection"
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": 330,
         "y": -180
@@ -76,13 +448,53 @@
     },
     {
       "id": "h-source",
-      "label": "粒子源贡献假设",
+      "label": {
+        "zh": "粒子源贡献假设",
+        "en": "Particle-source hypothesis"
+      },
       "kind": "hypothesis",
-      "status": "hypothesis",
-      "summary": "检验粒子源分布是否影响芯部密度剖面。",
-      "details": "源与输运可能耦合。必须限定加料条件并估算源分布，避免把相关性当成机制证据。",
-      "tags": ["加料", "源项"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport", "turbulence"],
+      "summary": {
+        "zh": "检验粒子源分布是否影响芯部密度剖面。",
+        "en": "Test whether source distributions contribute to core density profiles."
+      },
+      "details": {
+        "zh": "源与输运可能耦合。必须限定加料条件并估算源分布，避免把相关性当成机制证据。",
+        "en": "Sources and transport may be coupled. Specify fueling conditions and estimate deposition; association is not mechanism evidence."
+      },
+      "tags": [
+        {
+          "zh": "加料",
+          "en": "fueling"
+        },
+        {
+          "zh": "源项",
+          "en": "source term"
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": 390,
         "y": 70
@@ -90,13 +502,29 @@
     },
     {
       "id": "g-identify",
-      "label": "源与输运难以辨识",
+      "label": {
+        "zh": "源与输运难以辨识",
+        "en": "Source–transport identifiability"
+      },
       "kind": "gap",
-      "status": "example",
-      "summary": "静态剖面不足以唯一识别机制。",
-      "details": "这里描述待解决的研究设计问题。需传播诊断误差与模型不确定度，比较多个解释并寻找可区分的预测。",
-      "tags": ["可辨识性"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "modeling"],
+      "summary": {
+        "zh": "静态剖面不足以唯一识别机制。",
+        "en": "A static profile does not uniquely identify the mechanism."
+      },
+      "details": {
+        "zh": "这里描述待解决的研究设计问题。需传播诊断误差与模型不确定度，比较多个解释并寻找可区分的预测。",
+        "en": "A research design problem. Propagate diagnostic and model uncertainty, compare competing explanations and seek distinguishable predictions."
+      },
+      "tags": [
+        {
+          "zh": "可辨识性",
+          "en": "identifiability"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -190,
         "y": 250
@@ -104,13 +532,33 @@
     },
     {
       "id": "m-profile",
-      "label": "密度剖面诊断",
+      "label": {
+        "zh": "密度剖面诊断",
+        "en": "Density-profile diagnostics"
+      },
       "kind": "method",
-      "status": "example",
-      "summary": "建立有空间、时间和不确定度信息的密度剖面。",
-      "details": "可规划 Thomson scattering 或其他适合装置的诊断，并执行标定与一致性检查；未宣称任何诊断数据已取得。",
-      "tags": ["Thomson", "诊断"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics", "modeling"],
+      "summary": {
+        "zh": "建立有空间、时间和不确定度信息的密度剖面。",
+        "en": "Establish profiles with spatial, temporal and uncertainty information."
+      },
+      "details": {
+        "zh": "可规划 Thomson scattering 或其他适合装置的诊断，并执行标定与一致性检查；未宣称任何诊断数据已取得。",
+        "en": "Plan Thomson scattering or another appropriate diagnostic with calibration and consistency checks. No diagnostic dataset has been acquired here."
+      },
+      "tags": [
+        {
+          "zh": "Thomson",
+          "en": "Thomson"
+        },
+        {
+          "zh": "诊断",
+          "en": "diagnostics"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -200,
         "y": -360
@@ -118,13 +566,33 @@
     },
     {
       "id": "m-modulation",
-      "label": "加料调制实验",
+      "label": {
+        "zh": "加料调制实验",
+        "en": "Fueling modulation experiment"
+      },
       "kind": "method",
-      "status": "example",
-      "summary": "以扰动响应增加粒子输运辨识约束。",
-      "details": "仅为拟议验证方法：定义扰动幅度、频率、边界条件与源模型，检验模型假设是否适用。",
-      "tags": ["调制", "扰动"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics", "modeling"],
+      "summary": {
+        "zh": "以扰动响应增加粒子输运辨识约束。",
+        "en": "Use perturbative responses to add transport constraints."
+      },
+      "details": {
+        "zh": "仅为拟议验证方法：定义扰动幅度、频率、边界条件与源模型，检验模型假设是否适用。",
+        "en": "Proposed verification only: define amplitude, frequency, boundary conditions and source models, then test their applicability."
+      },
+      "tags": [
+        {
+          "zh": "调制",
+          "en": "modulation"
+        },
+        {
+          "zh": "扰动",
+          "en": "perturbation"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": 200,
         "y": 360
@@ -132,13 +600,33 @@
     },
     {
       "id": "m-simulation",
-      "label": "输运模型对比",
+      "label": {
+        "zh": "输运模型对比",
+        "en": "Transport-model comparison"
+      },
       "kind": "method",
-      "status": "example",
-      "summary": "比较候选机制对剖面及扰动的预测。",
-      "details": "规划模型比较而不是展示模拟结果。需要独立验证、适用范围与预测不确定度，防止只拟合稳态剖面。",
-      "tags": ["模拟", "验证"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics", "modeling"],
+      "summary": {
+        "zh": "比较候选机制对剖面及扰动的预测。",
+        "en": "Compare candidate predictions for profiles and perturbations."
+      },
+      "details": {
+        "zh": "规划模型比较而不是展示模拟结果。需要独立验证、适用范围与预测不确定度，防止只拟合稳态剖面。",
+        "en": "A modeling plan, not simulation results. Require independent validation, applicability limits and prediction uncertainty; fitting a steady profile is insufficient."
+      },
+      "tags": [
+        {
+          "zh": "模拟",
+          "en": "simulation"
+        },
+        {
+          "zh": "验证",
+          "en": "verification"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -200,
         "y": 360
@@ -146,13 +634,33 @@
     },
     {
       "id": "e-profile",
-      "label": "剖面与误差证据",
+      "label": {
+        "zh": "剖面与误差证据",
+        "en": "Profile and uncertainty evidence"
+      },
       "kind": "evidence",
-      "status": "example",
-      "summary": "待获取：剖面测量、标定记录和误差估计。",
-      "details": "证据需求占位，不含数值、不含实验记录，也不表示证据已存在。取得数据后须附公开授权、来源、版本与处理方法。",
-      "tags": ["测量", "误差"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics"],
+      "summary": {
+        "zh": "待获取：剖面测量、标定记录和误差估计。",
+        "en": "To acquire: profiles, calibration records and uncertainty estimates."
+      },
+      "details": {
+        "zh": "证据需求占位，不含数值、不含实验记录，也不表示证据已存在。取得数据后须附公开授权、来源、版本与处理方法。",
+        "en": "An evidence requirement, with no numerical measurements or experiment record. Future records need provenance, version, processing methods and permission to share."
+      },
+      "tags": [
+        {
+          "zh": "测量",
+          "en": "measurement"
+        },
+        {
+          "zh": "误差",
+          "en": "uncertainty"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": 200,
         "y": -360
@@ -160,13 +668,29 @@
     },
     {
       "id": "e-response",
-      "label": "扰动响应证据",
+      "label": {
+        "zh": "扰动响应证据",
+        "en": "Perturbative response evidence"
+      },
       "kind": "evidence",
-      "status": "example",
-      "summary": "待获取：调制输入与密度响应的时间序列。",
-      "details": "证据需求占位，不能用作支持假设的结果。真实数据应包含时间同步、重复性、噪声和传递函数不确定度。",
-      "tags": ["时间序列"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics"],
+      "summary": {
+        "zh": "待获取：调制输入与密度响应的时间序列。",
+        "en": "To acquire: modulation inputs and density-response time series."
+      },
+      "details": {
+        "zh": "证据需求占位，不能用作支持假设的结果。真实数据应包含时间同步、重复性、噪声和传递函数不确定度。",
+        "en": "An evidence requirement, not a result supporting a hypothesis. Real data require synchronized timing, repeatability, noise assessment and transfer-function uncertainty."
+      },
+      "tags": [
+        {
+          "zh": "时间序列",
+          "en": "time series"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": 0,
         "y": 260
@@ -174,13 +698,49 @@
     },
     {
       "id": "g-source",
-      "label": "粒子源不确定度",
+      "label": {
+        "zh": "粒子源不确定度",
+        "en": "Particle-source uncertainty"
+      },
       "kind": "gap",
-      "status": "example",
-      "summary": "估计源分布的不确定度及其对反演的影响。",
-      "details": "拟议研究问题。当前没有任何装置的源计算或沉积数据；不能据此判断特定装置的误差大小。",
-      "tags": ["不确定度"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "modeling"],
+      "summary": {
+        "zh": "估计源分布的不确定度及其对反演的影响。",
+        "en": "Estimate source uncertainty and its effects on inference."
+      },
+      "details": {
+        "zh": "拟议研究问题。当前没有任何装置的源计算或沉积数据；不能据此判断特定装置的误差大小。",
+        "en": "A proposed research question. No source calculation or deposition dataset is provided for any device; no device-specific error magnitude is asserted."
+      },
+      "tags": [
+        {
+          "zh": "不确定度",
+          "en": "uncertainty"
+        }
+      ],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": 330,
         "y": 250
@@ -188,13 +748,29 @@
     },
     {
       "id": "q-discriminate",
-      "label": "怎样区分候选机制？",
+      "label": {
+        "zh": "怎样区分候选机制？",
+        "en": "How can mechanisms be distinguished?"
+      },
       "kind": "question",
-      "status": "example",
-      "summary": "寻找能够排除替代解释的观测与实验。",
-      "details": "研究设计示例：将可区分的预测与证据需求一一对应，并预先定义判断准则。",
-      "tags": ["研究设计"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "summary": {
+        "zh": "寻找能够排除替代解释的观测与实验。",
+        "en": "Seek observations and experiments that exclude alternative explanations."
+      },
+      "details": {
+        "zh": "研究设计示例：将可区分的预测与证据需求一一对应，并预先定义判断准则。",
+        "en": "Match distinguishable predictions to evidence requirements and define decision criteria in advance."
+      },
+      "tags": [
+        {
+          "zh": "研究设计",
+          "en": "research design"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": -330,
         "y": -290
@@ -202,13 +778,33 @@
     },
     {
       "id": "m-source",
-      "label": "粒子源估算",
+      "label": {
+        "zh": "粒子源估算",
+        "en": "Particle-source estimation"
+      },
       "kind": "method",
-      "status": "example",
-      "summary": "对加料、沉积及边界源做一致的估算。",
-      "details": "方法规划示例，需依据装置和放电条件选择源模型；未提供真实源强或沉积计算。",
-      "tags": ["加料", "源模型"],
-      "sourceIds": [],
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "diagnostics", "modeling"],
+      "summary": {
+        "zh": "对加料、沉积及边界源做一致的估算。",
+        "en": "Estimate fueling, deposition and boundary sources consistently."
+      },
+      "details": {
+        "zh": "方法规划示例，需依据装置和放电条件选择源模型；未提供真实源强或沉积计算。",
+        "en": "A method plan. Choose a source model for the device and discharge; no actual source strength or deposition calculation is supplied."
+      },
+      "tags": [
+        {
+          "zh": "加料",
+          "en": "fueling"
+        },
+        {
+          "zh": "源模型",
+          "en": "source model"
+        }
+      ],
+      "citations": [],
       "position": {
         "x": 330,
         "y": -290
@@ -221,200 +817,400 @@
       "source": "p-peaking",
       "target": "q-density",
       "relation": "motivates",
-      "label": "引出问题",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "引出问题",
+        "en": "motivates"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-02",
       "source": "k-balance",
       "target": "q-density",
       "relation": "contextualizes",
-      "label": "组织守恒框架",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "组织守恒框架",
+        "en": "frames particle balance"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-03",
       "source": "k-flux",
       "target": "q-density",
       "relation": "contextualizes",
-      "label": "提供建模框架",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "提供建模框架",
+        "en": "frames modeling"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-04",
       "source": "h-pinch",
       "target": "p-peaking",
       "relation": "may_explain",
-      "label": "可能解释",
-      "status": "hypothesis",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "可能解释",
+        "en": "may explain"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
+            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ]
     },
     {
       "id": "r-05",
       "source": "h-source",
       "target": "p-peaking",
       "relation": "may_explain",
-      "label": "可能影响",
-      "status": "hypothesis",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "可能影响",
+        "en": "may influence"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-2007",
+          "role": "context",
+          "scope": "abstract",
+          "statement": {
+            "zh": "作为相关研究背景，不核验此示例对象或关系。",
+            "en": "Related research context; it does not verify this demonstration object or relationship."
+          },
+          "conditions": {
+            "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
+            "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+          },
+          "locator": {
+            "zh": "摘要",
+            "en": "Abstract"
+          },
+          "claimVerified": false
+        }
+      ]
     },
     {
       "id": "r-06",
       "source": "q-density",
       "target": "g-identify",
       "relation": "requires",
-      "label": "需要辨识",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "需要辨识",
+        "en": "requires identification"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-07",
       "source": "q-density",
       "target": "q-discriminate",
       "relation": "requires",
-      "label": "需要区分机制",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "需要区分机制",
+        "en": "requires discrimination"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-08",
       "source": "m-profile",
       "target": "e-profile",
       "relation": "requires",
-      "label": "需要获取",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "需要获取",
+        "en": "requires evidence"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-09",
       "source": "e-profile",
       "target": "p-peaking",
       "relation": "describes",
-      "label": "拟用于表征",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟用于表征",
+        "en": "would characterize"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-10",
       "source": "m-modulation",
       "target": "h-pinch",
       "relation": "tests",
-      "label": "拟检验",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟检验",
+        "en": "would test"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-11",
       "source": "m-modulation",
       "target": "e-response",
       "relation": "requires",
-      "label": "需要获取",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "需要获取",
+        "en": "requires evidence"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-12",
       "source": "e-response",
       "target": "g-identify",
       "relation": "constrains",
-      "label": "拟约束辨识",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟约束辨识",
+        "en": "would constrain inference"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-13",
       "source": "m-simulation",
       "target": "h-pinch",
       "relation": "tests",
-      "label": "拟检验",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟检验",
+        "en": "would test"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-14",
       "source": "m-simulation",
       "target": "h-source",
       "relation": "tests",
-      "label": "拟检验",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟检验",
+        "en": "would test"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-15",
       "source": "g-source",
       "target": "h-source",
       "relation": "constrains",
-      "label": "限制可解释性",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "限制可解释性",
+        "en": "limits interpretation"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-16",
       "source": "m-source",
       "target": "g-source",
       "relation": "tests",
-      "label": "拟量化",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟量化",
+        "en": "would quantify"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-17",
       "source": "m-source",
       "target": "h-source",
       "relation": "tests",
-      "label": "拟检验",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟检验",
+        "en": "would test"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-18",
       "source": "q-discriminate",
       "target": "m-modulation",
       "relation": "requires",
-      "label": "需要验证设计",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "需要验证设计",
+        "en": "requires test design"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-19",
       "source": "k-balance",
       "target": "k-flux",
       "relation": "contextualizes",
-      "label": "约束通量定义",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "约束通量定义",
+        "en": "constrains flux definition"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     },
     {
       "id": "r-20",
       "source": "e-profile",
       "target": "m-simulation",
       "relation": "constrains",
-      "label": "拟约束模型",
-      "status": "example",
-      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
-      "sourceIds": []
+      "label": {
+        "zh": "拟约束模型",
+        "en": "would constrain modeling"
+      },
+      "contentStatus": "demonstration",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport"],
+      "rationale": {
+        "zh": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+        "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
+      },
+      "citations": []
     }
   ]
 }
