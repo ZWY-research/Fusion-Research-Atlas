@@ -235,7 +235,7 @@ export default function App() {
             <small>科学问题与证据图谱</small>
           </span>
         </a>
-        <span className="version">V0.1 · 本地研究原型</span>
+        <span className="version">V0.1 · 交互式研究原型</span>
       </header>
       <section className="intro">
         <div>

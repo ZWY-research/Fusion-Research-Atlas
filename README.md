@@ -1,6 +1,9 @@
 # Fusion Research Atlas
 
-V0.1 本地科研图谱原型，使用 React、TypeScript、Vite 与 Cytoscape.js。正式仓库名称为 `Fusion-Research-Atlas`。尚未创建远程仓库或公开发布。
+V0.1 交互式科研图谱原型，使用 React、TypeScript、Vite 与 Cytoscape.js。正式仓库名称为 `Fusion-Research-Atlas`。
+
+- GitHub 仓库：[ZWY-research/Fusion-Research-Atlas](https://github.com/ZWY-research/Fusion-Research-Atlas)
+- 网站入口：[Fusion Research Atlas](https://zwy-research.github.io/Fusion-Research-Atlas/)
 
 ## 本地运行
 
@@ -18,7 +21,7 @@ npm run build
 npm run preview -- --host 127.0.0.1 --port 4173
 ```
 
-入口为 http://127.0.0.1:4173/Fusion-Research-Atlas/ 。这是本地预览地址，不是运行时配置。未来 Pages 路径为 `/Fusion-Research-Atlas/`；公开网站尚未上线。
+入口为 http://127.0.0.1:4173/Fusion-Research-Atlas/ 。这是本地预览地址，不是运行时配置。GitHub Pages 路径为 `/Fusion-Research-Atlas/`。
 
 ## 功能与数据
 
@@ -51,3 +54,13 @@ $env:FRA_BROWSER_CHANNEL = 'chrome'
 ```
 
 未设置 FRA_SCREENSHOT_DIR 时，截图默认保存到 test-results/screenshots。
+
+## 贡献
+
+欢迎通过 GitHub Issues 报告问题，或提交 Pull Request 改善交互、文档与测试。提交前请运行数据校验、类型检查、单元测试、lint 和生产构建；涉及界面时请复验浏览器交互。
+
+科学内容贡献必须说明来源、适用范围与证据状态，明确区分示例、假设与已核验材料，不得提交非公开实验数据、私人科研文件或认证凭据。新证据须先确认公开权限及许可，并逐条核验对主张的支持范围。
+
+## 自动部署
+
+`.github/workflows/deploy.yml` 在 push main 或手动触发时使用 Node.js 24 安装依赖、验证数据与类型、运行测试和 lint、构建 dist，并通过 GitHub 官方 Pages Actions 部署。站点采用 hash 深链接。
