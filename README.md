@@ -54,9 +54,9 @@
 
 ### Why start with particle transport? | 为什么从粒子输运开始？
 
-**EN** The first in-depth case is core electron-density transport and density peaking in tokamak plasmas. The project's initiator has relevant experimental and theoretical research experience, allowing a real research case to test FRA's scientific methods, evidence organisation, and collaboration mechanisms. The existing graph remains a demonstration while substantive research is developed. This starting point does not limit FRA to tokamaks or particle transport: its long-term scope spans different fusion science and technology directions.
+**EN** The first in-depth case is core electron-density transport and density peaking in tokamak plasmas. The project's initiator has relevant experimental and theoretical research experience, allowing a real research case to test FRA's scientific methods, evidence organisation, and collaboration mechanisms. The original graph records retain demonstration status while separately labelled research records develop. This starting point does not limit FRA to tokamaks or particle transport: its long-term scope spans different fusion science and technology directions.
 
-**中文** 首个深入研究案例是托卡马克核心电子密度输运及密度峰化。项目发起者具有相关实验与理论研究经验，可利用真实研究案例检验 FRA 的科研方法、科学证据组织方式和协作机制。在实质性研究逐步开展的同时，现有图谱仍属于演示内容。这一起点不意味着 FRA 仅研究托卡马克或粒子输运，其长期范围涵盖不同聚变科学和技术方向。
+**中文** 首个深入研究案例是托卡马克核心电子密度输运及密度峰化。项目发起者具有相关实验与理论研究经验，可利用真实研究案例检验 FRA 的科研方法、科学证据组织方式和协作机制。原有图谱记录保留演示状态，新增科研记录单独标识。这一起点不意味着 FRA 仅研究托卡马克或粒子输运，其长期范围涵盖不同聚变科学和技术方向。
 
 ## Respecting contributions and working together | 尊重科研贡献，共同探索
 

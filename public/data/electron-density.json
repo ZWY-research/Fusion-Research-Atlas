@@ -5,8 +5,8 @@
     "en": "Electron density transport & density peaking"
   },
   "disclaimer": {
-    "zh": "示例研究框架，不含本项目实验结果。文献仅提供摘要范围的背景；书目核验不代表机制已验证。",
-    "en": "Demonstration framework, with no project measurements. Literature supplies abstract-level context; metadata checks do not verify mechanisms."
+    "zh": "本图谱分别标识原有演示对象与有原文依据的科研记录。文献主张核验不等于独立复现，微观输运机制仍未解决。",
+    "en": "Original demonstration objects and source-grounded research records are labelled separately. Source claim checks are not independent replication; microscopic transport mechanisms remain unresolved."
   },
   "sources": [
     {

@@ -1,4 +1,21 @@
 import { test, expect } from "@playwright/test";
+import type { Page } from "@playwright/test";
+import type { Core } from "cytoscape";
+
+// Use actual rendered coordinates; adding research nodes changes the fitted viewport.
+async function tapGraph(page: Page, id: string) {
+  const graph = page.getByTestId("graph");
+  const pos = await graph.evaluate((element, id) => {
+    const cy = (element as HTMLElement & { _cyreg: { cy: Core } })._cyreg.cy;
+    const item = cy.getElementById(id);
+    return item.group() === "nodes"
+      ? item.renderedPosition()
+      : item.renderedMidpoint();
+  }, id);
+  const box = await graph.boundingBox();
+  if (!box) throw Error("No graph");
+  await page.mouse.click(box.x + pos.x, box.y + pos.y);
+}
 const screenshotDir =
   process.env.FRA_SCREENSHOT_DIR || "test-results/screenshots";
 test("default atlas, bilingual mission, real canvas click, search, filters and old deep link", async ({
@@ -11,7 +28,7 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     if (r.status() >= 400) failures.push(r.url());
   });
   await page.goto("");
-  await expect(page.getByTestId("result-count")).toHaveText("15");
+  await expect(page.getByTestId("result-count")).toHaveText("21");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await expect(page.locator(".mission")).toContainText("开放协作");
   await expect(page.locator(".mission")).toContainText("open, collaborative");
@@ -22,9 +39,7 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     path: screenshotDir + "/FRA-V0.2-home.png",
     fullPage: true,
   });
-  const box = await page.getByTestId("graph").boundingBox();
-  if (!box) throw Error("No graph");
-  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+  await tapGraph(page, "q-density");
   await expect(page.getByTestId("detail-title")).toHaveText(
     "密度峰化由什么决定？",
   );
@@ -78,7 +93,7 @@ test("all research panels, domain exploration and complete bilingual methodology
   );
   await page.getByRole("button", { name: "查看子图" }).click();
   await expect(page.getByLabel("研究领域")).toHaveValue("transport");
-  await expect(page.getByTestId("result-count")).toHaveText("15");
+  await expect(page.getByTestId("result-count")).toHaveText("21");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await page
     .getByRole("button", { name: "研究方法 / Methodology", exact: true })
@@ -148,11 +163,7 @@ test("real canvas relationship tap opens scientific basis", async ({
   await expect(
     page.locator('[data-testid="graph"] canvas').first(),
   ).toBeVisible();
-  // Isolate the two endpoints of r-04 through a search shared only by their labels/details.
-  // Click the centre of the long vertical link between q-density and p-peaking (r-01), away from nodes.
-  const box = await page.getByTestId("graph").boundingBox();
-  if (!box) throw Error("No graph");
-  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2 - 70);
+  await tapGraph(page, "r-01");
   await expect(page.getByTestId("edge-title")).toBeVisible();
   await expect(page.locator(".detail")).toContainText("物理含义");
 });
@@ -221,7 +232,8 @@ test("300-node synthetic fixture retains responsive selection and bilingual sear
 }) => {
   const response = await page.request.get("data/electron-density.json");
   const atlas = await response.json();
-  for (let i = 0; i < 285; i++) {
+  const syntheticCount = 300 - atlas.nodes.length;
+  for (let i = 0; i < syntheticCount; i++) {
     const node = structuredClone(atlas.nodes[i % 15]);
     node.id = "perf-" + i;
     node.label = { zh: "性能测试对象 " + i, en: "Performance fixture " + i };
@@ -247,6 +259,103 @@ test("300-node synthetic fixture retains responsive selection and bilingual sear
   await page.getByTestId("node-perf-100").click();
   await expect(page.getByTestId("detail-title")).toHaveText("性能测试对象 100");
   await page.getByLabel("搜索科学对象").fill("performance-fixture");
-  await expect(page.getByTestId("result-count")).toHaveText("285");
+  await expect(page.getByTestId("result-count")).toHaveText(
+    String(syntheticCount),
+  );
   await page.getByRole("button", { name: "适应视图" }).click();
+});
+
+test("Q001 research chain, real canvas node, source findings and bilingual insight links", async ({
+  page,
+}) => {
+  await page.goto("#q-density");
+  await expect(page.locator(".notice")).toContainText("科研记录");
+  await expect(page.getByTestId("edge-r-q001-enter")).toBeVisible();
+  await page.getByTestId("edge-r-q001-enter").click();
+  await expect(page.getByTestId("edge-title")).toHaveText("进入真实研究问题");
+  await page.getByRole("button", { name: "重置", exact: true }).click();
+  await tapGraph(page, "k-collisionality-evidence");
+  await expect(page.getByTestId("detail-title")).toHaveText(
+    "碰撞性经验支持增强",
+  );
+  await expect(page.locator(".detail")).toContainText("科研记录");
+  await expect(page.locator(".detail")).toContainText("微观通量机制尚未证明");
+  await expect(page.locator(".citation code")).toContainText([
+    "finding-a07-covariance",
+    "finding-g07-discrimination",
+  ]);
+  await page
+    .locator(".citation button")
+    .filter({ hasText: "Density profile peaking in low collisionality" })
+    .click();
+  const paper = page.getByTestId("paper-paper-greenwald-2007");
+  await expect(paper).toBeVisible();
+  await expect(paper.locator("a.doi-link")).toHaveAttribute(
+    "href",
+    "https://doi.org/10.1088/0029-5515/47/9/l03",
+  );
+  await expect(page.getByTestId("finding-finding-g07-transfer")).toContainText(
+    "未参与",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "独立核验: 未检查",
+  );
+  const insight = page.getByTestId("insight-paper-greenwald-2007");
+  await expect(insight).toHaveText("科研成果解读 ↗");
+  await expect(insight).toHaveAttribute(
+    "href",
+    /\/blob\/[a-f0-9]{40}\/docs\/literature\/papers\/greenwald-2007\.md$/,
+  );
+  await expect(insight).toHaveAttribute("target", "_blank");
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(insight).toHaveText("Research Insights ↗");
+  await expect(paper).toContainText("figure-image details unchecked");
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Q001-Greenwald-source.png",
+    fullPage: true,
+  });
+  await page
+    .locator(".evidence-sidebar button")
+    .filter({ hasText: "Scaling of density peaking" })
+    .click();
+  await expect(page.getByTestId("insight-paper-angioni-2007")).toHaveAttribute(
+    "href",
+    /angioni-2007\.md$/,
+  );
+  await expect(page.getByTestId("finding-finding-2007")).toContainText(
+    "Abstract",
+  );
+  await page
+    .locator(".evidence-sidebar button")
+    .filter({ hasText: "Density Peaking, Anomalous Pinch" })
+    .click();
+  await expect(page.getByTestId("insight-paper-angioni-2003")).toHaveAttribute(
+    "href",
+    /angioni-2003\.md$/,
+  );
+  await expect(
+    page.getByTestId("paper-paper-angioni-2003").locator(".verification-grid"),
+  ).toContainText("Full text checked: Not checked");
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.goto("#m-cross-device-validation");
+  await expect(page.getByTestId("detail-title")).toHaveText(
+    "跨装置与有限源验证计划",
+  );
+  await expect(page.locator(".detail")).toContainText("尚未开展");
+  await page.getByLabel("内容性质").selectOption("research_record");
+  await expect(page.getByTestId("result-count")).toHaveText("6");
+  await page.getByRole("button", { name: "适应视图", exact: true }).click();
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Q001-research-chain.png",
+    fullPage: true,
+  });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("#p-cmod-low-collisionality");
+  await page.locator(".citation button").click();
+  await expect(page.getByTestId("insight-paper-greenwald-2007")).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
 });
