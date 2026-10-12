@@ -17,6 +17,29 @@ Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.
 **EN** You may also submit a Pull Request for bilingual scientific content, corrections, code, tests, visualization, accessibility, or documentation.\
 **中文** 也可通过 Pull Request 贡献双语科学内容、勘误、代码、测试、图谱可视化、可访问性或文档改进。
 
+### Scientific literature contributions | 科学文献评议贡献
+
+**EN** Begin with the [literature catalogue](docs/literature/README.md) and use the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) for a new paper page. The existing four Issue forms and Pull Request process cover all literature contributions:
+
+**中文** 请先查阅[文献目录](docs/literature/README.md)，新增论文页面时沿用[双语评议模板](docs/literature/REVIEW_TEMPLATE.md)。文献贡献复用现有四种 Issue 表单和 Pull Request 流程：
+
+| Contribution / 贡献内容                                                                            | Existing route / 现有入口                                                                                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Recommend an original paper worth studying / 推荐值得研究的原始论文                                | Evidence Contribution / 证据贡献                                                                                                     |
+| Add a specific finding with its conditions and source locator / 贡献具体科学证据及其条件与原文位置 | Evidence Contribution / 证据贡献                                                                                                     |
+| Correct an error or omission in a review / 指出评议中的错误或遗漏                                  | Scientific Challenge, or a focused correction PR / 科学质疑，或勘误 PR                                                               |
+| Propose a competing physical explanation / 提出竞争性物理解释                                      | Scientific Challenge / 科学质疑                                                                                                      |
+| Add a mathematical, simulation, or experimental verification method / 补充数学、模拟或实验验证方法 | Verification Proposal / 验证提案                                                                                                     |
+| Submit a new English–Chinese scientific review / 提交新的中英双语科学文献评议                      | Pull Request; Research Question for unresolved questions raised by the review / Pull Request；评议引出的未解决问题可使用科学问题表单 |
+
+**EN** For a review PR, create one file in `docs/literature/papers/`, link it from the relevant domain sections, and update the distinct-paper counts in the catalogue and README when warranted. Check for an existing DOI record to avoid duplicate pages; retain graph source and finding IDs when present, link the related question, and separate reported results, authors' interpretations, and FRA analysis. Record actual reading scope, claim assessment, review date/version, and any independent verification with its evidence. Mark unfinished sections as pending. Keep indexed, reviewed, and independently verified counts separate, and add verified claims to graph data only in a subsequent, explicitly supported change.
+
+**中文** 提交评议 PR 时，在 `docs/literature/papers/` 新建一个文件，从相关领域栏目链接该文件，并在实际状态变化时同步更新目录与 README 的去重统计。先查找已有 DOI 记录，避免重复页面；如已有图谱来源与发现 ID，应保留这些标识并关联科学问题，区分原文报告结果、作者解释和 FRA 分析。记录实际阅读范围、主张核验程度、评议日期与版本，以及独立验证的证据。未完成栏目明确标为待研究，收录、完成评议和独立验证分别计数。后续只有具备明确科学依据时，才另行将经核验的主张加入图谱数据。
+
+**EN** For changes confined to Markdown, check the changed files with the existing Prettier installation, run `git diff --check`, and verify relative links, section anchors, source links, bilingual correspondence, counts, and status descriptions. Browser regression is needed when browser behaviour changes.
+
+**中文** 仅修改 Markdown 时，使用现有 Prettier 检查修改文件，执行 `git diff --check`，并核对相对链接、章节锚点、来源链接、双语对应、统计和状态描述。修改浏览器行为时再执行浏览器回归测试。
+
 ## 2. A useful scientific submission | 一份有价值的科学贡献
 
 You do not need complete scientific answers to start a discussion. Required form fields must be filled; explicitly mark unknown information as unknown / 发起讨论无需已有完整科学答案，但须填写表单必填字段；尚不清楚的信息可明确标注为未知。
