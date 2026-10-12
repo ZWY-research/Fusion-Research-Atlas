@@ -4,7 +4,7 @@ import { ui } from "./i18n";
 // Pin the studied documents so links work while the research PR is still open.
 const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
 const studyVersions: Record<string, string> = {
-  "paper-mordijck-2020": "509a9aafa4005711835fc31ff4af3387f1db382f",
+  "paper-mordijck-2020": "74bd06f48ec06a67a15464d0f6a4200a72096d0f",
 };
 const studyPages: Record<string, string> = {
   "paper-angioni-2003": "angioni-2003.md",

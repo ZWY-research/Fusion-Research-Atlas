@@ -389,7 +389,7 @@ test("Mordijck transport chain links full study while keeping mechanisms conditi
   const insight = page.getByTestId("insight-paper-mordijck-2020");
   await expect(insight).toHaveAttribute(
     "href",
-    /\/blob\/[a-f0-9]{40}\/docs\/literature\/papers\/mordijck-2020\.md$/,
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/74bd06f48ec06a67a15464d0f6a4200a72096d0f/docs/literature/papers/mordijck-2020.md",
   );
   await expect(insight).toHaveText("科研成果解读 ↗");
   await paper.locator("details summary").click();
