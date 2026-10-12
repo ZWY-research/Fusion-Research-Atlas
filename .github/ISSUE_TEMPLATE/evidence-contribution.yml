@@ -1,0 +1,70 @@
+name: "Evidence Contribution / 证据贡献"
+description: "Contribute scientific questions, evidence and verification paths to FRA."
+title: "[evidence-contribution] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please contribute only material you have permission to make public. Metadata checks do not verify scientific claims. 欢迎中英文贡献。"
+  - type: textarea
+    id: question
+    attributes:
+      label: "Scientific question / 科学问题"
+      description: "State the question or claim precisely."
+    validations:
+      required: true
+  - type: textarea
+    id: domain
+    attributes:
+      label: "Research domains / 研究领域"
+      description: "List relevant FRA domains; multiple domains are welcome."
+    validations:
+      required: true
+  - type: textarea
+    id: knowledge
+    attributes:
+      label: "Existing understanding / 现有认识"
+      description: "What is known, assumed or disputed?"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "New evidence or hypothesis / 新证据或假设"
+      description: "Distinguish measured results, literature context and candidate hypotheses."
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: "DOI or traceable source / DOI 或可追溯来源"
+      description: "Use https://doi.org/{doi}; disclose when there is no DOI. Do not fabricate sources."
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: "Physical scope and limitations / 物理范围与限制"
+      description: "Specify device, regime, assumptions and uncertainties."
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: "Proposed verification / 建议验证方式"
+      description: "Describe distinguishable predictions, inputs and decision criteria."
+    validations:
+      required: true
+  - type: textarea
+    id: counterevidence
+    attributes:
+      label: "Counterevidence / 相反证据"
+      description: "Describe conflicting findings or alternatives; unknown does not mean absent."
+    validations:
+      required: false
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: "Public sharing / 公开权限"
+      options:
+        - label: "I have permission to share this material publicly and have excluded credentials and private data."
+          required: true

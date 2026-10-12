@@ -1,0 +1,35 @@
+[
+  {
+    "doi": "10.1103/physrevlett.90.205003",
+    "title": "Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas",
+    "authors": [
+      "C. Angioni",
+      "A. G. Peeters",
+      "G. V. Pereverzev",
+      "F. Ryter",
+      "G. Tardini"
+    ],
+    "journal": "Physical Review Letters",
+    "year": 2003
+  },
+  {
+    "doi": "10.1088/0029-5515/47/9/033",
+    "title": "Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations",
+    "authors": [
+      "C. Angioni",
+      "H. Weisen",
+      "O.J.W.F. Kardaun",
+      "M. Maslov",
+      "A. Zabolotsky",
+      "C. Fuchs",
+      "L. Garzotti",
+      "C. Giroud",
+      "B. Kurzan",
+      "P. Mantica",
+      "A.G. Peeters",
+      "J. Stober"
+    ],
+    "journal": "Nuclear Fusion",
+    "year": 2007
+  }
+]

@@ -1,66 +1,70 @@
 # Fusion Research Atlas
 
-V0.1 交互式科研图谱原型，使用 React、TypeScript、Vite 与 Cytoscape.js。正式仓库名称为 `Fusion-Research-Atlas`。
+Fusion Research Atlas is an open, collaborative and evolving atlas of scientific questions and research progress in fusion science, organized around scientific evidence.
 
-- GitHub 仓库：[ZWY-research/Fusion-Research-Atlas](https://github.com/ZWY-research/Fusion-Research-Atlas)
-- 网站入口：[Fusion Research Atlas](https://zwy-research.github.io/Fusion-Research-Atlas/)
+Fusion Research Atlas 是一个开放协作、由科学证据驱动、持续演化的聚变科学问题与研究进展图谱。
 
-## 本地运行
+- Repository: https://github.com/ZWY-research/Fusion-Research-Atlas
+- Website: https://zwy-research.github.io/Fusion-Research-Atlas/
+- **V0.2 · Scientific Research Prototype / 科学研究原型**
 
-需要 Node.js 24 LTS 与 npm。
+## Research platform
+
+The website combines About FRA, Scientific Domains, Research Methodology, Evidence & Verification, an interactive Cytoscape atlas and Open Collaboration. The atlas remains the default view; English and Chinese UI and scientific fields share stable identifiers. Node and relationship selections support hash deep links.
+
+FRA identifies phenomena, organizes existing understanding, exposes model limitations, studies competing mechanisms, develops verification paths, tracks changes in evidence and explores connections between questions. Physical laws provide the foundation; experimental, simulation, mathematical and literature evidence constrain understanding. New hypotheses require distinguishable predictions, and understanding remains revisable.
+
+## Scientific domains and progress
+
+Eight maintained domains cover particle/heat/momentum transport, turbulence/microinstabilities, MHD/stability, heating/current drive, edge/plasma-wall interaction, burning plasma physics, diagnostics/measurements and integrated modeling/control. Only tokamak electron-density transport and density peaking has a demonstration subgraph. Other dedicated domain atlases are future scope, not completed research.
+
+## Objects, evidence and DOI
+
+Seven object types: Question, Phenomenon, Knowledge, Hypothesis, Evidence, Gap and Verification (`method` remains compatible). Version 0.2 separates domain IDs, `contentStatus`, `epistemicStatus`, source type and five verification dimensions. Existing 15 object IDs, 20 relationship IDs and endpoints are preserved. The versioned migration supports the V0.1 no-source dataset; richer legacy bibliographies require explicit migration rather than fabricated metadata.
+
+Two real papers have Crossref and publisher bibliographic checks, with narrowly scoped abstract-level findings: `10.1103/physrevlett.90.205003` and `10.1088/0029-5515/47/9/033`. Their context citations do not verify the demonstration graph. Metadata checks are separate from abstract/full-text review, claim verification and independent validation. Full text and figures have not been checked. The website uses saved records and does not depend on Crossref at runtime. See [data and evidence model](docs/data-model.md).
+
+**The atlas remains demonstration data and candidate hypotheses, not new experimental findings or verified mechanisms.** Evidence nodes are evidence requirements. Real literature records do not make demonstration objects formal research results. Existing statements retain their original limitations. 来源核对不等于科学结论核验。
+
+## Research methodology
+
+Phenomenon Identification → Existing Knowledge → Scientific Questions → Competing Hypotheses → Evidence Assessment → Verification Design → Knowledge Update. Website cards specify actions, inputs, outputs and update criteria. Physical conditions, assumptions, uncertainty, experiment/simulation comparisons, counterevidence and falsifiable predictions matter more than formal checklists.
+
+## International participation
+
+English and Chinese contributions are welcome through GitHub: Research Question, Evidence Contribution, Scientific Challenge or Verification Proposal. Website buttons open the corresponding GitHub Issue Forms in the default branch. See [CONTRIBUTING](CONTRIBUTING.md). Share only material with public permission.
+
+## Development and verification
+
+Node.js 24 and npm are required.
 
 ```powershell
 npm ci
 npm run dev -- --host 127.0.0.1
 ```
 
-打开终端显示的 `/Fusion-Research-Atlas/` 地址。生产预览：
-
-```powershell
-npm run build
-npm run preview -- --host 127.0.0.1 --port 4173
-```
-
-入口为 http://127.0.0.1:4173/Fusion-Research-Atlas/ 。这是本地预览地址，不是运行时配置。GitHub Pages 路径为 `/Fusion-Research-Atlas/`。
-
-## 功能与数据
-
-图谱支持拖动、缩放、节点选择、关系高亮、名称及关键词搜索、类型和证据状态组合筛选。左侧节点列表可使用键盘浏览。节点采用 hash 深链接，可刷新与前进后退，无需服务器路径重写。
-
-数据独立存于 `public/data/electron-density.json`，通过 Vite 的 BASE_URL 请求；`src/model.ts` 定义并在运行时验证版本化模型。包含科学问题、现象、知识、假设、证据、研究缺口和验证方法。关系同时记录方向、语义、状态、依据与来源。
-
-**首个子图是明确标记的研究组织示例，不包含真实实验数据，也不提供已核验的文献证据。** 证据节点表示待获取的证据种类，假设不等于结论。不得将示例用作论文或实验报告中的已验证事实。增加真实来源时应逐项核查来源对结论的支持范围。
-
-## 验证
+Open `/Fusion-Research-Atlas/` on the terminal's port. For production preview:
 
 ```powershell
 npm run validate:data
 npm run typecheck
 npm test
+npm run lint
 npm run build
-npx playwright install chromium
-$env:FRA_SCREENSHOT_DIR = '<本地审查截图目录>'
-npm run test:browser
+npm run preview -- --host 127.0.0.1 --port 4173
 ```
 
-浏览器测试检查生产构建的真实画布交互、详情、搜索、筛选、hash 刷新、手机布局和加载失败。测试与截图结果保存在本地审查工作区，勿提交私有科研材料。
-
-源码使用 MIT License；公开示例数据同样以 MIT 授权。以后引入的论文、图片和实验数据需单独确认公开权限与许可。
-
-若本机已安装 Chrome，可省去 Chromium 下载，测试前设置：
+Real Chrome tests:
 
 ```powershell
 $env:FRA_BROWSER_CHANNEL = 'chrome'
+npm run test:browser
 ```
 
-未设置 FRA_SCREENSHOT_DIR 时，截图默认保存到 test-results/screenshots。
+Without installed Chrome, run `npx playwright install chromium` and omit the channel variable. Screenshots default to test-results/screenshots; FRA_SCREENSHOT_DIR can select a local review directory. Optional `npm run verify:doi -- --output <report.json>` rechecks DOI/title/authors/year/journal against Crossref without promoting scientific statuses.
 
-## 贡献
+## GitHub Pages and licensing
 
-欢迎通过 GitHub Issues 报告问题，或提交 Pull Request 改善交互、文档与测试。提交前请运行数据校验、类型检查、单元测试、lint 和生产构建；涉及界面时请复验浏览器交互。
+Vite base is `/Fusion-Research-Atlas/`. The existing main-only Actions workflow uses Node.js 24, validates/tests/builds and uploads dist through official Pages Actions. Reviewed changes are integrated through pull requests; merging to main triggers the Pages build and deployment. Publication verifies the software release, not scientific conclusions.
 
-科学内容贡献必须说明来源、适用范围与证据状态，明确区分示例、假设与已核验材料，不得提交非公开实验数据、私人科研文件或认证凭据。新证据须先确认公开权限及许可，并逐条核验对主张的支持范围。
-
-## 自动部署
-
-`.github/workflows/deploy.yml` 在 push main 或手动触发时使用 Node.js 24 安装依赖、验证数据与类型、运行测试和 lint、构建 dist，并通过 GitHub 官方 Pages Actions 部署。站点采用 hash 深链接。
+Original source code and original illustrative descriptions use MIT License. Bibliographic facts and short original abstract-level summaries do not grant rights to publisher full text, figures or future datasets. Obtain separate permission for copyrighted or private materials; no paper full text or private experiments are bundled in the repository.

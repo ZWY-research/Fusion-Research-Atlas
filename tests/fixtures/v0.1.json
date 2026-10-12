@@ -1,0 +1,420 @@
+{
+  "schemaVersion": "0.1",
+  "title": "电子密度输运与密度峰化",
+  "disclaimer": "所有对象均为明确标记的研究组织示例；不含真实实验数据与已核验文献证据。",
+  "sources": [],
+  "nodes": [
+    {
+      "id": "q-density",
+      "label": "密度峰化由什么决定？",
+      "kind": "question",
+      "status": "example",
+      "summary": "区分粒子源、扩散与对流对密度剖面的贡献。",
+      "details": "研究组织示例：限定放电条件后再讨论输运机制，不能由密度峰化单独推断粒子通量。",
+      "tags": ["电子密度", "输运"],
+      "sourceIds": [],
+      "position": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "p-peaking",
+      "label": "芯部密度峰化",
+      "kind": "phenomenon",
+      "status": "example",
+      "summary": "描述中心密度相对参考密度的增强。",
+      "details": "待观察的现象类别，并非本项目测量结果。峰化因子的定义、空间范围与时间窗必须先固定。",
+      "tags": ["密度剖面"],
+      "sourceIds": [],
+      "position": {
+        "x": 0,
+        "y": -260
+      }
+    },
+    {
+      "id": "k-balance",
+      "label": "粒子守恒与源项",
+      "kind": "knowledge",
+      "status": "example",
+      "summary": "以守恒框架组织密度演化、粒子通量和粒子源。",
+      "details": "示例模型框架：∂n/∂t + ∇·Γ = S；须说明通量面平均、几何和粒子种类等约定，不能直接把电子与离子源混同。",
+      "tags": ["连续性", "源项"],
+      "sourceIds": [],
+      "position": {
+        "x": -330,
+        "y": -180
+      }
+    },
+    {
+      "id": "k-flux",
+      "label": "扩散与对流分解",
+      "kind": "knowledge",
+      "status": "example",
+      "summary": "在简化框架下用 Γ = −D∇n + Vn 组织讨论。",
+      "details": "这里只展示建模语言，D 与 V 不能从一条稳态密度剖面唯一确定。方向约定为径向向外为正。",
+      "tags": ["D", "V", "粒子通量"],
+      "sourceIds": [],
+      "position": {
+        "x": -390,
+        "y": 70
+      }
+    },
+    {
+      "id": "h-pinch",
+      "label": "向内对流贡献假设",
+      "kind": "hypothesis",
+      "status": "hypothesis",
+      "summary": "检验有效向内对流是否能解释部分峰化。",
+      "details": "V < 0 在向外为正的约定下表示向内；该假设尚未在任何具体放电上验证，也不意味着所有条件下均存在向内对流。",
+      "tags": ["pinch", "对流"],
+      "sourceIds": [],
+      "position": {
+        "x": 330,
+        "y": -180
+      }
+    },
+    {
+      "id": "h-source",
+      "label": "粒子源贡献假设",
+      "kind": "hypothesis",
+      "status": "hypothesis",
+      "summary": "检验粒子源分布是否影响芯部密度剖面。",
+      "details": "源与输运可能耦合。必须限定加料条件并估算源分布，避免把相关性当成机制证据。",
+      "tags": ["加料", "源项"],
+      "sourceIds": [],
+      "position": {
+        "x": 390,
+        "y": 70
+      }
+    },
+    {
+      "id": "g-identify",
+      "label": "源与输运难以辨识",
+      "kind": "gap",
+      "status": "example",
+      "summary": "静态剖面不足以唯一识别机制。",
+      "details": "这里描述待解决的研究设计问题。需传播诊断误差与模型不确定度，比较多个解释并寻找可区分的预测。",
+      "tags": ["可辨识性"],
+      "sourceIds": [],
+      "position": {
+        "x": -190,
+        "y": 250
+      }
+    },
+    {
+      "id": "m-profile",
+      "label": "密度剖面诊断",
+      "kind": "method",
+      "status": "example",
+      "summary": "建立有空间、时间和不确定度信息的密度剖面。",
+      "details": "可规划 Thomson scattering 或其他适合装置的诊断，并执行标定与一致性检查；未宣称任何诊断数据已取得。",
+      "tags": ["Thomson", "诊断"],
+      "sourceIds": [],
+      "position": {
+        "x": -200,
+        "y": -360
+      }
+    },
+    {
+      "id": "m-modulation",
+      "label": "加料调制实验",
+      "kind": "method",
+      "status": "example",
+      "summary": "以扰动响应增加粒子输运辨识约束。",
+      "details": "仅为拟议验证方法：定义扰动幅度、频率、边界条件与源模型，检验模型假设是否适用。",
+      "tags": ["调制", "扰动"],
+      "sourceIds": [],
+      "position": {
+        "x": 200,
+        "y": 360
+      }
+    },
+    {
+      "id": "m-simulation",
+      "label": "输运模型对比",
+      "kind": "method",
+      "status": "example",
+      "summary": "比较候选机制对剖面及扰动的预测。",
+      "details": "规划模型比较而不是展示模拟结果。需要独立验证、适用范围与预测不确定度，防止只拟合稳态剖面。",
+      "tags": ["模拟", "验证"],
+      "sourceIds": [],
+      "position": {
+        "x": -200,
+        "y": 360
+      }
+    },
+    {
+      "id": "e-profile",
+      "label": "剖面与误差证据",
+      "kind": "evidence",
+      "status": "example",
+      "summary": "待获取：剖面测量、标定记录和误差估计。",
+      "details": "证据需求占位，不含数值、不含实验记录，也不表示证据已存在。取得数据后须附公开授权、来源、版本与处理方法。",
+      "tags": ["测量", "误差"],
+      "sourceIds": [],
+      "position": {
+        "x": 200,
+        "y": -360
+      }
+    },
+    {
+      "id": "e-response",
+      "label": "扰动响应证据",
+      "kind": "evidence",
+      "status": "example",
+      "summary": "待获取：调制输入与密度响应的时间序列。",
+      "details": "证据需求占位，不能用作支持假设的结果。真实数据应包含时间同步、重复性、噪声和传递函数不确定度。",
+      "tags": ["时间序列"],
+      "sourceIds": [],
+      "position": {
+        "x": 0,
+        "y": 260
+      }
+    },
+    {
+      "id": "g-source",
+      "label": "粒子源不确定度",
+      "kind": "gap",
+      "status": "example",
+      "summary": "估计源分布的不确定度及其对反演的影响。",
+      "details": "拟议研究问题。当前没有任何装置的源计算或沉积数据；不能据此判断特定装置的误差大小。",
+      "tags": ["不确定度"],
+      "sourceIds": [],
+      "position": {
+        "x": 330,
+        "y": 250
+      }
+    },
+    {
+      "id": "q-discriminate",
+      "label": "怎样区分候选机制？",
+      "kind": "question",
+      "status": "example",
+      "summary": "寻找能够排除替代解释的观测与实验。",
+      "details": "研究设计示例：将可区分的预测与证据需求一一对应，并预先定义判断准则。",
+      "tags": ["研究设计"],
+      "sourceIds": [],
+      "position": {
+        "x": -330,
+        "y": -290
+      }
+    },
+    {
+      "id": "m-source",
+      "label": "粒子源估算",
+      "kind": "method",
+      "status": "example",
+      "summary": "对加料、沉积及边界源做一致的估算。",
+      "details": "方法规划示例，需依据装置和放电条件选择源模型；未提供真实源强或沉积计算。",
+      "tags": ["加料", "源模型"],
+      "sourceIds": [],
+      "position": {
+        "x": 330,
+        "y": -290
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "r-01",
+      "source": "p-peaking",
+      "target": "q-density",
+      "relation": "motivates",
+      "label": "引出问题",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-02",
+      "source": "k-balance",
+      "target": "q-density",
+      "relation": "contextualizes",
+      "label": "组织守恒框架",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-03",
+      "source": "k-flux",
+      "target": "q-density",
+      "relation": "contextualizes",
+      "label": "提供建模框架",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-04",
+      "source": "h-pinch",
+      "target": "p-peaking",
+      "relation": "may_explain",
+      "label": "可能解释",
+      "status": "hypothesis",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-05",
+      "source": "h-source",
+      "target": "p-peaking",
+      "relation": "may_explain",
+      "label": "可能影响",
+      "status": "hypothesis",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-06",
+      "source": "q-density",
+      "target": "g-identify",
+      "relation": "requires",
+      "label": "需要辨识",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-07",
+      "source": "q-density",
+      "target": "q-discriminate",
+      "relation": "requires",
+      "label": "需要区分机制",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-08",
+      "source": "m-profile",
+      "target": "e-profile",
+      "relation": "requires",
+      "label": "需要获取",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-09",
+      "source": "e-profile",
+      "target": "p-peaking",
+      "relation": "describes",
+      "label": "拟用于表征",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-10",
+      "source": "m-modulation",
+      "target": "h-pinch",
+      "relation": "tests",
+      "label": "拟检验",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-11",
+      "source": "m-modulation",
+      "target": "e-response",
+      "relation": "requires",
+      "label": "需要获取",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-12",
+      "source": "e-response",
+      "target": "g-identify",
+      "relation": "constrains",
+      "label": "拟约束辨识",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-13",
+      "source": "m-simulation",
+      "target": "h-pinch",
+      "relation": "tests",
+      "label": "拟检验",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-14",
+      "source": "m-simulation",
+      "target": "h-source",
+      "relation": "tests",
+      "label": "拟检验",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-15",
+      "source": "g-source",
+      "target": "h-source",
+      "relation": "constrains",
+      "label": "限制可解释性",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-16",
+      "source": "m-source",
+      "target": "g-source",
+      "relation": "tests",
+      "label": "拟量化",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-17",
+      "source": "m-source",
+      "target": "h-source",
+      "relation": "tests",
+      "label": "拟检验",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-18",
+      "source": "q-discriminate",
+      "target": "m-modulation",
+      "relation": "requires",
+      "label": "需要验证设计",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-19",
+      "source": "k-balance",
+      "target": "k-flux",
+      "relation": "contextualizes",
+      "label": "约束通量定义",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    },
+    {
+      "id": "r-20",
+      "source": "e-profile",
+      "target": "m-simulation",
+      "relation": "constrains",
+      "label": "拟约束模型",
+      "status": "example",
+      "rationale": "拟议研究逻辑关系，尚无本项目实验或已核验文献支持；不表示已证实因果。",
+      "sourceIds": []
+    }
+  ]
+}
