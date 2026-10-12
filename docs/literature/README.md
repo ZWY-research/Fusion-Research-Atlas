@@ -1,106 +1,103 @@
-# Scientific Literature Reviews | 科学文献评议
+# Research Insights | 科研成果解读
 
-[Project README / 项目首页](../../README.md) · [Contribution guide / 贡献指南](../../CONTRIBUTING.md) · [Review template / 评议模板](REVIEW_TEMPLATE.md) · [Atlas question q-density / 图谱问题 q-density](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
+[Project README / 项目首页](../../README.md) · [Contribution guide / 贡献指南](../../CONTRIBUTING.md) · [Research Insights template / 解读模板](REVIEW_TEMPLATE.md) · [q-density / 图谱问题](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
 
-**EN** This catalogue connects original papers to FRA's scientific questions and evidence records across the eight existing research domains. Paper pages preserve the DOI, graph identifiers, source scope, and actual review status. Angioni 2007 now has a completed review of the identified 22-page institutional author manuscript; Angioni 2003 remains at bibliographic/abstract scope. Version-of-record concordance and independent scientific verification remain separate, unfinished checks.
+**EN** This catalogue connects original research to scientific questions, contributions, bounded findings, open questions and verification tasks. It respects authors' contributions and invites corrections and new evidence. Angioni 2007 and Greenwald 2007 now have completed source-based studies; their evidence enters six research records and eight relationships alongside the original demonstration graph. Empirical discrimination has advanced; microscopic transport closure remains open.
 
-**中文** 本目录按 FRA 现有八个研究领域，将原始论文连接至科学问题与证据记录。论文页面保留 DOI、图谱标识、来源范围和实际评议状态。Angioni 2007 已完成对明确的 22 页机构作者稿的科学评议，Angioni 2003 仍为书目及摘要级范围。正式发表版本一致性与独立科学验证是另行记录、尚未完成的检查。
+**中文** 本目录将原始研究连接至科学问题、具体贡献、有适用范围的发现、开放问题及验证任务，尊重作者贡献并欢迎修订与新证据。Angioni 2007 和 Greenwald 2007 已完成基于实际来源的研读；相关证据通过六个科研记录和八条关系进入原演示图谱。经验判别得到推进，微观输运闭合仍然开放。
 
 ## Status and counts | 状态与统计
 
-| Status / 状态                                                                  | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                                                                  |
-| ------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Indexed Papers / 已收录论文](#indexed-papers)                                 | **2**                        | A traceable literature record exists / 已建立可追溯文献记录                                                                                                                     |
-| [Completed Scientific Reviews / 已完成科学评议](#completed-scientific-reviews) | **1**                        | The paper's full text and relevant scientific claims have actually been systematically studied and reviewed / 已实际完成论文正文及相关科学主张的系统研究与评议                  |
-| [Independently Verified / 已完成独立验证](#independently-verified)             | **0**                        | Specified scientific results have an evidenced independent recheck, computational reproduction, or experimental test / 对明确科研结果已有具备证据的独立复核、计算复现或实验检验 |
+| Status / 状态                                                              | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                   |
+| -------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [Indexed Papers / 已收录论文](#indexed-papers)                             | **3**                        | Traceable paper records / 可追溯论文记录                                                                                         |
+| [Completed Research Studies / 已完成深入研读](#completed-research-studies) | **2**                        | Actual full-text and relevant-claim study, with source and access limits recorded / 已实际研读全文及相关主张，记录来源和访问边界 |
+| [Independently Verified / 已完成独立验证](#independently-verified)         | **0**                        | Specified scientific results independently reproduced or tested / 明确科研结果已独立复现或检验                                   |
 
-**EN** Status as of 12 October 2026, based on the [existing source records](../../public/data/electron-density.json) and the paper pages below. Count each normalised DOI once (or a stable source ID for a paper without a DOI), irrespective of domain assignments. These are separate progress measures; independent verification must identify the result and the extent actually tested. DOI validation is not scientific review, and review is not independent verification.
+**EN** As of 12 October 2026, based on [source records](../../public/data/electron-density.json) and the studies below. Count each normalised DOI once across domains. Source reading and claim checking are not independent verification; software validation is not physical validation.
 
-**中文** 状态截至 2026 年 10 月 12 日，依据[现有来源记录](../../public/data/electron-density.json)及下列论文页面。按规范化 DOI 去重，无 DOI 时按稳定来源 ID 去重，不累加领域关联次数。这些指标分别反映不同工作；独立验证必须注明实际检验的结果与范围。DOI 核验不等于科学评议，评议不等于独立验证。
+**中文** 截至 2026 年 10 月 12 日，依据[来源记录](../../public/data/electron-density.json)及下列研读。规范化 DOI 跨领域仅计一次。原文阅读与主张检查不等于独立验证，软件检查不等于物理验证。
 
 <a id="indexed-papers"></a>
 
 ## Indexed Papers | 已收录论文
 
-| Paper / 论文                                                                                                                                           | DOI                                                                            | FRA source ID / 来源标识 | Actual scope and status / 实际范围与状态                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                               | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata and abstract checked; pending full-text review / 已检查书目和摘要；待全文评议                                 |
-| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md) | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Completed review of the institutional author manuscript; not independently verified / 已完成机构作者稿评议；未独立验证 |
+| Paper / 论文                                                                                                                                                               | DOI                                                                            | FRA source ID / 来源标识 | Actual scope / 实际范围                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------------------------------- |
+| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                                                   | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata/abstract; pending full-text study / 书目与摘要；待全文研读         |
+| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md)                     | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Completed institutional author-manuscript study / 已完成机构作者稿研读      |
+| [Greenwald et al. (2007): Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings](papers/greenwald-2007.md) | [10.1088/0029-5515/47/9/L03](https://doi.org/10.1088/0029-5515/47/9/L03)       | `paper-greenwald-2007`   | Completed original-letter extracted-text study / 已完成原刊短文提取全文研读 |
 
+<a id="completed-research-studies"></a>
 <a id="completed-scientific-reviews"></a>
 
-## Completed Scientific Reviews | 已完成科学评议
+## Completed Research Studies | 已完成深入研读
 
-**1 — [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md).**
+1. **[Angioni 2007](papers/angioni-2007.md) — FRA-Q001-R01-A01.** Full 22-page institutional author manuscript, four figures, four tables, five numbered equations, nine source-anchored claims. Journal-version numerical concordance remains unverified. / 22 页机构作者稿、四图、四表、五个编号方程及九项已定位主张；期刊版本数值一致性未确认。
+2. **[Greenwald 2007](papers/greenwald-2007.md) — FRA-Q001-R02.** Journal L26–L29 extracted full text, three sections, four figure captions, Eq. (1) and reference chain. Figure-image access and diagnostic/coordinate details remain unchecked or unresolved. / 原刊 L26—L29 提取全文、三节正文、四图注、式（1）及引用链；原图像访问、诊断和坐标细节仍有限制或待解决。
 
-**EN** Review FRA-Q001-R01-A01 covers the complete 22-page Max Planck institutional author manuscript, four figures, four tables, five numbered equations and nine source-located claims. It distinguishes the global peaking observable, conditional source attribution and competing ITER extrapolations. Numerical concordance with the journal version remains unverified; independent reproduction was not performed. Angioni 2003 remains pending.
+**EN** The JSON now records the checked full-text scope and selected bounded findings of both studies. Existing abstract finding IDs retain their original meanings, and all original demonstration objects remain demonstration objects. Neither paper is independently reproduced.
 
-**中文** FRA-Q001-R01-A01 覆盖 Max Planck 22 页机构作者稿全文、四图、四表、五个编号方程及九项已定位主张，区分全局峰化观测量、有条件的源归因与竞争 ITER 外推。与期刊版本的数值一致性尚未核实，没有开展独立复现。Angioni 2003 仍待评议。
-
-**EN** The Markdown page records the new review. The unchanged JSON remains the historical graph-data snapshot with metadata/abstract checks; this review does not promote graph claims or verification flags.
-
-**中文** Markdown 页面记录本次新增评议；未修改的 JSON 仍是书目/摘要检查的历史图谱快照。本次评议不提升图谱主张或验证标记。
+**中文** JSON 已记录两项研读的实际全文范围和选定的有边界发现。原摘要发现 ID 保持原义，原有演示对象保持演示状态。两篇均未独立复现。
 
 <a id="independently-verified"></a>
 
 ## Independently Verified | 已完成独立验证
 
-**0 — No independently verified results recorded yet / 暂无已完成独立验证的结果记录。**
+**0 — No independent scientific verification recorded / 暂无独立科学验证记录。**
 
-**EN** No independent reproduction or scientific validation is recorded for either indexed paper. Their links to the demonstration graph are contextual citations, not verified support for graph claims.
+**EN** Cross-device observations reported in a paper are evidence used by FRA; reading that paper is not FRA's own independent reproduction. Source-specific reading limits remain visible in the site and paper pages.
 
-**中文** 两篇论文均未记录独立复现或科学验证。它们与演示图谱的关联属于背景引用，不代表图谱主张已得到验证。
+**中文** 文献报告的跨装置观测是 FRA 使用的证据；阅读该文献不等于 FRA 自身开展独立复现。网站和论文页保留各来源的阅读边界。
 
 ## Browse by research domain | 按研究领域浏览
 
-**EN** Domain names and IDs follow the [current FRA framework](../../src/content/framework.json). A paper may appear in multiple domains; these links point to one canonical paper page and must not be summed as additional papers. Both initial records have primary scope in transport and a contextual association with turbulence through `q-density`; this association does not establish a turbulence mechanism.
+**EN** Names and IDs follow the [existing framework](../../src/content/framework.json). All three papers have primary transport relevance and a contextual turbulence association. This association does not establish a microscopic turbulence mechanism. Each paper is counted once overall.
 
-**中文** 领域名称与 ID 沿用[现有 FRA 框架](../../src/content/framework.json)。同一篇论文可关联多个领域，但链接均指向唯一论文页面，不额外计数。两篇初始记录主要属于输运领域，并通过 `q-density` 与湍流领域具有背景关联；这一关联不代表湍流机制得到证实。
+**中文** 名称与 ID 沿用[现有框架](../../src/content/framework.json)。三篇主要关联输运，并与湍流具有背景联系；此关联不证明微观湍流机制。每篇总体只计一次。
 
 ### 1. Particle, Heat & Momentum Transport | 粒子、热量与动量输运
 
-Domain ID / 领域标识：`transport`。Indexed / 已收录：2；completed reviews / 已完成评议：1。
+Domain / 领域：`transport`。Indexed / 收录：**3**；completed studies / 已完成研读：**2**。
 
-- [Angioni et al. (2003) / Angioni 等（2003）](papers/angioni-2003.md) — Pending full-text review / 待全文评议。
-- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Completed manuscript review; not independently verified / 已完成作者稿评议；未独立验证。
-
-One completed manuscript review: Angioni 2007; the same paper is counted once across domains / 一篇已完成作者稿评议：Angioni 2007；跨领域仍只计一次。
+- [Angioni 2003](papers/angioni-2003.md) — Pending full text / 待全文研读。
+- [Angioni 2007](papers/angioni-2007.md) — Completed manuscript study / 已完成作者稿研读。
+- [Greenwald 2007](papers/greenwald-2007.md) — Completed original-letter text study / 已完成原刊短文文本研读。
 
 ### 2. Turbulence & Microinstabilities | 湍流与微观不稳定性
 
-Domain ID / 领域标识：`turbulence`。Indexed / 已收录：2；completed reviews / 已完成评议：1。
+Domain / 领域：`turbulence`。Indexed contextual associations / 收录背景关联：**3**；completed studies / 已完成研读：**2**。
 
-- [Angioni et al. (2003) / Angioni 等（2003）](papers/angioni-2003.md) — Context for q-density; Pending full-text review / q-density 研究背景；待全文评议。
-- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Context for q-density; completed manuscript review / q-density 研究背景；已完成作者稿评议。
-
-One completed manuscript review: Angioni 2007; the same paper is counted once across domains / 一篇已完成作者稿评议：Angioni 2007；跨领域仍只计一次。
+- [Angioni 2003](papers/angioni-2003.md) — q-density context; pending full text / 背景；待全文。
+- [Angioni 2007](papers/angioni-2007.md) — Conditional mechanism discussion / 有条件的机制讨论。
+- [Greenwald 2007](papers/greenwald-2007.md) — Empirical discrimination; mechanism unresolved / 经验判别；机制未解。
 
 ### 3. MHD & Plasma Stability | MHD 与等离子体稳定性
 
-Domain ID / 领域标识：`mhd`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`mhd`。No indexed or completed studies / 暂无收录或已完成研读。
 
 ### 4. Heating & Current Drive | 加热与电流驱动
 
-Domain ID / 领域标识：`heating`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`heating`。No indexed or completed studies / 暂无收录或已完成研读。
 
 ### 5. Edge & Plasma-Wall Interaction | 边缘与等离子体壁相互作用
 
-Domain ID / 领域标识：`edge`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`edge`。No indexed or completed studies / 暂无收录或已完成研读。
 
 ### 6. Burning Plasma Physics | 燃烧等离子体物理
 
-Domain ID / 领域标识：`burning`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`burning`。No indexed or completed studies / 暂无收录或已完成研读。
 
 ### 7. Plasma Diagnostics & Measurements | 等离子体诊断与测量
 
-Domain ID / 领域标识：`diagnostics`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`diagnostics`。No indexed or completed studies / 暂无收录或已完成研读。
 
 ### 8. Integrated Modeling & Control | 集成建模与控制
 
-Domain ID / 领域标识：`modeling`。No indexed papers yet / 暂无已收录论文。No reviewed papers yet / 暂无已完成评议的论文。
+Domain / 领域：`modeling`。No indexed or completed studies / 暂无收录或已完成研读。
 
-## Add a paper or review | 新增论文或评议
+## Add a study or correction | 新增研读或修订
 
-**EN** Reuse the [bilingual template](REVIEW_TEMPLATE.md), create one paper file in `papers/`, link it in the indexed list and relevant domains, then update the distinct-paper counts here and in the [project README](../../README.md) if the actual status warrants it. Retain existing source/finding IDs and connect related FRA questions. Use the [four existing Issue forms or a Pull Request](../../CONTRIBUTING.md) to contribute papers, evidence, challenges, verification tasks, or complete reviews. Research findings may enter the graph later once their claims and scope have been assessed.
+**EN** Reuse the [bilingual template](REVIEW_TEMPLATE.md), preserve paper/source/finding IDs, identify why the study matters, record contributions before limitations, and anchor findings to actual source material. Update counts only when the reading and claim-assessment scope warrants it. Authors and interdisciplinary collaborators may clarify conditions, add overlooked contributions, correct interpretations or propose new tests through [existing Issues and Pull Requests](../../CONTRIBUTING.md).
 
-**中文** 复用[双语模板](REVIEW_TEMPLATE.md)，在 `papers/` 创建唯一论文文件，将其加入收录列表与相关领域，再根据实际完成状态同步更新本目录及[项目 README](../../README.md)的去重统计。保留已有来源和发现 ID，关联 FRA 科学问题。通过[现有四种 Issue 表单或 Pull Request](../../CONTRIBUTING.md)贡献论文、证据、质疑、验证任务或完整评议。研究发现经主张和适用范围核验后，再逐步加入图谱。
+**中文** 复用[双语模板](REVIEW_TEMPLATE.md)，保留论文、来源和发现 ID，说明研究价值，先介绍贡献，再分析边界，按实际原始材料定位发现。仅在阅读与主张核验范围支持时更新统计。欢迎作者与跨学科研究者通过[现有 Issue 和 Pull Request](../../CONTRIBUTING.md)澄清条件、补充贡献、修正解读或提出新检验。

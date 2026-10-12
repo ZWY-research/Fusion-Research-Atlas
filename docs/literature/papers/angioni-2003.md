@@ -1,12 +1,23 @@
 # Angioni et al. (2003) | Angioni 等（2003）
 
-[Catalogue / 文献目录](../README.md) · [Review template / 评议模板](../REVIEW_TEMPLATE.md) · [Project README / 项目首页](../../../README.md)
+[Catalogue / 文献目录](../README.md) · [Research Insights template / 解读模板](../REVIEW_TEMPLATE.md) · [Project README / 项目首页](../../../README.md)
 
 **Status / 状态：Indexed paper; pending full-text review / 已收录论文；待全文评议。**
 
 **EN** This page transcribes the existing bibliographic and abstract-level research record. It is not a completed scientific review and does not record independent verification. The original source checks were recorded on 2026-10-10; the information page was prepared on 12 October 2026.
 
 **中文** 本页转录既有书目及摘要级研究记录，尚未完成科学评议，也未记录独立验证。原始来源检查日期为 2026-10-10；信息页面建立于 2026 年 10 月 12 日。
+
+## Why This Study Matters | 为什么选择这项研究？
+
+**EN** The checked abstract links density peaking, collisionality and anomalous pinch to q-density. This makes the paper a relevant historical starting point for tracing how the question developed. Its full-text methods and contribution boundaries remain to be studied.
+
+**中文** 已检查摘要将密度峰化、碰撞性和反常箍缩与 q-density 相连，因此适合作为追踪科学问题发展过程的早期研究起点。全文方法与贡献边界仍待研读。
+
+## Key Contributions at a Glance | 主要科学贡献概览
+
+- **EN** Selection value from the checked abstract: a reported peaking/collisionality association, recorded as `finding-2003`. / **中文** 已核验摘要的选题价值：报告峰化与碰撞性的关联，记录为 `finding-2003`。
+- **EN** Full-text contribution assessment remains pending; no new mechanism claim is added. / **中文** 全文贡献评价保留待研究，不增加新的机制结论。
 
 ## 1. Bibliographic Information | 论文基本信息
 
@@ -102,15 +113,15 @@
 
 ## 11. Review Status & References | 评议状态与参考资料
 
-| Dimension / 维度                             | Actual status / 实际状态                                                                                                                 |
-| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Metadata / 书目                              | `checked` — saved check 2026-10-10; Crossref recheck 2026-10-12 / 已检查，原记录日期 2026-10-10，Crossref 复核日期 2026-10-12            |
-| Abstract / 摘要                              | `checked` — existing record only; not a new full-text check / 已检查，沿用既有记录，不是新全文检查                                       |
-| Full text / 全文                             | `not_checked` / 未检查                                                                                                                   |
-| Specific graph claims / 具体图谱主张         | `not_checked`; q-density citations are `context`, with `claimVerified: false` / 未检查；q-density 引用为背景关联，`claimVerified: false` |
-| Completed scientific review / 已完成科学评议 | Pending full-text review / 待全文评议                                                                                                    |
-| Independent verification / 独立验证          | `not_checked`; no independent reproduction or test recorded / 未检查；未记录独立复现或检验                                               |
-| Page date/version / 页面日期与版本           | 2026-10-12, information record v0.1; scientific review not completed / 2026-10-12，信息记录 v0.1；科学评议未完成                         |
+| Dimension / 维度                          | Actual status / 实际状态                                                                                                                 |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Metadata / 书目                           | `checked` — saved check 2026-10-10; Crossref recheck 2026-10-12 / 已检查，原记录日期 2026-10-10，Crossref 复核日期 2026-10-12            |
+| Abstract / 摘要                           | `checked` — existing record only; not a new full-text check / 已检查，沿用既有记录，不是新全文检查                                       |
+| Full text / 全文                          | `not_checked` / 未检查                                                                                                                   |
+| Specific graph claims / 具体图谱主张      | `not_checked`; q-density citations are `context`, with `claimVerified: false` / 未检查；q-density 引用为背景关联，`claimVerified: false` |
+| Completed research study / 已完成深入研读 | Pending full-text review / 待全文评议                                                                                                    |
+| Independent verification / 独立验证       | `not_checked`; no independent reproduction or test recorded / 未检查；未记录独立复现或检验                                               |
+| Page date/version / 页面日期与版本        | 2026-10-12, information record v0.1; scientific review not completed / 2026-10-12，信息记录 v0.1；科学评议未完成                         |
 
 - [Original paper DOI / 原始论文 DOI](https://doi.org/10.1103/physrevlett.90.205003).
 - [Crossref metadata / Crossref 书目](https://api.crossref.org/works/10.1103/physrevlett.90.205003).

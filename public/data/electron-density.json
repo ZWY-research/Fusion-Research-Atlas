@@ -113,8 +113,8 @@
       "url": "https://doi.org/10.1088/0029-5515/47/9/033",
       "sourceType": "journal_article",
       "researchConditions": {
-        "zh": "ASDEX Upgrade 与 JET 的 H-mode 数据库；不外推到所有装置。",
-        "en": "H-mode observations from ASDEX Upgrade and JET; not generalized to all devices."
+        "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+        "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
       },
       "reportedFindings": [
         {
@@ -136,25 +136,195 @@
             "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
             "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
           }
+        },
+        {
+          "id": "finding-a07-covariance",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "limitations": {
+            "zh": "原文主张已核对，不是回归复现；正式发表版本数值一致性未确认；全局峰化不等于局部梯度响应，未唯一识别微观机制。",
+            "en": "Source claims checked, not regression reproduction; journal-version numerical concordance unverified; global peaking is not a local gradient response and microscopic mechanisms remain unidentified."
+          }
+        },
+        {
+          "id": "finding-a07-source",
+          "statement": {
+            "zh": "束流贡献估计依赖近似恒定热与粒子扩散比；该模型内束供粒不能解释全部峰化变化。",
+            "en": "Beam-source attribution assumes an approximately constant heat/particle diffusivity ratio; within these models beam fuelling cannot explain all peaking variation."
+          },
+          "locator": {
+            "zh": "作者稿第 3 节、式（1）—（2）；第 6 节；A07-C06",
+            "en": "Manuscript §3, Eqs. (1)–(2); §6; A07-C06"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "limitations": {
+            "zh": "原文主张已核对，不是回归复现；正式发表版本数值一致性未确认；全局峰化不等于局部梯度响应，未唯一识别微观机制。",
+            "en": "Source claims checked, not regression reproduction; journal-version numerical concordance unverified; global peaking is not a local gradient response and microscopic mechanisms remain unidentified."
+          }
+        },
+        {
+          "id": "finding-a07-prediction",
+          "statement": {
+            "zh": "拟合误差相近的竞争模型给出不同 ITER 峰化外推，不能以样本内误差确认跨装置预测。",
+            "en": "Competing models with similar fitting errors give different ITER peaking projections; in-sample error alone does not establish cross-device prediction."
+          },
+          "locator": {
+            "zh": "作者稿第 7 节、式（3）—（5）、图 4；A07-C07",
+            "en": "Manuscript §7, Eqs. (3)–(5), Fig. 4; A07-C07"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "limitations": {
+            "zh": "原文主张已核对，不是回归复现；正式发表版本数值一致性未确认；全局峰化不等于局部梯度响应，未唯一识别微观机制。",
+            "en": "Source claims checked, not regression reproduction; journal-version numerical concordance unverified; global peaking is not a local gradient response and microscopic mechanisms remain unidentified."
+          }
         }
       ],
       "limitations": {
-        "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
-        "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+        "zh": "原文主张已核对，不是回归复现；正式发表版本数值一致性未确认；全局峰化不等于局部梯度响应，未唯一识别微观机制。",
+        "en": "Source claims checked, not regression reproduction; journal-version numerical concordance unverified; global peaking is not a local gradient response and microscopic mechanisms remain unidentified."
       },
       "verificationStatus": {
         "metadata": "checked",
         "abstract": "checked",
-        "fullText": "not_checked",
-        "claim": "not_checked",
+        "fullText": "checked",
+        "claim": "checked",
         "independent": "not_checked"
       },
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-12",
       "metadataSources": [
         "https://api.crossref.org/works/10.1088/0029-5515/47/9/033",
-        "https://iopscience.iop.org/article/10.1088/0029-5515/47/9/033"
+        "https://iopscience.iop.org/article/10.1088/0029-5515/47/9/033",
+        "https://pure.mpg.de/rest/items/item_2142837_2/component/file_2142836/content"
       ],
-      "readingScope": "abstract",
+      "readingScope": "full_text",
+      "contentStatus": "research_record"
+    },
+    {
+      "id": "paper-greenwald-2007",
+      "doi": "10.1088/0029-5515/47/9/l03",
+      "title": "Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings",
+      "authors": [
+        "M. Greenwald",
+        "C. Angioni",
+        "J.W. Hughes",
+        "J. Terry",
+        "H. Weisen"
+      ],
+      "journal": "Nuclear Fusion",
+      "year": 2007,
+      "titleTranslation": {
+        "zh": "低碰撞性 H 模中的密度剖面峰化：Alcator C-Mod 数据与 ASDEX Upgrade/JET 定标的比较",
+        "en": "Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings"
+      },
+      "collectiveAuthors": [],
+      "volume": "47",
+      "issue": "9",
+      "pages": "L26-L29",
+      "doiUnavailableReason": null,
+      "url": "https://doi.org/10.1088/0029-5515/47/9/l03",
+      "sourceType": "journal_article",
+      "researchConditions": {
+        "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+        "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+      },
+      "reportedFindings": [
+        {
+          "id": "finding-g07-peaking",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "limitations": {
+            "zh": "已读原刊全文提取文本及四图注，原图像细节未核验；没有原始数据复现或独立验证。诊断链、磁通坐标对应及有限源账本不完整；经验支持不证明唯一微观机制。",
+            "en": "Original journal text extraction and all four captions read; figure-image details unchecked; no raw-data reproduction or independent verification. Diagnostic pipeline, flux-coordinate matching and finite-source inventory remain incomplete; empirical support does not prove a unique microscopic mechanism."
+          }
+        },
+        {
+          "id": "finding-g07-discrimination",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "limitations": {
+            "zh": "已读原刊全文提取文本及四图注，原图像细节未核验；没有原始数据复现或独立验证。诊断链、磁通坐标对应及有限源账本不完整；经验支持不证明唯一微观机制。",
+            "en": "Original journal text extraction and all four captions read; figure-image details unchecked; no raw-data reproduction or independent verification. Diagnostic pipeline, flux-coordinate matching and finite-source inventory remain incomplete; empirical support does not prove a unique microscopic mechanism."
+          }
+        },
+        {
+          "id": "finding-g07-transfer",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "limitations": {
+            "zh": "已读原刊全文提取文本及四图注，原图像细节未核验；没有原始数据复现或独立验证。诊断链、磁通坐标对应及有限源账本不完整；经验支持不证明唯一微观机制。",
+            "en": "Original journal text extraction and all four captions read; figure-image details unchecked; no raw-data reproduction or independent verification. Diagnostic pipeline, flux-coordinate matching and finite-source inventory remain incomplete; empirical support does not prove a unique microscopic mechanism."
+          }
+        }
+      ],
+      "limitations": {
+        "zh": "已读原刊全文提取文本及四图注，原图像细节未核验；没有原始数据复现或独立验证。诊断链、磁通坐标对应及有限源账本不完整；经验支持不证明唯一微观机制。",
+        "en": "Original journal text extraction and all four captions read; figure-image details unchecked; no raw-data reproduction or independent verification. Diagnostic pipeline, flux-coordinate matching and finite-source inventory remain incomplete; empirical support does not prove a unique microscopic mechanism."
+      },
+      "verificationStatus": {
+        "metadata": "checked",
+        "abstract": "checked",
+        "fullText": "checked",
+        "claim": "checked",
+        "independent": "not_checked"
+      },
+      "verifiedAt": "2026-10-12",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1088/0029-5515/47/9/L03",
+        "https://iopscience.iop.org/article/10.1088/0029-5515/47/9/L03"
+      ],
+      "readingScope": "full_text",
       "contentStatus": "research_record"
     }
   ],
@@ -809,6 +979,444 @@
         "x": 330,
         "y": -290
       }
+    },
+    {
+      "id": "q-collisionality-transfer",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-covariance",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "碰撞性还是 Greenwald 分数？",
+        "en": "Collisionality or Greenwald fraction?"
+      },
+      "kind": "question",
+      "summary": {
+        "zh": "如何区分密度峰化的竞争预测，并判断跨装置转移能力？",
+        "en": "How can competing peaking predictors be distinguished and tested across devices?"
+      },
+      "details": {
+        "zh": "AUG/JET 的相关预测变量不能仅靠相近样本内拟合区分。新增 C-Mod 覆盖增强碰撞性定标的经验支持，仍需核对诊断、坐标、协变量和外推边界。本问题不预设碰撞性的微观因果。",
+        "en": "Correlated AUG/JET predictors cannot be distinguished by similar in-sample fits alone. C-Mod strengthens empirical discrimination; diagnostic, coordinate, covariate and extrapolation audits remain necessary. This question does not presume microscopic collisionality causation."
+      },
+      "tags": [
+        {
+          "zh": "跨装置",
+          "en": "cross-device"
+        },
+        {
+          "zh": "可识别性",
+          "en": "identifiability"
+        }
+      ],
+      "position": {
+        "x": 740,
+        "y": 0
+      }
+    },
+    {
+      "id": "p-cmod-low-collisionality",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-peaking",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "无束供粒仍有密度峰化",
+        "en": "Density peaking without beam fuelling"
+      },
+      "kind": "phenomenon",
+      "summary": {
+        "zh": "C-Mod 的低碰撞性 ICRF H 模在无 NBI 条件下仍出现峰化。",
+        "en": "Low-collisionality ICRF C-Mod H-modes exhibit peaking without NBI."
+      },
+      "details": {
+        "zh": "原文报告的现象限制仅束流解释；不将无 NBI 改写成零总粒子源。全局峰化因子不同于指定半径的 R/Lne，坐标定义仍需核对。",
+        "en": "The reported phenomenon constrains beam-only explanations; absence of NBI is not zero total particle source. Global peaking differs from pointwise R/Lne, and coordinate definitions still require checking."
+      },
+      "tags": [
+        {
+          "zh": "RF 加热",
+          "en": "RF heating"
+        },
+        {
+          "zh": "有限粒子源",
+          "en": "finite particle source"
+        }
+      ],
+      "position": {
+        "x": 640,
+        "y": -260
+      }
+    },
+    {
+      "id": "e-cmod-transfer",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-prediction",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "拟合误差相近的竞争模型给出不同 ITER 峰化外推，不能以样本内误差确认跨装置预测。",
+            "en": "Competing models with similar fitting errors give different ITER peaking projections; in-sample error alone does not establish cross-device prediction."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 7 节、式（3）—（5）、图 4；A07-C07",
+            "en": "Manuscript §7, Eqs. (3)–(5), Fig. 4; A07-C07"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "C-Mod 跨装置检验证据",
+        "en": "C-Mod external-device evidence"
+      },
+      "kind": "evidence",
+      "summary": {
+        "zh": "图 2—4 提供预测变量比较与既有经验律的新增装置检验。",
+        "en": "Figures 2–4 compare predictors and test an existing empirical law on an added device."
+      },
+      "details": {
+        "zh": "C-Mod 没有参加原 AUG/JET 拟合，因而不是简单增加拟合样本。图 2—3 改变协变量覆盖，图 4 检验既有预测。此处引用原图注和正文，未数字化散点，也未复现误差或因果效应。",
+        "en": "C-Mod did not participate in the original AUG/JET fit. Figures 2–3 change predictor coverage, and Fig. 4 tests the existing prediction. Citations use original captions and prose; plotted points, errors and causal effects have not been independently reproduced."
+      },
+      "tags": [
+        {
+          "zh": "装置外检验",
+          "en": "external-device test"
+        },
+        {
+          "zh": "经验定标",
+          "en": "empirical scaling"
+        }
+      ],
+      "position": {
+        "x": 1040,
+        "y": -260
+      }
+    },
+    {
+      "id": "k-collisionality-evidence",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-covariance",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "碰撞性经验支持增强",
+        "en": "Stronger empirical collisionality support"
+      },
+      "kind": "knowledge",
+      "summary": {
+        "zh": "从相关的 AUG/JET 比较推进到 C-Mod 检验；微观通量机制尚未证明。",
+        "en": "The correlated AUG/JET comparison advances to a C-Mod test; microscopic flux mechanisms remain unproved."
+      },
+      "details": {
+        "zh": "Angioni 记录原有碰撞性与 Greenwald 歧义；Greenwald 的新增装置覆盖更支持碰撞性经验定标。结论限定于所研究 H 模、观测量与代理量约定，不能声称跨所有装置普适或直接因果。",
+        "en": "Angioni documents the predictor ambiguity, while Greenwald supplies discriminating device coverage. The update is bounded by the studied H-modes, observables and proxy conventions; it does not establish universal transfer or direct causation."
+      },
+      "tags": [
+        {
+          "zh": "认识更新",
+          "en": "knowledge update"
+        },
+        {
+          "zh": "有条件结论",
+          "en": "conditional conclusion"
+        }
+      ],
+      "position": {
+        "x": 1040,
+        "y": 40
+      }
+    },
+    {
+      "id": "g-flux-identification",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-source",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "束流贡献估计依赖近似恒定热与粒子扩散比；该模型内束供粒不能解释全部峰化变化。",
+            "en": "Beam-source attribution assumes an approximately constant heat/particle diffusivity ratio; within these models beam fuelling cannot explain all peaking variation."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 3 节、式（1）—（2）；第 6 节；A07-C06",
+            "en": "Manuscript §3, Eqs. (1)–(2); §6; A07-C06"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-peaking",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "粒子通量机制仍未唯一识别",
+        "en": "Particle-flux mechanisms remain unidentified"
+      },
+      "kind": "gap",
+      "summary": {
+        "zh": "经验定标与稳态峰化不足以唯一确定扩散、对流和有限源的作用。",
+        "en": "Empirical scaling and steady peaking do not uniquely identify diffusion, convection and finite-source contributions."
+      },
+      "details": {
+        "zh": "需建立有限源粒子平衡、诊断与坐标匹配以及可识别的输运闭合。源贡献受输运比假设影响，原刊未提供完整源账本或独立通量拆分。不能由全局峰化直接推出局部梯度或电子/离子梯度偏导响应。",
+        "en": "Finite-source balance, diagnostic/coordinate matching and identifiable transport closure are required. Source attribution depends on diffusivity-ratio assumptions; the letter provides no complete source inventory or independently resolved flux split. Global peaking does not establish local gradients or electron/ion gradient partial responses."
+      },
+      "tags": [
+        {
+          "zh": "机制识别",
+          "en": "mechanism identification"
+        },
+        {
+          "zh": "开放问题",
+          "en": "open question"
+        }
+      ],
+      "position": {
+        "x": 1040,
+        "y": 340
+      }
+    },
+    {
+      "id": "m-cross-device-validation",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-prediction",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "拟合误差相近的竞争模型给出不同 ITER 峰化外推，不能以样本内误差确认跨装置预测。",
+            "en": "Competing models with similar fitting errors give different ITER peaking projections; in-sample error alone does not establish cross-device prediction."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 7 节、式（3）—（5）、图 4；A07-C07",
+            "en": "Manuscript §7, Eqs. (3)–(5), Fig. 4; A07-C07"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "跨装置与有限源验证计划",
+        "en": "Cross-device and finite-source verification"
+      },
+      "kind": "method",
+      "summary": {
+        "zh": "核对观测定义，开展留一装置预测与能区分通量闭合的受控扫描。",
+        "en": "Audit observable definitions, test held-out devices and design controlled scans that distinguish flux closures."
+      },
+      "details": {
+        "zh": "计划取得合法放电级数据、诊断协方差、源剖面和瞬态；冻结竞争模型、检查条件参数覆盖、按放电聚类留一装置检验，并预先规定否定判据。该计划尚未开展，不表示模型已复现或机制已验证。",
+        "en": "Proposed work requires lawful shot-level data, diagnostic covariance, source profiles and transients. Freeze competing models, check conditional support, cluster by shot, test held-out devices and prespecify rejection criteria. This plan has not been performed and does not certify reproduction or mechanism validation."
+      },
+      "tags": [
+        {
+          "zh": "验证计划",
+          "en": "verification plan"
+        },
+        {
+          "zh": "实验设计",
+          "en": "experimental design"
+        }
+      ],
+      "position": {
+        "x": 640,
+        "y": 340
+      }
     }
   ],
   "edges": [
@@ -1211,6 +1819,462 @@
         "en": "Proposed research relationship, not established causality. No project measurement verifies this link."
       },
       "citations": []
+    },
+    {
+      "id": "r-q001-enter",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-covariance",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "q-density",
+      "target": "q-collisionality-transfer",
+      "relation": "contextualizes",
+      "label": {
+        "zh": "进入真实研究问题",
+        "en": "Enter the research question"
+      },
+      "rationale": {
+        "zh": "把演示问题连接至有原文依据的预测变量判别问题，不提升原节点状态。",
+        "en": "Connect the demonstration question to source-grounded predictor discrimination without promoting its status."
+      }
+    },
+    {
+      "id": "r-q001-observation",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-peaking",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "q-collisionality-transfer",
+      "target": "p-cmod-low-collisionality",
+      "relation": "describes",
+      "label": {
+        "zh": "对应可比较现象",
+        "en": "Identify the compared phenomenon"
+      },
+      "rationale": {
+        "zh": "研究对象是明确条件下的峰化观测，局部响应不由此自动得到。",
+        "en": "The object is peaking under stated conditions; local responses do not follow automatically."
+      }
+    },
+    {
+      "id": "r-q001-evidence",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-peaking",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "p-cmod-low-collisionality",
+      "target": "e-cmod-transfer",
+      "relation": "motivates",
+      "label": {
+        "zh": "检验可转移预测",
+        "en": "Test transferable prediction"
+      },
+      "rationale": {
+        "zh": "无束供粒峰化与新装置覆盖促使检验既有经验定标。",
+        "en": "No-beam peaking and added device coverage motivate testing the existing empirical scaling."
+      }
+    },
+    {
+      "id": "r-q001-update",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-covariance",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "e-cmod-transfer",
+      "target": "k-collisionality-evidence",
+      "relation": "constrains",
+      "label": {
+        "zh": "限定认识更新",
+        "en": "Bound the knowledge update"
+      },
+      "rationale": {
+        "zh": "图 2—4 增强经验支持，未提供唯一的微观因果闭合。",
+        "en": "Figures 2–4 strengthen empirical support without providing unique microscopic causal closure."
+      }
+    },
+    {
+      "id": "r-q001-open-gap",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-source",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "束流贡献估计依赖近似恒定热与粒子扩散比；该模型内束供粒不能解释全部峰化变化。",
+            "en": "Beam-source attribution assumes an approximately constant heat/particle diffusivity ratio; within these models beam fuelling cannot explain all peaking variation."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 3 节、式（1）—（2）；第 6 节；A07-C06",
+            "en": "Manuscript §3, Eqs. (1)–(2); §6; A07-C06"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "k-collisionality-evidence",
+      "target": "g-flux-identification",
+      "relation": "contextualizes",
+      "label": {
+        "zh": "形成后续开放问题",
+        "en": "Frame the remaining open question"
+      },
+      "rationale": {
+        "zh": "经验判别的推进使有限源、坐标与通量机制的剩余缺口更明确。",
+        "en": "Improved empirical discrimination clarifies the remaining source, coordinate and flux-mechanism gaps."
+      }
+    },
+    {
+      "id": "r-q001-requires-test",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-prediction",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "拟合误差相近的竞争模型给出不同 ITER 峰化外推，不能以样本内误差确认跨装置预测。",
+            "en": "Competing models with similar fitting errors give different ITER peaking projections; in-sample error alone does not establish cross-device prediction."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 7 节、式（3）—（5）、图 4；A07-C07",
+            "en": "Manuscript §7, Eqs. (3)–(5), Fig. 4; A07-C07"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-transfer",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "C-Mod 未参与原 AUG/JET 定标拟合；图 4 将其与既有经验律作装置外比较，构成新增预测检验。",
+            "en": "C-Mod was not used in the original AUG/JET fit; Fig. 4 compares it with the existing law and provides an additional external-device prediction test."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L28，第 2 节、式（1）；L29，图 4；G07-C04",
+            "en": "Journal L28, §2, Eq. (1); L29, Fig. 4; G07-C04"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "g-flux-identification",
+      "target": "m-cross-device-validation",
+      "relation": "requires",
+      "label": {
+        "zh": "需要区分性验证",
+        "en": "Require discriminating verification"
+      },
+      "rationale": {
+        "zh": "计划通过诊断匹配、装置外预测和瞬态源扫描约束未识别结构；尚未执行。",
+        "en": "Diagnostic matching, external-device prediction and transient source scans are proposed to constrain unidentified structure; not performed."
+      }
+    },
+    {
+      "id": "r-q001-tests-question",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-prediction",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "拟合误差相近的竞争模型给出不同 ITER 峰化外推，不能以样本内误差确认跨装置预测。",
+            "en": "Competing models with similar fitting errors give different ITER peaking projections; in-sample error alone does not establish cross-device prediction."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 7 节、式（3）—（5）、图 4；A07-C07",
+            "en": "Manuscript §7, Eqs. (3)–(5), Fig. 4; A07-C07"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "m-cross-device-validation",
+      "target": "q-collisionality-transfer",
+      "relation": "tests",
+      "label": {
+        "zh": "计划检验竞争预测",
+        "en": "Plan to test competing predictions"
+      },
+      "rationale": {
+        "zh": "留一装置与条件覆盖分析针对经验预测变量判别，并另行设计机制检验。",
+        "en": "Held-out-device and conditional-support analyses target predictor discrimination, with separate mechanism tests."
+      }
+    },
+    {
+      "id": "r-q001-limit-mechanism",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-source",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "束流贡献估计依赖近似恒定热与粒子扩散比；该模型内束供粒不能解释全部峰化变化。",
+            "en": "Beam-source attribution assumes an approximately constant heat/particle diffusivity ratio; within these models beam fuelling cannot explain all peaking variation."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 3 节、式（1）—（2）；第 6 节；A07-C06",
+            "en": "Manuscript §3, Eqs. (1)–(2); §6; A07-C06"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-peaking",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "无 NBI 的 C-Mod 低碰撞性 ICRF H 模仍有密度峰化，说明束流核心供粒不是这些观测的必要条件。",
+            "en": "Low-collisionality ICRF C-Mod H-modes exhibit density peaking without NBI, so beam core fuelling is not necessary for these observations."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27，第 1 节、图 1；L29，第 3 节；G07-C01",
+            "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "g-flux-identification",
+      "target": "k-collisionality-evidence",
+      "relation": "constrains",
+      "label": {
+        "zh": "机制结论保持开放",
+        "en": "Keep mechanism conclusions open"
+      },
+      "rationale": {
+        "zh": "认识更新必须保留输运比、有限源及观测量的适用限制。",
+        "en": "The knowledge update retains diffusivity-ratio, finite-source and observable limitations."
+      }
     }
   ]
 }

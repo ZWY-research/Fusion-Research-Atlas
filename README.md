@@ -3,11 +3,15 @@
 **Make the real scientific questions of fusion visible. Connect disciplines. Advance understanding through evidence.**\
 **让真实的聚变科学问题被看见，让不同学科汇聚，以科学证据推动认识与突破。**
 
-[**Explore the Atlas · 探索图谱**](https://zwy-research.github.io/Fusion-Research-Atlas/) · [**Contribute a Question or Idea · 参与研究**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Contribution Guide · 贡献指南**](CONTRIBUTING.md) · [**Scientific Literature Reviews · 科学文献评议**](docs/literature/README.md)
+[**Explore the Atlas · 探索图谱**](https://zwy-research.github.io/Fusion-Research-Atlas/) · [**Contribute a Question or Idea · 参与研究**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Contribution Guide · 贡献指南**](CONTRIBUTING.md) · [**Research Insights · 科研成果解读**](docs/literature/README.md)
 
 > **EN** — Fusion is a scientific challenge shared by humanity. Many of its hardest problems lie at the intersection of disciplines. Fusion Research Atlas (FRA) is an open, collaborative, evidence-driven and evolving fusion research platform to expose the questions that matter, trace what the evidence actually shows, identify what remains unexplained, and invite researchers from different fields to develop and test new explanations together.
 >
 > **中文** — 聚变研究是人类共同面对的重大科学挑战，许多关键困难位于不同学科的交汇处。Fusion Research Atlas（FRA）是一个开放协作、科学证据驱动、持续演化的聚变科学研究平台：将真正重要的科学问题清晰呈现出来，追踪证据究竟支持什么、尚有哪些现象无法解释，并吸引不同专业背景的研究者共同提出和检验新的科学解释。
+
+**EN** Curiosity opens new scientific questions; evidence and collaboration turn them into progress.
+
+**中文** 好奇心让科学不断提出新的问题，证据与合作让探索逐步转化为进步。
 
 ## Why this project exists | 为什么需要 FRA？
 
@@ -53,6 +57,16 @@
 **EN** The first in-depth case is core electron-density transport and density peaking in tokamak plasmas. The project's initiator has relevant experimental and theoretical research experience, allowing a real research case to test FRA's scientific methods, evidence organisation, and collaboration mechanisms. The existing graph remains a demonstration while substantive research is developed. This starting point does not limit FRA to tokamaks or particle transport: its long-term scope spans different fusion science and technology directions.
 
 **中文** 首个深入研究案例是托卡马克核心电子密度输运及密度峰化。项目发起者具有相关实验与理论研究经验，可利用真实研究案例检验 FRA 的科研方法、科学证据组织方式和协作机制。在实质性研究逐步开展的同时，现有图谱仍属于演示内容。这一起点不意味着 FRA 仅研究托卡马克或粒子输运，其长期范围涵盖不同聚变科学和技术方向。
+
+## Respecting contributions and working together | 尊重科研贡献，共同探索
+
+**EN** FRA respects each research contribution and its authors. We select representative studies because their observations, methods, evidence, or ideas help address an important fusion question. Research Insights explain why a study deserves attention, what its authors contributed, how it advances understanding, and what new connections and open questions invite further work. Applicability limits and unresolved questions help build on a contribution. They should be read in the context of the experimental capabilities, theory, and computing resources available when the work was done.
+
+**中文** FRA 尊重每项科研成果及其作者。我们选择有代表性的研究，是因为其观测、方法、证据或思想有助于回答重要的聚变科学问题。科研成果解读说明研究为何值得关注、作者实际作出的贡献、相关认识如何得到推进，以及哪些新联系和开放问题值得继续探索。辨明适用边界和未解问题，有助于在已有贡献上继续研究，也应结合研究开展时的实验能力、理论认识与计算条件理解。
+
+**EN** FRA's role is constructive scientific learning, discussion, research, and collaboration. It does not act as a journal referee or assign pass/fail decisions or academic grades. Authors and researchers from other disciplines are welcome to correct interpretations, clarify original conditions, add overlooked contributions or new evidence, propose alternative explanations, and develop questions together through the [existing Issue forms and Pull Requests](CONTRIBUTING.md).
+
+**中文** FRA 用于建设性的科学学习、交流、研究与合作，不扮演期刊审稿人，不作通过、未通过或学术等级裁决，也不以个人或学术攻击为目的。欢迎原论文作者及其他学科研究者通过[现有 Issue 表单和 Pull Request](CONTRIBUTING.md)修正解读、澄清原始条件、补充未充分呈现的贡献或新证据、提出替代解释，并共同发展新的研究问题。
 
 ## The questions we want to make visible | 我们希望呈现什么？
 
@@ -142,13 +156,13 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
 
 **Version / 版本： `v0.2.0` — public research-platform prototype / 已公开的科研平台原型**
 
-| Research progress / 科研进展                                                                            | Current record / 当前记录                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Indexed Papers / 已收录论文](docs/literature/README.md#indexed-papers)                                 | **2**                                                                                                                                                                                                    |
-| [Completed Scientific Reviews / 已完成科学评议](docs/literature/README.md#completed-scientific-reviews) | **1**                                                                                                                                                                                                    |
-| [Independently Verified / 已完成独立验证](docs/literature/README.md#independently-verified)             | **0**                                                                                                                                                                                                    |
-| First research case / 首个研究案例                                                                      | [q-density: core electron-density transport and density peaking / 核心电子密度输运与密度峰化](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)                                           |
-| [Scientific Literature Reviews / 科学文献评议](docs/literature/README.md)                               | Eight-domain catalogue, individual paper records, and a [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) / 八领域目录、单篇论文信息页及[双语评议模板](docs/literature/REVIEW_TEMPLATE.md) |
+| Research progress / 科研进展                                                                        | Current record / 当前记录                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Indexed Papers / 已收录论文](docs/literature/README.md#indexed-papers)                             | **3**                                                                                                                                                                                                    |
+| [Completed Research Studies / 已完成深入研读](docs/literature/README.md#completed-research-studies) | **2**                                                                                                                                                                                                    |
+| [Independently Verified / 已完成独立验证](docs/literature/README.md#independently-verified)         | **0**                                                                                                                                                                                                    |
+| First research case / 首个研究案例                                                                  | [q-density: core electron-density transport and density peaking / 核心电子密度输运与密度峰化](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)                                           |
+| [Research Insights / 科研成果解读](docs/literature/README.md)                                       | Eight-domain catalogue, individual paper records, and a [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) / 八领域目录、单篇论文信息页及[双语评议模板](docs/literature/REVIEW_TEMPLATE.md) |
 
 **EN** Counts describe distinct papers, not domain assignments, and reflect the current records as of 12 October 2026. Creating a paper page or checking a DOI does not count as a completed scientific review; a completed review does not itself establish independent verification.
 
@@ -156,10 +170,12 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
 
 - **EN:** The bilingual website and interactive scientific graph are available. The platform supports scientific objects, typed relationships, search, filtering, source links, and distinct evidence-verification states.\
   **中文：** 已上线中英双语网站与交互式科学图谱，支持科学对象、带语义的关系、搜索筛选、来源链接和分层证据核验状态。
-- **EN:** The electron-density subgraph remains a **demonstration**. [Angioni 2007](docs/literature/papers/angioni-2007.md) has a completed scientific review of its 22-page institutional author manuscript; Angioni 2003 remains at bibliographic/abstract scope. Journal-version numerical concordance and independent scientific verification are not complete. The unchanged JSON retains historical bibliographic/abstract checks; its specific graph claims remain unverified.\
-  **中文：** 电子密度子图仍为**演示内容**。[Angioni 2007](docs/literature/papers/angioni-2007.md) 已完成对其 22 页机构作者稿的科学评议，Angioni 2003 仍为书目/摘要级范围。期刊版本数值一致性和独立科学验证均未完成。未修改的 JSON 保留历史书目/摘要检查，具体图谱主张仍未验证。
-- **EN:** The next scientific milestone, **V0.3**, is to build the first substantive, source-traceable research atlas for q-density.\
-  **中文：** 下一项科研里程碑 **V0.3**，是围绕 q-density 建立首个具有真实、可追溯科学证据的研究子图谱。
+- **EN:** The original 15 scientific objects and their relationships retain their **demonstration** status. Six additional **research records** connect the q-density question to the Angioni 2007 / Greenwald 2007 evidence chain, an empirical knowledge update, unresolved mechanism identification, and proposed verification. Source details link to Research Insights and retain DOI, finding IDs, and verification levels.\
+  **中文：** 原有 15 个科学对象及关系继续保留**演示**状态。六个新增**科研记录**将 q-density 连接至 Angioni 2007 / Greenwald 2007 的跨论文证据链、经验认识更新、机制识别缺口和计划验证。来源详情可进入科研成果解读，并保留 DOI、发现 ID 与分层核验状态。
+- **EN:** [Angioni 2007](docs/literature/papers/angioni-2007.md) has a completed study of its institutional author manuscript; [Greenwald 2007](docs/literature/papers/greenwald-2007.md) has a completed study of the journal letter's full-text extraction, including all four figure captions and Eq. (1). Figure-image access limitations are recorded. Angioni 2003 remains at metadata/abstract scope. No independent scientific verification has been performed.\
+  **中文：** [Angioni 2007](docs/literature/papers/angioni-2007.md) 已完成机构作者稿研读；[Greenwald 2007](docs/literature/papers/greenwald-2007.md) 已完成原刊短文全文提取文本、四幅图注及式（1）的研读，并记录图像访问限制。Angioni 2003 仍为书目/摘要级。均未开展独立科学验证。
+- **EN:** This begins the **V0.3** research milestone: cross-paper evidence now enters the interactive atlas. Stronger empirical support for a collisionality scaling does not resolve the microscopic density-peaking mechanism. The public release remains v0.2.0; these additions are submitted through a reviewable PR.\
+  **中文：** 本次开始落实 **V0.3** 科研里程碑：跨论文证据已进入交互图谱。碰撞性经验定标得到更强支持，密度峰化的微观机制仍未解决。公开发布标签保持 v0.2.0，新增内容通过可审查的 PR 提交。
 
 **EN** A successful software build does not establish a scientific mechanism. FRA explicitly separates source metadata, abstract/full-text reading, claim assessment, and independent verification.\
 **中文** 软件构建成功不代表物理机制得到证明。FRA 严格区分书目信息、摘要与全文查阅、具体科学主张核验和独立科学验证。
