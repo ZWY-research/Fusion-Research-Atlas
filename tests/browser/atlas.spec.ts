@@ -12,6 +12,7 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
   });
   await page.goto("");
   await expect(page.getByTestId("result-count")).toHaveText("15");
+  await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await expect(page.locator(".mission")).toContainText("开放协作");
   await expect(page.locator(".mission")).toContainText("open, collaborative");
   await expect(
@@ -50,6 +51,9 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     "Candidate hypothesis",
   );
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.locator(".version")).toHaveText(
+    "V0.2 · Scientific Research Prototype",
+  );
   await page.reload();
   await expect(page.getByTestId("detail-title")).toHaveText(
     "Inward convection hypothesis",
@@ -75,6 +79,7 @@ test("all research panels, domain exploration and complete bilingual methodology
   await page.getByRole("button", { name: "查看子图" }).click();
   await expect(page.getByLabel("研究领域")).toHaveValue("transport");
   await expect(page.getByTestId("result-count")).toHaveText("15");
+  await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await page
     .getByRole("button", { name: "研究方法 / Methodology", exact: true })
     .click();
@@ -151,7 +156,7 @@ test("real canvas relationship tap opens scientific basis", async ({
   await expect(page.getByTestId("edge-title")).toBeVisible();
   await expect(page.locator(".detail")).toContainText("物理含义");
 });
-test("GitHub contribution entry URLs are actual issue composers", async ({
+test("GitHub contribution entry URLs select the corresponding Issue Forms", async ({
   page,
 }) => {
   await page.goto("");
@@ -159,11 +164,19 @@ test("GitHub contribution entry URLs are actual issue composers", async ({
     .getByRole("button", { name: "开放协作 / Open Collaboration", exact: true })
     .click();
   await expect(page.locator(".collaboration-grid a")).toHaveCount(4);
-  for (const link of await page.locator(".collaboration-grid a").all()) {
+  const links = await page.locator(".collaboration-grid a").all();
+  for (const [index, link] of links.entries()) {
     const u = new URL((await link.getAttribute("href"))!);
     expect(u.pathname).toBe("/ZWY-research/Fusion-Research-Atlas/issues/new");
-    expect(u.searchParams.get("body")).toContain("DOI");
-    expect(u.searchParams.has("template")).toBe(false);
+    expect(u.searchParams.get("template")).toBe(
+      [
+        "research-question.yml",
+        "evidence-contribution.yml",
+        "scientific-challenge.yml",
+        "verification-proposal.yml",
+      ][index],
+    );
+    expect(u.searchParams.has("body")).toBe(false);
   }
 });
 test("mobile atlas and scientific panels have no horizontal overflow", async ({

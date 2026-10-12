@@ -123,6 +123,11 @@ export const sourceSchema = z
     )
       fail("Metadata check needs traceable providers");
     if (
+      s.verificationStatus.abstract === "checked" &&
+      s.readingScope === "metadata_only"
+    )
+      fail("Abstract check requires abstract or full-text reading");
+    if (
       s.verificationStatus.fullText === "checked" &&
       s.readingScope !== "full_text"
     )

@@ -115,8 +115,8 @@ export const labels = {
   ],
   contribute: ["在 GitHub 提交", "Contribute on GitHub"],
   collabNote: [
-    "通过现有 GitHub Issue 入口参与，需要 GitHub 账号。本地表单将在审查合并后启用；当前入口预填科研问题字段。",
-    "Use the existing GitHub issue composer; a GitHub account is required. Local Issue Forms await reviewed integration; current links prefill scientific fields.",
+    "通过对应的 GitHub Issue Form 提交科研贡献，需要 GitHub 账号。请填写科学问题、来源、适用条件与验证方案。",
+    "Use the corresponding GitHub Issue Form; a GitHub account is required. Include the scientific question, sources, physical conditions and verification proposal.",
   ],
   guide: ["贡献指南", "Contribution guide"],
   github: ["GitHub 仓库", "GitHub repository"],
@@ -133,10 +133,7 @@ export const labels = {
     "问题 · 证据 · 质疑 · 验证提案",
     "Questions · Evidence · Challenges · Verification proposals",
   ],
-  prototype: [
-    "研究框架 · 本地待审查",
-    "Research framework · Local review pending",
-  ],
+  prototype: ["科学研究原型", "Scientific Research Prototype"],
   unknownDoi: [
     "无 DOI：使用可追溯替代来源",
     "No DOI: traceable alternative source",

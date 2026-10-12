@@ -5,8 +5,8 @@ Fusion Research Atlas is an open, collaborative and evolving atlas of scientific
 Fusion Research Atlas 是一个开放协作、由科学证据驱动、持续演化的聚变科学问题与研究进展图谱。
 
 - Repository: https://github.com/ZWY-research/Fusion-Research-Atlas
-- Published V0.1: https://zwy-research.github.io/Fusion-Research-Atlas/
-- **V0.2 is local development on `feature/v0.2-science-framework`; it has not been deployed.**
+- Website: https://zwy-research.github.io/Fusion-Research-Atlas/
+- **V0.2 · Scientific Research Prototype / 科学研究原型**
 
 ## Research platform
 
@@ -32,7 +32,7 @@ Phenomenon Identification → Existing Knowledge → Scientific Questions → Co
 
 ## International participation
 
-English and Chinese contributions are welcome through GitHub: Research Question, Evidence Contribution, Scientific Challenge or Verification Proposal. Ready-to-integrate Issue Forms are local; current website buttons use existing prefilled issue composers until reviewed merge. See [CONTRIBUTING](CONTRIBUTING.md). Share only material with public permission.
+English and Chinese contributions are welcome through GitHub: Research Question, Evidence Contribution, Scientific Challenge or Verification Proposal. Website buttons open the corresponding GitHub Issue Forms in the default branch. See [CONTRIBUTING](CONTRIBUTING.md). Share only material with public permission.
 
 ## Development and verification
 
@@ -65,6 +65,6 @@ Without installed Chrome, run `npx playwright install chromium` and omit the cha
 
 ## GitHub Pages and licensing
 
-Vite base is `/Fusion-Research-Atlas/`. The existing main-only Actions workflow uses Node.js 24, validates/tests/builds and uploads dist through official Pages Actions. **Do not push main, merge or deploy V0.2 until independent review.** Feature development leaves V0.1 online.
+Vite base is `/Fusion-Research-Atlas/`. The existing main-only Actions workflow uses Node.js 24, validates/tests/builds and uploads dist through official Pages Actions. Reviewed changes are integrated through pull requests; merging to main triggers the Pages build and deployment. Publication verifies the software release, not scientific conclusions.
 
 Original source code and original illustrative descriptions use MIT License. Bibliographic facts and short original abstract-level summaries do not grant rights to publisher full text, figures or future datasets. Obtain separate permission for copyrighted or private materials; no paper full text or private experiments are bundled in the repository.

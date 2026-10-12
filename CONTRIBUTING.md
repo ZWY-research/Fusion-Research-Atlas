@@ -4,7 +4,7 @@ Researchers may contribute in English or Chinese. Please distinguish questions, 
 
 ## Ways to participate
 
-Use the repository Issues for research questions, evidence contributions, scientific challenges and verification proposals. Four Issue Forms are prepared under `.github/ISSUE_TEMPLATE/`. They become available after reviewed integration into the default branch. The local V0.2 website currently links to the existing GitHub issue composer with prefilled scientific fields, which is available today.
+Use the repository Issues for research questions, evidence contributions, scientific challenges and verification proposals. Four Issue Forms are maintained under `.github/ISSUE_TEMPLATE/` in the default branch. The V0.2 website links directly to the corresponding form using its template filename.
 
 Include the scientific question, relevant domains, existing understanding, new evidence or hypothesis, DOI or alternative traceable source, physical conditions, limitations, competing explanations and proposed verification. A GitHub account is required to submit an issue; FRA has no separate account system.
 

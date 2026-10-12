@@ -167,7 +167,7 @@ test("bilingual fields, domains, all seven object types and search filters compo
     0,
   );
 });
-test("GitHub entry URLs use existing issue composer and complete scientific fields", () => {
+test("GitHub contribution URLs select the corresponding existing Issue Form", () => {
   for (const kind of contributionKinds) {
     const url = new URL(contributionUrl(kind));
     assert.equal(url.origin, "https://github.com");
@@ -175,11 +175,40 @@ test("GitHub entry URLs use existing issue composer and complete scientific fiel
       url.pathname,
       "/ZWY-research/Fusion-Research-Atlas/issues/new",
     );
-    const body = url.searchParams.get("body")!;
-    assert.ok(body.includes("DOI"));
-    assert.ok(body.includes("Physical scope"));
-    assert.ok(body.includes("Proposed verification"));
-    assert.ok(body.includes("\n"));
-    assert.equal(url.searchParams.has("template"), false);
+    assert.equal(url.searchParams.get("template"), kind + ".yml");
+    assert.equal(url.searchParams.has("body"), false);
+    assert.deepEqual([...url.searchParams.keys()], ["template"]);
+    const form = readFileSync(
+      new URL("../.github/ISSUE_TEMPLATE/" + kind + ".yml", import.meta.url),
+      "utf8",
+    );
+    assert.ok(form.includes("id: question"));
+    assert.ok(form.includes("id: sources"));
+    assert.ok(form.includes("id: verification"));
+  }
+});
+test("checked abstract rejects metadata-only reading even with no findings", () => {
+  const source = structuredClone(data.sources[0]);
+  source.reportedFindings = [];
+  source.readingScope = "metadata_only";
+  assert.equal(source.verificationStatus.abstract, "checked");
+  const result = sourceSchema.safeParse(source);
+  assert.equal(result.success, false);
+  if (!result.success)
+    assert.ok(
+      result.error.issues.some(
+        (i) =>
+          i.message === "Abstract check requires abstract or full-text reading",
+      ),
+    );
+  source.verificationStatus.abstract = "not_checked";
+  assert.equal(sourceSchema.safeParse(source).success, true);
+});
+test("checked abstract accepts abstract and full-text reading scopes", () => {
+  for (const scope of ["abstract", "full_text"]) {
+    const source = structuredClone(data.sources[0]);
+    source.readingScope = scope;
+    assert.equal(source.verificationStatus.abstract, "checked");
+    assert.equal(sourceSchema.safeParse(source).success, true);
   }
 });
