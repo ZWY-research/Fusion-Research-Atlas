@@ -3,7 +3,7 @@
 **Make the real scientific questions of fusion visible. Connect disciplines. Advance understanding through evidence.**\
 **让真实的聚变科学问题被看见，让不同学科汇聚，以科学证据推动认识与突破。**
 
-[**Explore the Atlas · 探索图谱**](https://zwy-research.github.io/Fusion-Research-Atlas/) · [**Contribute a Question or Idea · 参与研究**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Contribution Guide · 贡献指南**](CONTRIBUTING.md)
+[**Explore the Atlas · 探索图谱**](https://zwy-research.github.io/Fusion-Research-Atlas/) · [**Contribute a Question or Idea · 参与研究**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Contribution Guide · 贡献指南**](CONTRIBUTING.md) · [**Scientific Literature Reviews · 科学文献评议**](docs/literature/README.md)
 
 > **EN** — Fusion is a scientific challenge shared by humanity. Many of its hardest problems lie at the intersection of disciplines. Fusion Research Atlas (FRA) is an open, collaborative, evidence-driven and evolving fusion research platform to expose the questions that matter, trace what the evidence actually shows, identify what remains unexplained, and invite researchers from different fields to develop and test new explanations together.
 >
@@ -11,13 +11,48 @@
 
 ## Why this project exists | 为什么需要 FRA？
 
-**EN** A researcher studying particle transport in a tokamak may need insights from turbulence theory, nonlinear dynamics, numerical analysis, statistics, or control theory. Conversely, a mathematician or computational scientist may have powerful methods but no clear view of which unresolved fusion problem could benefit from them. Similar boundaries appear throughout fusion research: plasma stability, heating, plasma–wall interactions, diagnostics, burning plasmas, and integrated control.
+**EN** Fusion energy is a shared scientific endeavour with potential long-term value for energy supply, energy security, low-carbon development, and humanity's scientific and technological capabilities. Growing energy needs and the time required to develop and validate complex technologies make sustained research urgent. National programmes and international collaborations are strengthening the effort, while practical fusion power still requires major advances in basic science, engineering, and reliable operation.
 
-**中文** 研究托卡马克粒子输运的科研人员，可能需要湍流理论、非线性动力学、数值分析、统计学或控制理论的帮助。反过来，数学或计算科学研究者可能拥有有效的方法，却不了解哪些尚未解决的聚变问题可以从中受益。类似的跨学科障碍广泛存在于等离子体稳定性、加热、等离子体与壁相互作用、诊断、燃烧等离子体及集成控制等研究领域。
+**中文** 聚变能源是人类共同探索的科学事业，对长期能源供给、能源安全、低碳发展以及未来科学技术能力具有潜在价值。持续增长的能源需求与复杂技术研发、验证所需的长期投入，使聚变研究具有现实紧迫性。各国研究计划与国际合作正在加强相关投入，而实现实用化聚变发电仍需要基础科学、工程技术和可靠运行方面的重大进展。
 
-**EN** FRA aims to make that connection possible. It is **not just a bibliography, a collection of answers, or a visualization of papers**. It is a map of scientific problems, observations, competing physical mechanisms, supporting and conflicting evidence, and research tasks that can actually be tested.
+### International research context | 国际研究背景
 
-**中文** FRA 希望打通这些联系。它**不只是文献目录、已有答案汇编或论文可视化工具**，而是将科学问题、实验现象、竞争性物理机制、支持与反对证据，以及能够实际检验的研究任务组织成相互关联的网络。
+**EN** The following official documents illustrate the wider research and policy context. They describe research priorities and ambitions, rather than evidence that commercial fusion power has already been achieved.
+
+**中文** 以下官方文件呈现相关科研与政策背景，反映研究重点和发展目标，不代表商业聚变发电已经实现。
+
+| Official source / 官方来源                                                                                                                                                                                                                                                                                                                                                                        | Date and relevant scope / 时间与相关内容                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| U.S. White House Office of Science and Technology Policy, [Science: A New Golden Age](https://www.whitehouse.gov/science/) / 美国白宫科技政策办公室                                                                                                                                                                                                                                               | July 2026; the transmittal letter is dated 21 July. Discusses interdisciplinary research, scientific publication, verification, and new forms of collaboration; a report on the research system, rather than a dedicated fusion technology white paper. / 2026 年 7 月，呈报信日期为 7 月 21 日。涉及跨学科研究、科学发表、验证与新型协作，是科研体系报告，并非专门的聚变技术白皮书。           |
+| U.S. Department of Energy, [Fusion Science and Technology Roadmap](https://www.energy.gov/documents/fusion-science-and-technology-roadmap) / 美国能源部                                                                                                                                                                                                                                           | Published June 2026. Identifies science and technology gaps, milestones, and infrastructure needs across confinement, materials, plasma-facing components, fuel cycles, blankets, and plant integration. / 2026 年 6 月发布，梳理约束、材料、面向等离子体部件、燃料循环、包层和电站集成等方向的科技缺口、里程碑及基础设施需求。                                                                 |
+| China, Outline of the 15th Five-Year Plan for National Economic and Social Development (2026–2030) / 《中华人民共和国国民经济和社会发展第十五个五年规划纲要》：[CPPCC republication / 全国政协转载](https://www.cppcc.gov.cn/zxww/2026/03/16/ARTI1773644951646391.shtml), [NDRC official text / 国家发展改革委原文](https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf) | March 2026; NDRC republication dated 17 March. Chapter 5, section 2 (PDF page 19) includes fusion energy in the development of future industries. The NDRC text provides an alternative official source when the CPPCC page is unavailable. / 2026 年 3 月，发改委转载日期为 3 月 17 日；第五章第二节（PDF 第 19 页）将核聚变能列入未来产业发展方向；政协网页不可访问时，可查阅发改委官方原文。 |
+| China, [Atomic Energy Law of the People's Republic of China / 《中华人民共和国原子能法》](https://www.caea.gov.cn/n6760338/n6760342/c10704020/content.html) ([alternative official text / 官方备用原文](https://www.caea.gov.cn/n6760338/n6760344/n10763762/n10763767/c10704020/content.html))                                                                                                    | Adopted 12 September 2025. Article 14 encourages and supports scientific research and technological development in controlled thermonuclear fusion. / 2025 年 9 月 12 日通过，第十四条明确鼓励和支持受控热核聚变的科学研究与技术开发。                                                                                                                                                          |
+
+**EN** These sources provide context for FRA's mission; their inclusion does not imply institutional endorsement, affiliation, or funding of FRA.
+
+**中文** 上述资料仅作为 FRA 使命的背景，引述不意味着 FRA 获得有关机构的官方支持、隶属关系或资助。
+
+### Shared scientific difficulties | 共同科学困难
+
+**EN** Practical fusion depends on coupled advances in plasma confinement and stability; turbulence and particle, heat, and momentum transport; nonlinear and multiscale dynamics; heating and current drive; plasma–wall interaction and extreme-environment materials; heat exhaust; burning plasmas and energetic particles; tritium fuel cycles; diagnostics, prediction, and control; and system integration. These difficulties extend across fusion approaches and are closely interdependent. Complex experimental conditions, restricted model applicability, quantities that are difficult to observe, and differences between simulations and measurements make evidence difficult to interpret and transfer between systems.
+
+**中文** 实用化聚变依赖多个相互耦合方向的进展：等离子体约束与稳定性，湍流及粒子、能量与动量输运，非线性与多尺度动力学，加热和电流驱动，等离子体与壁相互作用及极端环境材料，热排出，燃烧等离子体与高能粒子，氚燃料循环，诊断、预测与控制，以及系统集成。这些困难广泛存在于不同聚变路线，并相互依赖。复杂的实验条件、模型适用边界、难以直接观测的物理量，以及模拟与测量之间的差异，使证据的解释和跨系统应用具有挑战性。
+
+### Connecting evidence and expertise | 连接科学证据与研究能力
+
+**EN** Papers, conferences, and large collaborations effectively communicate specialised results. Yet the conditions, assumptions, evidence, and interpretations needed to compare those results remain distributed across publications, devices, models, and communities. Researchers entering from another discipline can struggle to determine what was actually observed, how well an explanation is supported, whether apparently conflicting findings concern comparable conditions, and which unresolved difficulty can become an executable research task. A mathematician, fluid dynamicist, statistician, computational scientist, or machine-learning researcher may have useful methods without a clear route into the physical problem.
+
+**中文** 论文、会议和大型合作项目能够有效传播专业成果，但比较这些成果所需的条件、假设、证据和解释仍分散在不同文献、装置、模型及研究群体中。其他学科的研究者往往难以迅速判断实验实际观测了什么、解释得到何种程度的支持、看似冲突的结果是否具有可比条件，以及哪项未解决的困难能够转化为可执行的研究任务。数学、流体力学、统计学、数值计算或机器学习研究者可能拥有有效方法，却缺少进入具体物理问题的清晰路径。
+
+**EN** FRA aims to complement these channels with an open research platform organised around scientific questions. It connects phenomena, existing knowledge, competing mechanisms, assumptions, supporting and challenging evidence, unresolved gaps, and verification methods in a traceable network. It should show how far current explanations reach, make promising mechanisms and new hypotheses explicit, and turn suitable fusion questions into more general problems in mathematics, nonlinear dynamics, numerical analysis, statistical inference, and systems science. Such abstraction must preserve the original physical conditions and model assumptions; proposed answers must ultimately be tested in the relevant fusion system. New evidence should continuously update the network and enable researchers worldwide to work on the same problem.
+
+**中文** FRA 希望通过以科学问题为中心的开放研究平台补充这些交流渠道，将现象、已有认识、竞争机制、假设、支持与质疑证据、尚未解决的困难和验证方法连接为可追溯网络。平台应说明现有解释究竟覆盖到什么程度，明确值得探索的机制与新假设，并将适合跨学科研究的聚变问题转化为数学、非线性动力学、数值分析、统计推断和系统科学中的一般问题。抽象过程必须保留原始物理条件及模型假设，提出的答案最终仍须回到相应聚变系统中检验。新证据应持续更新这一网络，使全球不同专业的科研人员能够共同研究同一问题。
+
+### Why start with particle transport? | 为什么从粒子输运开始？
+
+**EN** The first in-depth case is core electron-density transport and density peaking in tokamak plasmas. The project's initiator has relevant experimental and theoretical research experience, allowing a real research case to test FRA's scientific methods, evidence organisation, and collaboration mechanisms. The existing graph remains a demonstration while substantive research is developed. This starting point does not limit FRA to tokamaks or particle transport: its long-term scope spans different fusion science and technology directions.
+
+**中文** 首个深入研究案例是托卡马克核心电子密度输运及密度峰化。项目发起者具有相关实验与理论研究经验，可利用真实研究案例检验 FRA 的科研方法、科学证据组织方式和协作机制。在实质性研究逐步开展的同时，现有图谱仍属于演示内容。这一起点不意味着 FRA 仅研究托卡马克或粒子输运，其长期范围涵盖不同聚变科学和技术方向。
 
 ## The questions we want to make visible | 我们希望呈现什么？
 
@@ -106,6 +141,18 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
 ## What is available now? | 当前项目进展
 
 **Version / 版本： `v0.2.0` — public research-platform prototype / 已公开的科研平台原型**
+
+| Research progress / 科研进展                                                                            | Current record / 当前记录                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Indexed Papers / 已收录论文](docs/literature/README.md#indexed-papers)                                 | **2**                                                                                                                                                                                                    |
+| [Completed Scientific Reviews / 已完成科学评议](docs/literature/README.md#completed-scientific-reviews) | **0**                                                                                                                                                                                                    |
+| [Independently Verified / 已完成独立验证](docs/literature/README.md#independently-verified)             | **0**                                                                                                                                                                                                    |
+| First research case / 首个研究案例                                                                      | [q-density: core electron-density transport and density peaking / 核心电子密度输运与密度峰化](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)                                           |
+| [Scientific Literature Reviews / 科学文献评议](docs/literature/README.md)                               | Eight-domain catalogue, individual paper records, and a [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) / 八领域目录、单篇论文信息页及[双语评议模板](docs/literature/REVIEW_TEMPLATE.md) |
+
+**EN** Counts describe distinct papers, not domain assignments, and reflect the current records as of 12 October 2026. Creating a paper page or checking a DOI does not count as a completed scientific review; a completed review does not itself establish independent verification.
+
+**中文** 统计按不同论文去重，不累加领域关联次数，反映截至 2026 年 10 月 12 日的实际记录。创建论文页面或核对 DOI 不计为完成科学评议，完成评议本身也不等于独立验证。
 
 - **EN:** The bilingual website and interactive scientific graph are available. The platform supports scientific objects, typed relationships, search, filtering, source links, and distinct evidence-verification states.\
   **中文：** 已上线中英双语网站与交互式科学图谱，支持科学对象、带语义的关系、搜索筛选、来源链接和分层证据核验状态。
