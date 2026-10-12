@@ -359,19 +359,140 @@
       "sourceType": "journal_article",
       "contentStatus": "research_record",
       "researchConditions": {
-        "zh": "标题对应 DIII-D H 模。完整原文尚不可读，扫描参数、源、梯度和诊断条件未完成原文核验。",
-        "en": "The title concerns DIII-D H-mode. Readable complete original text was not obtained; scan parameters, sources, gradients and diagnostic conditions remain unchecked against the paper."
+        "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+        "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
       },
-      "reportedFindings": [],
+      "reportedFindings": [
+        {
+          "id": "finding-m20-scan",
+          "statement": {
+            "zh": "近似匹配的核心碰撞性扫描伴随更陡局部密度梯度；最低点同时形成离子温度 ITB，不能解释为所有驱动固定的独立偏导。",
+            "en": "An approximately matched core collisionality scan accompanies steeper local density gradients; the lowest case develops an ion-temperature ITB, so it is not a partial response with every drive fixed."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 5—8 页，表 1、图 1—6；M20-C01",
+            "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        },
+        {
+          "id": "finding-m20-modulation",
+          "statement": {
+            "zh": "两诊断幅相及式（3）、（5）反演显示最低碰撞性扰动扩散可达约 8 m²/s；对流由扰动扩散与稳态平衡共同构造，并非独立的纯箍缩测量。",
+            "en": "Two-diagnostic amplitude/phase analysis with Eqs.(3),(5) gives low-collisionality perturbative diffusion reaching about 8 m²/s; convection is constructed from that diffusion and steady balance, not an independent pure-pinch measurement."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 9—13 页，式（1）—（5）、图 7—10；M20-C02",
+            "en": "Accepted PDF pp.9–13, Eqs.(1)–(5), Figs.7–10; M20-C02"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        },
+        {
+          "id": "finding-m20-tangent-steady",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        },
+        {
+          "id": "finding-m20-source-ratio",
+          "statement": {
+            "zh": "在所采用有限源平衡与重建系数下，局部峰化增大主要对应向内对流／扩散之比增大；束供粒虽增，源的相对贡献下降，不意味着源为零或扩散减弱。",
+            "en": "Within the adopted finite-source balance and reconstructed coefficients, stronger local peaking mainly corresponds to a larger inward-convection/diffusion ratio; increased beam fuelling has a smaller relative source share, not zero source or reduced diffusion."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 14 页，式（10）、图 11、第 4 节；M20-C04",
+            "en": "Accepted PDF p.14, Eq.(10), Fig.11, §4; M20-C04"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        },
+        {
+          "id": "finding-m20-models",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        },
+        {
+          "id": "finding-m20-coupled-state",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "limitations": {
+            "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+            "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
+          }
+        }
+      ],
       "limitations": {
-        "zh": "仅登记已核对书目信息与公开来源。没有完成正文、公式、图表及图注研读，不登记据摘要推断的机制发现；全文、主张和独立验证均未完成。",
-        "en": "Verified bibliography and public source records only. Body text, equations, figures and captions were not fully studied; no abstract-derived mechanism findings are registered. Full-text, claim and independent verification remain incomplete."
+        "zh": "原稿 24 页、18 图、1 表和 10 个编号方程已读。反演依赖幅相拟合、局部闭合、源近似和稳态重建；最低碰撞性伴随梯度及电场变化，模型使用实测梯度且 GENE 不含 E×B 剪切。没有独立反演、模拟复现或剖面预测验证。",
+        "en": "All 24 pages, 18 figures, one table and ten numbered equations read. Inference depends on amplitude/phase fits, local closure, source approximation and steady reconstruction. Low collisionality accompanies gradient/electric-field changes; models use measured gradients and GENE omits E×B shear. No independent inversion, simulation reproduction or profile-prediction validation."
       },
       "verificationStatus": {
         "metadata": "checked",
-        "abstract": "not_checked",
-        "fullText": "not_checked",
-        "claim": "not_checked",
+        "abstract": "checked",
+        "fullText": "checked",
+        "claim": "checked",
         "independent": "not_checked"
       },
       "verifiedAt": "2026-10-12",
@@ -381,7 +502,7 @@
         "https://iopscience.iop.org/article/10.1088/1741-4326/ab81aa",
         "https://www.osti.gov/servlets/purl/1618050"
       ],
-      "readingScope": "metadata_only"
+      "readingScope": "full_text"
     }
   ],
   "nodes": [
@@ -1079,6 +1200,25 @@
             "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
           },
           "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-scan",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "近似匹配的核心碰撞性扫描伴随更陡局部密度梯度；最低点同时形成离子温度 ITB，不能解释为所有驱动固定的独立偏导。",
+            "en": "An approximately matched core collisionality scan accompanies steeper local density gradients; the lowest case develops an ion-temperature ITB, so it is not a partial response with every drive fixed."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 5—8 页，表 1、图 1—6；M20-C01",
+            "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
+          },
+          "claimVerified": false
         }
       ],
       "label": {
@@ -1091,8 +1231,8 @@
         "en": "How can competing peaking predictors be distinguished and tested across devices?"
       },
       "details": {
-        "zh": "AUG/JET 的相关预测变量不能仅靠相近样本内拟合区分。新增 C-Mod 覆盖增强碰撞性定标的经验支持，仍需核对诊断、坐标、协变量和外推边界。本问题不预设碰撞性的微观因果。",
-        "en": "Correlated AUG/JET predictors cannot be distinguished by similar in-sample fits alone. C-Mod strengthens empirical discrimination; diagnostic, coordinate, covariate and extrapolation audits remain necessary. This question does not presume microscopic collisionality causation."
+        "zh": "AUG/JET 的相关预测变量不能仅靠相近样本内拟合区分。新增 C-Mod 覆盖增强碰撞性定标的经验支持，仍需核对诊断、坐标、协变量和外推边界。本问题不预设碰撞性的微观因果。 DIII-D 的局部梯度扫描提供新输运约束，与前序全局峰化的定义仍需分别处理。",
+        "en": "Correlated AUG/JET predictors cannot be distinguished by similar in-sample fits alone. C-Mod strengthens empirical discrimination; diagnostic, coordinate, covariate and extrapolation audits remain necessary. This question does not presume microscopic collisionality causation. The DIII-D local-gradient scan adds transport constraints while retaining the distinction from earlier global peaking definitions."
       },
       "tags": [
         {
@@ -1371,6 +1511,25 @@
             "en": "Journal L27, §1, Fig. 1; L29, §3; G07-C01"
           },
           "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
         }
       ],
       "label": {
@@ -1383,8 +1542,8 @@
         "en": "Empirical scaling and steady peaking do not uniquely identify diffusion, convection and finite-source contributions."
       },
       "details": {
-        "zh": "需建立有限源粒子平衡、诊断与坐标匹配以及可识别的输运闭合。源贡献受输运比假设影响，原刊未提供完整源账本或独立通量拆分。不能由全局峰化直接推出局部梯度或电子/离子梯度偏导响应。",
-        "en": "Finite-source balance, diagnostic/coordinate matching and identifiable transport closure are required. Source attribution depends on diffusivity-ratio assumptions; the letter provides no complete source inventory or independently resolved flux split. Global peaking does not establish local gradients or electron/ion gradient partial responses."
+        "zh": "需建立有限源粒子平衡、诊断与坐标匹配以及可识别的输运闭合。源贡献受输运比假设影响，原刊未提供完整源账本或独立通量拆分。不能由全局峰化直接推出局部梯度或电子/离子梯度偏导响应。 Mordijck 2020 增加幅相及有限源平衡约束，但稳态重建路径、非对角响应及微观分量仍未唯一识别。",
+        "en": "Finite-source balance, diagnostic/coordinate matching and identifiable transport closure are required. Source attribution depends on diffusivity-ratio assumptions; the letter provides no complete source inventory or independently resolved flux split. Global peaking does not establish local gradients or electron/ion gradient partial responses. Mordijck 2020 adds phase/amplitude and finite-source balance constraints, while reconstruction paths, off-diagonal responses and microscopic components remain unidentified."
       },
       "tags": [
         {
@@ -1472,6 +1631,451 @@
       "position": {
         "x": 640,
         "y": 340
+      }
+    },
+    {
+      "id": "p-diiid-peaking",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-scan",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "近似匹配的核心碰撞性扫描伴随更陡局部密度梯度；最低点同时形成离子温度 ITB，不能解释为所有驱动固定的独立偏导。",
+            "en": "An approximately matched core collisionality scan accompanies steeper local density gradients; the lowest case develops an ion-temperature ITB, so it is not a partial response with every drive fixed."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 5—8 页，表 1、图 1—6；M20-C01",
+            "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "DIII-D 扫描与密度梯度",
+        "en": "DIII-D scan and density gradient"
+      },
+      "kind": "phenomenon",
+      "summary": {
+        "zh": "核心碰撞性降低伴随局部梯度增大；匹配有条件。",
+        "en": "Reduced core collisionality accompanies a larger local gradient under approximate matching."
+      },
+      "details": {
+        "zh": "三放电的线密度与中半径无量纲量较接近，但离子梯度、ITB、电场和有限束源共同改变。本文局部 R/Ln 不能直接与 2007 年全局密度比合并。",
+        "en": "The three shots approximately match line density and mid-radius dimensionless parameters, while ion gradients, ITB, electric field and finite beam sources change. Local R/Ln cannot be pooled directly with the 2007 global density ratio."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 1460,
+        "y": -270
+      }
+    },
+    {
+      "id": "e-diiid-modulation",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-modulation",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "两诊断幅相及式（3）、（5）反演显示最低碰撞性扰动扩散可达约 8 m²/s；对流由扰动扩散与稳态平衡共同构造，并非独立的纯箍缩测量。",
+            "en": "Two-diagnostic amplitude/phase analysis with Eqs.(3),(5) gives low-collisionality perturbative diffusion reaching about 8 m²/s; convection is constructed from that diffusion and steady balance, not an independent pure-pinch measurement."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 9—13 页，式（1）—（5）、图 7—10；M20-C02",
+            "en": "Accepted PDF pp.9–13, Eqs.(1)–(5), Figs.7–10; M20-C02"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "3 Hz 调制输运证据",
+        "en": "3 Hz modulation transport evidence"
+      },
+      "kind": "evidence",
+      "summary": {
+        "zh": "双诊断幅相约束扰动扩散，对流使用稳态平衡构造。",
+        "en": "Two diagnostics constrain perturbative diffusion; convection uses steady-balance construction."
+      },
+      "details": {
+        "zh": "Thomson scattering 与反射计在核心幅相较一致。小相位斜率导致大 Dp 和拟合敏感性；原文最低点约达 8 m²/s。式（5）不是纯微观箍缩的第二独立测量，稳态源仍有限。",
+        "en": "Thomson scattering and reflectometry agree better in the core. Small phase slope produces large Dp and fit sensitivity; the lowest point reaches about 8 m²/s. Eq.(5) is not a second independent pure-pinch measurement and steady sources remain finite."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 1840,
+        "y": -270
+      }
+    },
+    {
+      "id": "k-diiid-source-transport",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-source-ratio",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "在所采用有限源平衡与重建系数下，局部峰化增大主要对应向内对流／扩散之比增大；束供粒虽增，源的相对贡献下降，不意味着源为零或扩散减弱。",
+            "en": "Within the adopted finite-source balance and reconstructed coefficients, stronger local peaking mainly corresponds to a larger inward-convection/diffusion ratio; increased beam fuelling has a smaller relative source share, not zero source or reduced diffusion."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 14 页，式（10）、图 11、第 4 节；M20-C04",
+            "en": "Accepted PDF p.14, Eq.(10), Fig.11, §4; M20-C04"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "有限源下的峰化输运比",
+        "en": "Peaking transport ratio with finite sources"
+      },
+      "kind": "knowledge",
+      "summary": {
+        "zh": "源强与扩散单独不决定峰化；平衡中的向内输运比更关键。",
+        "en": "Source strength and diffusion alone do not determine peaking; the inward balance ratio matters."
+      },
+      "details": {
+        "zh": "式（10）保留源所要求的通量，图 11 依赖 DPB、vPB 的重建。更强扩散与更强峰化可同时发生。此为限定于三放电及所用闭合的源归因，不是普适源不重要或唯一微观机制。",
+        "en": "Eq.(10) retains source-required flux, and Fig.11 depends on reconstructed DPB,vPB. Stronger diffusion and stronger peaking can coexist. Attribution is bounded by these three shots and the closure, not universal source insignificance or a unique microscopic mechanism."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 1840,
+        "y": 0
+      }
+    },
+    {
+      "id": "e-diiid-turbulence-models",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "分尺度涨落与梯度模型",
+        "en": "Scale-dependent fluctuations and gradient models"
+      },
+      "kind": "evidence",
+      "summary": {
+        "zh": "BES/DBS 与 GENE/TGLF 部分符合，仍有中点偏差与预测限制。",
+        "en": "BES/DBS partly agree with GENE/TGLF, with a middle-point discrepancy and prediction limits."
+      },
+      "details": {
+        "zh": "大尺度与小尺度涨落趋势不同。GENE 线性计算不含 E×B 剪切，TGLF-SAT1 给出条件通量谱；未测密度／径向速度交叉相位通量。输入实测梯度的解释不等于独立预测密度剖面。",
+        "en": "Large- and small-scale fluctuation trends differ. Linear GENE omits E×B shear; TGLF-SAT1 supplies a conditional flux spectrum. Density/radial-velocity cross-phase flux was not measured. Explanation with measured gradients is not independent density-profile prediction."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 1460,
+        "y": 0
+      }
+    },
+    {
+      "id": "h-diiid-coupled-turbulence",
+      "contentStatus": "research_record",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "耦合湍流状态候选解释",
+        "en": "Candidate coupled-turbulence interpretation"
+      },
+      "kind": "hypothesis",
+      "summary": {
+        "zh": "碰撞性、梯度、混合模态和 ITB 相关电场共同介导输运变化。",
+        "en": "Collisions, gradients, mode mixture and ITB-associated electric field may jointly mediate transport changes."
+      },
+      "details": {
+        "zh": "候选解释来自原文对最低碰撞性状态的讨论；热扩散、曲率对流、剪切和快离子贡献尚未完全分离。不得把 ITG/TEM 标签与非线性净粒子通量方向普遍一一对应。",
+        "en": "The candidate follows the paper’s lowest-collisionality discussion. Thermodiffusion, curvature convection, shear and fast-ion contributions remain incompletely separated. ITG/TEM labels are not a universal map to nonlinear net particle-flux direction."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 1460,
+        "y": 270
+      }
+    },
+    {
+      "id": "q-perturbative-steady",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-modulation",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "两诊断幅相及式（3）、（5）反演显示最低碰撞性扰动扩散可达约 8 m²/s；对流由扰动扩散与稳态平衡共同构造，并非独立的纯箍缩测量。",
+            "en": "Two-diagnostic amplitude/phase analysis with Eqs.(3),(5) gives low-collisionality perturbative diffusion reaching about 8 m²/s; convection is constructed from that diffusion and steady balance, not an independent pure-pinch measurement."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 9—13 页，式（1）—（5）、图 7—10；M20-C02",
+            "en": "Accepted PDF pp.9–13, Eqs.(1)–(5), Figs.7–10; M20-C02"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "扰动能否识别稳态闭合？",
+        "en": "Can perturbations identify steady closure?"
+      },
+      "kind": "question",
+      "summary": {
+        "zh": "切线 Dp 到稳态 DPB 的换算需要哪些可检验输入？",
+        "en": "Which testable inputs allow tangent Dp to determine steady DPB?"
+      },
+      "details": {
+        "zh": "式（8）—（9）需要固定状态的梯度路径、对流梯度导数假设与积分条件。有限频率、残余源、幅相拟合及内部状态响应可给出竞争解释，应检验允许的闭合族而非只报一个拟合。",
+        "en": "Eqs.(8)–(9) require a fixed-state gradient path, convection-derivative assumptions and integration conditions. Finite frequency, residual sources, phase fits and internal-state response offer alternatives; test admissible closure families instead of one fit."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 2240,
+        "y": 0
+      }
+    },
+    {
+      "id": "m-diiid-discriminating-tests",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "闭合与剖面预测验证计划",
+        "en": "Closure and profile-prediction test plan"
+      },
+      "kind": "method",
+      "summary": {
+        "zh": "多频源约束、耦合扫描、交叉相位和留出剖面预测四项计划。",
+        "en": "Four proposed tests: source-aware multi-frequency response, coupled scans, cross-phase and held-out profile prediction."
+      },
+      "details": {
+        "zh": "计划比较稳态闭合族，区分直接碰撞与梯度／剪切／快离子作用，测可及交叉相位，并以源、几何和边界预测留出剖面。未开展新实验或 GENE/TGLF 计算，独立验证仍未完成。",
+        "en": "Propose comparing steady closure families, separating collision and gradient/shear/fast-ion effects, measuring feasible cross-phases and predicting held-out profiles from sources, geometry and boundaries. No new experiment or GENE/TGLF run was performed; independent verification remains incomplete."
+      },
+      "tags": [
+        {
+          "zh": "DIII-D 原文证据",
+          "en": "DIII-D source evidence"
+        }
+      ],
+      "position": {
+        "x": 2240,
+        "y": 270
       }
     }
   ],
@@ -2330,6 +2934,595 @@
       "rationale": {
         "zh": "认识更新必须保留输运比、有限源及观测量的适用限制。",
         "en": "The knowledge update retains diffusivity-ratio, finite-source and observable limitations."
+      }
+    },
+    {
+      "id": "r-m20-observation",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-scan",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "近似匹配的核心碰撞性扫描伴随更陡局部密度梯度；最低点同时形成离子温度 ITB，不能解释为所有驱动固定的独立偏导。",
+            "en": "An approximately matched core collisionality scan accompanies steeper local density gradients; the lowest case develops an ion-temperature ITB, so it is not a partial response with every drive fixed."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 5—8 页，表 1、图 1—6；M20-C01",
+            "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "q-density",
+      "target": "p-diiid-peaking",
+      "relation": "describes",
+      "label": {
+        "zh": "连接 DIII-D 观测",
+        "en": "Connect DIII-D observation"
+      },
+      "rationale": {
+        "zh": "围绕同一密度形成问题连接局部梯度观测，不提升原演示状态。",
+        "en": "Connect local-gradient observations to density formation without promoting the original demonstration."
+      }
+    },
+    {
+      "id": "r-m20-comparison",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2007",
+          "findingId": "finding-a07-covariance",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "联合数据库保留碰撞性与 Greenwald 分数的强相关；作者未排除 Greenwald 竞争定标。",
+            "en": "The combined database retains strong collisionality/Greenwald covariance; the authors do not exclude the competing Greenwald scaling."
+          },
+          "conditions": {
+            "zh": "AUG/JET ELMy H 模联合数据库，22 页 Max Planck 机构作者稿；固定观测量与代理量定义。",
+            "en": "Combined AUG/JET ELMy H-mode database, identified 22-page Max Planck author manuscript; fixed observable and proxy definitions."
+          },
+          "locator": {
+            "zh": "作者稿第 5 节、表 2；第 6.1 节，第 11—12 页；A07-C03/C05",
+            "en": "Manuscript §5, Table 2; §6.1, pp. 11–12; A07-C03/C05"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-greenwald-2007",
+          "findingId": "finding-g07-discrimination",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "加入 C-Mod 后，碰撞性经验比较比仅用 Greenwald 分数更好地连接这些装置；仅 ICRF 子集进一步增强该经验支持。",
+            "en": "Adding C-Mod makes the collisionality comparison connect these devices better than Greenwald fraction alone; the ICRF-only subset strengthens that empirical support."
+          },
+          "conditions": {
+            "zh": "C-Mod 准稳态 ELMy H 模，51 次放电，仅 ICRF、无 NBI；有效碰撞性 0.35—8，电子和离子温度接近；与 AUG/JET 比较。",
+            "en": "51 C-Mod quasi-steady ELMy H-mode shots, ICRF heating without NBI; effective collisionality 0.35–8 and near-equilibrated electron/ion temperatures; comparison with AUG/JET."
+          },
+          "locator": {
+            "zh": "原刊 L27—L28，第 2 节、图 2—3；G07-C02/C03",
+            "en": "Journal L27–L28, §2, Figs. 2–3; G07-C02/C03"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-scan",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "近似匹配的核心碰撞性扫描伴随更陡局部密度梯度；最低点同时形成离子温度 ITB，不能解释为所有驱动固定的独立偏导。",
+            "en": "An approximately matched core collisionality scan accompanies steeper local density gradients; the lowest case develops an ion-temperature ITB, so it is not a partial response with every drive fixed."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 5—8 页，表 1、图 1—6；M20-C01",
+            "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "q-collisionality-transfer",
+      "target": "p-diiid-peaking",
+      "relation": "contextualizes",
+      "label": {
+        "zh": "延伸跨论文研究",
+        "en": "Extend cross-paper research"
+      },
+      "rationale": {
+        "zh": "从经验比较进入局部输运研究，保留观测量与碰撞性定义差异。",
+        "en": "Move from empirical comparison to local transport while preserving observable and collisionality differences."
+      }
+    },
+    {
+      "id": "r-m20-modulation",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-modulation",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "两诊断幅相及式（3）、（5）反演显示最低碰撞性扰动扩散可达约 8 m²/s；对流由扰动扩散与稳态平衡共同构造，并非独立的纯箍缩测量。",
+            "en": "Two-diagnostic amplitude/phase analysis with Eqs.(3),(5) gives low-collisionality perturbative diffusion reaching about 8 m²/s; convection is constructed from that diffusion and steady balance, not an independent pure-pinch measurement."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 9—13 页，式（1）—（5）、图 7—10；M20-C02",
+            "en": "Accepted PDF pp.9–13, Eqs.(1)–(5), Figs.7–10; M20-C02"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "p-diiid-peaking",
+      "target": "e-diiid-modulation",
+      "relation": "requires",
+      "label": {
+        "zh": "需要源与输运分析",
+        "en": "Require source/transport analysis"
+      },
+      "rationale": {
+        "zh": "剖面差异需结合调制响应与有限源，不能只靠相关性归因。",
+        "en": "Profile differences require modulation and finite-source analysis rather than correlation alone."
+      }
+    },
+    {
+      "id": "r-m20-balance",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-source-ratio",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "在所采用有限源平衡与重建系数下，局部峰化增大主要对应向内对流／扩散之比增大；束供粒虽增，源的相对贡献下降，不意味着源为零或扩散减弱。",
+            "en": "Within the adopted finite-source balance and reconstructed coefficients, stronger local peaking mainly corresponds to a larger inward-convection/diffusion ratio; increased beam fuelling has a smaller relative source share, not zero source or reduced diffusion."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 14 页，式（10）、图 11、第 4 节；M20-C04",
+            "en": "Accepted PDF p.14, Eq.(10), Fig.11, §4; M20-C04"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "e-diiid-modulation",
+      "target": "k-diiid-source-transport",
+      "relation": "constrains",
+      "label": {
+        "zh": "约束条件平衡归因",
+        "en": "Constrain conditional balance attribution"
+      },
+      "rationale": {
+        "zh": "扰动系数须经有条件稳态重建才能用于源／对流比归因。",
+        "en": "Perturbative coefficients need conditional steady reconstruction before source/convection attribution."
+      }
+    },
+    {
+      "id": "r-m20-open-gap",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-source-ratio",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "在所采用有限源平衡与重建系数下，局部峰化增大主要对应向内对流／扩散之比增大；束供粒虽增，源的相对贡献下降，不意味着源为零或扩散减弱。",
+            "en": "Within the adopted finite-source balance and reconstructed coefficients, stronger local peaking mainly corresponds to a larger inward-convection/diffusion ratio; increased beam fuelling has a smaller relative source share, not zero source or reduced diffusion."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 14 页，式（10）、图 11、第 4 节；M20-C04",
+            "en": "Accepted PDF p.14, Eq.(10), Fig.11, §4; M20-C04"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "k-diiid-source-transport",
+      "target": "g-flux-identification",
+      "relation": "contextualizes",
+      "label": {
+        "zh": "保留微观闭合缺口",
+        "en": "Retain microscopic closure gap"
+      },
+      "rationale": {
+        "zh": "平衡分解不分别识别热扩散、曲率及其他内部响应。",
+        "en": "Balance decomposition does not separately identify thermodiffusion, curvature and internal responses."
+      }
+    },
+    {
+      "id": "r-m20-tangent-question",
+      "contentStatus": "research_record",
+      "epistemicStatus": "open_question",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "e-diiid-modulation",
+      "target": "q-perturbative-steady",
+      "relation": "motivates",
+      "label": {
+        "zh": "提出切线与稳态问题",
+        "en": "Motivate tangent/steady question"
+      },
+      "rationale": {
+        "zh": "Dp 与 DPB 的明显差异要求审查固定梯度路径与积分输入。",
+        "en": "The Dp/DPB difference motivates auditing fixed-gradient paths and integration inputs."
+      }
+    },
+    {
+      "id": "r-m20-turbulence-data",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "p-diiid-peaking",
+      "target": "e-diiid-turbulence-models",
+      "relation": "motivates",
+      "label": {
+        "zh": "检查多尺度湍流",
+        "en": "Examine multiscale turbulence"
+      },
+      "rationale": {
+        "zh": "最低点变化促使比较分尺度测量与条件模型。",
+        "en": "Lowest-point changes motivate scale-specific measurement/model comparisons."
+      }
+    },
+    {
+      "id": "r-m20-model-test",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": true
+        }
+      ],
+      "source": "e-diiid-turbulence-models",
+      "target": "h-diiid-coupled-turbulence",
+      "relation": "tests",
+      "label": {
+        "zh": "部分检验候选解释",
+        "en": "Partly test the candidate"
+      },
+      "rationale": {
+        "zh": "模型和涨落提供部分一致性，未单独证明各微观分量。",
+        "en": "Models and fluctuations provide partial consistency without proving individual microscopic terms."
+      }
+    },
+    {
+      "id": "r-m20-candidate",
+      "contentStatus": "research_record",
+      "epistemicStatus": "candidate_hypothesis",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "h-diiid-coupled-turbulence",
+      "target": "p-diiid-peaking",
+      "relation": "may_explain",
+      "label": {
+        "zh": "候选耦合机制",
+        "en": "Candidate coupled mechanism"
+      },
+      "rationale": {
+        "zh": "混合模态、梯度和电场共同变化可能介导局部梯度变化，因果分离仍待验证。",
+        "en": "Mode mixture, gradients and electric field may mediate local-gradient changes; causal separation remains open."
+      }
+    },
+    {
+      "id": "r-m20-closure-test",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "q-perturbative-steady",
+      "target": "m-diiid-discriminating-tests",
+      "relation": "requires",
+      "label": {
+        "zh": "需要可识别性验证",
+        "en": "Require identifiability tests"
+      },
+      "rationale": {
+        "zh": "多频多幅和源约束可检验允许的闭合族，任务未执行。",
+        "en": "Source-aware multi-frequency/amplitude work can test closure families; not performed."
+      }
+    },
+    {
+      "id": "r-m20-gap-test",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-models",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "BES 与 DBS 有分尺度涨落趋势，GENE 线性结果和 TGLF 通量谱提供部分符合；中点 DBS 不完全符合。计算以实验梯度为输入，不是独立剖面预测或直接涨落交叉相位通量测量。",
+            "en": "BES and DBS show scale-dependent trends, with partial agreement from linear GENE and TGLF flux spectra; middle-case DBS differs. Calculations use experimental gradients and are neither independent profile predictions nor measured cross-phase particle fluxes."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 15—17、20—21 页，图 12—14、18，第 5—7 节；M20-C05/C07",
+            "en": "Accepted PDF pp.15–17,20–21, Figs.12–14,18, §§5–7; M20-C05/C07"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "g-flux-identification",
+      "target": "m-diiid-discriminating-tests",
+      "relation": "requires",
+      "label": {
+        "zh": "需要通量与预测验证",
+        "en": "Require flux/prediction validation"
+      },
+      "rationale": {
+        "zh": "分量通量及独立剖面预测尚需前瞻检验。",
+        "en": "Component fluxes and independent profile prediction need prospective testing."
+      }
+    },
+    {
+      "id": "r-m20-test-hypothesis",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-coupled-state",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "最低碰撞性点的温度梯度、径向电场和快离子比例共同变化；作者提出混合湍流及 ITB 相关解释，直接碰撞效应未与各耦合作用完全隔离。",
+            "en": "Temperature gradients, radial electric field and fast-ion fraction change together at the lowest point; the authors propose mixed-turbulence/ITB interpretations without fully isolating direct collisional effects from coupled contributions."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 7—8、17—21 页，图 5—6、15—18，第 6—7 节；M20-C06",
+            "en": "Accepted PDF pp.7–8,17–21, Figs.5–6,15–18, §§6–7; M20-C06"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "m-diiid-discriminating-tests",
+      "target": "h-diiid-coupled-turbulence",
+      "relation": "tests",
+      "label": {
+        "zh": "计划区分耦合解释",
+        "en": "Plan to distinguish coupled explanations"
+      },
+      "rationale": {
+        "zh": "针对碰撞、梯度、剪切、快离子设计可行条件扫描。",
+        "en": "Design feasible conditional scans for collisions, gradients, shear and fast ions."
+      }
+    },
+    {
+      "id": "r-m20-test-closure",
+      "contentStatus": "research_record",
+      "epistemicStatus": "research_plan",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-mordijck-2020",
+          "findingId": "finding-m20-tangent-steady",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者有条件重建报告最低点 Dp>3DPB，高／中点两者近似；从切线系数积分到稳态系数需要固定状态梯度路径与积分条件。",
+            "en": "The authors conditionally reconstruct Dp>3DPB at the lowest point, with approximate agreement at high/mid points; integration from tangent to steady coefficients needs a fixed-state gradient path and integration condition."
+          },
+          "conditions": {
+            "zh": "DIII-D 三放电 165303/165325/165320，约 3 s 稳态段施加 3 Hz 小密度调制；中半径无量纲参数近似匹配，核心碰撞性约五倍扫描；有限 NBI 源保留。来源为用户提供 NF-103523.R2 接受稿。",
+            "en": "DIII-D shots 165303/165325/165320, 3 Hz small density modulation during about 3 s of steady conditions; approximate mid-radius dimensionless matching and factor-five core collisionality scan with finite NBI sources. Source: user-supplied Accepted Manuscript NF-103523.R2."
+          },
+          "locator": {
+            "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
+            "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "source": "m-diiid-discriminating-tests",
+      "target": "q-perturbative-steady",
+      "relation": "tests",
+      "label": {
+        "zh": "计划检验稳态映射",
+        "en": "Plan to test steady mapping"
+      },
+      "rationale": {
+        "zh": "用独立扰动与积分路径输入检验切线到稳态映射。",
+        "en": "Test tangent-to-steady mapping with separate perturbations and gradient-path inputs."
       }
     }
   ]

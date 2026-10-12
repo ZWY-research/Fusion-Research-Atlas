@@ -2,20 +2,20 @@
 
 [Project README / 项目首页](../../README.md) · [Contribution guide / 贡献指南](../../CONTRIBUTING.md) · [Research Insights template / 解读模板](REVIEW_TEMPLATE.md) · [q-density / 图谱问题](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
 
-**EN** This catalogue connects original research to scientific questions, contributions, bounded findings, open questions and verification tasks. It respects authors' contributions and invites corrections and new evidence. Angioni 2007 and Greenwald 2007 now have completed source-based studies; their evidence enters six research records and eight relationships alongside the original demonstration graph. Empirical discrimination has advanced; microscopic transport closure remains open.
+**EN** This catalogue connects original research to scientific questions, contributions, bounded findings, open questions and verification tasks. It respects authors' contributions and invites corrections and new evidence. Angioni 2007, Greenwald 2007 and Mordijck 2020 have completed source-based studies; their evidence enters thirteen research records and twenty-one relationships alongside the original fifteen demonstration nodes and twenty relationships. Empirical discrimination has advanced; microscopic transport closure remains open.
 
-**中文** 本目录将原始研究连接至科学问题、具体贡献、有适用范围的发现、开放问题及验证任务，尊重作者贡献并欢迎修订与新证据。Angioni 2007 和 Greenwald 2007 已完成基于实际来源的研读；相关证据通过六个科研记录和八条关系进入原演示图谱。经验判别得到推进，微观输运闭合仍然开放。
+**中文** 本目录将原始研究连接至科学问题、具体贡献、有适用范围的发现、开放问题及验证任务，尊重作者贡献并欢迎修订与新证据。Angioni 2007、Greenwald 2007 和 Mordijck 2020 已完成基于实际来源的研读；相关证据通过十三个科研记录和二十一条关系进入原有十五个演示节点、二十条关系组成的图谱。经验判别得到推进，微观输运闭合仍然开放。
 
-**EN** [Mordijck 2020](papers/mordijck-2020.md) is newly indexed at metadata-only scope. A readable complete original was not obtained, so it adds no completed study, mechanism finding or new graph claim. Existing studies retain their actual source limits.
+**EN** [Mordijck 2020](papers/mordijck-2020.md) now has a complete study of the supplied accepted manuscript: 24 PDF pages, 18 figures, one table and ten numbered equations. Perturbative transport, finite-source balance and turbulence/model comparisons constrain mechanisms without uniquely identifying them.
 
-**中文** [Mordijck 2020](papers/mordijck-2020.md) 新增书目级收录。未取得可读完整原文，因此不增加完成研读、机制发现或图谱主张，已有研读保留原来源边界。
+**中文** [Mordijck 2020](papers/mordijck-2020.md) 已完成用户提供的接收稿研读：24 页 PDF、18 幅图、一张表及十个编号公式。扰动输运、有限源平衡及湍流/模型比较约束机制，但未唯一确定微观机制。
 
 ## Status and counts | 状态与统计
 
 | Status / 状态                                                              | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                   |
 | -------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Indexed Papers / 已收录论文](#indexed-papers)                             | **4**                        | Traceable paper records / 可追溯论文记录                                                                                         |
-| [Completed Research Studies / 已完成深入研读](#completed-research-studies) | **2**                        | Actual full-text and relevant-claim study, with source and access limits recorded / 已实际研读全文及相关主张，记录来源和访问边界 |
+| [Completed Research Studies / 已完成深入研读](#completed-research-studies) | **3**                        | Actual full-text and relevant-claim study, with source and access limits recorded / 已实际研读全文及相关主张，记录来源和访问边界 |
 | [Independently Verified / 已完成独立验证](#independently-verified)         | **0**                        | Specified scientific results independently reproduced or tested / 明确科研结果已独立复现或检验                                   |
 
 **EN** As of 12 October 2026, based on [source records](../../public/data/electron-density.json) and the studies below. Count each normalised DOI once across domains. Source reading and claim checking are not independent verification; software validation is not physical validation.
@@ -26,12 +26,12 @@
 
 ## Indexed Papers | 已收录论文
 
-| Paper / 论文                                                                                                                                                               | DOI                                                                            | FRA source ID / 来源标识 | Actual scope / 实际范围                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------- |
-| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                                                   | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata/abstract; pending full-text study / 书目与摘要；待全文研读                         |
-| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md)                     | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Completed institutional author-manuscript study / 已完成机构作者稿研读                      |
-| [Greenwald et al. (2007): Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings](papers/greenwald-2007.md) | [10.1088/0029-5515/47/9/L03](https://doi.org/10.1088/0029-5515/47/9/L03)       | `paper-greenwald-2007`   | Completed original-letter extracted-text study / 已完成原刊短文提取全文研读                 |
-| [Mordijck et al. (2020): Collisionality driven turbulent particle transport changes in DIII-D H-mode plasmas](papers/mordijck-2020.md)                                     | [10.1088/1741-4326/ab81aa](https://doi.org/10.1088/1741-4326/ab81aa)           | `paper-mordijck-2020`    | Metadata only; pending readable original and full-text study / 仅书目；待可读原文及全文研读 |
+| Paper / 论文                                                                                                                                                               | DOI                                                                            | FRA source ID / 来源标识 | Actual scope / 实际范围                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------------------------------- |
+| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                                                   | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata/abstract; pending full-text study / 书目与摘要；待全文研读         |
+| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md)                     | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Completed institutional author-manuscript study / 已完成机构作者稿研读      |
+| [Greenwald et al. (2007): Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings](papers/greenwald-2007.md) | [10.1088/0029-5515/47/9/L03](https://doi.org/10.1088/0029-5515/47/9/L03)       | `paper-greenwald-2007`   | Completed original-letter extracted-text study / 已完成原刊短文提取全文研读 |
+| [Mordijck et al. (2020): Collisionality driven turbulent particle transport changes in DIII-D H-mode plasmas](papers/mordijck-2020.md)                                     | [10.1088/1741-4326/ab81aa](https://doi.org/10.1088/1741-4326/ab81aa)           | `paper-mordijck-2020`    | Completed supplied accepted-manuscript study / 已完成用户提供的接收稿研读   |
 
 <a id="completed-research-studies"></a>
 <a id="completed-scientific-reviews"></a>
@@ -41,9 +41,11 @@
 1. **[Angioni 2007](papers/angioni-2007.md) — FRA-Q001-R01-A01.** Full 22-page institutional author manuscript, four figures, four tables, five numbered equations, nine source-anchored claims. Journal-version numerical concordance remains unverified. / 22 页机构作者稿、四图、四表、五个编号方程及九项已定位主张；期刊版本数值一致性未确认。
 2. **[Greenwald 2007](papers/greenwald-2007.md) — FRA-Q001-R02.** Journal L26–L29 extracted full text, three sections, four figure captions, Eq. (1) and reference chain. Figure-image access and diagnostic/coordinate details remain unchecked or unresolved. / 原刊 L26—L29 提取全文、三节正文、四图注、式（1）及引用链；原图像访问、诊断和坐标细节仍有限制或待解决。
 
-**EN** The JSON now records the checked full-text scope and selected bounded findings of both studies. Existing abstract finding IDs retain their original meanings, and all original demonstration objects remain demonstration objects. Neither paper is independently reproduced.
+3. **[Mordijck 2020](papers/mordijck-2020.md) — FRA-Q001-R03.** Accepted manuscript NF-103523.R2: full text, 18 figure images/captions, Table 1 and Eqs. (1)–(10); seven bounded claims and explicit inversion/model limits. / 接收稿全文、18 幅图像与图注、表 1 及式（1）—（10）；七项有边界主张，保留反演与模型限制。
 
-**中文** JSON 已记录两项研读的实际全文范围和选定的有边界发现。原摘要发现 ID 保持原义，原有演示对象保持演示状态。两篇均未独立复现。
+**EN** The JSON now records the checked full-text scope and selected bounded findings of all three studies. Existing abstract finding IDs retain their original meanings, and all original demonstration objects remain demonstration objects. None of these papers is independently reproduced.
+
+**中文** JSON 已记录三项研读的实际全文范围和选定的有边界发现。原摘要发现 ID 保持原义，原有演示对象保持演示状态。三篇均未独立复现。
 
 <a id="independently-verified"></a>
 
@@ -63,23 +65,23 @@
 
 ### 1. Particle, Heat & Momentum Transport | 粒子、热量与动量输运
 
-Domain / 领域：`transport`。Indexed / 收录：**4**；completed studies / 已完成研读：**2**。
+Domain / 领域：`transport`。Indexed / 收录：**4**；completed studies / 已完成研读：**3**。
 
 - [Angioni 2003](papers/angioni-2003.md) — Pending full text / 待全文研读。
 - [Angioni 2007](papers/angioni-2007.md) — Completed manuscript study / 已完成作者稿研读。
 - [Greenwald 2007](papers/greenwald-2007.md) — Completed original-letter text study / 已完成原刊短文文本研读。
 
-- [Mordijck 2020](papers/mordijck-2020.md) — Indexed; full-text study pending / 已收录；待全文研读。
+- [Mordijck 2020](papers/mordijck-2020.md) — Completed transport/turbulence study; causal attribution remains conditional / 已完成输运与湍流研读；因果归属仍有条件。
 
 ### 2. Turbulence & Microinstabilities | 湍流与微观不稳定性
 
-Domain / 领域：`turbulence`。Indexed contextual associations / 收录背景关联：**4**；completed studies / 已完成研读：**2**。
+Domain / 领域：`turbulence`。Indexed contextual associations / 收录背景关联：**4**；completed studies / 已完成研读：**3**。
 
 - [Angioni 2003](papers/angioni-2003.md) — q-density context; pending full text / 背景；待全文。
 - [Angioni 2007](papers/angioni-2007.md) — Conditional mechanism discussion / 有条件的机制讨论。
 - [Greenwald 2007](papers/greenwald-2007.md) — Empirical discrimination; mechanism unresolved / 经验判别；机制未解。
 
-- [Mordijck 2020](papers/mordijck-2020.md) — Indexed; full-text study pending / 已收录；待全文研读。
+- [Mordijck 2020](papers/mordijck-2020.md) — Completed transport/turbulence study; causal attribution remains conditional / 已完成输运与湍流研读；因果归属仍有条件。
 
 ### 3. MHD & Plasma Stability | MHD 与等离子体稳定性
 
