@@ -1,10 +1,10 @@
 # Angioni et al. (2007) | Angioni 等（2007）
 
-[Catalogue / 文献目录](../README.md) · [Review template / 评议模板](../REVIEW_TEMPLATE.md) · [Project README / 项目首页](../../../README.md) · [q-density / 密度峰化问题](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
+[Catalogue / 文献目录](../README.md) · [Research Insights template / 解读模板](../REVIEW_TEMPLATE.md) · [Project README / 项目首页](../../../README.md) · [q-density / 密度峰化问题](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
 
 **Review / 评议：FRA-Q001-R01-A01 · 2026-10-12 · v1.0**
 
-**Status / 状态：Completed Scientific Review of the institutional author manuscript / 已完成机构作者稿的科学评议。Independent Verification: not performed / 独立验证：未开展。**
+**Status / 状态：Completed Research Study of the institutional author manuscript / 已完成机构作者稿深入研读。Independent Verification: not performed / 独立验证：未开展。**
 
 **EN** The evidence below comes from the complete, publicly accessible **22-page Max Planck institutional author manuscript** associated with this 2007 article. The repository identifies it as public full text but does not label it an accepted manuscript or the version of record. Its title, authors, publication record and abstract agree with the article identity; complete numerical concordance with the journal's typeset version has **not** been established. Accordingly, all numbered equations, tables, figures, page locators and quantitative results below refer specifically to this manuscript. The earlier EFDA–JET–PR(06)15 preprint is not used to fill gaps or supply numbers. Completing this source-based review does not certify version-of-record concordance, reproduce the regressions, or verify the demonstration graph.
 
@@ -13,6 +13,18 @@
 **EN — Reading result.** The study offers a carefully harmonised, two-device empirical model of **global density peaking**. Collisionality is the most relevant fitted variable in its tested models, but the data do not eliminate Greenwald-based alternatives. Beam fuelling contributes under a transport-ratio assumption and cannot account for the full variation within those models. Comparable fit errors coexist with substantially different ITER extrapolations. The paper therefore improves empirical discrimination and exposes a prediction problem; it does not establish a unique microscopic pinch mechanism or a local density-gradient response law.
 
 **中文 — 阅读结论。** 该研究通过跨装置诊断协调，建立了**全局密度峰化**的双装置经验模型。在考察的模型中，碰撞性是最具统计关联强度的拟合变量，但数据尚未排除基于 Greenwald 分数的竞争定标。束供粒在输运比假设下具有贡献，却不足以解释这些模型中的全部变化。拟合误差接近的模型仍产生明显不同的 ITER 外推。论文改进了经验判别并揭示预测难题，没有建立唯一微观箍缩机制或局部密度梯度响应定律。
+
+## Why This Study Matters | 为什么选择这项研究？
+
+**EN** For q-density, the authors harmonise AUG/JET observations and compare competing explanations of global density peaking. Their source-aware regression offers a starting point for cross-device prediction and makes the unresolved collisionality/Greenwald covariance visible. The completed manuscript study below provides the source anchors; the new [C-Mod study](greenwald-2007.md) adds an external device test.
+
+**中文** 对 q-density，作者协调 AUG/JET 观测并比较全局密度峰化的竞争解释。考虑粒子源的回归为跨装置预测提供起点，也明确呈现碰撞性与 Greenwald 分数尚未解除的相关性。下文已完成的作者稿研读提供原文定位；新增的 [C-Mod 研究](greenwald-2007.md)提供装置外检验。
+
+## Key Contributions at a Glance | 主要科学贡献概览
+
+- **EN** Harmonised global peaking measurements and a combined AUG/JET database: manuscript §2 and Table 1. / **中文** 协调全局峰化观测量并建立 AUG/JET 联合数据库：作者稿第 2 节及表 1。
+- **EN** Quantified conditional collisionality and beam-source terms: §3, Eqs. (1)–(3), Table 3. / **中文** 定量估计有条件的碰撞性与束流源项：第 3 节、式（1）—（3）及表 3。
+- **EN** Exposed divergent ITER predictions from similarly fitting models: §4, Eqs. (3)–(5), Fig. 4. / **中文** 揭示拟合相近的模型产生不同 ITER 预测：第 4 节、式（3）—（5）及图 4。
 
 ## 1. Bibliographic Information | 论文基本信息
 
@@ -338,9 +350,9 @@ $$
 
 **中文** FRA 阅读了完整 22 页机构作者稿，提取文本层并渲染页面，逐一查看全部表格、图及决定性定义和方程所在页面。核对内容包括响应定义、密度与温度单位、自然对数、式 (2) 中 $D$ 的消去、式 (4) 温度项负号、系数表列对应及三种独立列出的外推。另核对官方仓储的出版关联和公开文件元数据。第 4 节主张 ID 记录位置、假设与未解决解释；第 3、4 节两个解析例子分别说明信息损失和稳态输运不可识别，不属于数值复现。
 
-**EN** The arithmetic check of source-effect magnitudes is performed on reported coefficients and standard deviations only. FRA did **not** obtain the shot-level database, rerun PENCIL/FAFNER, reproduce robust weights or covariances, perform gyrokinetic calculations, validate ITER performance, or systematically review another paper. Prior work is discussed only as described or cited by this manuscript. The historical JSON metadata/abstract flags and contextual graph citations are unchanged.
+**EN** The arithmetic check of source-effect magnitudes is performed on reported coefficients and standard deviations only. FRA did **not** obtain the shot-level database, rerun PENCIL/FAFNER, reproduce robust weights or covariances, perform gyrokinetic calculations, validate ITER performance, or systematically review another paper. Prior work is discussed only as described or cited by this manuscript. The original demonstration citations remain unchanged. The subsequent Greenwald evidence integration records selected full-text findings separately, with source and reading limits preserved.
 
-**中文** 源效应量级的算术核对仅使用已报告系数与标准差。FRA **没有**取得逐放电数据库、重跑 PENCIL/FAFNER、复现稳健权重或协方差、开展回旋动理学计算、验证 ITER 性能，或系统评议其他论文。前序工作只按本稿的描述或引用讨论。既有 JSON 书目/摘要标记及背景图谱引用保持原记录。
+**中文** 源效应量级的算术核对仅使用已报告系数与标准差。FRA **没有**取得逐放电数据库、重跑 PENCIL/FAFNER、复现稳健权重或协方差、开展回旋动理学计算、验证 ITER 性能，或系统评议其他论文。前序工作只按本稿的描述或引用讨论。原有演示图谱引用保持原记录；后续 Greenwald 证据整合另行登记选定全文发现，并保留来源与阅读范围限制。
 
 ## 6. Scientific Contribution & Novelty | 科学贡献与先进性
 
@@ -414,20 +426,20 @@ $$
 
 ## 11. Review Status & References | 评议状态与参考资料
 
-| Dimension / 维度                                     | Actual status / 实际状态                                                                                                                                                                                                                                                                 |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bibliographic identity / 书目身份                    | Existing checked record retained; repository publication association inspected / 沿用已核对记录，检查机构仓储出版关联                                                                                                                                                                    |
-| Reading scope / 阅读范围                             | Entire 22-page institutional author manuscript, including main text, references, four figures, four tables and five numbered equations / 完整 22 页机构作者稿，包括正文、参考文献、四图、四表、五个编号方程                                                                              |
-| Source-claim assessment / 原文主张评议               | `A07-C01`–`A07-C09` located and analysed with conditions and interpretation boundaries / 九项主张已定位并分析条件及解释边界                                                                                                                                                              |
-| Completed scientific review / 已完成科学评议         | **Completed for this identified manuscript, 2026-10-12, v1.0**; version-of-record concordance remains unverified / **对该明确作者稿已完成，2026-10-12，v1.0**；正式发表版本一致性尚未核实                                                                                                |
-| Independent verification / 独立验证                  | **Not performed**: no independent regression reproduction, transport calculation or experiment / **未开展**：未独立复现回归、输运计算或实验                                                                                                                                              |
-| JSON/graph status / JSON 与图谱状态                  | Historical `metadata/abstract: checked`, `fullText/claim/independent: not_checked` remain unchanged; graph citations remain `context`, `claimVerified: false` / 历史分层标记未修改，图谱仍为未验证的背景引用                                                                             |
-| Counts in this documentation change / 本文档变更统计 | Indexed **2**; completed scientific reviews **1**; independently verified **0**. Angioni 2003 remains pending / 收录 **2**、完成评议 **1**、独立验证 **0**；Angioni 2003 仍待评议                                                                                                        |
-| Deferred evidence / 待补证据                         | Journal-version numerical concordance; raw observations and diagnostic covariance; full regression covariance/weights; full density-gradient renormalisation; complete projection inputs / 发表稿数值一致性、逐观测数据与诊断协方差、完整回归协方差/权重、完整密度梯度重归一化及外推输入 |
+| Dimension / 维度                          | Actual status / 实际状态                                                                                                                                                                                                                                                                 |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bibliographic identity / 书目身份         | Existing checked record retained; repository publication association inspected / 沿用已核对记录，检查机构仓储出版关联                                                                                                                                                                    |
+| Reading scope / 阅读范围                  | Entire 22-page institutional author manuscript, including main text, references, four figures, four tables and five numbered equations / 完整 22 页机构作者稿，包括正文、参考文献、四图、四表、五个编号方程                                                                              |
+| Source-claim assessment / 原文主张评议    | `A07-C01`–`A07-C09` located and analysed with conditions and interpretation boundaries / 九项主张已定位并分析条件及解释边界                                                                                                                                                              |
+| Completed research study / 已完成深入研读 | **Completed for this identified manuscript, 2026-10-12, v1.0**; version-of-record concordance remains unverified / **对该明确作者稿已完成，2026-10-12，v1.0**；正式发表版本一致性尚未核实                                                                                                |
+| Independent verification / 独立验证       | **Not performed**: no independent regression reproduction, transport calculation or experiment / **未开展**：未独立复现回归、输运计算或实验                                                                                                                                              |
+| JSON/graph status / JSON 与图谱状态       | Source full-text/selected-claim checks now recorded; `finding-2007` remains abstract-level; original demo citations stay contextual; independent remains not_checked / 来源已记录全文与选定主张检查；原摘要发现和演示引用保留原义，独立验证仍未检查                                      |
+| Current catalogue / 当前目录              | Indexed **3**; completed research studies **2**; independently verified **0**; see [catalogue](../README.md). Angioni 2003 remains pending / 收录 **3**、完成研读 **2**、独立验证 **0**；Angioni 2003 仍待全文                                                                           |
+| Deferred evidence / 待补证据              | Journal-version numerical concordance; raw observations and diagnostic covariance; full regression covariance/weights; full density-gradient renormalisation; complete projection inputs / 发表稿数值一致性、逐观测数据与诊断协方差、完整回归协方差/权重、完整密度梯度重归一化及外推输入 |
 
-**EN** The literature page is the record of this new source-based review. JSON remains the historical graph-data snapshot because its modification was outside this task; a completed Markdown review does not silently change graph claims or their verification flags. The analytic identifiability examples and reported-number arithmetic checks do not qualify the paper as independently verified. Documentation counts reflect this review on the PR branch; main adopts them only if the PR is merged by the maintainer.
+**EN** This page retains the original source-based study. Subsequent integration with [Greenwald 2007](greenwald-2007.md) adds selected full-text findings to JSON and a separate research-record chain. The original demonstration objects and citations are preserved. Analytical examples and reported-number arithmetic do not constitute independent scientific verification.
 
-**中文** 文献页面记录本次新的原文评议；JSON 因不在本轮修改范围内，仍是历史图谱数据快照。Markdown 评议完成不自动改变图谱主张及核验标记。解析可识别性例子与已报告数字的算术核对，不使论文升级为已完成独立验证。文档计数反映 PR 分支上的评议状态，只有维护者合并 PR 后，main 才采用这些计数。
+**中文** 本页保留原文研读成果。后续与 [Greenwald 2007](greenwald-2007.md) 的整合将选定全文发现加入 JSON，并另建科研记录链；原有演示对象和引用仍保留原义。解析例子与已报告数字的算术核对，不构成独立科学验证。
 
 - [Original article DOI / 原始论文 DOI](https://doi.org/10.1088/0029-5515/47/9/033); [publisher article page / 正式出版页面](https://iopscience.iop.org/article/10.1088/0029-5515/47/9/033).
 - [Full text actually reviewed: Max Planck institutional author manuscript / 实际评议全文：Max Planck 机构作者稿](https://pure.mpg.de/rest/items/item_2142837_2/component/file_2142836/content); [official repository metadata / 官方仓储元数据](https://pure.mpg.de/rest/items/item_2142837).

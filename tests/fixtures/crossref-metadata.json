@@ -31,5 +31,18 @@
     ],
     "journal": "Nuclear Fusion",
     "year": 2007
+  },
+  {
+    "doi": "10.1088/0029-5515/47/9/l03",
+    "title": "Density profile peaking in low collisionality H-modes: comparison of Alcator C-Mod data to ASDEX Upgrade/JET scalings",
+    "authors": [
+      "M. Greenwald",
+      "C. Angioni",
+      "J.W. Hughes",
+      "J. Terry",
+      "H. Weisen"
+    ],
+    "journal": "Nuclear Fusion",
+    "year": 2007
   }
 ]

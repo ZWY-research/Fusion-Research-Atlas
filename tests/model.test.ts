@@ -164,7 +164,7 @@ test("bilingual fields, domains, all seven object types and search filters compo
   );
   assert.equal(
     visibleNodes(a, "", "all", "all", "all", "research_record").length,
-    0,
+    6,
   );
 });
 test("GitHub contribution URLs select the corresponding existing Issue Form", () => {
@@ -211,4 +211,38 @@ test("checked abstract accepts abstract and full-text reading scopes", () => {
     assert.equal(source.verificationStatus.abstract, "checked");
     assert.equal(sourceSchema.safeParse(source).success, true);
   }
+});
+
+test("research additions preserve demonstration provenance and historical abstract findings", () => {
+  const a = parseAtlas(data);
+  for (const original of legacy.nodes) {
+    const n = a.nodes.find((n) => n.id === original.id)!;
+    assert.deepEqual(n.position, original.position);
+    assert.equal(n.contentStatus, "demonstration");
+    assert.ok(
+      n.citations.every((c) => c.role === "context" && !c.claimVerified),
+    );
+  }
+  const angioni = a.sources.find((s) => s.id === "paper-angioni-2007")!;
+  assert.equal(angioni.readingScope, "full_text");
+  assert.equal(
+    angioni.reportedFindings.find((f) => f.id === "finding-2007")!.scope,
+    "abstract",
+  );
+  assert.equal(
+    a.sources.find((s) => s.id === "paper-angioni-2003")!.readingScope,
+    "abstract",
+  );
+  assert.ok(
+    a.sources.every((s) => s.verificationStatus.independent === "not_checked"),
+  );
+  const reachable = new Set(["q-density"]);
+  for (let i = 0; i < a.nodes.length; i++)
+    for (const edge of a.edges)
+      if (reachable.has(edge.source)) reachable.add(edge.target);
+  assert.ok(
+    a.nodes
+      .filter((n) => n.contentStatus === "research_record")
+      .every((n) => reachable.has(n.id)),
+  );
 });

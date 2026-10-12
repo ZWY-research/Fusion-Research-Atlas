@@ -96,7 +96,10 @@ export const labels = {
   challenge: ["挑战", "Challenge"],
   reference: ["背景引用", "Context citation"],
   notVerified: ["未核验此主张", "This claim is not verified"],
-  available: ["已有示例子图", "Demonstration subgraph available"],
+  available: [
+    "已有研究与示例子图",
+    "Research and demonstration subgraph available",
+  ],
   future: ["未来研究范围", "Future research scope"],
   typical: ["典型科学问题", "Typical question"],
   explore: ["查看子图", "Explore subgraph"],
@@ -104,8 +107,8 @@ export const labels = {
   output: ["输出", "Output"],
   update: ["更新准则", "Update criteria"],
   evidenceWarning: [
-    "DOI 核对只确认书目身份，不验证物理机制。两篇文献没有把整个示例图谱变成正式研究结果。",
-    "DOI checks establish bibliographic identity, not mechanisms. Two papers do not turn the demonstration atlas into research results.",
+    "DOI 核对只确认书目身份。文献主张核验按实际阅读范围记录，不等于独立复现或机制验证；原有示例对象保留示例状态。",
+    "DOI checks establish bibliographic identity. Source claims are checked within the stated reading scope, not independently replicated or mechanistically validated; original demonstration objects retain their status.",
   ],
   standards: ["证据评估规范", "Evidence assessment standards"],
   openSource: ["打开来源", "Open source"],

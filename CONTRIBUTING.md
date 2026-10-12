@@ -17,7 +17,7 @@ Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.
 **EN** You may also submit a Pull Request for bilingual scientific content, corrections, code, tests, visualization, accessibility, or documentation.\
 **中文** 也可通过 Pull Request 贡献双语科学内容、勘误、代码、测试、图谱可视化、可访问性或文档改进。
 
-### Scientific literature contributions | 科学文献评议贡献
+### Research Insights contributions | 科研成果解读贡献
 
 **EN** Begin with the [literature catalogue](docs/literature/README.md) and use the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) for a new paper page. The existing four Issue forms and Pull Request process cover all literature contributions:
 
@@ -30,7 +30,7 @@ Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.
 | Correct an error or omission in a review / 指出评议中的错误或遗漏                                  | Scientific Challenge, or a focused correction PR / 科学质疑，或勘误 PR                                                               |
 | Propose a competing physical explanation / 提出竞争性物理解释                                      | Scientific Challenge / 科学质疑                                                                                                      |
 | Add a mathematical, simulation, or experimental verification method / 补充数学、模拟或实验验证方法 | Verification Proposal / 验证提案                                                                                                     |
-| Submit a new English–Chinese scientific review / 提交新的中英双语科学文献评议                      | Pull Request; Research Question for unresolved questions raised by the review / Pull Request；评议引出的未解决问题可使用科学问题表单 |
+| Submit a new English–Chinese scientific review / 提交新的中英双语科研成果解读                      | Pull Request; Research Question for unresolved questions raised by the review / Pull Request；评议引出的未解决问题可使用科学问题表单 |
 
 **EN** For a review PR, create one file in `docs/literature/papers/`, link it from the relevant domain sections, and update the distinct-paper counts in the catalogue and README when warranted. Check for an existing DOI record to avoid duplicate pages; retain graph source and finding IDs when present, link the related question, and separate reported results, authors' interpretations, and FRA analysis. Record actual reading scope, claim assessment, review date/version, and any independent verification with its evidence. Mark unfinished sections as pending. Keep indexed, reviewed, and independently verified counts separate, and add verified claims to graph data only in a subsequent, explicitly supported change.
 
@@ -97,3 +97,9 @@ npm run build
 **中文** 贡献内容可以转化为定义更清楚的科学问题、可追溯的证据记录、竞争性假设、研究验证任务，或经过审查的图谱与代码变更。并非每次贡献都必须得到确定结论：未解决或相互矛盾的研究结果本身也是图谱的一部分。
 
 [**Start with an Issue · 通过 Issue 参与**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Back to README · 返回项目首页**](README.md)
+
+## Authors and interdisciplinary collaborators | 作者与跨学科研究者参与
+
+**EN** Authors are welcome to add contributions insufficiently represented in Research Insights, explain experimental conditions or model context, clarify applicability, supply subsequent evidence, propose alternative interpretations, and develop new questions with other disciplines. Please identify the relevant paper, finding, or graph ID and give source locators where possible. Reuse the four existing Issue forms or submit a Pull Request; participation does not require a new author approval process.
+
+**中文** 欢迎作者补充解读中未充分呈现的贡献，说明实验条件或模型背景，澄清适用范围，提供后续证据，提出替代解释，并与其他学科共同发展新问题。请注明相关论文、发现或图谱 ID，尽可能提供原文位置。复用现有四种 Issue 表单或提交 Pull Request，无须另设作者审批制度。

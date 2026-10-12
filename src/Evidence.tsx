@@ -1,6 +1,13 @@
 import { text } from "./model";
 import type { Source, Citation, Language } from "./model";
 import { ui } from "./i18n";
+// Pin the studied documents so links work while the research PR is still open.
+const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
+const studyPages: Record<string, string> = {
+  "paper-angioni-2003": "angioni-2003.md",
+  "paper-angioni-2007": "angioni-2007.md",
+  "paper-greenwald-2007": "greenwald-2007.md",
+};
 export function SourceDetail({
   source: s,
   language: l,
@@ -27,6 +34,22 @@ export function SourceDetail({
       <a className="doi-link" href={s.url} target="_blank" rel="noreferrer">
         {s.doi ? "DOI: " + s.doi : ui("unknownDoi", l)} ↗
       </a>
+      {studyPages[s.id] && (
+        <a
+          className="provider"
+          data-testid={"insight-" + s.id}
+          href={
+            "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/" +
+            studyRevision +
+            "/docs/literature/papers/" +
+            studyPages[s.id]
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
+          {l === "zh" ? "科研成果解读" : "Research Insights"} ↗
+        </a>
+      )}
       <div className="verification-grid">
         {(
           ["metadata", "abstract", "fullText", "claim", "independent"] as const
@@ -43,10 +66,10 @@ export function SourceDetail({
       <p>{text(s.researchConditions, l)}</p>
       <h4>{ui("findings", l)}</h4>
       {s.reportedFindings.map((f) => (
-        <div className="finding" key={f.id}>
+        <div className="finding" key={f.id} data-testid={"finding-" + f.id}>
           <p>{text(f.statement, l)}</p>
           <small>
-            {ui("locator", l)}: {text(f.locator, l)} · {ui(f.scope, l)}
+            {f.id} · {ui("locator", l)}: {text(f.locator, l)} · {ui(f.scope, l)}
           </small>
         </div>
       ))}
@@ -104,6 +127,12 @@ export function CitationList({
               </a>
               <p>{text(c.statement, l)}</p>
               <small>
+                {c.findingId && (
+                  <>
+                    <code>{c.findingId}</code>
+                    <br />
+                  </>
+                )}
                 {ui("conditions", l)}: {text(c.conditions, l)}
                 <br />
                 {ui("locator", l)}: {text(c.locator, l)}

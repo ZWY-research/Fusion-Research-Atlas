@@ -1,4 +1,4 @@
-# Scientific Paper Review Template | 科学文献评议模板
+# Research Insights Template | 科研成果解读模板
 
 [Catalogue / 文献目录](README.md) · [Contribution guide / 贡献指南](../../CONTRIBUTING.md)
 
@@ -7,6 +7,17 @@
 **中文** 将本结构复制到 `docs/literature/papers/` 的一个文件中，用中英对应内容替换提示，并按所在位置调整导航链接（目录链接改为 `../README.md`）。优先沿用已有 DOI 记录，保留来源、发现及问题 ID，将页面加入相关领域。本模板适用于聚变领域的实验、理论、模拟、诊断、材料与工程研究。未阅读或未完成栏目明确标为待研究，页面结构完整不等于完成科学评议。
 
 **Default status / 默认状态：Pending review / 待评议。**
+
+## Why This Study Matters | 为什么选择这项研究？
+
+**EN** Identify the FRA question, the authors' specific contribution, the value of the observations/methods/theory, and the directions it opens. Give source anchors and respect the actual reading scope. Avoid unsupported claims of breakthroughs.
+
+**中文** 说明对应的 FRA 科学问题、作者的具体贡献、观测或方法或理论的研究价值，以及打开的后续方向。提供原文依据，尊重实际阅读范围，避免无依据的突破性评价。
+
+## Key Contributions at a Glance | 主要科学贡献概览
+
+- **EN** Summarise 2–4 specific contributions, each with a source locator, conditions and actual status. / **中文** 用 2–4 项概括具体贡献，逐项给出原文位置、条件和实际状态。
+- **EN** For unread full text, record only verified selection value and keep contribution assessment pending. / **中文** 未读全文时，只记录已核验的选题价值，贡献评价保留待研究。
 
 ## 1. Bibliographic Information | 论文基本信息
 
@@ -84,7 +95,7 @@
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------- |
 | A concrete theoretical, simulation, or experimental task / 具体理论、模拟或实验任务 | Source equations, public data, parameter ranges, uncertainties / 原文方程、公开数据、参数范围与不确定性 | Derivation, controlled scan, reproduction, measurement / 推导、控制扫描、复现或测量 | A falsifiable prediction or reproducible outcome / 可证伪预测或可复现结果 | State the alternatives and the discriminating criterion / 说明竞争解释与判别标准 | Proposed; not performed / 计划；未开展 |
 
-## 11. Review Status & References | 评议状态与参考资料
+## 11. Study Status & References | 研读状态与参考资料
 
 | Dimension / 维度                              | Actual status and evidence / 实际状态与依据                                                                                                                                                   |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,7 +104,7 @@
 | Abstract / 摘要                               | Not checked or checked; source / 未检查或已检查；来源                                                                                                                                         |
 | Full text / 全文                              | Not checked or checked; consulted sections / 未检查或已检查；阅读章节                                                                                                                         |
 | Specific scientific claims / 具体科学主张     | Which claims were assessed, how, and which remain pending / 已核验哪些主张、方法及待核验部分                                                                                                  |
-| Completed scientific review / 已完成科学评议  | Pending by default; completion requires actual full-text and relevant-claim study / 默认待完成；须实际研究全文及相关主张                                                                      |
+| Completed research study / 已完成深入研读     | Pending by default; completion requires actual full-text and relevant-claim study / 默认待完成；须实际研究全文及相关主张                                                                      |
 | Independent verification / 独立验证           | Not performed by default; identify the result, independent method, inputs, artefact, uncertainty, and outcome if completed / 默认未开展；完成时记录结果、独立方法、输入、材料、不确定性与结论 |
 | Review date/version / 评议日期与版本          | Distinguish page-update date from scientific review and independent-verification dates / 区分页面更新、科学评议及独立验证日期                                                                 |
 | Original and related sources / 原始与相关资料 | DOI, source locators, and related FRA question/evidence links / DOI、来源位置及 FRA 问题与证据链接                                                                                            |
