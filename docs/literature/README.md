@@ -2,16 +2,16 @@
 
 [Project README / 项目首页](../../README.md) · [Contribution guide / 贡献指南](../../CONTRIBUTING.md) · [Review template / 评议模板](REVIEW_TEMPLATE.md) · [Atlas question q-density / 图谱问题 q-density](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)
 
-**EN** This catalogue connects original papers to FRA's scientific questions and evidence records across the eight existing research domains. Paper pages preserve the DOI, graph identifiers, source scope, and actual review status. The initial two pages document bibliographic and abstract-level checks; full-text scientific reviews remain pending.
+**EN** This catalogue connects original papers to FRA's scientific questions and evidence records across the eight existing research domains. Paper pages preserve the DOI, graph identifiers, source scope, and actual review status. Angioni 2007 now has a completed review of the identified 22-page institutional author manuscript; Angioni 2003 remains at bibliographic/abstract scope. Version-of-record concordance and independent scientific verification remain separate, unfinished checks.
 
-**中文** 本目录按 FRA 现有八个研究领域，将原始论文连接至科学问题与证据记录。论文页面保留 DOI、图谱标识、来源范围和实际评议状态。首批两篇页面记录的是书目及摘要级检查，全文科学评议仍待开展。
+**中文** 本目录按 FRA 现有八个研究领域，将原始论文连接至科学问题与证据记录。论文页面保留 DOI、图谱标识、来源范围和实际评议状态。Angioni 2007 已完成对明确的 22 页机构作者稿的科学评议，Angioni 2003 仍为书目及摘要级范围。正式发表版本一致性与独立科学验证是另行记录、尚未完成的检查。
 
 ## Status and counts | 状态与统计
 
 | Status / 状态                                                                  | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                                                                  |
 | ------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Indexed Papers / 已收录论文](#indexed-papers)                                 | **2**                        | A traceable literature record exists / 已建立可追溯文献记录                                                                                                                     |
-| [Completed Scientific Reviews / 已完成科学评议](#completed-scientific-reviews) | **0**                        | The paper's full text and relevant scientific claims have actually been systematically studied and reviewed / 已实际完成论文正文及相关科学主张的系统研究与评议                  |
+| [Completed Scientific Reviews / 已完成科学评议](#completed-scientific-reviews) | **1**                        | The paper's full text and relevant scientific claims have actually been systematically studied and reviewed / 已实际完成论文正文及相关科学主张的系统研究与评议                  |
 | [Independently Verified / 已完成独立验证](#independently-verified)             | **0**                        | Specified scientific results have an evidenced independent recheck, computational reproduction, or experimental test / 对明确科研结果已有具备证据的独立复核、计算复现或实验检验 |
 
 **EN** Status as of 12 October 2026, based on the [existing source records](../../public/data/electron-density.json) and the paper pages below. Count each normalised DOI once (or a stable source ID for a paper without a DOI), irrespective of domain assignments. These are separate progress measures; independent verification must identify the result and the extent actually tested. DOI validation is not scientific review, and review is not independent verification.
@@ -22,20 +22,24 @@
 
 ## Indexed Papers | 已收录论文
 
-| Paper / 论文                                                                                                                                           | DOI                                                                            | FRA source ID / 来源标识 | Actual scope and status / 实际范围与状态                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------ | -------------------------------------------------------------------------------------- |
-| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                               | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata and abstract checked; pending full-text review / 已检查书目和摘要；待全文评议 |
-| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md) | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Metadata and abstract checked; pending full-text review / 已检查书目和摘要；待全文评议 |
+| Paper / 论文                                                                                                                                           | DOI                                                                            | FRA source ID / 来源标识 | Actual scope and status / 实际范围与状态                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| [Angioni et al. (2003): Density Peaking, Anomalous Pinch, and Collisionality in Tokamak Plasmas](papers/angioni-2003.md)                               | [10.1103/PhysRevLett.90.205003](https://doi.org/10.1103/PhysRevLett.90.205003) | `paper-angioni-2003`     | Metadata and abstract checked; pending full-text review / 已检查书目和摘要；待全文评议                                 |
+| [Angioni et al. (2007): Scaling of density peaking in H-mode plasmas based on a combined database of AUG and JET observations](papers/angioni-2007.md) | [10.1088/0029-5515/47/9/033](https://doi.org/10.1088/0029-5515/47/9/033)       | `paper-angioni-2007`     | Completed review of the institutional author manuscript; not independently verified / 已完成机构作者稿评议；未独立验证 |
 
 <a id="completed-scientific-reviews"></a>
 
 ## Completed Scientific Reviews | 已完成科学评议
 
-**0 — No completed scientific reviews yet / 暂无已完成科学评议。**
+**1 — [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md).**
 
-**EN** The two indexed paper pages are information records with pending review sections. Neither is counted as a completed review.
+**EN** Review FRA-Q001-R01-A01 covers the complete 22-page Max Planck institutional author manuscript, four figures, four tables, five numbered equations and nine source-located claims. It distinguishes the global peaking observable, conditional source attribution and competing ITER extrapolations. Numerical concordance with the journal version remains unverified; independent reproduction was not performed. Angioni 2003 remains pending.
 
-**中文** 两篇已收录论文页面是附有待评议栏目的信息记录，均不计为已完成评议。
+**中文** FRA-Q001-R01-A01 覆盖 Max Planck 22 页机构作者稿全文、四图、四表、五个编号方程及九项已定位主张，区分全局峰化观测量、有条件的源归因与竞争 ITER 外推。与期刊版本的数值一致性尚未核实，没有开展独立复现。Angioni 2003 仍待评议。
+
+**EN** The Markdown page records the new review. The unchanged JSON remains the historical graph-data snapshot with metadata/abstract checks; this review does not promote graph claims or verification flags.
+
+**中文** Markdown 页面记录本次新增评议；未修改的 JSON 仍是书目/摘要检查的历史图谱快照。本次评议不提升图谱主张或验证标记。
 
 <a id="independently-verified"></a>
 
@@ -55,21 +59,21 @@
 
 ### 1. Particle, Heat & Momentum Transport | 粒子、热量与动量输运
 
-Domain ID / 领域标识：`transport`。Indexed / 已收录：2；completed reviews / 已完成评议：0。
+Domain ID / 领域标识：`transport`。Indexed / 已收录：2；completed reviews / 已完成评议：1。
 
 - [Angioni et al. (2003) / Angioni 等（2003）](papers/angioni-2003.md) — Pending full-text review / 待全文评议。
-- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Pending full-text review / 待全文评议。
+- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Completed manuscript review; not independently verified / 已完成作者稿评议；未独立验证。
 
-No reviewed papers yet / 暂无已完成评议的论文。
+One completed manuscript review: Angioni 2007; the same paper is counted once across domains / 一篇已完成作者稿评议：Angioni 2007；跨领域仍只计一次。
 
 ### 2. Turbulence & Microinstabilities | 湍流与微观不稳定性
 
-Domain ID / 领域标识：`turbulence`。Indexed / 已收录：2；completed reviews / 已完成评议：0。
+Domain ID / 领域标识：`turbulence`。Indexed / 已收录：2；completed reviews / 已完成评议：1。
 
 - [Angioni et al. (2003) / Angioni 等（2003）](papers/angioni-2003.md) — Context for q-density; Pending full-text review / q-density 研究背景；待全文评议。
-- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Context for q-density; Pending full-text review / q-density 研究背景；待全文评议。
+- [Angioni et al. (2007) / Angioni 等（2007）](papers/angioni-2007.md) — Context for q-density; completed manuscript review / q-density 研究背景；已完成作者稿评议。
 
-No reviewed papers yet / 暂无已完成评议的论文。
+One completed manuscript review: Angioni 2007; the same paper is counted once across domains / 一篇已完成作者稿评议：Angioni 2007；跨领域仍只计一次。
 
 ### 3. MHD & Plasma Stability | MHD 与等离子体稳定性
 
