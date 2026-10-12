@@ -44,5 +44,24 @@
     ],
     "journal": "Nuclear Fusion",
     "year": 2007
+  },
+  {
+    "doi": "10.1088/1741-4326/ab81aa",
+    "title": "Collisionality driven turbulent particle transport changes in DIII-D H-mode plasmas",
+    "authors": [
+      "S. Mordijck",
+      "T.L. Rhodes",
+      "L. Zeng",
+      "A. Salmi",
+      "T. Tala",
+      "C.C. Petty",
+      "G.R. McKee",
+      "R. Reksoatmodjo",
+      "F. Eriksson",
+      "E. Fransson",
+      "H. Nordman"
+    ],
+    "year": 2020,
+    "journal": "Nuclear Fusion"
   }
 ]

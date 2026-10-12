@@ -326,6 +326,62 @@
       ],
       "readingScope": "full_text",
       "contentStatus": "research_record"
+    },
+    {
+      "id": "paper-mordijck-2020",
+      "title": "Collisionality driven turbulent particle transport changes in DIII-D H-mode plasmas",
+      "titleTranslation": {
+        "zh": "DIII-D H 模等离子体中碰撞性驱动的湍流粒子输运变化",
+        "en": "Collisionality driven turbulent particle transport changes in DIII-D H-mode plasmas"
+      },
+      "authors": [
+        "S. Mordijck",
+        "T.L. Rhodes",
+        "L. Zeng",
+        "A. Salmi",
+        "T. Tala",
+        "C.C. Petty",
+        "G.R. McKee",
+        "R. Reksoatmodjo",
+        "F. Eriksson",
+        "E. Fransson",
+        "H. Nordman"
+      ],
+      "collectiveAuthors": [],
+      "journal": "Nuclear Fusion",
+      "year": 2020,
+      "volume": "60",
+      "issue": "6",
+      "pages": "066019",
+      "doi": "10.1088/1741-4326/ab81aa",
+      "doiUnavailableReason": null,
+      "url": "https://doi.org/10.1088/1741-4326/ab81aa",
+      "sourceType": "journal_article",
+      "contentStatus": "research_record",
+      "researchConditions": {
+        "zh": "标题对应 DIII-D H 模。完整原文尚不可读，扫描参数、源、梯度和诊断条件未完成原文核验。",
+        "en": "The title concerns DIII-D H-mode. Readable complete original text was not obtained; scan parameters, sources, gradients and diagnostic conditions remain unchecked against the paper."
+      },
+      "reportedFindings": [],
+      "limitations": {
+        "zh": "仅登记已核对书目信息与公开来源。没有完成正文、公式、图表及图注研读，不登记据摘要推断的机制发现；全文、主张和独立验证均未完成。",
+        "en": "Verified bibliography and public source records only. Body text, equations, figures and captions were not fully studied; no abstract-derived mechanism findings are registered. Full-text, claim and independent verification remain incomplete."
+      },
+      "verificationStatus": {
+        "metadata": "checked",
+        "abstract": "not_checked",
+        "fullText": "not_checked",
+        "claim": "not_checked",
+        "independent": "not_checked"
+      },
+      "verifiedAt": "2026-10-12",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1088/1741-4326/ab81aa",
+        "https://research.chalmers.se/publication/517342",
+        "https://iopscience.iop.org/article/10.1088/1741-4326/ab81aa",
+        "https://www.osti.gov/servlets/purl/1618050"
+      ],
+      "readingScope": "metadata_only"
     }
   ],
   "nodes": [

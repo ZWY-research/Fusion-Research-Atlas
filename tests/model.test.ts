@@ -246,3 +246,18 @@ test("research additions preserve demonstration provenance and historical abstra
       .every((n) => reachable.has(n.id)),
   );
 });
+
+test("Mordijck intake cannot promote unavailable full text or mechanism claims", () => {
+  const a = parseAtlas(data);
+  const source = a.sources.find((s) => s.id === "paper-mordijck-2020")!;
+  assert.equal(source.readingScope, "metadata_only");
+  assert.deepEqual(source.reportedFindings, []);
+  assert.equal(source.verificationStatus.metadata, "checked");
+  for (const key of ["abstract", "fullText", "claim", "independent"] as const)
+    assert.equal(source.verificationStatus[key], "not_checked");
+  assert.ok(
+    [...a.nodes, ...a.edges].every((item) =>
+      item.citations.every((c) => c.sourceId !== source.id),
+    ),
+  );
+});

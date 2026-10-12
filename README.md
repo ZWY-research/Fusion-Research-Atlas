@@ -158,7 +158,7 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
 
 | Research progress / 科研进展                                                                        | Current record / 当前记录                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Indexed Papers / 已收录论文](docs/literature/README.md#indexed-papers)                             | **3**                                                                                                                                                                                                    |
+| [Indexed Papers / 已收录论文](docs/literature/README.md#indexed-papers)                             | **4**                                                                                                                                                                                                    |
 | [Completed Research Studies / 已完成深入研读](docs/literature/README.md#completed-research-studies) | **2**                                                                                                                                                                                                    |
 | [Independently Verified / 已完成独立验证](docs/literature/README.md#independently-verified)         | **0**                                                                                                                                                                                                    |
 | First research case / 首个研究案例                                                                  | [q-density: core electron-density transport and density peaking / 核心电子密度输运与密度峰化](https://zwy-research.github.io/Fusion-Research-Atlas/#q-density)                                           |
@@ -176,6 +176,10 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
   **中文：** [Angioni 2007](docs/literature/papers/angioni-2007.md) 已完成机构作者稿研读；[Greenwald 2007](docs/literature/papers/greenwald-2007.md) 已完成原刊短文全文提取文本、四幅图注及式（1）的研读，并记录图像访问限制。Angioni 2003 仍为书目/摘要级。均未开展独立科学验证。
 - **EN:** This begins the **V0.3** research milestone: cross-paper evidence now enters the interactive atlas. Stronger empirical support for a collisionality scaling does not resolve the microscopic density-peaking mechanism. The public release remains v0.2.0; these additions are submitted through a reviewable PR.\
   **中文：** 本次开始落实 **V0.3** 科研里程碑：跨论文证据已进入交互图谱。碰撞性经验定标得到更强支持，密度峰化的微观机制仍未解决。公开发布标签保持 v0.2.0，新增内容通过可审查的 PR 提交。
+
+**EN** [Mordijck 2020](docs/literature/papers/mordijck-2020.md) is indexed at metadata-only scope; original full-text access remains pending. It adds no verified mechanism or completed study.
+
+**中文** [Mordijck 2020](docs/literature/papers/mordijck-2020.md) 已完成书目级收录，待取得原始全文；不增加已核验机制或完成研读。
 
 **EN** A successful software build does not establish a scientific mechanism. FRA explicitly separates source metadata, abstract/full-text reading, claim assessment, and independent verification.\
 **中文** 软件构建成功不代表物理机制得到证明。FRA 严格区分书目信息、摘要与全文查阅、具体科学主张核验和独立科学验证。
