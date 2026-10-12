@@ -359,3 +359,62 @@ test("Q001 research chain, real canvas node, source findings and bilingual insig
     ),
   ).toBe(true);
 });
+
+test("Mordijck metadata intake is accessible without claiming completed scientific study", async ({
+  page,
+}) => {
+  await page.goto("");
+  await page
+    .getByRole("button", {
+      name: "证据与核验 / Evidence & Verification",
+      exact: true,
+    })
+    .click();
+  await page
+    .locator(".evidence-sidebar button")
+    .filter({ hasText: "Collisionality driven turbulent particle transport" })
+    .click();
+  const paper = page.getByTestId("paper-paper-mordijck-2020");
+  await expect(paper).toBeVisible();
+  await expect(paper.locator(".eyebrow")).toContainText("仅书目");
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "全文检查: 未检查",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "主张核验: 未检查",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "独立核验: 未检查",
+  );
+  await expect(paper.locator(".finding")).toHaveCount(0);
+  await expect(paper.locator("a.doi-link")).toHaveAttribute(
+    "href",
+    "https://doi.org/10.1088/1741-4326/ab81aa",
+  );
+  const insight = page.getByTestId("insight-paper-mordijck-2020");
+  await expect(insight).toHaveAttribute(
+    "href",
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/509a9aafa4005711835fc31ff4af3387f1db382f/docs/literature/papers/mordijck-2020.md",
+  );
+  await expect(insight).toHaveText("科研成果解读 ↗");
+  await paper.locator("details summary").click();
+  await expect(
+    paper.locator('a[href="https://www.osti.gov/servlets/purl/1618050"]'),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(insight).toHaveText("Research Insights ↗");
+  await expect(paper).toContainText(
+    "Readable complete original text was not obtained",
+  );
+  await expect(paper.locator(".eyebrow")).toContainText("Metadata only");
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Mordijck-metadata-intake.png",
+    fullPage: true,
+  });
+});
