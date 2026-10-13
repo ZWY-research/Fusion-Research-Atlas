@@ -10,13 +10,16 @@
     "preview": "vite preview",
     "validate:data": "node --experimental-strip-types scripts/validate-data.ts",
     "typecheck": "tsc -b",
-    "test": "node --experimental-strip-types --test tests/model.test.ts",
+    "test": "node --experimental-strip-types --test tests/model.test.ts tests/citations.test.ts",
     "test:browser": "playwright test",
     "format:check": "prettier --check .",
-    "verify:doi": "node --experimental-strip-types scripts/verify-dois.ts"
+    "verify:doi": "node --experimental-strip-types scripts/verify-dois.ts",
+    "render:references": "node --experimental-strip-types scripts/render-citations.ts"
   },
   "dependencies": {
+    "citeproc": "2.4.63",
     "cytoscape": "^3.34.3",
+    "markdown-it": "15.0.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "zod": "^4.6.5"
@@ -24,6 +27,7 @@
   "devDependencies": {
     "@playwright/test": "^1.64.0",
     "@types/cytoscape": "^3.21.9",
+    "@types/markdown-it": "14.2.0",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",

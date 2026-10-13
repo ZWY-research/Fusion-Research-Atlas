@@ -23,6 +23,7 @@
     "vite.config.ts",
     "playwright.config.ts",
     "scripts/**/*.ts",
-    "tests/**/*.ts"
+    "tests/**/*.ts",
+    "src/citeproc.d.ts"
   ]
 }

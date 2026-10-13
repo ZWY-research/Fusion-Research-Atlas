@@ -73,6 +73,7 @@ export const sourceSchema = z
     authors: z.array(z.string().min(1)).min(1),
     collectiveAuthors: z.array(z.string()),
     journal: z.string(),
+    journalAbbreviation: z.string().min(1).optional(),
     year: z.number().int().min(1600).max(2100),
     volume: z.string(),
     issue: z.string(),
