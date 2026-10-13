@@ -3,10 +3,14 @@ import type { Source, Citation, Language } from "./model";
 import { ui } from "./i18n";
 // Pin the studied documents so links work while the research PR is still open.
 const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
+const studyVersions: Record<string, string> = {
+  "paper-mordijck-2020": "74bd06f48ec06a67a15464d0f6a4200a72096d0f",
+};
 const studyPages: Record<string, string> = {
   "paper-angioni-2003": "angioni-2003.md",
   "paper-angioni-2007": "angioni-2007.md",
   "paper-greenwald-2007": "greenwald-2007.md",
+  "paper-mordijck-2020": "mordijck-2020.md",
 };
 export function SourceDetail({
   source: s,
@@ -40,7 +44,7 @@ export function SourceDetail({
           data-testid={"insight-" + s.id}
           href={
             "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/" +
-            studyRevision +
+            (studyVersions[s.id] || studyRevision) +
             "/docs/literature/papers/" +
             studyPages[s.id]
           }

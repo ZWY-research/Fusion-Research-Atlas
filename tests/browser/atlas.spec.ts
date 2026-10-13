@@ -28,7 +28,7 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     if (r.status() >= 400) failures.push(r.url());
   });
   await page.goto("");
-  await expect(page.getByTestId("result-count")).toHaveText("21");
+  await expect(page.getByTestId("result-count")).toHaveText("28");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await expect(page.locator(".mission")).toContainText("开放协作");
   await expect(page.locator(".mission")).toContainText("open, collaborative");
@@ -44,14 +44,14 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     "密度峰化由什么决定？",
   );
   await page.getByLabel("搜索科学对象").fill("Thomson");
-  await expect(page.getByTestId("result-count")).toHaveText("1");
+  await expect(page.getByTestId("result-count")).toHaveText("2");
   await page.getByTestId("node-m-profile").click();
   await expect(page.getByTestId("detail-title")).toHaveText("密度剖面诊断");
   await page.getByRole("button", { name: "重置", exact: true }).click();
   await page.getByLabel("对象类型").selectOption("hypothesis");
-  await expect(page.getByTestId("result-count")).toHaveText("2");
+  await expect(page.getByTestId("result-count")).toHaveText("3");
   await page.getByLabel("内容性质").selectOption("research_record");
-  await expect(page.getByTestId("result-count")).toHaveText("0");
+  await expect(page.getByTestId("result-count")).toHaveText("1");
   await page.getByRole("button", { name: "重置", exact: true }).click();
   await page.goto("#h-pinch");
   await expect(page.getByTestId("detail-title")).toHaveText("向内对流贡献假设");
@@ -93,7 +93,7 @@ test("all research panels, domain exploration and complete bilingual methodology
   );
   await page.getByRole("button", { name: "查看子图" }).click();
   await expect(page.getByLabel("研究领域")).toHaveValue("transport");
-  await expect(page.getByTestId("result-count")).toHaveText("21");
+  await expect(page.getByTestId("result-count")).toHaveText("28");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await page
     .getByRole("button", { name: "研究方法 / Methodology", exact: true })
@@ -343,7 +343,7 @@ test("Q001 research chain, real canvas node, source findings and bilingual insig
   );
   await expect(page.locator(".detail")).toContainText("尚未开展");
   await page.getByLabel("内容性质").selectOption("research_record");
-  await expect(page.getByTestId("result-count")).toHaveText("6");
+  await expect(page.getByTestId("result-count")).toHaveText("13");
   await page.getByRole("button", { name: "适应视图", exact: true }).click();
   await page.screenshot({
     path: screenshotDir + "/FRA-Q001-research-chain.png",
@@ -358,4 +358,75 @@ test("Q001 research chain, real canvas node, source findings and bilingual insig
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+});
+
+test("Mordijck transport chain links full study while keeping mechanisms conditional", async ({
+  page,
+}) => {
+  await page.goto("");
+  await expect(page.getByTestId("result-count")).toHaveText("28");
+  await tapGraph(page, "p-diiid-peaking");
+  await expect(page.getByTestId("detail-title")).toBeVisible();
+  await page.locator(".citation button").first().click();
+  const paper = page.getByTestId("paper-paper-mordijck-2020");
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "全文检查: 已检查",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "主张核验: 已检查",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "独立核验: 未检查",
+  );
+  await expect(paper.locator(".finding")).toHaveCount(6);
+  await expect(
+    page.getByTestId("finding-finding-m20-tangent-steady"),
+  ).toBeVisible();
+  await expect(paper.locator("a.doi-link")).toHaveAttribute(
+    "href",
+    "https://doi.org/10.1088/1741-4326/ab81aa",
+  );
+  const insight = page.getByTestId("insight-paper-mordijck-2020");
+  await expect(insight).toHaveAttribute(
+    "href",
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/74bd06f48ec06a67a15464d0f6a4200a72096d0f/docs/literature/papers/mordijck-2020.md",
+  );
+  await expect(insight).toHaveText("科研成果解读 ↗");
+  await paper.locator("details summary").click();
+  await expect(
+    paper.locator('a[href="https://www.osti.gov/servlets/purl/1618050"]'),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(insight).toHaveText("Research Insights ↗");
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "Full text checked: Checked",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "Independent verification: Not checked",
+  );
+  await page.goto("#h-diiid-coupled-turbulence");
+  await expect(page.locator(".detail .status")).toHaveText(
+    "Candidate hypothesis",
+  );
+  await page.reload();
+  await expect(page.locator(".detail .status")).toHaveText(
+    "Candidate hypothesis",
+  );
+  await page.goto("#q-perturbative-steady");
+  await expect(page.getByTestId("edge-r-m20-closure-test")).toBeVisible();
+  await page.getByTestId("edge-r-m20-closure-test").click();
+  await expect(page.getByTestId("edge-title")).toBeVisible();
+  await page.getByRole("button", { name: "中文", exact: true }).click();
+  await page.goto("#m-diiid-discriminating-tests");
+  await expect(page.getByTestId("detail-title")).toBeVisible();
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Mordijck-transport-study.png",
+    fullPage: true,
+  });
 });

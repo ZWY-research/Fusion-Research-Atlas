@@ -156,15 +156,15 @@ test("bilingual fields, domains, all seven object types and search filters compo
     for (const domain of n.domainIds)
       assert.ok(f.domains.some((d) => d.id === domain));
   }
-  assert.equal(visibleNodes(a, "Thomson", "all", "all").length, 1);
+  assert.equal(visibleNodes(a, "Thomson", "all", "all").length, 2);
   assert.ok(visibleNodes(a, "source", "all", "all").length > 0);
   assert.equal(
     visibleNodes(a, "", "hypothesis", "candidate_hypothesis").length,
-    2,
+    3,
   );
   assert.equal(
     visibleNodes(a, "", "all", "all", "all", "research_record").length,
-    6,
+    13,
   );
 });
 test("GitHub contribution URLs select the corresponding existing Issue Form", () => {
@@ -245,4 +245,34 @@ test("research additions preserve demonstration provenance and historical abstra
       .filter((n) => n.contentStatus === "research_record")
       .every((n) => reachable.has(n.id)),
   );
+});
+
+test("Mordijck full-text findings constrain transport without independent causal verification", () => {
+  const a = parseAtlas(data);
+  const source = a.sources.find((s) => s.id === "paper-mordijck-2020")!;
+  assert.equal(source.readingScope, "full_text");
+  for (const key of ["metadata", "abstract", "fullText", "claim"] as const)
+    assert.equal(source.verificationStatus[key], "checked");
+  assert.equal(source.verificationStatus.independent, "not_checked");
+  assert.ok(source.reportedFindings.every((f) => f.scope === "full_text"));
+  const hypothesis = a.nodes.find(
+    (n) => n.id === "h-diiid-coupled-turbulence",
+  )!;
+  assert.equal(hypothesis.epistemicStatus, "candidate_hypothesis");
+  assert.ok(
+    hypothesis.citations.every((c) => c.role === "context" && !c.claimVerified),
+  );
+  const observation = a.nodes.find((n) => n.id === "p-diiid-peaking")!;
+  assert.equal(observation.epistemicStatus, "conditional");
+  assert.ok(observation.citations.every((c) => c.claimVerified && c.findingId));
+  for (const id of ["q-perturbative-steady", "m-diiid-discriminating-tests"])
+    assert.ok(
+      a.nodes
+        .find((n) => n.id === id)!
+        .citations.every((c) => !c.claimVerified),
+    );
+  const inflated = structuredClone(data);
+  inflated.nodes.find((n: any) => n.id === hypothesis.id).epistemicStatus =
+    "supported";
+  assert.equal(atlasSchema.safeParse(inflated).success, false);
 });
