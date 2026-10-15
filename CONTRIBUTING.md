@@ -7,21 +7,38 @@
 
 Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) to begin a scientific discussion. GitHub sign-in is required to submit an Issue / 提交 Issue 需要登录 GitHub。
 
-| Form                  | 表单     | Use it for / 适用情形                                                                                                                 |
-| --------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Research Question     | 科学问题 | An observation, discrepancy, or unresolved mechanism / 观察现象、研究差异或未解决的机制                                               |
-| Evidence Contribution | 证据贡献 | A paper, public experiment, simulation, or theoretical result / 论文、公开实验、模拟或理论结果                                        |
-| Scientific Challenge  | 科学质疑 | A counterexample, alternative explanation, incorrect assumption, or incompatible result / 反例、其他解释、不成立的假设或不一致结果    |
-| Verification Proposal | 验证提案 | An experiment, mathematical derivation, reproducible calculation, or discriminating test / 实验、数学推导、可复现计算或区分机制的检验 |
+| Form                           | 表单             | Use it for / 适用情形                                                                                                                 |
+| ------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Research Question              | 科学问题         | An observation, discrepancy, or unresolved mechanism / 观察现象、研究差异或未解决的机制                                               |
+| Evidence Contribution          | 证据贡献         | A paper, public experiment, simulation, or theoretical result / 论文、公开实验、模拟或理论结果                                        |
+| Scientific Challenge           | 科学质疑         | A counterexample, alternative explanation, incorrect assumption, or incompatible result / 反例、其他解释、不成立的假设或不一致结果    |
+| Verification Proposal          | 验证提案         | An experiment, mathematical derivation, reproducible calculation, or discriminating test / 实验、数学推导、可复现计算或区分机制的检验 |
+| Literature Research Submission | 文献研究成果提交 | Evidence-grounded research-handoff.md, studied manually or with AI / 人工或 AI 辅助完成、有证据支撑的研究交接包                       |
 
 **EN** You may also submit a Pull Request for bilingual scientific content, corrections, code, tests, visualization, accessibility, or documentation.\
 **中文** 也可通过 Pull Request 贡献双语科学内容、勘误、代码、测试、图谱可视化、可访问性或文档改进。
 
 ### Research Insights contributions | 科研成果解读贡献
 
-**EN** Begin with the [literature catalogue](docs/literature/README.md) and use the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md) for a new paper page. The existing four Issue forms and Pull Request process cover all literature contributions:
+**EN** Begin with the [literature catalogue](docs/literature/README.md). To submit literature research without code, use [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml). For a formal paper-page PR, retain the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md). The four existing scientific Issue forms remain available for focused contributions:
 
-**中文** 请先查阅[文献目录](docs/literature/README.md)，新增论文页面时沿用[双语评议模板](docs/literature/REVIEW_TEMPLATE.md)。文献贡献复用现有四种 Issue 表单和 Pull Request 流程：
+**中文** 请先查阅[文献目录](docs/literature/README.md)。无需写代码的文献研究可使用 [Literature Research Submission / 文献研究成果提交](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml)。正式论文页面 PR 仍沿用[双语评议模板](docs/literature/REVIEW_TEMPLATE.md)；原有四种科学 Issue 表单继续用于具体问题和证据贡献：
+
+### Submit a research handoff | 提交研究交接包
+
+1. Obtain a paper you may lawfully access / 获取可合法阅读的论文。
+2. Study it manually or use the [GPT/Gemini/Claude dialogue prompt](docs/workflows/research-dialogue-prompt.md). AI assistance is optional / 人工研究，或使用通用科研指令开展 AI 辅助研究；AI 不是贡献的必要条件。
+3. Prepare evidence-supported `research-handoff.md` with the prompt's ten sections. If an AI cannot export files, copy its complete Markdown code block and save as UTF-8 / 按指令中的十章节形成有证据支撑的交接文件；AI 不能导出文件时，复制完整 Markdown 代码块并保存为 UTF-8。
+4. Sign in to GitHub and paste the complete Markdown or drag the file into the required Research Handoff field of [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml) / 登录 GitHub，在提交表单的 Research Handoff 必填框中粘贴完整内容或拖入文件。
+5. Maintainers organise and assess key claims and sources, then decide whether a PR should update formal records and the graph / 维护者整理和评议关键主张与来源后，再决定是否通过 PR 更新正式记录和图谱。
+
+**EN** Focused studies, including one topic within a long review, are welcome. State the actual reading and analysis scope; do not imply full-text checking of material not covered. Key claims need evidence and applicable conditions. AI-generated text is not verified scientific fact. Researchers need no programming, fork, Codex or development tools, and no personal credentials, academic title, affiliation or supervisor approval are requested.
+
+**中文** 允许部分专题研究，包括长篇综述中的一个专题。必须声明实际阅读和分析范围，不得暗示已核查未覆盖的全文。关键主张应有证据和适用条件；AI 生成的文本不是已经核验的科学事实。普通研究者无需编程、Fork、Codex 或安装开发工具，也不要求填写个人身份信息、职称、单位或导师批准。
+
+**EN** Developers and maintainers may use Codex when useful to organise evidence, perform necessary computations, draft formal reviews and prepare graph-update PRs. It is not a prerequisite for researchers to submit.
+
+**中文** 开发者或维护者可按需要通过 Codex 整理证据、开展必要计算、生成正式评议并准备图谱更新 PR；普通研究者提交成果不以使用 Codex 为前提。
 
 | Contribution / 贡献内容                                                                            | Existing route / 现有入口                                                                                                            |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -67,6 +84,31 @@ You do not need complete scientific answers to start a discussion. Required form
 
 See [the data model / 数据模型说明](docs/data-model.md) for object types, status fields, and source/claim relationships.
 
+### Key-claim evidence record | 关键主张证据记录
+
+**EN** FRA contributions centre on specific scientific claims and their evidence, rather than lengthy paper summaries. Record these eight items for each important claim affecting scientific judgement, using section 04 Evidence and Findings of `research-handoff.md`. Background sentences do not each need a complete record; mark unavailable information as unknown or unchecked rather than inventing it.
+
+**中文** FRA 科学贡献以具体主张及其证据为核心，而非长篇论文总结。在 `research-handoff.md` 的 04 Evidence and Findings 中，对影响科学判断的重要主张记录以下八类信息；无需为每句背景说明填写完整记录，缺失信息明确标为未知或待核实，不得补造。
+
+| Field / 字段                                      | Required information / 必要信息                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Claim ID / 局部主张编号                           | C01, C02, etc., local to this handoff; not a global FRA finding ID / 仅限本交接文件，不冒充 FRA 全局 finding ID                                                                                                                                                                                                                 |
+| Scientific Claim / 科学主张                       | A precise statement of what is claimed / 清楚表述具体科学主张                                                                                                                                                                                                                                                                   |
+| Source / 来源                                     | DOI or another stable original source; identify what was actually consulted / DOI 或其他稳定原始来源，注明实际查阅材料                                                                                                                                                                                                          |
+| Evidence Locator / 证据位置                       | PDF page, figure, table, equation or section when available / 尽可能提供实际查阅的 PDF 页码、图号、表号、公式编号或章节                                                                                                                                                                                                         |
+| Conditions and Assumptions / 条件与假设           | Device, parameter range, theoretical approximations, experimental or simulation conditions / 装置、参数范围、理论近似、实验或模拟条件                                                                                                                                                                                           |
+| Claim Type / 主张性质                             | Directly reported result; authors' physical interpretation; contributor or AI independent analysis; unverified new hypothesis / 区分原文直接结果、作者物理解释、贡献者或 AI 独立分析、待验证新假设                                                                                                                              |
+| Evidence and Verification Status / 证据与核查状态 | State which bibliographic checks, relevant text/evidence reading, specific claim checks, independent calculations or experimental verification were actually completed and with what evidence; identify unchecked work / 分别说明实际完成的书目核对、相关正文与证据阅读、具体主张检查、独立计算或实验验证及依据，标明待核实事项 |
+| Limitations / 局限                                | Main limits affecting the claim and unresolved questions / 影响主张成立的主要局限及未解决问题                                                                                                                                                                                                                                   |
+
+**EN** For review articles, distinguish results summarised by the review's authors from original studies actually read. Without consulting a cited original study, do not claim it has been checked. Reading, contributor/AI analysis and software-test success are not independent scientific verification. An insufficiently supported claim can remain a question to investigate, but cannot be presented as an established conclusion.
+
+**中文** 研究综述时，必须区分综述作者概括的结果与本次实际阅读的原始研究；没有查阅被引原始论文时，不得声称已经核实该原始研究。阅读、贡献者或 AI 分析、软件测试通过均不等于独立科学验证。证据不足的主张可作为待核查问题保留，不能表述为既定结论。
+
+**EN** This is a contribution-writing convention, not a new data schema or status enumeration. Formal ingestion preserves existing `sourceId`/`findingId`, `epistemicStatus` and `verificationStatus`. C01/C02 labels remain local, new source/finding IDs are assigned during ingestion, and Nature citation numbers are generated by the existing system.
+
+**中文** 这是贡献写作规范，不新增数据结构或科学状态枚举。正式入库继续保留已有 `sourceId`/`findingId`、`epistemicStatus` 和 `verificationStatus`。C01/C02 仅在交接文件内有效，新 source/finding ID 由入库工作确定，Nature 引用编号由现有系统生成。
+
 ## 4. Editing the graph or code | 修改图谱或代码
 
 **EN** Create a branch, make focused changes, then open a Pull Request that states what changed and why. For scientific records, explain the source of each substantive claim. Preserve stable node/edge/source identifiers, use existing schema conventions, and provide `zh` and `en` fields for public-facing graph content. If you can only draft in one language, an Issue is a good starting point for collaborative translation.\
@@ -95,6 +137,10 @@ npm run build
 
 **EN** A contribution can become a clarified question, a traceable evidence record, a competing hypothesis, a proposed verification task, or a reviewed graph/code change. Not every submission will become a settled conclusion: unresolved or contradictory results are part of the atlas.\
 **中文** 贡献内容可以转化为定义更清楚的科学问题、可追溯的证据记录、竞争性假设、研究验证任务，或经过审查的图谱与代码变更。并非每次贡献都必须得到确定结论：未解决或相互矛盾的研究结果本身也是图谱的一部分。
+
+**EN** A new Literature Research Submission Issue acknowledges receipt only. It does not automatically change the graph or established conclusions, create verified findings, increase completed-review counts, or mark AI speculation as verified. Maintainers check key claims and sources before deciding on a PR for formal inclusion. Valuable questions with insufficient sources can stay in the Issue for further discussion.
+
+**中文** 新的文献研究成果 Issue 只表示收到贡献，不会自动修改图谱或已建立结论、创建已验证 finding、增加已完成评议统计，或将 AI 推测标为 verified。维护者对关键主张和来源进行必要检查后，再决定是否通过 PR 纳入正式科学记录。来源不足但有价值的问题可留在 Issue 中继续讨论。
 
 [**Start with an Issue · 通过 Issue 参与**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Back to README · 返回项目首页**](README.md)
 
