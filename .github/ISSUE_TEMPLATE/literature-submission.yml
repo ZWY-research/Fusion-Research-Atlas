@@ -1,0 +1,46 @@
+name: "Literature Research Submission | 文献研究成果提交"
+description: "Submit evidence-grounded literature research, with or without AI. 提交有证据支撑的文献研究，AI 辅助可选。"
+title: "[literature-submission] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use the [research dialogue prompt and handoff requirements / 科研对话指令与交接要求](https://github.com/ZWY-research/Fusion-Research-Atlas/blob/main/docs/workflows/research-dialogue-prompt.md). Manual research is equally welcome. No programming, fork or Codex is needed. 人工研究同样欢迎，无需编程、Fork 或 Codex。
+
+        A complete handoff must include source evidence, claim types, applicable conditions and checking status. 完整交接包须包含原文证据、主张性质、适用条件及核查状态，并声明实际研究范围。
+
+        Submission acknowledges receipt only. Maintainers check key claims and sources before deciding on a PR for formal inclusion. An Issue does not automatically update the graph, create verified findings, change conclusions or increase completed-review counts. Valuable questions with insufficient evidence may remain open for discussion.
+
+        提交仅表示收到研究贡献。维护者检查关键主张和来源后，再决定是否通过 PR 纳入正式记录；不会自动修改图谱、生成已验证 finding、改变科学结论或增加已完成评议统计。证据不足但有价值的问题可保留讨论。
+  - type: textarea
+    id: source
+    attributes:
+      label: "Paper / Source | 论文与来源"
+      description: "Provide the DOI, original title or stable source URL. 提供 DOI、原始题名或稳定来源 URL。"
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: "Research Scope and Main Contribution | 研究范围与主要贡献"
+      description: "State the actual coverage and most important finding, question or explanation. 说明实际研究范围及最重要的科学发现、问题或解释，专题研究也适用。"
+    validations:
+      required: true
+  - type: textarea
+    id: handoff
+    attributes:
+      label: "Research Handoff | 研究交接包"
+      description: "Paste the complete Markdown or drag research-handoff.md into this field. 粘贴完整 Markdown，或将 research-handoff.md 拖入本框作为附件；只提交允许公开的材料。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: public-sharing
+    attributes:
+      label: "Public Sharing Confirmation | 公开共享确认"
+      options:
+        - label: "I may share the submitted material publicly. 我确认提交材料允许公开。"
+          required: true
+        - label: "It contains no unauthorised paper full text, restricted data or sensitive information. 不含未授权论文全文、受限数据或敏感信息。"
+          required: true
+        - label: "AI-assisted analysis is not proof of independent scientific verification. AI 辅助分析不证明已完成独立科学验证。"
+          required: true
