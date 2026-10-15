@@ -1,0 +1,14 @@
+{
+  "nature.csl": {
+    "url": "https://raw.githubusercontent.com/citation-style-language/styles/094133926c5dbc3f91d17619db1ae6dfa4a07fa2/nature.csl",
+    "sha256": "d7572c372d3ed5dfd73420b1681af3607ef475141e1d6f1b415033b723d83124"
+  },
+  "locales-en-GB.xml": {
+    "url": "https://raw.githubusercontent.com/citation-style-language/locales/8353f0623998ad020bb2f52b59eeb175408cb107/locales-en-GB.xml",
+    "sha256": "24d1f20645e517a70ec42a9514c50c57058acefe54f7f5890adef01fd0a49a1a"
+  },
+  "locales-en-US.xml": {
+    "url": "https://raw.githubusercontent.com/citation-style-language/locales/8353f0623998ad020bb2f52b59eeb175408cb107/locales-en-US.xml",
+    "sha256": "6f2cd3d1d5527ff07a2981f7ec237753e3b6787568d053c08485802cc3d04ac0"
+  }
+}

@@ -76,7 +76,8 @@
         "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.205003"
       ],
       "readingScope": "abstract",
-      "contentStatus": "research_record"
+      "contentStatus": "research_record",
+      "journalAbbreviation": "Phys. Rev. Lett."
     },
     {
       "doi": "10.1088/0029-5515/47/9/033",
@@ -216,7 +217,8 @@
         "https://pure.mpg.de/rest/items/item_2142837_2/component/file_2142836/content"
       ],
       "readingScope": "full_text",
-      "contentStatus": "research_record"
+      "contentStatus": "research_record",
+      "journalAbbreviation": "Nucl. Fusion"
     },
     {
       "id": "paper-greenwald-2007",
@@ -325,7 +327,8 @@
         "https://iopscience.iop.org/article/10.1088/0029-5515/47/9/L03"
       ],
       "readingScope": "full_text",
-      "contentStatus": "research_record"
+      "contentStatus": "research_record",
+      "journalAbbreviation": "Nucl. Fusion"
     },
     {
       "id": "paper-mordijck-2020",
@@ -502,7 +505,8 @@
         "https://iopscience.iop.org/article/10.1088/1741-4326/ab81aa",
         "https://www.osti.gov/servlets/purl/1618050"
       ],
-      "readingScope": "full_text"
+      "readingScope": "full_text",
+      "journalAbbreviation": "Nucl. Fusion"
     }
   ],
   "nodes": [

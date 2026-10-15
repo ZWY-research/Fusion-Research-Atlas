@@ -1,6 +1,8 @@
 import { text } from "./model";
 import type { Source, Citation, Language } from "./model";
 import { ui } from "./i18n";
+import { References } from "./References";
+import { useReferences } from "./useReferences";
 // Pin the studied documents so links work while the research PR is still open.
 const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
 const studyVersions: Record<string, string> = {
@@ -107,6 +109,11 @@ export function CitationList({
   language: Language;
   onSource: (id: string) => void;
 }) {
+  const { entries, error } = useReferences(
+    sources,
+    citations.map((c) => c.sourceId),
+  );
+  const numbers = new Map(entries.map((e) => [e.sourceId, e.number]));
   return (
     <>
       {!citations.length ? (
@@ -129,7 +136,30 @@ export function CitationList({
               >
                 {s.doi || ui("unknownDoi", l)}
               </a>
-              <p>{text(c.statement, l)}</p>
+              <p>
+                {text(c.statement, l)}{" "}
+                {numbers.has(s.id) && (
+                  <sup>
+                    <a
+                      className="citation-number"
+                      href={"#ref-" + s.id}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        document
+                          .getElementById("ref-" + s.id)
+                          ?.scrollIntoView({ block: "start" });
+                      }}
+                      data-source-id={s.id}
+                      aria-label={
+                        (l === "zh" ? "参考文献 " : "Reference ") +
+                        numbers.get(s.id)
+                      }
+                    >
+                      {numbers.get(s.id)}
+                    </a>
+                  </sup>
+                )}
+              </p>
               <small>
                 {c.findingId && (
                   <>
@@ -149,6 +179,7 @@ export function CitationList({
           );
         })
       )}
+      <References entries={entries} language={l} error={error} />
     </>
   );
 }

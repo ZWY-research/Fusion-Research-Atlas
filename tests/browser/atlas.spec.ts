@@ -430,3 +430,80 @@ test("Mordijck transport chain links full study while keeping mechanisms conditi
     fullPage: true,
   });
 });
+
+test("Nature references use local scope numbers and preserve scientific status", async ({
+  page,
+}) => {
+  await page.goto("#k-collisionality-evidence");
+  await expect(
+    page.locator('[data-testid="graph"] canvas').first(),
+  ).toBeVisible();
+  const references = page.locator(".detail .references");
+  await expect(references.locator(".reference-entry")).toHaveCount(2);
+  await expect(references.locator(".reference-entry").nth(0)).toHaveAttribute(
+    "data-source-id",
+    "paper-angioni-2007",
+  );
+  await expect(references.locator(".reference-entry").nth(1)).toHaveAttribute(
+    "data-source-id",
+    "paper-greenwald-2007",
+  );
+  await expect(page.locator(".citation-number")).toHaveText(["1", "2"]);
+  await expect(references.locator(".csl-left-margin")).toHaveText(["1.", "2."]);
+  await expect(
+    references.locator("i").filter({ hasText: "Nucl. Fusion" }),
+  ).toHaveCount(2);
+  await expect(references.locator("b")).toHaveText(["47", "47"]);
+  await expect(references.locator(".reference-link").first()).toHaveAttribute(
+    "href",
+    "https://doi.org/10.1088/0029-5515/47/9/033",
+  );
+  await page.locator(".citation-number").last().click();
+  expect(page.url()).toContain("#k-collisionality-evidence");
+  await expect(page.getByTestId("detail-title")).toHaveText(
+    "碰撞性经验支持增强",
+  );
+  await references.scrollIntoViewIfNeeded();
+  await expect(references.locator(".reference-entry").last()).toBeInViewport();
+  await references.screenshot({
+    path: screenshotDir + "/FRA-Nature-reference-list-zh.png",
+  });
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Nature-references-zh.png",
+    fullPage: false,
+  });
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(references.locator("h3")).toHaveText("References");
+  await expect(page.locator(".citation-number")).toHaveText(["1", "2"]);
+  await references.scrollIntoViewIfNeeded();
+  await expect(references.locator(".reference-entry").last()).toBeInViewport();
+  await references.screenshot({
+    path: screenshotDir + "/FRA-Nature-reference-list-en.png",
+  });
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Nature-references-en.png",
+    fullPage: false,
+  });
+  await page.goto("#h-pinch");
+  await expect(references.locator(".reference-entry")).toHaveCount(2);
+  await expect(references.locator(".reference-entry").first()).toHaveAttribute(
+    "data-source-id",
+    "paper-angioni-2003",
+  );
+  await expect(references.locator(".csl-left-margin")).toHaveText(["1.", "2."]);
+  await expect(
+    references.locator("i").filter({ hasText: "Phys. Rev. Lett." }),
+  ).toBeVisible();
+  await expect(page.locator(".detail .status")).toHaveText(
+    "Candidate hypothesis",
+  );
+  await page.goto("#e-diiid-modulation");
+  await expect(references.locator(".reference-entry")).toHaveCount(1);
+  await expect(page.locator(".citation-number")).toHaveText(["1", "1"]);
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
