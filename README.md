@@ -5,7 +5,7 @@
 
 [**Explore the Atlas · 探索图谱**](https://zwy-research.github.io/Fusion-Research-Atlas/) · [**Contribute a Question or Idea · 参与研究**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) · [**Contribution Guide · 贡献指南**](CONTRIBUTING.md) · [**Research Insights · 科研成果解读**](docs/literature/README.md)
 
-[**Research a Paper / 研究一篇论文**](docs/workflows/research-dialogue-prompt.md) · [**Submit Research / 提交研究成果**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml)
+[**Research a Paper / 研究一篇论文**](docs/workflows/research-dialogue-prompt.md) · [**Submit Research / 提交研究成果**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)
 
 > **EN** — Fusion is a scientific challenge shared by humanity. Many of its hardest problems lie at the intersection of disciplines. Fusion Research Atlas (FRA) is an open, collaborative, evidence-driven and evolving fusion research platform to expose the questions that matter, trace what the evidence actually shows, identify what remains unexplained, and invite researchers from different fields to develop and test new explanations together.
 >
@@ -134,9 +134,9 @@ FRA currently organizes research across eight domains / FRA 当前按八个领�
 
 Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose). You can contribute in English or Chinese / 可使用英文或中文提交讨论材料。
 
-**EN** Study a paper manually or with the [research dialogue prompt](docs/workflows/research-dialogue-prompt.md), then paste or attach `research-handoff.md` in [Submit Research](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml). A focused topic is welcome: declare what you actually read and support key claims with sources, conditions and checking status. No programming, fork, Codex or development tools are required. Submission acknowledges receipt; maintainers check claims and sources before deciding whether to include them through a PR. AI-generated text is not verified scientific fact.
+**EN** Research a paper manually or with the [research dialogue prompt](docs/workflows/research-dialogue-prompt.md) → Generate the FRA handoff → Paste or attach Markdown → [Submit an Issue](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md). A focused topic is welcome: declare what you actually read and support key claims with sources, conditions and checking status. No programming, fork, Codex or development tools are required. Submission acknowledges receipt; maintainers check claims and sources before deciding whether to include them through a PR. AI-generated text is not verified scientific fact.
 
-**中文** 可以人工研究论文，也可以使用[科研对话指令](docs/workflows/research-dialogue-prompt.md)，然后在[提交研究成果](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml)中粘贴或附上 `research-handoff.md`。允许聚焦专题，但须声明实际阅读范围，为关键主张提供来源、适用条件和核查状态。无需编程、Fork、Codex 或安装开发工具。提交只表示收到贡献；维护者检查主张与来源后，再决定是否通过 PR 入库。AI 生成的文字不是已经核验的科学事实。
+**中文** 人工或借助[科研对话指令](docs/workflows/research-dialogue-prompt.md)研究论文 → 生成 FRA 交接包 → 直接粘贴或上传 Markdown → [提交 Issue](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)。允许聚焦专题，但须声明实际阅读范围，为关键主张提供来源、适用条件和核查状态。无需编程、Fork、Codex 或安装开发工具。提交只表示收到贡献；维护者检查主张与来源后，再决定是否通过 PR 入库。AI 生成的文字不是已经核验的科学事实。
 
 | Contribution route        | 参与方式           | A useful first contribution / 第一次可以做什么                                                                                                           |
 | ------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -5,9 +5,9 @@
 
 ## 1. Choose a contribution | 选择参与方式
 
-Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) to begin a scientific discussion. GitHub sign-in is required to submit an Issue / 提交 Issue 需要登录 GitHub。
+Use the [GitHub Issue template selector / GitHub Issue 模板入口](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new/choose) to begin a scientific discussion. GitHub sign-in is required to submit an Issue / 提交 Issue 需要登录 GitHub。
 
-| Form                           | 表单             | Use it for / 适用情形                                                                                                                 |
+| Route                          | 入口             | Use it for / 适用情形                                                                                                                 |
 | ------------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Research Question              | 科学问题         | An observation, discrepancy, or unresolved mechanism / 观察现象、研究差异或未解决的机制                                               |
 | Evidence Contribution          | 证据贡献         | A paper, public experiment, simulation, or theoretical result / 论文、公开实验、模拟或理论结果                                        |
@@ -20,16 +20,16 @@ Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.
 
 ### Research Insights contributions | 科研成果解读贡献
 
-**EN** Begin with the [literature catalogue](docs/literature/README.md). To submit literature research without code, use [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml). For a formal paper-page PR, retain the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md). The four existing scientific Issue forms remain available for focused contributions:
+**EN** Begin with the [literature catalogue](docs/literature/README.md). To submit literature research without code, use [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md). For a formal paper-page PR, retain the [bilingual review template](docs/literature/REVIEW_TEMPLATE.md). The four existing scientific Issue forms remain available for focused contributions:
 
-**中文** 请先查阅[文献目录](docs/literature/README.md)。无需写代码的文献研究可使用 [Literature Research Submission / 文献研究成果提交](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml)。正式论文页面 PR 仍沿用[双语评议模板](docs/literature/REVIEW_TEMPLATE.md)；原有四种科学 Issue 表单继续用于具体问题和证据贡献：
+**中文** 请先查阅[文献目录](docs/literature/README.md)。无需写代码的文献研究可使用 [Literature Research Submission / 文献研究成果提交](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)。正式论文页面 PR 仍沿用[双语评议模板](docs/literature/REVIEW_TEMPLATE.md)；原有四种科学 Issue 表单继续用于具体问题和证据贡献：
 
 ### Submit a research handoff | 提交研究交接包
 
 1. Obtain a paper you may lawfully access / 获取可合法阅读的论文。
 2. Study it manually or use the [GPT/Gemini/Claude dialogue prompt](docs/workflows/research-dialogue-prompt.md). AI assistance is optional / 人工研究，或使用通用科研指令开展 AI 辅助研究；AI 不是贡献的必要条件。
-3. Prepare evidence-supported `research-handoff.md` with the prompt's ten sections. If an AI cannot export files, copy its complete Markdown code block and save as UTF-8 / 按指令中的十章节形成有证据支撑的交接文件；AI 不能导出文件时，复制完整 Markdown 代码块并保存为 UTF-8。
-4. Sign in to GitHub and paste the complete Markdown or drag the file into the required Research Handoff field of [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.yml) / 登录 GitHub，在提交表单的 Research Handoff 必填框中粘贴完整内容或拖入文件。
+3. Prepare evidence-supported `research-handoff.md` with the prompt's ten sections. If an AI cannot export files, copy its complete Markdown code block for direct pasting; saving a UTF-8 file is optional / 按指令中的十章节形成有证据支撑的交接内容；AI 不能导出文件时，可直接复制完整 Markdown 代码块投稿，无须先保存本地文件。
+4. Sign in to GitHub, open [Literature Research Submission](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md), edit the title, then either paste the complete Markdown into the Issue body or attach the `.md` file by dragging it in or selecting a file. For attachments, confirm that a valid attachment reference appears before submitting. Either method alone is sufficient; no duplicate bibliographic, scope or claim fields are required / 登录 GitHub，打开投稿模板并修改标题，然后在 Issue 正文中粘贴完整 Markdown，或拖入、选择并上传 `.md` 文件；附件方式应先确认正文出现有效附件引用再提交。两种方式任选其一，无须重复填写书目信息、研究范围或科学主张。
 5. Maintainers organise and assess key claims and sources, then decide whether a PR should update formal records and the graph / 维护者整理和评议关键主张与来源后，再决定是否通过 PR 更新正式记录和图谱。
 
 **EN** Focused studies, including one topic within a long review, are welcome. State the actual reading and analysis scope; do not imply full-text checking of material not covered. Key claims need evidence and applicable conditions. AI-generated text is not verified scientific fact. Researchers need no programming, fork, Codex or development tools, and no personal credentials, academic title, affiliation or supervisor approval are requested.
@@ -59,7 +59,7 @@ Use the [GitHub Issue form selector / GitHub Issue 表单入口](https://github.
 
 ## 2. A useful scientific submission | 一份有价值的科学贡献
 
-You do not need complete scientific answers to start a discussion. Required form fields must be filled; explicitly mark unknown information as unknown / 发起讨论无需已有完整科学答案，但须填写表单必填字段；尚不清楚的信息可明确标注为未知。
+You do not need complete scientific answers to start a discussion. Complete required fields where a scientific Issue Form uses them; the literature submission template accepts the complete handoff without separate fields. Explicitly mark unknown information as unknown / 发起讨论无需已有完整科学答案；使用科学 Issue Form 时须填写其必填字段，文献投稿模板只接收完整交接包，不要求重复填写字段。尚不清楚的信息可明确标注为未知。
 
 1. **Research question / 科学问题：** State the question or unexplained phenomenon clearly / 清楚表述问题或尚未解释的现象。
 2. **Scope / 研究条件：** Identify the device/system, physical region, operating regime, relevant parameters and assumptions when known / 尽可能说明装置或物理系统、位置、运行条件、关键参数与假设。
