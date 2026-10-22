@@ -507,6 +507,238 @@
       ],
       "readingScope": "full_text",
       "journalAbbreviation": "Nucl. Fusion"
+    },
+    {
+      "id": "paper-angioni-2012",
+      "title": "Off-diagonal particle and toroidal momentum transport: a survey of experimental, theoretical and modelling aspects",
+      "titleTranslation": {
+        "zh": "非对角粒子输运与环向动量输运：实验、理论和建模方面的综述",
+        "en": "Off-diagonal particle and toroidal momentum transport: a survey of experimental, theoretical and modelling aspects"
+      },
+      "authors": [
+        "C. Angioni",
+        "Y. Camenen",
+        "F. J. Casson",
+        "E. Fable",
+        "R. M. McDermott",
+        "A. G. Peeters",
+        "J. E. Rice"
+      ],
+      "collectiveAuthors": [],
+      "journal": "Nuclear Fusion",
+      "journalAbbreviation": "Nucl. Fusion",
+      "year": 2012,
+      "volume": "52",
+      "issue": "11",
+      "pages": "114003",
+      "doi": "10.1088/0029-5515/52/11/114003",
+      "doiUnavailableReason": null,
+      "url": "https://doi.org/10.1088/0029-5515/52/11/114003",
+      "sourceType": "journal_article",
+      "contentStatus": "research_record",
+      "researchConditions": {
+        "zh": "专题综述；比较 AUG、JET、TCV、DIII-D、NSTX、C-Mod 等文献中的粒子与动量输运，涵盖局域静电准线性理论及引用的电磁、全局和实验研究；不是统一实验或新模拟。依据用户提供交接材料，正式出版 PDF 18 页（含下载封面），期刊正文 17 页；§1–5、Eqs. (1)–(12)、Figs. 1–9 已研读。",
+        "en": "Special Topic Survey comparing particle/momentum transport from AUG, JET, TCV, DIII-D, NSTX and C-Mod literature, including local electrostatic quasilinear theory and cited electromagnetic, global and experimental studies; not a unified experiment or new simulation. Per the supplied handoff, the published PDF has 18 pages including a download cover and 17 journal pages; §§1–5, Eqs. (1)–(12), Figs. 1–9 were studied."
+      },
+      "reportedFindings": [
+        {
+          "id": "finding-a12-flux-decomposition",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "limitations": {
+            "zh": "形式分解不提供任意梯度变化的自洽闭合或完整响应。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "The decomposition supplies neither self-consistent closure nor the complete response to arbitrary gradient changes. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-energy-selection",
+          "statement": {
+            "zh": "综述用 Eq. (8) 中的能量核 E/Te−3/2 解释电子热扩散：共振权重选择低能或高能电子，可改变净通量方向。",
+            "en": "The review explains electron thermodiffusion using the E/Te−3/2 energy kernel in Eq. (8): resonant weighting of lower- or higher-energy electrons can change the net flux direction."
+          },
+          "locator": {
+            "zh": "§3.1–3.2，Eq. (8)，Figs. 1–2；PDF 5–7 / 期刊 4–6；C04",
+            "en": "§§3.1–3.2, Eq. (8), Figs. 1–2; PDF pp.5–7 / journal pp.4–6; C04"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "局域静电准线性近似及文中共振条件。",
+            "en": "Local electrostatic quasilinear approximation and the stated resonance conditions."
+          },
+          "limitations": {
+            "zh": "模态标签不能单独决定符号；不含完整电磁或非线性饱和谱闭合。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "Mode labels alone do not determine the sign; full electromagnetic and nonlinear saturated-spectrum closure is absent. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-resonance-sign",
+          "statement": {
+            "zh": "文中环向漂移共振下，ITG 与近零频弱 TEM 的电子热扩散可向内，强 TEM 可向外；ITG 碰撞贡献可削弱向内纯对流。平行共振极限的符号组合不同。",
+            "en": "For the toroidal-drift resonances discussed, electron thermodiffusion can be inward for ITG and weak near-zero-frequency TEM, and outward for strong TEM; ITG collisional contributions can weaken inward pure convection. Parallel-resonance limits have different sign combinations."
+          },
+          "locator": {
+            "zh": "§3.1–3.3，Eq. (8)，Fig. 2；PDF 5–7 / 期刊 4–6；C05",
+            "en": "§§3.1–3.3, Eq. (8), Fig. 2; PDF pp.5–7 / journal pp.4–6; C05"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "原文约定 ωr>0 为离子抗磁方向、ωr<0 为电子抗磁方向；须指定共振、碰撞和几何。",
+            "en": "The paper uses ωr>0 for ion-diamagnetic propagation and ωr<0 for electron-diamagnetic propagation; resonance, collisions and geometry must be specified."
+          },
+          "limitations": {
+            "zh": "机制号表不能替代多模非线性通量计算。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "The mechanism sign chart cannot replace a multimode nonlinear flux calculation. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-frequency-peaking",
+          "statement": {
+            "zh": "综述 Fig. 3 按最不稳定模实频组织准线性扫描与 AUG 结果：稳态密度梯度在适度负频、临近 TEM–ITG 转换处较大，两端减小。",
+            "en": "Review Fig. 3 organises quasilinear scans and AUG results by the most unstable mode real frequency: the steady density gradient is larger at moderately negative frequency near the TEM–ITG transition and decreases towards both ends."
+          },
+          "locator": {
+            "zh": "§3.3，Fig. 3(a–c) 及图注；PDF 7–8 / 期刊 6–7；C06；综述引文 [51,63,43]",
+            "en": "§3.3, Fig. 3(a–c) and caption; PDF pp.7–8 / journal pp.6–7; C06; review refs. [51,63,43]"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "(a) 零湍流粒子通量扫描；(b) NBI+ECH H 模；(c) 无 NBI 的 AUG L/H 模。",
+            "en": "(a) Zero turbulent particle-flux scans; (b) NBI+ECH H-mode; (c) AUG L/H-mode without NBI."
+          },
+          "limitations": {
+            "zh": "非单调组织规律不证明外部频率因果控制或普适定理；单个横轴频率不证明单模通量。[51] 频谱构造仍待全文核对，实验不全是零通量。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "Nonmonotonic organisation establishes neither external causal frequency control nor a universal theorem; one plotted frequency does not establish single-mode flux. Ref. [51] spectral construction awaits full-text checking; experiments are not all zero-flux. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-ech-response",
+          "statement": {
+            "zh": "综述转述中心 ECH 在某些 ITG 条件下增强密度峰化、在强 TEM 条件下导致 pump-out，并以热扩散方向变化解释差异。",
+            "en": "The review reports central ECH increasing density peaking in some ITG conditions and producing pump-out in strong TEM conditions, interpreting the difference through changes in thermodiffusion direction."
+          },
+          "locator": {
+            "zh": "§3.3，PDF 7 / 期刊 6；C07；综述引文 [59–65]",
+            "en": "§3.3, PDF p.7 / journal p.6; C07; review refs. [59–65]"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "所引不同 L/H 模、加热分配、密度与模态状态；不是统一单变量扫描。",
+            "en": "The cited L/H-mode, heating-partition, density and mode conditions; not a unified single-variable scan."
+          },
+          "limitations": {
+            "zh": "ECH 联动温度比、碰撞、模态、源和强度；不能直接测出独立温度梯度偏导。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "ECH couples temperature ratio, collisions, modes, sources and intensity; it does not directly measure an independent temperature-gradient partial derivative. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-collisions-beta",
+          "statement": {
+            "zh": "综述在限定 ITG 模型中联系碰撞外向对流与峰化减弱；另转述固定其他参数的电磁模型预测：增大 βe 可增加通行电子外向通量并平坦化密度。",
+            "en": "Within restricted ITG models the review links collisional outward convection to reduced peaking; it separately reports electromagnetic models predicting increased passing-electron outward flux and density flattening with increasing βe at fixed other parameters."
+          },
+          "locator": {
+            "zh": "§3.3，Eq. (8)，PDF 8–9 / 期刊 7–8；C08；综述引文 [54,55,67–75]",
+            "en": "§3.3, Eq. (8), PDF pp.8–9 / journal pp.7–8; C08; review refs. [54,55,67–75]"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "文中 ITG、几何和扫描路径；电磁结果来自被引模型，超出静电 Eq. (8) 本身。",
+            "en": "The stated ITG, geometry and scan paths; electromagnetic results come from cited models beyond electrostatic Eq. (8) itself."
+          },
+          "limitations": {
+            "zh": "碰撞相关性不是单变量因果证明；实验隔离 βe 的困难仅是作者对 2012 年状态的描述。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "Collisionality correlation is not single-variable causal proof; difficulty isolating βe experimentally describes the authors’ 2012 assessment only. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-momentum-symmetry",
+          "statement": {
+            "zh": "综述整合的最低阶局域动理学对称性允许无旋转、无旋转梯度、无流剪切且上下对称时平均动量通量为零；磁面不对称、流剪切或高阶剖面变化可产生剩余应力。",
+            "en": "The lowest-order local kinetic symmetry synthesised in the review allows vanishing mean momentum flux without rotation, rotation gradient or flow shear in up–down symmetry; flux-surface asymmetry, flow shear or higher-order profile variation can generate residual stress."
+          },
+          "locator": {
+            "zh": "§4.1–4.2、§4.5，Eqs. (9),(10)，Figs. 4–5；PDF 9–11 / 期刊 8–10；C10",
+            "en": "§§4.1–4.2,4.5, Eqs. (9),(10), Figs. 4–5; PDF pp.9–11 / journal pp.8–10; C10"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "文中局域回旋动理学排序与列明对称条件。",
+            "en": "The stated local gyrokinetic ordering and symmetry conditions."
+          },
+          "limitations": {
+            "zh": "对称性破缺机制不单独确定应力大小或任意平衡中的旋转符号；底层模拟未复现。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "Symmetry-breaking mechanisms alone determine neither stress magnitude nor rotation sign in arbitrary equilibria; underlying simulations were not reproduced. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-momentum-pinch",
+          "statement": {
+            "zh": "作者指出自洽平行模结构影响科里奥利箍缩：部分理论比实验反演箍缩数低约 30%–50%，常规瞬态反演还忽略剩余应力。",
+            "en": "The authors identify self-consistent parallel mode structure as important for the Coriolis pinch: some theories give pinch numbers about 30%–50% below experimental inversions, while conventional transient inversions omit residual stress."
+          },
+          "locator": {
+            "zh": "§4.3–4.4；PDF 11–12 / 期刊 10–11；C11；综述引文 [39,78,89,97]",
+            "en": "§§4.3–4.4; PDF pp.11–12 / journal pp.10–11; C11; review refs. [39,78,89,97]"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "综述汇总的特定 JET/DIII-D/NSTX 模型与反演比较。",
+            "en": "The particular JET/DIII-D/NSTX model/inversion comparisons summarised by the review."
+          },
+          "limitations": {
+            "zh": "30%–50% 不是普遍误差率；剩余应力、粒子通量及模结构的作用尚未独立分离，原始反演未复核。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "30%–50% is not a universal error rate; effects of residual stress, particle flux and mode structure are not independently separated, and original inversions were not audited. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        },
+        {
+          "id": "finding-a12-rotation-correlation",
+          "statement": {
+            "zh": "综述重印的 AUG/C-Mod LOC–SOC 观测显示密度峰化与本征旋转变化或反转相关；作者讨论 TEM–ITG、剖面剪切、E×B 剪切及剩余应力等竞争解释。",
+            "en": "The AUG/C-Mod LOC–SOC observations reproduced by the review correlate density peaking with intrinsic-rotation changes or reversals; the authors discuss competing TEM–ITG, profile-shear, E×B-shear and residual-stress interpretations."
+          },
+          "locator": {
+            "zh": "§4.6.1–4.6.3，Eqs. (11),(12)，Figs. 6–9；PDF 14–16 / 期刊 13–15；C12",
+            "en": "§§4.6.1–4.6.3, Eqs. (11),(12), Figs. 6–9; PDF pp.14–16 / journal pp.13–15; C12"
+          },
+          "scope": "full_text",
+          "conditions": {
+            "zh": "特定 OH 密度爬升、平衡与温度比；AUG/C-Mod 在 SOC 深处演化不同。",
+            "en": "Specific Ohmic density ramps, equilibria and temperature ratios; AUG/C-Mod evolve differently deep in SOC."
+          },
+          "limitations": {
+            "zh": "局域涡旋倾斜符号不直接等于中心旋转符号；需全径向动量平衡、边界、源及竞争机制，不能据相关性确定唯一因果。 核查依据为所提供的 2026-10-19 科研交接材料；仅确认综述报告内容，未逐篇核对被引原始研究全文或独立复现。",
+            "en": "Local eddy-tilt sign is not directly central-rotation sign; radial momentum balance, boundaries, sources and competing mechanisms are required, so correlation does not identify unique causality. Checking provenance is the supplied 2026-10-19 research handoff; it establishes what the review reports, without systematic full-text checking of cited original studies or independent replication."
+          }
+        }
+      ],
+      "limitations": {
+        "zh": "全文与 C01–C13 核查继承自用户提供的 2026-10-19 科研交接材料；本次入库未取得或重读 Angioni PDF，仅独立核对 Crossref 书目。checked 指综述报告内容，不代表被引原始研究全文、原始数据或模拟复现。C14–C15 是交接材料的独立数学分析，仅保存在评议，不作为作者发现。无 HL-3 数据；模式频率相关性、ECH/碰撞协变和动量关联不能确立唯一机制。",
+        "en": "Full-text and C01–C13 checking are inherited from the supplied 2026-10-19 research handoff; this ingestion did not obtain or reread the Angioni PDF and independently checked Crossref metadata only. checked refers to the review’s reported content, not cited original full texts, raw data or simulation reproduction. C14–C15 are independent mathematics from the handoff, retained only in the study rather than attributed to the authors. No HL-3 data; mode-frequency correlations, ECH/collision covariance and momentum associations do not establish a unique mechanism."
+      },
+      "verificationStatus": {
+        "metadata": "checked",
+        "abstract": "checked",
+        "fullText": "checked",
+        "claim": "checked",
+        "independent": "not_checked"
+      },
+      "verifiedAt": "2026-10-19",
+      "metadataSources": [
+        "https://api.crossref.org/works/10.1088/0029-5515/52/11/114003",
+        "https://doi.org/10.1088/0029-5515/52/11/114003"
+      ],
+      "readingScope": "full_text"
     }
   ],
   "nodes": [
@@ -574,6 +806,44 @@
           "locator": {
             "zh": "摘要",
             "en": "Abstract"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-frequency-peaking",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述 Fig. 3 按最不稳定模实频组织准线性扫描与 AUG 结果：稳态密度梯度在适度负频、临近 TEM–ITG 转换处较大，两端减小。",
+            "en": "Review Fig. 3 organises quasilinear scans and AUG results by the most unstable mode real frequency: the steady density gradient is larger at moderately negative frequency near the TEM–ITG transition and decreases towards both ends."
+          },
+          "conditions": {
+            "zh": "(a) 零湍流粒子通量扫描；(b) NBI+ECH H 模；(c) 无 NBI 的 AUG L/H 模。",
+            "en": "(a) Zero turbulent particle-flux scans; (b) NBI+ECH H-mode; (c) AUG L/H-mode without NBI."
+          },
+          "locator": {
+            "zh": "§3.3，Fig. 3(a–c) 及图注；PDF 7–8 / 期刊 6–7；C06；综述引文 [51,63,43]",
+            "en": "§3.3, Fig. 3(a–c) and caption; PDF pp.7–8 / journal pp.6–7; C06; review refs. [51,63,43]"
           },
           "claimVerified": false
         }
@@ -718,7 +988,27 @@
           "en": "particle flux"
         }
       ],
-      "citations": [],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": false
+        }
+      ],
       "position": {
         "x": -390,
         "y": 70
@@ -788,6 +1078,25 @@
           "locator": {
             "zh": "摘要",
             "en": "Abstract"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-resonance-sign",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "文中环向漂移共振下，ITG 与近零频弱 TEM 的电子热扩散可向内，强 TEM 可向外；ITG 碰撞贡献可削弱向内纯对流。平行共振极限的符号组合不同。",
+            "en": "For the toroidal-drift resonances discussed, electron thermodiffusion can be inward for ITG and weak near-zero-frequency TEM, and outward for strong TEM; ITG collisional contributions can weaken inward pure convection. Parallel-resonance limits have different sign combinations."
+          },
+          "conditions": {
+            "zh": "原文约定 ωr>0 为离子抗磁方向、ωr<0 为电子抗磁方向；须指定共振、碰撞和几何。",
+            "en": "The paper uses ωr>0 for ion-diamagnetic propagation and ωr<0 for electron-diamagnetic propagation; resonance, collisions and geometry must be specified."
+          },
+          "locator": {
+            "zh": "§3.1–3.3，Eq. (8)，Fig. 2；PDF 5–7 / 期刊 4–6；C05",
+            "en": "§§3.1–3.3, Eq. (8), Fig. 2; PDF pp.5–7 / journal pp.4–6; C05"
           },
           "claimVerified": false
         }
@@ -2080,6 +2389,282 @@
       "position": {
         "x": 2240,
         "y": 270
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "id": "k-a12-state-dependent-flux",
+      "kind": "knowledge",
+      "label": {
+        "zh": "梯度依赖的非对角粒子通量",
+        "en": "Gradient-dependent off-diagonal particle flux"
+      },
+      "summary": {
+        "zh": "热扩散和纯对流取决于能量共振、模态、碰撞和背景梯度；分解系数不等于完整梯度响应。",
+        "en": "Thermodiffusion and pure convection depend on energy resonances, modes, collisions and background gradients; decomposition coefficients are not the complete gradient response."
+      },
+      "details": {
+        "zh": "2012 综述 Eqs. (5)–(8)、Figs. 1–2 将粒子输运机制与适用条件联系起来。ITG/TEM 标签不能代替有条件的共振与谱求和；电磁 βe 结论来自另引模型。核查继承自所提供交接材料，不是原始研究复现。",
+        "en": "The 2012 review’s Eqs. (5)–(8), Figs. 1–2 connect particle mechanisms with their applicability. ITG/TEM labels cannot replace conditional resonance and spectral sums; electromagnetic βe results come from separately cited models. Checking is inherited from the supplied handoff, not original-study reproduction."
+      },
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-energy-selection",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述用 Eq. (8) 中的能量核 E/Te−3/2 解释电子热扩散：共振权重选择低能或高能电子，可改变净通量方向。",
+            "en": "The review explains electron thermodiffusion using the E/Te−3/2 energy kernel in Eq. (8): resonant weighting of lower- or higher-energy electrons can change the net flux direction."
+          },
+          "conditions": {
+            "zh": "局域静电准线性近似及文中共振条件。",
+            "en": "Local electrostatic quasilinear approximation and the stated resonance conditions."
+          },
+          "locator": {
+            "zh": "§3.1–3.2，Eq. (8)，Figs. 1–2；PDF 5–7 / 期刊 4–6；C04",
+            "en": "§§3.1–3.2, Eq. (8), Figs. 1–2; PDF pp.5–7 / journal pp.4–6; C04"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-resonance-sign",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "文中环向漂移共振下，ITG 与近零频弱 TEM 的电子热扩散可向内，强 TEM 可向外；ITG 碰撞贡献可削弱向内纯对流。平行共振极限的符号组合不同。",
+            "en": "For the toroidal-drift resonances discussed, electron thermodiffusion can be inward for ITG and weak near-zero-frequency TEM, and outward for strong TEM; ITG collisional contributions can weaken inward pure convection. Parallel-resonance limits have different sign combinations."
+          },
+          "conditions": {
+            "zh": "原文约定 ωr>0 为离子抗磁方向、ωr<0 为电子抗磁方向；须指定共振、碰撞和几何。",
+            "en": "The paper uses ωr>0 for ion-diamagnetic propagation and ωr<0 for electron-diamagnetic propagation; resonance, collisions and geometry must be specified."
+          },
+          "locator": {
+            "zh": "§3.1–3.3，Eq. (8)，Fig. 2；PDF 5–7 / 期刊 4–6；C05",
+            "en": "§§3.1–3.3, Eq. (8), Fig. 2; PDF pp.5–7 / journal pp.4–6; C05"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-collisions-beta",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述在限定 ITG 模型中联系碰撞外向对流与峰化减弱；另转述固定其他参数的电磁模型预测：增大 βe 可增加通行电子外向通量并平坦化密度。",
+            "en": "Within restricted ITG models the review links collisional outward convection to reduced peaking; it separately reports electromagnetic models predicting increased passing-electron outward flux and density flattening with increasing βe at fixed other parameters."
+          },
+          "conditions": {
+            "zh": "文中 ITG、几何和扫描路径；电磁结果来自被引模型，超出静电 Eq. (8) 本身。",
+            "en": "The stated ITG, geometry and scan paths; electromagnetic results come from cited models beyond electrostatic Eq. (8) itself."
+          },
+          "locator": {
+            "zh": "§3.3，Eq. (8)，PDF 8–9 / 期刊 7–8；C08；综述引文 [54,55,67–75]",
+            "en": "§3.3, Eq. (8), PDF pp.8–9 / journal pp.7–8; C08; review refs. [54,55,67–75]"
+          },
+          "claimVerified": true
+        }
+      ],
+      "tags": [
+        {
+          "zh": "准线性",
+          "en": "Quasilinear"
+        },
+        {
+          "zh": "热扩散",
+          "en": "Thermodiffusion"
+        }
+      ],
+      "position": {
+        "x": 1000,
+        "y": 850
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "id": "e-a12-frequency-peaking",
+      "kind": "evidence",
+      "label": {
+        "zh": "模实频与密度梯度的非单调关联",
+        "en": "Nonmonotonic mode-frequency/gradient association"
+      },
+      "summary": {
+        "zh": "Fig. 3 组织零通量模型与不同 AUG 数据；ECH 双向响应提供机制线索，频率因果与谱闭合仍未确定。",
+        "en": "Fig. 3 organises zero-flux models and differing AUG data; bidirectional ECH responses provide mechanism clues while frequency causality and spectral closure remain unresolved."
+      },
+      "details": {
+        "zh": "Fig. 3(a) 是零湍流粒子通量扫描，(b) 是 NBI+ECH H 模，(c) 是无 NBI 的 AUG L/H 模。最不稳定模频率是状态相关的输出，不是已识别的独立控制。一个横轴频率不证明单模通量；ECH 改变多个变量。",
+        "en": "Fig. 3(a) is a zero turbulent particle-flux scan, (b) NBI+ECH H-mode, (c) AUG L/H-mode without NBI. The most unstable frequency is a state-dependent output, not an identified independent control. One plotted frequency does not establish single-mode flux; ECH changes several variables."
+      },
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-frequency-peaking",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述 Fig. 3 按最不稳定模实频组织准线性扫描与 AUG 结果：稳态密度梯度在适度负频、临近 TEM–ITG 转换处较大，两端减小。",
+            "en": "Review Fig. 3 organises quasilinear scans and AUG results by the most unstable mode real frequency: the steady density gradient is larger at moderately negative frequency near the TEM–ITG transition and decreases towards both ends."
+          },
+          "conditions": {
+            "zh": "(a) 零湍流粒子通量扫描；(b) NBI+ECH H 模；(c) 无 NBI 的 AUG L/H 模。",
+            "en": "(a) Zero turbulent particle-flux scans; (b) NBI+ECH H-mode; (c) AUG L/H-mode without NBI."
+          },
+          "locator": {
+            "zh": "§3.3，Fig. 3(a–c) 及图注；PDF 7–8 / 期刊 6–7；C06；综述引文 [51,63,43]",
+            "en": "§3.3, Fig. 3(a–c) and caption; PDF pp.7–8 / journal pp.6–7; C06; review refs. [51,63,43]"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-ech-response",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述转述中心 ECH 在某些 ITG 条件下增强密度峰化、在强 TEM 条件下导致 pump-out，并以热扩散方向变化解释差异。",
+            "en": "The review reports central ECH increasing density peaking in some ITG conditions and producing pump-out in strong TEM conditions, interpreting the difference through changes in thermodiffusion direction."
+          },
+          "conditions": {
+            "zh": "所引不同 L/H 模、加热分配、密度与模态状态；不是统一单变量扫描。",
+            "en": "The cited L/H-mode, heating-partition, density and mode conditions; not a unified single-variable scan."
+          },
+          "locator": {
+            "zh": "§3.3，PDF 7 / 期刊 6；C07；综述引文 [59–65]",
+            "en": "§3.3, PDF p.7 / journal p.6; C07; review refs. [59–65]"
+          },
+          "claimVerified": true
+        }
+      ],
+      "tags": [
+        {
+          "zh": "AUG",
+          "en": "AUG"
+        },
+        {
+          "zh": "相关性",
+          "en": "Correlation"
+        }
+      ],
+      "position": {
+        "x": 1300,
+        "y": 850
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "id": "k-a12-momentum-coupling",
+      "kind": "knowledge",
+      "label": {
+        "zh": "密度与动量的有条件跨通道约束",
+        "en": "Conditional density/momentum cross-channel constraints"
+      },
+      "summary": {
+        "zh": "剩余应力需考虑对称性破缺；科里奥利箍缩和旋转关联增加约束，但尚未闭合全径向动量平衡。",
+        "en": "Residual stress requires consideration of symmetry breaking; Coriolis pinch and rotation associations add constraints without closing radial momentum balance."
+      },
+      "details": {
+        "zh": "综述 Eqs. (9)–(12)、Figs. 4–9 连接模结构、密度梯度、箍缩与剩余应力。部分理论与反演差约 30%–50%，不是普遍误差率。AUG/C-Mod 相关性不证明唯一机制，局域倾斜符号不能直接映射为中心旋转符号。",
+        "en": "Review Eqs. (9)–(12), Figs. 4–9 connect mode structure, density gradients, pinch and residual stress. Some theory/inversion differences are about 30%–50%, not a universal error rate. AUG/C-Mod associations do not establish a unique mechanism; local tilt sign does not directly map to central rotation sign."
+      },
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-momentum-symmetry",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述整合的最低阶局域动理学对称性允许无旋转、无旋转梯度、无流剪切且上下对称时平均动量通量为零；磁面不对称、流剪切或高阶剖面变化可产生剩余应力。",
+            "en": "The lowest-order local kinetic symmetry synthesised in the review allows vanishing mean momentum flux without rotation, rotation gradient or flow shear in up–down symmetry; flux-surface asymmetry, flow shear or higher-order profile variation can generate residual stress."
+          },
+          "conditions": {
+            "zh": "文中局域回旋动理学排序与列明对称条件。",
+            "en": "The stated local gyrokinetic ordering and symmetry conditions."
+          },
+          "locator": {
+            "zh": "§4.1–4.2、§4.5，Eqs. (9),(10)，Figs. 4–5；PDF 9–11 / 期刊 8–10；C10",
+            "en": "§§4.1–4.2,4.5, Eqs. (9),(10), Figs. 4–5; PDF pp.9–11 / journal pp.8–10; C10"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-momentum-pinch",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者指出自洽平行模结构影响科里奥利箍缩：部分理论比实验反演箍缩数低约 30%–50%，常规瞬态反演还忽略剩余应力。",
+            "en": "The authors identify self-consistent parallel mode structure as important for the Coriolis pinch: some theories give pinch numbers about 30%–50% below experimental inversions, while conventional transient inversions omit residual stress."
+          },
+          "conditions": {
+            "zh": "综述汇总的特定 JET/DIII-D/NSTX 模型与反演比较。",
+            "en": "The particular JET/DIII-D/NSTX model/inversion comparisons summarised by the review."
+          },
+          "locator": {
+            "zh": "§4.3–4.4；PDF 11–12 / 期刊 10–11；C11；综述引文 [39,78,89,97]",
+            "en": "§§4.3–4.4; PDF pp.11–12 / journal pp.10–11; C11; review refs. [39,78,89,97]"
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-rotation-correlation",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述重印的 AUG/C-Mod LOC–SOC 观测显示密度峰化与本征旋转变化或反转相关；作者讨论 TEM–ITG、剖面剪切、E×B 剪切及剩余应力等竞争解释。",
+            "en": "The AUG/C-Mod LOC–SOC observations reproduced by the review correlate density peaking with intrinsic-rotation changes or reversals; the authors discuss competing TEM–ITG, profile-shear, E×B-shear and residual-stress interpretations."
+          },
+          "conditions": {
+            "zh": "特定 OH 密度爬升、平衡与温度比；AUG/C-Mod 在 SOC 深处演化不同。",
+            "en": "Specific Ohmic density ramps, equilibria and temperature ratios; AUG/C-Mod evolve differently deep in SOC."
+          },
+          "locator": {
+            "zh": "§4.6.1–4.6.3，Eqs. (11),(12)，Figs. 6–9；PDF 14–16 / 期刊 13–15；C12",
+            "en": "§§4.6.1–4.6.3, Eqs. (11),(12), Figs. 6–9; PDF pp.14–16 / journal pp.13–15; C12"
+          },
+          "claimVerified": true
+        }
+      ],
+      "tags": [
+        {
+          "zh": "跨通道",
+          "en": "Cross-channel"
+        },
+        {
+          "zh": "剩余应力",
+          "en": "Residual stress"
+        }
+      ],
+      "position": {
+        "x": 1600,
+        "y": 850
       }
     }
   ],
@@ -3527,6 +4112,348 @@
       "rationale": {
         "zh": "用独立扰动与积分路径输入检验切线到稳态映射。",
         "en": "Test tangent-to-steady mapping with separate perturbations and gradient-path inputs."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-question",
+      "source": "q-density",
+      "target": "k-a12-state-dependent-flux",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "引入有条件通量理论",
+        "en": "Introduce conditional flux theory"
+      },
+      "rationale": {
+        "zh": "保持原问题的演示状态，增加有定位的综述背景。",
+        "en": "Retain the question’s demonstration status while adding located review context."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-framework",
+      "source": "k-a12-state-dependent-flux",
+      "target": "k-flux",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "限定通量分解的含义",
+        "en": "Bound the flux decomposition"
+      },
+      "rationale": {
+        "zh": "系数随状态变化；不可把形式分解当作完整响应。",
+        "en": "Coefficients change with state; the formal decomposition is not a complete response."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-response",
+      "source": "k-a12-state-dependent-flux",
+      "target": "q-perturbative-steady",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-flux-decomposition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者区分粒子扩散/对流与可含剩余应力的动量通量，并明确 Eq. (5) 的系数可依赖背景梯度；该式不是固定系数的全局响应律。",
+            "en": "The authors distinguish particle diffusion/convection from momentum flux allowing residual stress, and explicitly allow Eq. (5) coefficients to depend on background gradients; it is not a fixed-coefficient global response law."
+          },
+          "conditions": {
+            "zh": "径向向外为正；粒子密度为正，旋转可过零；局域输运分解。",
+            "en": "Outward-positive radial flux; positive particle density, rotation allowed to cross zero; local transport decomposition."
+          },
+          "locator": {
+            "zh": "§2–3，Eqs. (1),(2),(5)；PDF 3–5 / 期刊 2–4；交接 C01/C03",
+            "en": "§§2–3, Eqs. (1),(2),(5); PDF pp.3–5 / journal pp.2–4; handoff C01/C03"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "联系切线与稳态闭合问题",
+        "en": "Connect tangent/steady closure"
+      },
+      "rationale": {
+        "zh": "梯度依赖系数为已有响应识别问题提供理论背景，未新增已验证闭合。",
+        "en": "Gradient-dependent coefficients contextualize the existing response-identification question without supplying verified closure."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-peaking",
+      "source": "e-a12-frequency-peaking",
+      "target": "p-peaking",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-frequency-peaking",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述 Fig. 3 按最不稳定模实频组织准线性扫描与 AUG 结果：稳态密度梯度在适度负频、临近 TEM–ITG 转换处较大，两端减小。",
+            "en": "Review Fig. 3 organises quasilinear scans and AUG results by the most unstable mode real frequency: the steady density gradient is larger at moderately negative frequency near the TEM–ITG transition and decreases towards both ends."
+          },
+          "conditions": {
+            "zh": "(a) 零湍流粒子通量扫描；(b) NBI+ECH H 模；(c) 无 NBI 的 AUG L/H 模。",
+            "en": "(a) Zero turbulent particle-flux scans; (b) NBI+ECH H-mode; (c) AUG L/H-mode without NBI."
+          },
+          "locator": {
+            "zh": "§3.3，Fig. 3(a–c) 及图注；PDF 7–8 / 期刊 6–7；C06；综述引文 [51,63,43]",
+            "en": "§3.3, Fig. 3(a–c) and caption; PDF pp.7–8 / journal pp.6–7; C06; review refs. [51,63,43]"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "提供非单调峰化线索",
+        "en": "Provide nonmonotonic peaking context"
+      },
+      "rationale": {
+        "zh": "引用不同条件下的模型与观测，原现象保持演示状态。",
+        "en": "Cite models and observations under differing conditions while retaining the original phenomenon’s demonstration status."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-frequency-gap",
+      "source": "e-a12-frequency-peaking",
+      "target": "g-flux-identification",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-frequency-peaking",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述 Fig. 3 按最不稳定模实频组织准线性扫描与 AUG 结果：稳态密度梯度在适度负频、临近 TEM–ITG 转换处较大，两端减小。",
+            "en": "Review Fig. 3 organises quasilinear scans and AUG results by the most unstable mode real frequency: the steady density gradient is larger at moderately negative frequency near the TEM–ITG transition and decreases towards both ends."
+          },
+          "conditions": {
+            "zh": "(a) 零湍流粒子通量扫描；(b) NBI+ECH H 模；(c) 无 NBI 的 AUG L/H 模。",
+            "en": "(a) Zero turbulent particle-flux scans; (b) NBI+ECH H-mode; (c) AUG L/H-mode without NBI."
+          },
+          "locator": {
+            "zh": "§3.3，Fig. 3(a–c) 及图注；PDF 7–8 / 期刊 6–7；C06；综述引文 [51,63,43]",
+            "en": "§3.3, Fig. 3(a–c) and caption; PDF pp.7–8 / journal pp.6–7; C06; review refs. [51,63,43]"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "保留频率与谱可识别性缺口",
+        "en": "Retain frequency/spectrum identification gap"
+      },
+      "rationale": {
+        "zh": "需核对原始 [51] 的通量谱及源条件，相关性不足以唯一识别机制。",
+        "en": "Original ref. [51] flux spectra and source conditions need checking; correlation cannot uniquely identify mechanisms."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-pinch",
+      "source": "e-a12-frequency-peaking",
+      "target": "h-pinch",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-ech-response",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述转述中心 ECH 在某些 ITG 条件下增强密度峰化、在强 TEM 条件下导致 pump-out，并以热扩散方向变化解释差异。",
+            "en": "The review reports central ECH increasing density peaking in some ITG conditions and producing pump-out in strong TEM conditions, interpreting the difference through changes in thermodiffusion direction."
+          },
+          "conditions": {
+            "zh": "所引不同 L/H 模、加热分配、密度与模态状态；不是统一单变量扫描。",
+            "en": "The cited L/H-mode, heating-partition, density and mode conditions; not a unified single-variable scan."
+          },
+          "locator": {
+            "zh": "§3.3，PDF 7 / 期刊 6；C07；综述引文 [59–65]",
+            "en": "§3.3, PDF p.7 / journal p.6; C07; review refs. [59–65]"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "限定加热与箍缩解释",
+        "en": "Bound heating/pinch interpretation"
+      },
+      "rationale": {
+        "zh": "ECH 同时改变多变量，原假设保持候选且未验证。",
+        "en": "ECH changes several variables; the original hypothesis remains a candidate and unverified."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-cross-channel",
+      "source": "k-a12-state-dependent-flux",
+      "target": "k-a12-momentum-coupling",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-rotation-correlation",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述重印的 AUG/C-Mod LOC–SOC 观测显示密度峰化与本征旋转变化或反转相关；作者讨论 TEM–ITG、剖面剪切、E×B 剪切及剩余应力等竞争解释。",
+            "en": "The AUG/C-Mod LOC–SOC observations reproduced by the review correlate density peaking with intrinsic-rotation changes or reversals; the authors discuss competing TEM–ITG, profile-shear, E×B-shear and residual-stress interpretations."
+          },
+          "conditions": {
+            "zh": "特定 OH 密度爬升、平衡与温度比；AUG/C-Mod 在 SOC 深处演化不同。",
+            "en": "Specific Ohmic density ramps, equilibria and temperature ratios; AUG/C-Mod evolve differently deep in SOC."
+          },
+          "locator": {
+            "zh": "§4.6.1–4.6.3，Eqs. (11),(12)，Figs. 6–9；PDF 14–16 / 期刊 13–15；C12",
+            "en": "§§4.6.1–4.6.3, Eqs. (11),(12), Figs. 6–9; PDF pp.14–16 / journal pp.13–15; C12"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "引入跨通道一致性约束",
+        "en": "Introduce cross-channel consistency"
+      },
+      "rationale": {
+        "zh": "同一湍流状态需同时解释粒子与动量响应，相关性不确立共同唯一机制。",
+        "en": "A turbulent state should explain particle and momentum responses consistently; associations do not establish one unique shared mechanism."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-momentum-gap",
+      "source": "k-a12-momentum-coupling",
+      "target": "g-flux-identification",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-momentum-pinch",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者指出自洽平行模结构影响科里奥利箍缩：部分理论比实验反演箍缩数低约 30%–50%，常规瞬态反演还忽略剩余应力。",
+            "en": "The authors identify self-consistent parallel mode structure as important for the Coriolis pinch: some theories give pinch numbers about 30%–50% below experimental inversions, while conventional transient inversions omit residual stress."
+          },
+          "conditions": {
+            "zh": "综述汇总的特定 JET/DIII-D/NSTX 模型与反演比较。",
+            "en": "The particular JET/DIII-D/NSTX model/inversion comparisons summarised by the review."
+          },
+          "locator": {
+            "zh": "§4.3–4.4；PDF 11–12 / 期刊 10–11；C11；综述引文 [39,78,89,97]",
+            "en": "§§4.3–4.4; PDF pp.11–12 / journal pp.10–11; C11; review refs. [39,78,89,97]"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "保留动量反演与机制缺口",
+        "en": "Retain momentum-inversion/mechanism gap"
+      },
+      "rationale": {
+        "zh": "模结构、剩余应力及有限粒子通量影响比较，不能由箍缩量值一致性关闭缺口。",
+        "en": "Mode structure, residual stress and finite particle flux affect comparisons; matching pinch magnitude cannot close the gap."
+      }
+    },
+    {
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "id": "r-a12-frequency-context",
+      "source": "k-a12-state-dependent-flux",
+      "target": "e-a12-frequency-peaking",
+      "relation": "contextualizes",
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2012",
+          "findingId": "finding-a12-ech-response",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "综述转述中心 ECH 在某些 ITG 条件下增强密度峰化、在强 TEM 条件下导致 pump-out，并以热扩散方向变化解释差异。",
+            "en": "The review reports central ECH increasing density peaking in some ITG conditions and producing pump-out in strong TEM conditions, interpreting the difference through changes in thermodiffusion direction."
+          },
+          "conditions": {
+            "zh": "所引不同 L/H 模、加热分配、密度与模态状态；不是统一单变量扫描。",
+            "en": "The cited L/H-mode, heating-partition, density and mode conditions; not a unified single-variable scan."
+          },
+          "locator": {
+            "zh": "§3.3，PDF 7 / 期刊 6；C07；综述引文 [59–65]",
+            "en": "§3.3, PDF p.7 / journal p.6; C07; review refs. [59–65]"
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "联系模型与频率组织规律",
+        "en": "Connect theory and frequency organisation"
+      },
+      "rationale": {
+        "zh": "用有条件的通量理论理解 AUG/ECH 比较，保持频率相关性与因果控制的区别。",
+        "en": "Use conditional flux theory to interpret AUG/ECH comparisons while distinguishing frequency association from causal control."
       }
     }
   ]

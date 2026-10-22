@@ -31,9 +31,9 @@ Only single-source markers in normal Markdown text are processed; code and escap
 
 ## 元数据边界 | Metadata boundaries
 
-当前适配四篇已有 journal_article，作者格式为原始 initials + family；团队按 collectiveAuthors 原序作为 CSL literal author 追加。因此团队也计入 CSL 的作者数量，六个及以上使用第一作者 et al.。保留全部作者底层顺序，显示截断由官方 CSL 决定。页码/文章号按已有记录输入，CSL 处理范围破折号。
+当前适配已登记的 journal_article，作者格式为原始 initials + family；团队按 collectiveAuthors 原序作为 CSL literal author 追加。因此团队也计入 CSL 的作者数量，六个及以上使用第一作者 et al.。保留全部作者底层顺序，显示截断由官方 CSL 决定。页码/文章号按已有记录输入，CSL 处理范围破折号。
 
-The adapter supports the four existing journal articles and their initials-plus-family names. Teams are appended as CSL literal authors in collectiveAuthors order and count towards CSL's six-author et-al threshold. Original author order is retained even when display is abbreviated. CSL formats existing page ranges/article numbers.
+The adapter supports the registered journal articles and their initials-plus-family names. Teams are appended as CSL literal authors in collectiveAuthors order and count towards CSL's six-author et-al threshold. Original author order is retained even when display is abbreviated. CSL formats existing page ranges/article numbers.
 
 缺少可靠期刊缩写、卷或页码、不能解析的姓名，以及未支持的来源类型必须明确报错，不猜测、不查网补造、不改变已核验状态。后续复杂姓名需显式结构化书目元数据后再扩展。不能将成功格式化理解为全文研读或独立验证。
 

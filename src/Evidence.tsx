@@ -7,12 +7,14 @@ import { useReferences } from "./useReferences";
 const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
 const studyVersions: Record<string, string> = {
   "paper-mordijck-2020": "74bd06f48ec06a67a15464d0f6a4200a72096d0f",
+  "paper-angioni-2012": "f515b7ec980b4402ab9d3b33a2f9e020756910bc",
 };
 const studyPages: Record<string, string> = {
   "paper-angioni-2003": "angioni-2003.md",
   "paper-angioni-2007": "angioni-2007.md",
   "paper-greenwald-2007": "greenwald-2007.md",
   "paper-mordijck-2020": "mordijck-2020.md",
+  "paper-angioni-2012": "angioni-2012-off-diagonal-transport.md",
 };
 export function SourceDetail({
   source: s,

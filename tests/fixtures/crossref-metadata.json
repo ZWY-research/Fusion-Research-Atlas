@@ -63,5 +63,20 @@
     ],
     "year": 2020,
     "journal": "Nuclear Fusion"
+  },
+  {
+    "doi": "10.1088/0029-5515/52/11/114003",
+    "title": "Off-diagonal particle and toroidal momentum transport: a survey of experimental, theoretical and modelling aspects",
+    "authors": [
+      "C. Angioni",
+      "Y. Camenen",
+      "F.J. Casson",
+      "E. Fable",
+      "R.M. McDermott",
+      "A.G. Peeters",
+      "J.E. Rice"
+    ],
+    "year": 2012,
+    "journal": "Nuclear Fusion"
   }
 ]
