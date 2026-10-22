@@ -34,48 +34,128 @@
       "url": "https://doi.org/10.1103/physrevlett.90.205003",
       "sourceType": "journal_article",
       "researchConditions": {
-        "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-        "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+        "zh": "稳态 NBI 加热 AUG H 模。Fig. 1 以极向磁通半径 ρψ 的 ne(0.4)/ne(0.8) 表示峰化，νeff=νei/ωDe，ωDe=2k⊥ρs cs/R，原刊 k⊥ρs=√0.1。Fig. 2 的 30 个代表性算例覆盖 0.1≤νeff≤2，Ip=1 MA、Bt=2.0–2.6 T、δ<0.2、PNBI≈5 MW、q95≈4、体平均 ne=(2.9–8.6)×10^19 m^-3。后续局域导数用长度坐标 ρ=aρφ，ρφ 为环向磁通半径。",
+        "en": "Stationary NBI-heated AUG H-modes. Fig. 1 measures peaking as ne(0.4)/ne(0.8) in poloidal-flux radius ρψ; νeff=νei/ωDe, ωDe=2k⊥ρs cs/R, with printed k⊥ρs=√0.1. Fig. 2 uses 30 representative cases over 0.1≤νeff≤2, Ip=1 MA, Bt=2.0–2.6 T, δ<0.2, PNBI≈5 MW, q95≈4, volume-average ne=(2.9–8.6)×10^19 m^-3. Subsequent local derivatives use length coordinate ρ=aρφ, with toroidal-flux radius ρφ."
       },
       "reportedFindings": [
         {
           "id": "finding-2003",
+          "scope": "full_text",
           "statement": {
-            "zh": "作者在所研究托卡马克条件下报告：碰撞性增加时密度峰化下降。",
-            "en": "The authors report lower density peaking at higher collisionality in the studied tokamak conditions."
+            "zh": "AUG 稳态 NBI H 模的密度峰化 ne(ρψ=0.4)/ne(ρψ=0.8) 随 νeff 增大下降；Fig. 1 的功率／安全因子分组与两个密度窗口保留该关联，但没有隔离全部协变量。",
+            "en": "Density peaking ne(ρψ=0.4)/ne(ρψ=0.8) decreases with increasing νeff in stationary NBI AUG H-modes; Fig. 1 power/safety-factor groups and two density windows retain the association without isolating all covariates."
           },
           "locator": {
-            "zh": "摘要",
-            "en": "Abstract"
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
           },
-          "scope": "abstract",
           "conditions": {
-            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
           },
           "limitations": {
-            "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
-            "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+            "zh": "实验关联不是对纯碰撞效应的独立干预；温度、Zeff、梯度、平衡与源仍可协变。原 finding ID 保留，证据由摘要扩展至实读 Fig. 1；未重算原始数据。",
+            "en": "The experimental association is not an independent intervention on collisions alone; temperature, Zeff, gradients, equilibrium and sources can covary. The original finding ID is retained while evidence expands from abstract to directly read Fig. 1; no raw-data reconstruction."
+          }
+        },
+        {
+          "id": "finding-a03-collision-ablation",
+          "scope": "full_text",
+          "statement": {
+            "zh": "30 个 AUG 条件的 ASTRA 预测中，含电子碰撞／电阻和耗散闭合的 GLF23 再现实验密度标长变化；Weiland、RGLF 及直接关闭碰撞的 GLF23 未恢复该趋势。关闭碰撞支持 GLF23 内归因，不等于实验因果隔离。",
+            "en": "In ASTRA predictions for 30 AUG conditions, GLF23 with electron collisions/resistivity and dissipative closure reproduces the experimental density-scale-length trend; Weiland, RGLF and GLF23 with collisions directly switched off do not recover it. Collision switch-off supports attribution within GLF23, not experimental causal isolation."
+          },
+          "locator": {
+            "zh": "PDF 第 2 页 Fig. 2(a–c) 及模型说明，第 3 页左栏首段；期刊 205003-2–3；C03/C04。",
+            "en": "PDF p.2, Fig. 2(a–c) and model description; p.3 first left-column paragraph; journal pp.205003-2–3; C03/C04."
+          },
+          "conditions": {
+            "zh": "30 个代表性算例，0.1≤νeff≤2；ASTRA 联合预测密度、Te、Ti 和电流，纳入新经典效应。RGLF 同时改变碰撞、电阻与闭合；直接关闭 GLF23 碰撞项更具针对性。",
+            "en": "30 representative cases, 0.1≤νeff≤2; ASTRA jointly predicts density, Te, Ti and current with neoclassical effects. RGLF changes collisions, resistivity and closure together; directly switching off GLF23 collisions is more targeted."
+          },
+          "limitations": {
+            "zh": "模型比较并非仅单参数不同；消融不证明 GLF23 是唯一正确微观闭合。源形状低敏感性仅指文中设定。 直接核对用户提供的四页正式 PRL PDF、全部五图及 Eqs. (1a),(1b),(2)。未获取原始数据库或运行 ASTRA/GLF23；核查原文报告不等于独立科学验证。",
+            "en": "Model comparisons change more than one parameter; ablation does not establish GLF23 as the unique correct microscopic closure. Source-shape insensitivity is confined to the reported settings. Directly checked the supplied four-page published PRL PDF, all five figures and Eqs. (1a),(1b),(2). No raw database was obtained or ASTRA/GLF23 rerun; checking source reports is not independent scientific verification."
+          }
+        },
+        {
+          "id": "finding-a03-incremental-flux",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者以 Eq. (1a) 的模型通量局域梯度导数和 Eq. (1b) 的剩余项分解 GLF23 通量；Fig. 3 低 νeff 下较大的外向密度扩散与内向电子热扩散／剩余箍缩相抵消，分量随碰撞性增大减弱。",
+            "en": "The authors partition GLF23 flux using the local model-flux gradient derivatives of Eq. (1a) and residual of Eq. (1b); in Fig. 3 large outward density diffusion and inward electron thermodiffusion/residual pinch cancel at low νeff, with components weakening as collisionality rises."
+          },
+          "locator": {
+            "zh": "PDF 第 3 页 Eqs. (1a),(1b)、Fig. 3 及右栏；期刊 205003-3；C06。",
+            "en": "PDF p.3, Eqs. (1a),(1b), Fig. 3 and right column; journal p.205003-3; C06."
+          },
+          "conditions": {
+            "zh": "GLF23 以实验剖面为输入，在 ρφ=0.4–0.7 平均；q_n 为通量除以粒子数密度，单位 m/s；导数对 ρ=aρφ 求取，增量扩散率单位 m²/s。",
+            "en": "GLF23 uses experimental profiles as inputs, averaged over ρφ=0.4–0.7; q_n is particle flux per particle with m/s units; derivatives use ρ=aρφ and incremental diffusivities have m²/s units."
+          },
+          "limitations": {
+            "zh": "各分量为模型计算而非独立实测；局域导数和剩余定义不构成任意梯度变化的固定系数全局线性律。 直接核对用户提供的四页正式 PRL PDF、全部五图及 Eqs. (1a),(1b),(2)。未获取原始数据库或运行 ASTRA/GLF23；核查原文报告不等于独立科学验证。",
+            "en": "Components are model calculations rather than independent measurements; local derivatives and the residual definition do not form a fixed-coefficient global linear law for arbitrary gradient changes. Directly checked the supplied four-page published PRL PDF, all five figures and Eqs. (1a),(1b),(2). No raw database was obtained or ASTRA/GLF23 rerun; checking source reports is not independent scientific verification."
+          }
+        },
+        {
+          "id": "finding-a03-effective-pinch",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 4 的有效反常总箍缩比 −Ṽ/D̃nn 随 νeff 总体下降并可变号；Eq. (2) 仅在 −q_n/D̃nn 修正相对较小时将其近似为 −∂ρ ln ni。",
+            "en": "The effective total anomalous pinch ratio −Ṽ/D̃nn in Fig. 4 generally decreases with νeff and can change sign; Eq. (2) approximates it by −∂ρ ln ni only when the −q_n/D̃nn correction is relatively small."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Eq. (2)、Fig. 4 及左栏说明；期刊 205003-4；C07。",
+            "en": "PDF p.4, Eq. (2), Fig. 4 and left-column explanation; journal p.205003-4; C07."
+          },
+          "conditions": {
+            "zh": "Ṽ 合并热扩散及剩余箍缩等全部非密度梯度贡献，D̃nn 非零；小净通量近似尤其针对低碰撞性。ρ=aρφ 为长度坐标，比值量纲为长度倒数。",
+            "en": "Ṽ combines thermodiffusion and residual pinch with all non-density-gradient contributions; D̃nn must be nonzero. The small-net-flux approximation is especially relevant at low collisionality. ρ=aρφ is a length coordinate and the ratio has inverse-length units."
+          },
+          "limitations": {
+            "zh": "这是模型计算的复合比值，不是独立实测纯微观 pinch 或 Ware 速度；有限源时不能无条件省略通量修正。 直接核对用户提供的四页正式 PRL PDF、全部五图及 Eqs. (1a),(1b),(2)。未获取原始数据库或运行 ASTRA/GLF23；核查原文报告不等于独立科学验证。",
+            "en": "This is a calculated composite ratio, not an independently measured pure microscopic pinch or Ware velocity; finite sources do not permit unconditional omission of the flux correction. Directly checked the supplied four-page published PRL PDF, all five figures and Eqs. (1a),(1b),(2). No raw database was obtained or ASTRA/GLF23 rerun; checking source reports is not independent scientific verification."
+          }
+        },
+        {
+          "id": "finding-a03-ware-competition",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 5 两个 GLF23 代表性算例比较 Ware 开／关：νeff≈0.1 时剖面影响较小，νeff≈1 时去 Ware 明显变平，支持在这些条件下 Ware 相对重要性随碰撞运行态改变。",
+            "en": "Two representative GLF23 cases in Fig. 5 compare Ware on/off: profile effects are smaller at νeff≈0.1, whereas removal substantially flattens the profile at νeff≈1, supporting regime-dependent relative Ware importance in those conditions."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Fig. 5、图注及左栏讨论；期刊 205003-4；C08。",
+            "en": "PDF p.4, Fig. 5, caption and left-column discussion; journal p.205003-4; C08."
+          },
+          "conditions": {
+            "zh": "两个指定 GLF23 算例及其源、边界和新经典分解；实线有 Ware，虚线无 Ware，星号为实验剖面。",
+            "en": "Two specified GLF23 cases with their source, boundary and neoclassical decomposition; solid lines include Ware, dashed lines omit it, stars show experimental profiles."
+          },
+          "limitations": {
+            "zh": "仅两个模型干预算例，不是实验独立移除 Ware，也不是所有高碰撞性、非感应或其他装置的普遍定律。 直接核对用户提供的四页正式 PRL PDF、全部五图及 Eqs. (1a),(1b),(2)。未获取原始数据库或运行 ASTRA/GLF23；核查原文报告不等于独立科学验证。",
+            "en": "Only two model interventions, not experimental independent removal of Ware or a universal rule for all high-collisionality, noninductive or other-device plasmas. Directly checked the supplied four-page published PRL PDF, all five figures and Eqs. (1a),(1b),(2). No raw database was obtained or ASTRA/GLF23 rerun; checking source reports is not independent scientific verification."
           }
         }
       ],
       "limitations": {
-        "zh": "只检查摘要及书目。未核对图表、原始数据或机制因果，也没有独立复现。",
-        "en": "Abstract and metadata only. Figures, raw data and mechanism causality were not checked; no independent replication."
+        "zh": "直接核对用户提供的四页正式 PRL PDF、全部五图及 Eqs. (1a),(1b),(2)。未获取原始数据库或运行 ASTRA/GLF23；核查原文报告不等于独立科学验证。 实验关联、模型内消融和微观机制分开；未系统研读被引原始研究，尤其未以 Physics of Plasmas 扩展论文替代本 PRL。Fig. 1 用 ρψ，后续局域导数用 ρ=aρφ；原刊 k⊥ρs=√0.1。",
+        "en": "Full text and all five figure images/captions were checked directly. Directly checked the supplied four-page published PRL PDF, all five figures and Eqs. (1a),(1b),(2). No raw database was obtained or ASTRA/GLF23 rerun; checking source reports is not independent scientific verification. Experimental association, model-internal intervention and microscopic mechanisms remain distinct. Cited original studies were not systematically read; the Physics of Plasmas extension was not substituted for this PRL. Fig. 1 uses ρψ; subsequent local derivatives use ρ=aρφ; printed k⊥ρs=√0.1."
       },
       "verificationStatus": {
         "metadata": "checked",
         "abstract": "checked",
-        "fullText": "not_checked",
-        "claim": "not_checked",
+        "fullText": "checked",
+        "claim": "checked",
         "independent": "not_checked"
       },
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-22",
       "metadataSources": [
         "https://api.crossref.org/works/10.1103/physrevlett.90.205003",
         "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.90.205003"
       ],
-      "readingScope": "abstract",
+      "readingScope": "full_text",
       "contentStatus": "research_record",
       "journalAbbreviation": "Phys. Rev. Lett."
     },
@@ -775,18 +855,18 @@
           "sourceId": "paper-angioni-2003",
           "findingId": "finding-2003",
           "role": "context",
-          "scope": "abstract",
+          "scope": "full_text",
           "statement": {
             "zh": "作为相关研究背景，不核验此示例对象或关系。",
             "en": "Related research context; it does not verify this demonstration object or relationship."
           },
           "conditions": {
-            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
           },
           "locator": {
-            "zh": "摘要",
-            "en": "Abstract"
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
           },
           "claimVerified": false
         },
@@ -882,18 +962,18 @@
           "sourceId": "paper-angioni-2003",
           "findingId": "finding-2003",
           "role": "context",
-          "scope": "abstract",
+          "scope": "full_text",
           "statement": {
             "zh": "作为相关研究背景，不核验此示例对象或关系。",
             "en": "Related research context; it does not verify this demonstration object or relationship."
           },
           "conditions": {
-            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
           },
           "locator": {
-            "zh": "摘要",
-            "en": "Abstract"
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
           },
           "claimVerified": false
         },
@@ -1047,18 +1127,18 @@
           "sourceId": "paper-angioni-2003",
           "findingId": "finding-2003",
           "role": "context",
-          "scope": "abstract",
+          "scope": "full_text",
           "statement": {
             "zh": "作为相关研究背景，不核验此示例对象或关系。",
             "en": "Related research context; it does not verify this demonstration object or relationship."
           },
           "conditions": {
-            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
           },
           "locator": {
-            "zh": "摘要",
-            "en": "Abstract"
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
           },
           "claimVerified": false
         },
@@ -1532,6 +1612,44 @@
             "en": "Accepted PDF pp.5–8, Table 1, Figs.1–6; M20-C01"
           },
           "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "AUG 稳态 NBI H 模的密度峰化 ne(ρψ=0.4)/ne(ρψ=0.8) 随 νeff 增大下降；Fig. 1 的功率／安全因子分组与两个密度窗口保留该关联，但没有隔离全部协变量。",
+            "en": "Density peaking ne(ρψ=0.4)/ne(ρψ=0.8) decreases with increasing νeff in stationary NBI AUG H-modes; Fig. 1 power/safety-factor groups and two density windows retain the association without isolating all covariates."
+          },
+          "conditions": {
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
+          },
+          "locator": {
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-collision-ablation",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "30 个 AUG 条件的 ASTRA 预测中，含电子碰撞／电阻和耗散闭合的 GLF23 再现实验密度标长变化；Weiland、RGLF 及直接关闭碰撞的 GLF23 未恢复该趋势。关闭碰撞支持 GLF23 内归因，不等于实验因果隔离。",
+            "en": "In ASTRA predictions for 30 AUG conditions, GLF23 with electron collisions/resistivity and dissipative closure reproduces the experimental density-scale-length trend; Weiland, RGLF and GLF23 with collisions directly switched off do not recover it. Collision switch-off supports attribution within GLF23, not experimental causal isolation."
+          },
+          "conditions": {
+            "zh": "30 个代表性算例，0.1≤νeff≤2；ASTRA 联合预测密度、Te、Ti 和电流，纳入新经典效应。RGLF 同时改变碰撞、电阻与闭合；直接关闭 GLF23 碰撞项更具针对性。",
+            "en": "30 representative cases, 0.1≤νeff≤2; ASTRA jointly predicts density, Te, Ti and current with neoclassical effects. RGLF changes collisions, resistivity and closure together; directly switching off GLF23 collisions is more targeted."
+          },
+          "locator": {
+            "zh": "PDF 第 2 页 Fig. 2(a–c) 及模型说明，第 3 页左栏首段；期刊 205003-2–3；C03/C04。",
+            "en": "PDF p.2, Fig. 2(a–c) and model description; p.3 first left-column paragraph; journal pp.205003-2–3; C03/C04."
+          },
+          "claimVerified": false
         }
       ],
       "label": {
@@ -1841,6 +1959,63 @@
           "locator": {
             "zh": "接受稿 PDF 第 13—14、20 页，式（8）—（9）、第 3.3 与 6.4 节；M20-C03",
             "en": "Accepted PDF pp.13–14,20, Eqs.(8)–(9), §§3.3,6.4; M20-C03"
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-incremental-flux",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者以 Eq. (1a) 的模型通量局域梯度导数和 Eq. (1b) 的剩余项分解 GLF23 通量；Fig. 3 低 νeff 下较大的外向密度扩散与内向电子热扩散／剩余箍缩相抵消，分量随碰撞性增大减弱。",
+            "en": "The authors partition GLF23 flux using the local model-flux gradient derivatives of Eq. (1a) and residual of Eq. (1b); in Fig. 3 large outward density diffusion and inward electron thermodiffusion/residual pinch cancel at low νeff, with components weakening as collisionality rises."
+          },
+          "conditions": {
+            "zh": "GLF23 以实验剖面为输入，在 ρφ=0.4–0.7 平均；q_n 为通量除以粒子数密度，单位 m/s；导数对 ρ=aρφ 求取，增量扩散率单位 m²/s。",
+            "en": "GLF23 uses experimental profiles as inputs, averaged over ρφ=0.4–0.7; q_n is particle flux per particle with m/s units; derivatives use ρ=aρφ and incremental diffusivities have m²/s units."
+          },
+          "locator": {
+            "zh": "PDF 第 3 页 Eqs. (1a),(1b)、Fig. 3 及右栏；期刊 205003-3；C06。",
+            "en": "PDF p.3, Eqs. (1a),(1b), Fig. 3 and right column; journal p.205003-3; C06."
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-effective-pinch",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 4 的有效反常总箍缩比 −Ṽ/D̃nn 随 νeff 总体下降并可变号；Eq. (2) 仅在 −q_n/D̃nn 修正相对较小时将其近似为 −∂ρ ln ni。",
+            "en": "The effective total anomalous pinch ratio −Ṽ/D̃nn in Fig. 4 generally decreases with νeff and can change sign; Eq. (2) approximates it by −∂ρ ln ni only when the −q_n/D̃nn correction is relatively small."
+          },
+          "conditions": {
+            "zh": "Ṽ 合并热扩散及剩余箍缩等全部非密度梯度贡献，D̃nn 非零；小净通量近似尤其针对低碰撞性。ρ=aρφ 为长度坐标，比值量纲为长度倒数。",
+            "en": "Ṽ combines thermodiffusion and residual pinch with all non-density-gradient contributions; D̃nn must be nonzero. The small-net-flux approximation is especially relevant at low collisionality. ρ=aρφ is a length coordinate and the ratio has inverse-length units."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Eq. (2)、Fig. 4 及左栏说明；期刊 205003-4；C07。",
+            "en": "PDF p.4, Eq. (2), Fig. 4 and left-column explanation; journal p.205003-4; C07."
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-ware-competition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 5 两个 GLF23 代表性算例比较 Ware 开／关：νeff≈0.1 时剖面影响较小，νeff≈1 时去 Ware 明显变平，支持在这些条件下 Ware 相对重要性随碰撞运行态改变。",
+            "en": "Two representative GLF23 cases in Fig. 5 compare Ware on/off: profile effects are smaller at νeff≈0.1, whereas removal substantially flattens the profile at νeff≈1, supporting regime-dependent relative Ware importance in those conditions."
+          },
+          "conditions": {
+            "zh": "两个指定 GLF23 算例及其源、边界和新经典分解；实线有 Ware，虚线无 Ware，星号为实验剖面。",
+            "en": "Two specified GLF23 cases with their source, boundary and neoclassical decomposition; solid lines include Ware, dashed lines omit it, stars show experimental profiles."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Fig. 5、图注及左栏讨论；期刊 205003-4；C08。",
+            "en": "PDF p.4, Fig. 5, caption and left-column discussion; journal p.205003-4; C08."
           },
           "claimVerified": false
         }
@@ -2485,6 +2660,44 @@
             "en": "§3.3, Eq. (8), PDF pp.8–9 / journal pp.7–8; C08; review refs. [54,55,67–75]"
           },
           "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-incremental-flux",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者以 Eq. (1a) 的模型通量局域梯度导数和 Eq. (1b) 的剩余项分解 GLF23 通量；Fig. 3 低 νeff 下较大的外向密度扩散与内向电子热扩散／剩余箍缩相抵消，分量随碰撞性增大减弱。",
+            "en": "The authors partition GLF23 flux using the local model-flux gradient derivatives of Eq. (1a) and residual of Eq. (1b); in Fig. 3 large outward density diffusion and inward electron thermodiffusion/residual pinch cancel at low νeff, with components weakening as collisionality rises."
+          },
+          "conditions": {
+            "zh": "GLF23 以实验剖面为输入，在 ρφ=0.4–0.7 平均；q_n 为通量除以粒子数密度，单位 m/s；导数对 ρ=aρφ 求取，增量扩散率单位 m²/s。",
+            "en": "GLF23 uses experimental profiles as inputs, averaged over ρφ=0.4–0.7; q_n is particle flux per particle with m/s units; derivatives use ρ=aρφ and incremental diffusivities have m²/s units."
+          },
+          "locator": {
+            "zh": "PDF 第 3 页 Eqs. (1a),(1b)、Fig. 3 及右栏；期刊 205003-3；C06。",
+            "en": "PDF p.3, Eqs. (1a),(1b), Fig. 3 and right column; journal p.205003-3; C06."
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-effective-pinch",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 4 的有效反常总箍缩比 −Ṽ/D̃nn 随 νeff 总体下降并可变号；Eq. (2) 仅在 −q_n/D̃nn 修正相对较小时将其近似为 −∂ρ ln ni。",
+            "en": "The effective total anomalous pinch ratio −Ṽ/D̃nn in Fig. 4 generally decreases with νeff and can change sign; Eq. (2) approximates it by −∂ρ ln ni only when the −q_n/D̃nn correction is relatively small."
+          },
+          "conditions": {
+            "zh": "Ṽ 合并热扩散及剩余箍缩等全部非密度梯度贡献，D̃nn 非零；小净通量近似尤其针对低碰撞性。ρ=aρφ 为长度坐标，比值量纲为长度倒数。",
+            "en": "Ṽ combines thermodiffusion and residual pinch with all non-density-gradient contributions; D̃nn must be nonzero. The small-net-flux approximation is especially relevant at low collisionality. ρ=aρφ is a length coordinate and the ratio has inverse-length units."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Eq. (2)、Fig. 4 及左栏说明；期刊 205003-4；C07。",
+            "en": "PDF p.4, Eq. (2), Fig. 4 and left-column explanation; journal p.205003-4; C07."
+          },
+          "claimVerified": false
         }
       ],
       "tags": [
@@ -2744,18 +2957,18 @@
           "sourceId": "paper-angioni-2003",
           "findingId": "finding-2003",
           "role": "context",
-          "scope": "abstract",
+          "scope": "full_text",
           "statement": {
             "zh": "作为相关研究背景，不核验此示例对象或关系。",
             "en": "Related research context; it does not verify this demonstration object or relationship."
           },
           "conditions": {
-            "zh": "摘要所述托卡马克条件；具体参数范围未从全文核对。",
-            "en": "Tokamak conditions described in the abstract; numerical ranges have not been checked in full text."
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
           },
           "locator": {
-            "zh": "摘要",
-            "en": "Abstract"
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
           },
           "claimVerified": false
         }
@@ -4454,6 +4667,158 @@
       "rationale": {
         "zh": "用有条件的通量理论理解 AUG/ECH 比较，保持频率相关性与因果控制的区别。",
         "en": "Use conditional flux theory to interpret AUG/ECH comparisons while distinguishing frequency association from causal control."
+      }
+    },
+    {
+      "id": "r-a03-model-context",
+      "source": "q-collisionality-transfer",
+      "target": "k-a12-state-dependent-flux",
+      "relation": "contextualizes",
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-2003",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "AUG 稳态 NBI H 模的密度峰化 ne(ρψ=0.4)/ne(ρψ=0.8) 随 νeff 增大下降；Fig. 1 的功率／安全因子分组与两个密度窗口保留该关联，但没有隔离全部协变量。",
+            "en": "Density peaking ne(ρψ=0.4)/ne(ρψ=0.8) decreases with increasing νeff in stationary NBI AUG H-modes; Fig. 1 power/safety-factor groups and two density windows retain the association without isolating all covariates."
+          },
+          "conditions": {
+            "zh": "Fig. 1(a) PNBI=5 MW，q95≈3/4/5 分组；(b) q95≈4，线平均密度窗口 0.5<nel20<0.55、0.75<nel20<0.8（10^20 m^-3）。νeff 为电子–离子碰撞频率与曲率漂移频率之比，k⊥ρs=√0.1；ρψ 是极向磁通坐标。",
+            "en": "Fig. 1(a): PNBI=5 MW and q95≈3/4/5 groups; (b): q95≈4, line-average density windows 0.5<nel20<0.55 and 0.75<nel20<0.8 (10^20 m^-3). νeff is the electron–ion collision/curvature-drift frequency ratio, with k⊥ρs=√0.1; ρψ is a poloidal-flux coordinate."
+          },
+          "locator": {
+            "zh": "PDF 第 1 页 Fig. 1(a,b)、图注及正文；第 2 页开头；期刊 205003-1–2；交接 C01/C02。",
+            "en": "PDF p.1, Fig. 1(a,b), caption/text; p.2 opening; journal pp.205003-1–2; handoff C01/C02."
+          },
+          "claimVerified": false
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-collision-ablation",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "30 个 AUG 条件的 ASTRA 预测中，含电子碰撞／电阻和耗散闭合的 GLF23 再现实验密度标长变化；Weiland、RGLF 及直接关闭碰撞的 GLF23 未恢复该趋势。关闭碰撞支持 GLF23 内归因，不等于实验因果隔离。",
+            "en": "In ASTRA predictions for 30 AUG conditions, GLF23 with electron collisions/resistivity and dissipative closure reproduces the experimental density-scale-length trend; Weiland, RGLF and GLF23 with collisions directly switched off do not recover it. Collision switch-off supports attribution within GLF23, not experimental causal isolation."
+          },
+          "conditions": {
+            "zh": "30 个代表性算例，0.1≤νeff≤2；ASTRA 联合预测密度、Te、Ti 和电流，纳入新经典效应。RGLF 同时改变碰撞、电阻与闭合；直接关闭 GLF23 碰撞项更具针对性。",
+            "en": "30 representative cases, 0.1≤νeff≤2; ASTRA jointly predicts density, Te, Ti and current with neoclassical effects. RGLF changes collisions, resistivity and closure together; directly switching off GLF23 collisions is more targeted."
+          },
+          "locator": {
+            "zh": "PDF 第 2 页 Fig. 2(a–c) 及模型说明，第 3 页左栏首段；期刊 205003-2–3；C03/C04。",
+            "en": "PDF p.2, Fig. 2(a–c) and model description; p.3 first left-column paragraph; journal pp.205003-2–3; C03/C04."
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "区分实验关联与模型消融",
+        "en": "Distinguish association and model ablation"
+      },
+      "rationale": {
+        "zh": "FRA 跨论文比较：2003 年关联与模型碰撞消融为已有梯度依赖通量问题提供背景，不能由此确立唯一实验机制。",
+        "en": "FRA cross-paper comparison: the 2003 association and model collision ablation contextualize the existing gradient-dependent flux problem without establishing a unique experimental mechanism."
+      }
+    },
+    {
+      "id": "r-a03-incremental-limit",
+      "source": "k-a12-state-dependent-flux",
+      "target": "g-flux-identification",
+      "relation": "constrains",
+      "contentStatus": "research_record",
+      "epistemicStatus": "conditional",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-incremental-flux",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "作者以 Eq. (1a) 的模型通量局域梯度导数和 Eq. (1b) 的剩余项分解 GLF23 通量；Fig. 3 低 νeff 下较大的外向密度扩散与内向电子热扩散／剩余箍缩相抵消，分量随碰撞性增大减弱。",
+            "en": "The authors partition GLF23 flux using the local model-flux gradient derivatives of Eq. (1a) and residual of Eq. (1b); in Fig. 3 large outward density diffusion and inward electron thermodiffusion/residual pinch cancel at low νeff, with components weakening as collisionality rises."
+          },
+          "conditions": {
+            "zh": "GLF23 以实验剖面为输入，在 ρφ=0.4–0.7 平均；q_n 为通量除以粒子数密度，单位 m/s；导数对 ρ=aρφ 求取，增量扩散率单位 m²/s。",
+            "en": "GLF23 uses experimental profiles as inputs, averaged over ρφ=0.4–0.7; q_n is particle flux per particle with m/s units; derivatives use ρ=aρφ and incremental diffusivities have m²/s units."
+          },
+          "locator": {
+            "zh": "PDF 第 3 页 Eqs. (1a),(1b)、Fig. 3 及右栏；期刊 205003-3；C06。",
+            "en": "PDF p.3, Eqs. (1a),(1b), Fig. 3 and right column; journal p.205003-3; C06."
+          },
+          "claimVerified": true
+        },
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-effective-pinch",
+          "role": "support",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 4 的有效反常总箍缩比 −Ṽ/D̃nn 随 νeff 总体下降并可变号；Eq. (2) 仅在 −q_n/D̃nn 修正相对较小时将其近似为 −∂ρ ln ni。",
+            "en": "The effective total anomalous pinch ratio −Ṽ/D̃nn in Fig. 4 generally decreases with νeff and can change sign; Eq. (2) approximates it by −∂ρ ln ni only when the −q_n/D̃nn correction is relatively small."
+          },
+          "conditions": {
+            "zh": "Ṽ 合并热扩散及剩余箍缩等全部非密度梯度贡献，D̃nn 非零；小净通量近似尤其针对低碰撞性。ρ=aρφ 为长度坐标，比值量纲为长度倒数。",
+            "en": "Ṽ combines thermodiffusion and residual pinch with all non-density-gradient contributions; D̃nn must be nonzero. The small-net-flux approximation is especially relevant at low collisionality. ρ=aρφ is a length coordinate and the ratio has inverse-length units."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Eq. (2)、Fig. 4 及左栏说明；期刊 205003-4；C07。",
+            "en": "PDF p.4, Eq. (2), Fig. 4 and left-column explanation; journal p.205003-4; C07."
+          },
+          "claimVerified": true
+        }
+      ],
+      "label": {
+        "zh": "限定增量系数与总箍缩解释",
+        "en": "Bound incremental-coefficient and total-pinch interpretation"
+      },
+      "rationale": {
+        "zh": "FRA 综合比较：2003 年局域模型导数及复合比值不能由一个稳态剖面分别识别各微观通量；Eq. (2) 还须保留有限净通量的适用边界。",
+        "en": "FRA synthesis: the 2003 local model derivatives and composite ratio do not separately identify microscopic fluxes from one steady profile; Eq. (2) also retains a finite-net-flux applicability boundary."
+      }
+    },
+    {
+      "id": "r-a03-ware-context",
+      "source": "q-collisionality-transfer",
+      "target": "g-flux-identification",
+      "relation": "contextualizes",
+      "contentStatus": "research_record",
+      "epistemicStatus": "background",
+      "domainIds": ["transport", "turbulence"],
+      "citations": [
+        {
+          "sourceId": "paper-angioni-2003",
+          "findingId": "finding-a03-ware-competition",
+          "role": "context",
+          "scope": "full_text",
+          "statement": {
+            "zh": "Fig. 5 两个 GLF23 代表性算例比较 Ware 开／关：νeff≈0.1 时剖面影响较小，νeff≈1 时去 Ware 明显变平，支持在这些条件下 Ware 相对重要性随碰撞运行态改变。",
+            "en": "Two representative GLF23 cases in Fig. 5 compare Ware on/off: profile effects are smaller at νeff≈0.1, whereas removal substantially flattens the profile at νeff≈1, supporting regime-dependent relative Ware importance in those conditions."
+          },
+          "conditions": {
+            "zh": "两个指定 GLF23 算例及其源、边界和新经典分解；实线有 Ware，虚线无 Ware，星号为实验剖面。",
+            "en": "Two specified GLF23 cases with their source, boundary and neoclassical decomposition; solid lines include Ware, dashed lines omit it, stars show experimental profiles."
+          },
+          "locator": {
+            "zh": "PDF 第 4 页 Fig. 5、图注及左栏讨论；期刊 205003-4；C08。",
+            "en": "PDF p.4, Fig. 5, caption and left-column discussion; journal p.205003-4; C08."
+          },
+          "claimVerified": false
+        }
+      ],
+      "label": {
+        "zh": "保留 Ware 与反常项竞争",
+        "en": "Retain Ware/anomalous competition"
+      },
+      "rationale": {
+        "zh": "两个 Ware 开关算例说明运行态相关的模型竞争，不能把碰撞性经验相关性等同于唯一湍流机制。",
+        "en": "Two Ware on/off cases contextualize regime-dependent model competition; an empirical collisionality association is not a unique turbulent mechanism."
       }
     }
   ]
