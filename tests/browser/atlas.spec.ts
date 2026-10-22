@@ -18,6 +18,59 @@ async function tapGraph(page: Page, id: string) {
 }
 const screenshotDir =
   process.env.FRA_SCREENSHOT_DIR || "test-results/screenshots";
+test("Angioni 2012 source exposes bounded findings, handoff provenance and pinned study", async ({
+  page,
+}) => {
+  await page.goto("#k-a12-state-dependent-flux");
+  await expect(page.getByTestId("detail-title")).toHaveText(
+    "梯度依赖的非对角粒子通量",
+  );
+  await page.locator(".citation button").first().click();
+  const paper = page.getByTestId("paper-paper-angioni-2012");
+  await expect(paper.locator(".finding")).toHaveCount(9);
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "全文检查: 已检查",
+  );
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "独立核验: 未检查",
+  );
+  await expect(paper).toContainText("科研交接材料");
+  await expect(paper).toContainText("未取得或重读");
+  await expect(paper.locator("a.doi-link")).toHaveAttribute(
+    "href",
+    "https://doi.org/10.1088/0029-5515/52/11/114003",
+  );
+  const insight = page.getByTestId("insight-paper-angioni-2012");
+  await expect(insight).toHaveAttribute(
+    "href",
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/f515b7ec980b4402ab9d3b33a2f9e020756910bc/docs/literature/papers/angioni-2012-off-diagonal-transport.md",
+  );
+  await expect(insight).toHaveText("科研成果解读 ↗");
+  await page.getByRole("button", { name: "English", exact: true }).click();
+  await expect(insight).toHaveText("Research Insights ↗");
+  await expect(paper).toContainText("did not obtain or reread");
+  await expect(paper.locator(".verification-grid")).toContainText(
+    "Independent verification: Not checked",
+  );
+  await page.screenshot({
+    path: screenshotDir + "/FRA-Angioni-2012-source-en.png",
+    fullPage: true,
+  });
+  await page.goto("#k-a12-momentum-coupling");
+  await expect(page.getByTestId("detail-title")).toHaveText(
+    "Conditional density/momentum cross-channel constraints",
+  );
+  await expect(page.locator(".detail .status")).toHaveText(
+    "Conditional conclusion",
+  );
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
+
 test("default atlas, bilingual mission, real canvas click, search, filters and old deep link", async ({
   page,
 }) => {
@@ -28,7 +81,7 @@ test("default atlas, bilingual mission, real canvas click, search, filters and o
     if (r.status() >= 400) failures.push(r.url());
   });
   await page.goto("");
-  await expect(page.getByTestId("result-count")).toHaveText("28");
+  await expect(page.getByTestId("result-count")).toHaveText("31");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await expect(page.locator(".mission")).toContainText("开放协作");
   await expect(page.locator(".mission")).toContainText("open, collaborative");
@@ -93,7 +146,7 @@ test("all research panels, domain exploration and complete bilingual methodology
   );
   await page.getByRole("button", { name: "查看子图" }).click();
   await expect(page.getByLabel("研究领域")).toHaveValue("transport");
-  await expect(page.getByTestId("result-count")).toHaveText("28");
+  await expect(page.getByTestId("result-count")).toHaveText("31");
   await expect(page.locator(".version")).toHaveText("V0.2 · 科学研究原型");
   await page
     .getByRole("button", { name: "研究方法 / Methodology", exact: true })
@@ -343,7 +396,7 @@ test("Q001 research chain, real canvas node, source findings and bilingual insig
   );
   await expect(page.locator(".detail")).toContainText("尚未开展");
   await page.getByLabel("内容性质").selectOption("research_record");
-  await expect(page.getByTestId("result-count")).toHaveText("13");
+  await expect(page.getByTestId("result-count")).toHaveText("16");
   await page.getByRole("button", { name: "适应视图", exact: true }).click();
   await page.screenshot({
     path: screenshotDir + "/FRA-Q001-research-chain.png",
@@ -364,7 +417,7 @@ test("Mordijck transport chain links full study while keeping mechanisms conditi
   page,
 }) => {
   await page.goto("");
-  await expect(page.getByTestId("result-count")).toHaveText("28");
+  await expect(page.getByTestId("result-count")).toHaveText("31");
   await tapGraph(page, "p-diiid-peaking");
   await expect(page.getByTestId("detail-title")).toBeVisible();
   await page.locator(".citation button").first().click();
@@ -485,12 +538,16 @@ test("Nature references use local scope numbers and preserve scientific status",
     fullPage: false,
   });
   await page.goto("#h-pinch");
-  await expect(references.locator(".reference-entry")).toHaveCount(2);
+  await expect(references.locator(".reference-entry")).toHaveCount(3);
   await expect(references.locator(".reference-entry").first()).toHaveAttribute(
     "data-source-id",
     "paper-angioni-2003",
   );
-  await expect(references.locator(".csl-left-margin")).toHaveText(["1.", "2."]);
+  await expect(references.locator(".csl-left-margin")).toHaveText([
+    "1.",
+    "2.",
+    "3.",
+  ]);
   await expect(
     references.locator("i").filter({ hasText: "Phys. Rev. Lett." }),
   ).toBeVisible();
