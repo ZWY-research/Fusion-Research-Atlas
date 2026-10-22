@@ -25,7 +25,9 @@ DOI normalization accepts DOI strings or encoded resolver URLs, preserves suffix
 
 Each citation references a source and optionally a specific finding, with role context/support/challenge, reading scope, statement, conditions, locator and a claimVerified flag. Support/challenge requires a specific finding. No citation may exceed actually read material. Metadata checks cannot establish claim or independent verification. Demonstration objects cannot be promoted to supported conclusions or verified claims by attaching a real DOI. A candidate hypothesis can cite real literature without becoming verified.
 
-Current two papers were checked at metadata and abstract level only, not full text, figures, claims or independent replication. All current graph citations are context. No counterevidence indexed does not mean counterevidence is absent.
+The source records and literature catalogue specify each paper’s actual reading and checking scope. Angioni 2003 remains at metadata/abstract level; four other papers have completed source-based studies with bounded full-text findings. Angioni 2012 full-text and claim checks are inherited from the supplied scientific handoff, with ingestion provenance stated in its limitations and literature page. Research records can carry conditional, claim-checked support; demonstration citations remain context only. None of the five papers has independent replication recorded. No counterevidence indexed does not mean counterevidence is absent.
+
+来源记录与文献目录分别说明各篇实际阅读及核查范围。Angioni 2003 仍为书目／摘要级，其余四篇已完成有边界的来源研读。Angioni 2012 的全文与主张核查继承所提供科研交接材料，入库来源边界在 limitations 与评议页明确说明。科研记录可保留有条件的主张支持；演示对象引用仍仅为背景。五篇均未记录独立复现；未收录反证不代表没有反证。
 
 ## Compatibility
 

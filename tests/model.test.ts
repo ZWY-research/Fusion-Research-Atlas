@@ -164,7 +164,7 @@ test("bilingual fields, domains, all seven object types and search filters compo
   );
   assert.equal(
     visibleNodes(a, "", "all", "all", "all", "research_record").length,
-    13,
+    16,
   );
 });
 test("GitHub contribution URLs select the corresponding existing Issue Form", () => {
