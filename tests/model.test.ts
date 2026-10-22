@@ -66,12 +66,17 @@ test("refuse fabricated claim verification and reading scope", () => {
     (d: any) => {
       d.sources[0].verificationStatus.claim = "checked";
       d.sources[0].verificationStatus.abstract = "not_checked";
+      d.sources[0].verificationStatus.fullText = "not_checked";
     },
-    (d: any) => (d.sources[0].verificationStatus.fullText = "checked"),
+    (d: any) => (d.sources[0].readingScope = "abstract"),
     (d: any) => (d.sources[0].readingScope = "metadata_only"),
-    (d: any) =>
-      (d.nodes.find((n: any) => n.id === "h-pinch").citations[0].scope =
-        "full_text"),
+    (d: any) => {
+      d.sources[0].readingScope = "abstract";
+      d.sources[0].verificationStatus.fullText = "not_checked";
+      for (const f of d.sources[0].reportedFindings) f.scope = "abstract";
+      d.nodes.find((n: any) => n.id === "h-pinch").citations[0].scope =
+        "full_text";
+    },
     (d: any) =>
       (d.nodes.find((n: any) => n.id === "h-pinch").citations[0].sourceId =
         "fake-source"),
@@ -190,6 +195,8 @@ test("GitHub contribution URLs select the corresponding existing Issue Form", ()
 test("checked abstract rejects metadata-only reading even with no findings", () => {
   const source = structuredClone(data.sources[0]);
   source.reportedFindings = [];
+  source.verificationStatus.fullText = "not_checked";
+  source.verificationStatus.claim = "not_checked";
   source.readingScope = "metadata_only";
   assert.equal(source.verificationStatus.abstract, "checked");
   const result = sourceSchema.safeParse(source);
@@ -208,6 +215,9 @@ test("checked abstract accepts abstract and full-text reading scopes", () => {
   for (const scope of ["abstract", "full_text"]) {
     const source = structuredClone(data.sources[0]);
     source.readingScope = scope;
+    source.verificationStatus.fullText =
+      scope === "full_text" ? "checked" : "not_checked";
+    for (const f of source.reportedFindings) f.scope = scope;
     assert.equal(source.verificationStatus.abstract, "checked");
     assert.equal(sourceSchema.safeParse(source).success, true);
   }
@@ -231,8 +241,13 @@ test("research additions preserve demonstration provenance and historical abstra
   );
   assert.equal(
     a.sources.find((s) => s.id === "paper-angioni-2003")!.readingScope,
-    "abstract",
+    "full_text",
   );
+  const angioni2003 = a.sources.find((s) => s.id === "paper-angioni-2003")!;
+  assert.equal(angioni2003.reportedFindings[0].id, "finding-2003");
+  assert.equal(angioni2003.reportedFindings[0].scope, "full_text");
+  assert.match(angioni2003.reportedFindings[0].locator.en, /Fig\. 1/);
+  assert.equal(angioni2003.verificationStatus.claim, "checked");
   assert.ok(
     a.sources.every((s) => s.verificationStatus.independent === "not_checked"),
   );

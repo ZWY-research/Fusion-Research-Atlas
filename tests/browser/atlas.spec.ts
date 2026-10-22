@@ -185,7 +185,24 @@ test("relationship selection, DOI evidence, reading limits and edge deep link", 
   await page.locator(".citation button").click();
   await expect(page.getByTestId("paper-paper-angioni-2003")).toBeVisible();
   await expect(page.locator(".verification-grid")).toContainText(
-    "主张核验: 未检查",
+    "主张核验: 已检查",
+  );
+  const angioni2003 = page.getByTestId("paper-paper-angioni-2003");
+  await expect(angioni2003.locator(".finding")).toHaveCount(5);
+  await expect(angioni2003.locator(".verification-grid")).toContainText(
+    "全文检查: 已检查",
+  );
+  await expect(angioni2003.locator(".verification-grid")).toContainText(
+    "独立核验: 未检查",
+  );
+  await expect(angioni2003).toContainText("√0.1");
+  await expect(angioni2003).toContainText("ρ=aρφ");
+  await expect(page.getByTestId("finding-finding-2003")).toContainText(
+    "Fig. 1",
+  );
+  await expect(page.getByTestId("insight-paper-angioni-2003")).toHaveAttribute(
+    "href",
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/04ca2d1892fde54835c25e64f4f01c2aef3c0717/docs/literature/papers/angioni-2003.md",
   );
   await page.screenshot({
     path: screenshotDir + "/FRA-V0.2-evidence-detail.png",
@@ -193,9 +210,12 @@ test("relationship selection, DOI evidence, reading limits and edge deep link", 
   });
   await page.getByRole("button", { name: "English", exact: true }).click();
   await expect(page.locator(".verification-grid")).toContainText(
-    "Claim verification: Not checked",
+    "Claim verification: Checked",
   );
-  await expect(page.locator(".paper")).toContainText("Figures, raw data");
+  await expect(angioni2003).toContainText("No raw database");
+  await expect(angioni2003.locator(".verification-grid")).toContainText(
+    "Independent verification: Not checked",
+  );
   await expect(page.locator(".paper a.doi-link")).toHaveAttribute(
     "href",
     "https://doi.org/10.1103/physrevlett.90.205003",
@@ -388,7 +408,7 @@ test("Q001 research chain, real canvas node, source findings and bilingual insig
   );
   await expect(
     page.getByTestId("paper-paper-angioni-2003").locator(".verification-grid"),
-  ).toContainText("Full text checked: Not checked");
+  ).toContainText("Full text checked: Checked");
   await page.getByRole("button", { name: "中文", exact: true }).click();
   await page.goto("#m-cross-device-validation");
   await expect(page.getByTestId("detail-title")).toHaveText(
