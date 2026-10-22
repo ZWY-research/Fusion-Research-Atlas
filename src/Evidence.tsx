@@ -6,6 +6,7 @@ import { useReferences } from "./useReferences";
 // Pin the studied documents so links work while the research PR is still open.
 const studyRevision = "5007325d549eef8e6a5681b26f6ee647cb5bb8f9";
 const studyVersions: Record<string, string> = {
+  "paper-angioni-2003": "04ca2d1892fde54835c25e64f4f01c2aef3c0717",
   "paper-mordijck-2020": "74bd06f48ec06a67a15464d0f6a4200a72096d0f",
   "paper-angioni-2012": "f515b7ec980b4402ab9d3b33a2f9e020756910bc",
 };
