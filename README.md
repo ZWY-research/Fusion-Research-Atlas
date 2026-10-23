@@ -7,6 +7,8 @@
 
 [**Research a Paper / 研究一篇论文**](docs/workflows/research-dialogue-prompt.md) · [**Submit Research / 提交研究成果**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)
 
+**FRA-03 — [Transport-closure identifiability / 输运闭合可辨识性](docs/literature/comparisons/fra-03-transport-closure-identifiability.md):** Mathematical proofs and reproducible dimensionless calculations connect steady balance, tangent response and finite-amplitude discrimination; no experimental closure or graph verification status is promoted. / 通过数学证明及可复现无量纲计算联系稳态平衡、切线响应与有限幅度判别，不提升实验闭合或图谱核验状态。
+
 **FRA-02 — Cross-study comparison / 跨研究比较：** [Full bilingual research record / 完整双语科研记录](docs/literature/comparisons/q-density-cross-study-comparison.md). Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; this is not a new Release and the public site has not deployed this PR. / 已在功能分支实现，PR 待审查；非正式新 Release，公开网站尚未部署此 PR。
 
 **EN** In a local build of this branch, open `?view=comparison&question=q-density`, or choose **Compare Studies** from the [FRA-01 overview](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density). The comparison links to source evidence, graph nodes and the overview. Version 0.2.0 / V0.2 and scientific verification states are unchanged.

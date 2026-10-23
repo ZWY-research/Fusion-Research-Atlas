@@ -1,0 +1,574 @@
+{
+  "scope": "Prescribed dimensionless mathematical examples; no experimental or turbulence-mechanism validation.",
+  "parameters": {
+    "c1": {
+      "points": 129,
+      "D": [
+        0.5,
+        1.2
+      ],
+      "n_offset": 1.0,
+      "n_amplitude": 0.2
+    },
+    "c2": {
+      "r": 0.5,
+      "D_tan": 0.7,
+      "V_tan": -0.3
+    },
+    "c3": {
+      "length": 3.141592653589793,
+      "D": 1.0,
+      "lambdas": [
+        0.0,
+        0.5,
+        -0.5
+      ],
+      "epsilons": [
+        0.025,
+        0.05,
+        0.1
+      ],
+      "target_time": 0.2,
+      "intervals": [
+        64,
+        128,
+        256
+      ],
+      "diffusive_step_factors": [
+        0.2,
+        0.1
+      ],
+      "boundary_u": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "floating_point": "float64"
+  },
+  "script_sha256": "ca3573566f755f018f3bd20738f4912a412709c5ec7a96528962849259adce47",
+  "c1": {
+    "density_min": 0.8,
+    "max_flux_residual": [
+      5.551115123125783e-17,
+      1.1102230246251565e-16
+    ],
+    "velocity_min_sampled": [
+      -0.32063327285651183,
+      -0.7695198548556283
+    ],
+    "velocity_max_sampled": [
+      -0.0,
+      -0.0
+    ],
+    "velocity_at_r_half": [
+      -0.3141592653589793,
+      -0.7539822368615503
+    ],
+    "interpretation": "Constructed mathematical profiles; not experimental inversion."
+  },
+  "c2": {
+    "column_order": [
+      "D_tan",
+      "V_tan"
+    ],
+    "independent": {
+      "matrix": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          6.283185307179586,
+          0.0
+        ]
+      ],
+      "flux": [
+        -0.3,
+        4.39822971502571
+      ],
+      "inverse": [
+        [
+          0.0,
+          0.15915494309189535
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "rank": 2,
+      "determinant": -6.283185307179585,
+      "condition_number_2": 6.283185307179586,
+      "specified": [
+        0.7,
+        -0.3
+      ],
+      "recovered": [
+        0.7,
+        -0.3
+      ],
+      "coefficient_error_max": 0.0,
+      "flux_residual_max": 0.0
+    },
+    "dependent": {
+      "matrix": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "flux": [
+        -0.3,
+        -0.6
+      ],
+      "rank": 1,
+      "condition_number_2": null,
+      "condition_number_note": "infinite: rank deficient; null is the JSON representation",
+      "null_direction": [
+        1.0,
+        0.0
+      ],
+      "distinct_positive_D_candidates": [
+        [
+          0.7,
+          -0.3
+        ],
+        [
+          1.2,
+          -0.3
+        ]
+      ],
+      "candidate_residual_max": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "No unique recovery of both coefficients is possible."
+    }
+  },
+  "c3": {
+    "method": "centered face-flux finite differences; classical RK4; trapezoidal sine projection",
+    "runs": [
+      {
+        "intervals": 64,
+        "points": 65,
+        "h": 0.04908738521234052,
+        "dt": 0.0004807692307692308,
+        "steps": 416,
+        "step_factor": 0.2,
+        "diffusive_number": 0.19952479240337287,
+        "diffusive_RK4_negative_axis_bound": 0.7980991696134915,
+        "advective_CFL_bound": 0.0009794150344116638,
+        "cell_Peclet_bound": 0.004908738521234052,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      },
+      {
+        "intervals": 64,
+        "points": 65,
+        "h": 0.04908738521234052,
+        "dt": 0.00024067388688327318,
+        "steps": 831,
+        "step_factor": 0.1,
+        "diffusive_number": 0.09988244721997967,
+        "diffusive_RK4_negative_axis_bound": 0.3995297888799187,
+        "advective_CFL_bound": 0.0004902968162638412,
+        "cell_Peclet_bound": 0.004908738521234052,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      },
+      {
+        "intervals": 128,
+        "points": 129,
+        "h": 0.02454369260617026,
+        "dt": 0.00012040939193257075,
+        "steps": 1661,
+        "step_factor": 0.2,
+        "diffusive_number": 0.19988516228730432,
+        "diffusive_RK4_negative_axis_bound": 0.7995406491492173,
+        "advective_CFL_bound": 0.0004905919979714053,
+        "cell_Peclet_bound": 0.002454369260617026,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      },
+      {
+        "intervals": 128,
+        "points": 129,
+        "h": 0.02454369260617026,
+        "dt": 6.022282445046673e-05,
+        "steps": 3321,
+        "step_factor": 0.1,
+        "diffusive_number": 0.09997267526624885,
+        "diffusive_RK4_negative_axis_bound": 0.3998907010649954,
+        "advective_CFL_bound": 0.0002453698610751293,
+        "cell_Peclet_bound": 0.002454369260617026,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      },
+      {
+        "intervals": 256,
+        "points": 257,
+        "h": 0.01227184630308513,
+        "dt": 3.011594639361542e-05,
+        "steps": 6641,
+        "step_factor": 0.2,
+        "diffusive_number": 0.19997545824978916,
+        "diffusive_RK4_negative_axis_bound": 0.7999018329991566,
+        "advective_CFL_bound": 0.000245406808803043,
+        "cell_Peclet_bound": 0.001227184630308513,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      },
+      {
+        "intervals": 256,
+        "points": 257,
+        "h": 0.01227184630308513,
+        "dt": 1.50591069949552e-05,
+        "steps": 13281,
+        "step_factor": 0.1,
+        "diffusive_number": 0.09999525775444995,
+        "diffusive_RK4_negative_axis_bound": 0.3999810310177998,
+        "advective_CFL_bound": 0.00012271264341999914,
+        "cell_Peclet_bound": 0.001227184630308513,
+        "boundary_error_max": 0.0,
+        "minimum_u_over_steps": 0.0,
+        "maximum_u_over_steps": 0.1
+      }
+    ],
+    "case_count": 9,
+    "records": 54,
+    "grid_comparisons": [
+      {
+        "coarse_intervals": 64,
+        "fine_intervals": 128,
+        "profile_difference_max_all_cases": 2.6645080566517487e-06,
+        "a2_difference_max_all_cases": 5.233283879532181e-07
+      },
+      {
+        "coarse_intervals": 128,
+        "fine_intervals": 256,
+        "profile_difference_max_all_cases": 6.662737058182877e-07,
+        "a2_difference_max_all_cases": 1.3085102744912758e-07
+      }
+    ],
+    "time_comparisons": [
+      {
+        "intervals": 64,
+        "profile_difference_max_all_cases": 1.3877787807814457e-16,
+        "a2_difference_max_all_cases": 1.0354130747236567e-16,
+        "note": "Rounded-up step counts give approximately, not exactly, halved dt."
+      },
+      {
+        "intervals": 128,
+        "profile_difference_max_all_cases": 8.326672684688674e-17,
+        "a2_difference_max_all_cases": 2.1358782797964437e-17,
+        "note": "Rounded-up step counts give approximately, not exactly, halved dt."
+      },
+      {
+        "intervals": 256,
+        "profile_difference_max_all_cases": 9.853229343548264e-16,
+        "a2_difference_max_all_cases": 5.963111948670274e-17,
+        "note": "Rounded-up step counts give approximately, not exactly, halved dt."
+      }
+    ],
+    "asymptotic_comparisons": [
+      {
+        "lambda": 0.5,
+        "epsilon": 0.025,
+        "analytic_scaled_limit": -0.05524777047960444,
+        "finest_a2": -3.452695019868418e-05,
+        "observed_spatial_order_a2": 1.9997905229786384,
+        "richardson_a2_estimate": -3.4529677086111226e-05,
+        "estimated_finest_spatial_error_a2": 2.726887427044163e-09,
+        "richardson_scaled_difference": 2.8714182648964526e-07,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      },
+      {
+        "lambda": 0.5,
+        "epsilon": 0.05,
+        "analytic_scaled_limit": -0.05524777047960444,
+        "finest_a2": -0.00013810564918141955,
+        "observed_spatial_order_a2": 1.9997906834463517,
+        "richardson_a2_estimate": -0.00013811655607151517,
+        "estimated_finest_spatial_error_a2": 1.0906890095621104e-08,
+        "richardson_scaled_difference": 1.148050998385497e-06,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      },
+      {
+        "lambda": 0.5,
+        "epsilon": 0.1,
+        "analytic_scaled_limit": -0.05524777047960444,
+        "finest_a2": -0.0005523881724594482,
+        "observed_spatial_order_a2": 1.9997912675837355,
+        "richardson_a2_estimate": -0.0005524317894685964,
+        "estimated_finest_spatial_error_a2": 4.361700914822745e-08,
+        "richardson_scaled_difference": 4.591532744804838e-06,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      },
+      {
+        "lambda": -0.5,
+        "epsilon": 0.025,
+        "analytic_scaled_limit": 0.05524777047960444,
+        "finest_a2": 3.452695019868418e-05,
+        "observed_spatial_order_a2": 1.9997905237019347,
+        "richardson_a2_estimate": 3.4529677086109965e-05,
+        "estimated_finest_spatial_error_a2": 2.726887425783778e-09,
+        "richardson_scaled_difference": -2.871418285088634e-07,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      },
+      {
+        "lambda": -0.5,
+        "epsilon": 0.05,
+        "analytic_scaled_limit": 0.05524777047960444,
+        "finest_a2": 0.00013810564918141955,
+        "observed_spatial_order_a2": 1.9997906836838817,
+        "richardson_a2_estimate": 0.00013811655607151363,
+        "estimated_finest_spatial_error_a2": 1.0906890094076116e-08,
+        "richardson_scaled_difference": -1.1480509990030585e-06,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      },
+      {
+        "lambda": -0.5,
+        "epsilon": 0.1,
+        "analytic_scaled_limit": 0.05524777047960444,
+        "finest_a2": 0.000552388172459457,
+        "observed_spatial_order_a2": 1.999791267515596,
+        "richardson_a2_estimate": 0.0005524317894686067,
+        "estimated_finest_spatial_error_a2": 4.361700914974533e-08,
+        "richardson_scaled_difference": -4.591532743777882e-06,
+        "note": "Richardson is a spatial error estimate, not an exact finite-amplitude solution."
+      }
+    ],
+    "lambda_zero_a2_max_finest": 4.417437057588218e-18,
+    "lambda_sign_reflection_profile_error_max_finest": 1.3877787807814457e-17,
+    "specified_second_order_reference": -0.000552477704796
+  },
+  "closure_derivative_checks": [
+    {
+      "lambda": 0.0,
+      "F_n": 0.0,
+      "F_p": -1.0,
+      "F_nn": 0.0,
+      "expected_F_nn": 0.0
+    },
+    {
+      "lambda": 0.5,
+      "F_n": 0.0,
+      "F_p": -1.0,
+      "F_nn": 0.9999999999997796,
+      "expected_F_nn": 1.0
+    },
+    {
+      "lambda": -0.5,
+      "F_n": 0.0,
+      "F_p": -1.0,
+      "F_nn": -0.9999999999997796,
+      "expected_F_nn": -1.0
+    }
+  ],
+  "checks": [
+    {
+      "name": "C1 positive background",
+      "passed": true,
+      "measured": 0.8
+    },
+    {
+      "name": "C1 zero flux",
+      "passed": true,
+      "measured": [
+        5.551115123125783e-17,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "name": "C2 full rank and recovery",
+      "passed": true,
+      "measured": [
+        0.7,
+        -0.3
+      ]
+    },
+    {
+      "name": "C2 dependent rows and nonuniqueness",
+      "passed": true,
+      "measured": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "C3 Dirichlet endpoints exact",
+      "passed": true,
+      "measured": 0.0
+    },
+    {
+      "name": "C3 bounded solution",
+      "passed": true,
+      "measured": [
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "C3 conservative stability limits",
+      "passed": true,
+      "measured": [
+        [
+          0.19952479240337287,
+          0.0009794150344116638,
+          0.004908738521234052
+        ],
+        [
+          0.09988244721997967,
+          0.0004902968162638412,
+          0.004908738521234052
+        ],
+        [
+          0.19988516228730432,
+          0.0004905919979714053,
+          0.002454369260617026
+        ],
+        [
+          0.09997267526624885,
+          0.0002453698610751293,
+          0.002454369260617026
+        ],
+        [
+          0.19997545824978916,
+          0.000245406808803043,
+          0.001227184630308513
+        ],
+        [
+          0.09999525775444995,
+          0.00012271264341999914,
+          0.001227184630308513
+        ]
+      ]
+    },
+    {
+      "name": "C3 dt refinement",
+      "passed": true,
+      "measured": 9.853229343548264e-16
+    },
+    {
+      "name": "C3 second-order spatial convergence",
+      "passed": true,
+      "measured": [
+        1.9997905229786384,
+        1.9997906834463517,
+        1.9997912675837355,
+        1.9997905237019347,
+        1.9997906836838817,
+        1.999791267515596
+      ]
+    },
+    {
+      "name": "C3 lambda zero second harmonic",
+      "passed": true,
+      "measured": 4.417437057588218e-18
+    },
+    {
+      "name": "C3 exact heat solution spatial convergence",
+      "passed": true,
+      "measured": [
+        1.9999348180696837,
+        1.9999837118812953
+      ]
+    },
+    {
+      "name": "C3 exact semidiscrete heat evolution",
+      "passed": true,
+      "measured": 1.0130785099704553e-15
+    },
+    {
+      "name": "C3 lambda sign reflection",
+      "passed": true,
+      "measured": 1.3877787807814457e-17
+    },
+    {
+      "name": "C3 scaled response approaches analytic limit",
+      "passed": true,
+      "measured": [
+        2.8714182648964526e-07,
+        1.148050998385497e-06,
+        4.591532744804838e-06
+      ]
+    },
+    {
+      "name": "C3 stated asymptotic reference",
+      "passed": true,
+      "measured": -0.0005524777047960446
+    },
+    {
+      "name": "C3 analytic b2 ODE residual",
+      "passed": true,
+      "measured": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "C3 equal tangent, distinct Hessian",
+      "passed": true,
+      "measured": [
+        {
+          "lambda": 0.0,
+          "F_n": 0.0,
+          "F_p": -1.0,
+          "F_nn": 0.0,
+          "expected_F_nn": 0.0
+        },
+        {
+          "lambda": 0.5,
+          "F_n": 0.0,
+          "F_p": -1.0,
+          "F_nn": 0.9999999999997796,
+          "expected_F_nn": 1.0
+        },
+        {
+          "lambda": -0.5,
+          "F_n": 0.0,
+          "F_p": -1.0,
+          "F_nn": -0.9999999999997796,
+          "expected_F_nn": -1.0
+        }
+      ]
+    }
+  ],
+  "all_checks_passed": true
+}

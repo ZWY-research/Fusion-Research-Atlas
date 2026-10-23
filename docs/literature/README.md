@@ -12,6 +12,8 @@
 
 ## Status and counts | 状态与统计
 
+**FRA-03 — [Transport-closure identifiability / 输运闭合可辨识性](comparisons/fra-03-transport-closure-identifiability.md):** Conditional proofs and prescribed dimensionless computations of steady nonuniqueness, tangent-response rank and nonlinear second harmonics. Method references are scoped within the note; they do not add completed literature studies or independent physical verification. / 包含稳态非唯一性、切线响应秩及非线性二次谐波的条件性证明与指定无量纲计算；方法参考的阅读范围另列，不增加已完成文献研读或独立物理验证统计。
+
 **FRA-02 — [Cross-study comparison / 跨研究比较](comparisons/q-density-cross-study-comparison.md):** Five-study comparison of conditions, observables, methods, bounded findings and further verification. FRA02-C01–C05 are FRA synthesis, not additional source findings. / 对照五篇研究的条件、观测量、方法、有边界发现及进一步验证；FRA02-C01–C05 为 FRA 综合分析，不是原论文新增 finding。
 
 **EN** Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; no new Release and no public deployment of this PR. In this branch’s local build, use `?view=comparison&question=q-density` or **Compare Studies** in the FRA-01 overview. Source evidence, graph nodes and return navigation remain connected. Counts remain **5 / 5 / 0**.
