@@ -1039,3 +1039,179 @@ button:hover,
 .workspace > .detail {
   min-height: 0;
 }
+
+.overview-entry {
+  display: block;
+  margin-top: 14px;
+}
+.question-overview {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+}
+.overview-heading {
+  max-width: 980px;
+}
+.overview-heading h2 {
+  font-size: 26px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+.question-overview .notice {
+  font-size: 12px;
+  margin: 18px 0;
+}
+.question-overview .overview-observables {
+  border-left: 2px solid #7294cc;
+  padding-left: 13px;
+  color: #c0cce0;
+}
+.overview-toc,
+.overview-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+  align-items: center;
+}
+.overview-toc a,
+.overview-sources button {
+  border: 1px solid #354a69;
+  padding: 9px 12px;
+  border-radius: 5px;
+  background: #16243a;
+  font-size: 12px;
+  text-decoration: none;
+}
+.overview-sources > span {
+  color: #9aaccb;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.overview-section {
+  scroll-margin-top: 20px;
+  border-top: 1px solid #30405b;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+.overview-section-heading {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+.overview-section-heading > div {
+  min-width: 0;
+}
+.overview-section-heading .step-number {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+.overview-section-heading h3 {
+  font-size: 20px;
+  margin: 0;
+}
+.overview-section-heading p {
+  margin: 9px 0 0;
+}
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+.overview-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #30405b;
+  border-radius: 7px;
+  background: #142036;
+}
+.overview-card.overview-definition {
+  border-style: dashed;
+  background: #161e2d;
+}
+.overview-card h4 {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.overview-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.overview-badges .badge {
+  margin: 0;
+}
+.overview-card .overview-boundary {
+  color: #cfb7da;
+  font-size: 12px;
+}
+.overview-card .overview-checks {
+  color: #a9b8d1;
+  font-size: 11px;
+}
+.overview-card .primary {
+  margin: 8px 0;
+}
+.overview-card details {
+  border-top: 1px solid #30405b;
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.overview-card summary {
+  cursor: pointer;
+  font-size: 12px;
+  color: #bdd0ef;
+  line-height: 1.7;
+}
+.overview-card code {
+  font-size: 11px;
+}
+.overview-related,
+.overview-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0;
+  align-items: center;
+}
+.overview-related > span {
+  width: 100%;
+  color: #a9b8d1;
+  font-size: 11px;
+}
+.overview-related button,
+.overview-source-links button {
+  background: transparent;
+  border: 1px solid #354761;
+  color: #b4c9ec;
+  border-radius: 4px;
+  padding: 7px 9px;
+  font-size: 11px;
+  text-align: left;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.question-overview button:focus-visible,
+.question-overview a:focus-visible,
+.question-overview summary:focus-visible {
+  outline: 2px solid #91adff;
+  outline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+  .overview-heading h2 {
+    font-size: 23px;
+  }
+  .overview-card {
+    padding: 16px;
+  }
+  .overview-toc a {
+    flex: 1 1 140px;
+  }
+}

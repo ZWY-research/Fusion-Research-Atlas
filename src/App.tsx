@@ -21,6 +21,8 @@ import type { Atlas, Language } from "./model";
 import frameworkData from "./content/framework.json";
 import { ui, dual } from "./i18n";
 import { CitationList, SourceDetail } from "./Evidence";
+import { QuestionOverview } from "./QuestionOverview";
+import { isOverviewNode, overviewQuestionId } from "./questionOverviewData";
 import { contributionUrl, repository } from "./collaboration";
 import "./App.css";
 const Graph = lazy(() => import("./Graph"));
@@ -33,7 +35,15 @@ const panels = [
   "evidence",
   "collaboration",
 ] as const;
-type Panel = (typeof panels)[number];
+type Panel = (typeof panels)[number] | "overview";
+function locationPanel(): Panel {
+  // Existing node/edge hashes take precedence, including links from other panels.
+  if (hashId()) return "atlas";
+  const view = new URL(location.href).searchParams.get("view");
+  return view === "overview" || panels.some((p) => p === view)
+    ? (view as Panel)
+    : "atlas";
+}
 function hashId() {
   try {
     return decodeURIComponent(location.hash.slice(1));
@@ -50,12 +60,17 @@ function initialLanguage(): Language {
 }
 export default function App() {
   const [language, setLanguage] = useState<Language>(initialLanguage),
-    [panel, setPanel] = useState<Panel>("atlas"),
+    [panel, setPanel] = useState<Panel>(locationPanel),
+    [overviewQuestion, setOverviewQuestion] = useState(
+      () => new URL(location.href).searchParams.get("question") || "",
+    ),
     [atlas, setAtlas] = useState<Atlas | null>(null),
     [error, setError] = useState(false),
     [loading, setLoading] = useState(true),
     [selected, setSelected] = useState(hashId),
-    [sourceId, setSourceId] = useState(""),
+    [sourceId, setSourceId] = useState(
+      () => new URL(location.href).searchParams.get("source") || "",
+    ),
     [query, setQuery] = useState(""),
     [kind, setKind] = useState("all"),
     [epistemic, setEpistemic] = useState("all"),
@@ -71,6 +86,46 @@ export default function App() {
     setSelected(id);
     location.hash = encodeURIComponent(id);
   }, []);
+  const syncLocation = useCallback(() => {
+    const url = new URL(location.href);
+    setPanel(locationPanel());
+    setOverviewQuestion(url.searchParams.get("question") || "");
+    setSourceId(url.searchParams.get("source") || "");
+    setSelected(hashId());
+  }, []);
+  const navigate = useCallback(
+    (
+      next: Panel,
+      options: { question?: string; node?: string; source?: string } = {},
+    ) => {
+      const url = new URL(location.href);
+      if (next === "atlas") url.searchParams.delete("view");
+      else url.searchParams.set("view", next);
+      url.searchParams.delete("question");
+      url.searchParams.delete("source");
+      if (next === "overview")
+        url.searchParams.set(
+          "question",
+          options.question || overviewQuestionId,
+        );
+      if (next === "evidence" && options.source)
+        url.searchParams.set("source", options.source);
+      if (next !== "atlas") url.hash = "";
+      else if (options.node !== undefined)
+        url.hash = options.node ? encodeURIComponent(options.node) : "";
+      if (url.href !== location.href) history.pushState(null, "", url);
+      syncLocation();
+    },
+    [syncLocation],
+  );
+  const openOverviewNode = (id: string) => {
+    setQuery("");
+    setKind("all");
+    setEpistemic("all");
+    setContent("all");
+    setDomain("all");
+    navigate("atlas", { node: id });
+  };
   useEffect(() => {
     document.documentElement.lang = l === "zh" ? "zh-CN" : "en";
     try {
@@ -99,13 +154,13 @@ export default function App() {
     return () => controller.abort();
   }, []);
   useEffect(() => {
-    const update = () => {
-      setSelected(hashId());
-      setPanel("atlas");
+    window.addEventListener("hashchange", syncLocation);
+    window.addEventListener("popstate", syncLocation);
+    return () => {
+      window.removeEventListener("hashchange", syncLocation);
+      window.removeEventListener("popstate", syncLocation);
     };
-    window.addEventListener("hashchange", update);
-    return () => window.removeEventListener("hashchange", update);
-  }, []);
+  }, [syncLocation]);
   const visible = atlas
       ? visibleNodes(atlas, query, kind, epistemic, domain, content)
       : [],
@@ -126,8 +181,7 @@ export default function App() {
     select("");
   };
   const openSource = (id: string) => {
-    setSourceId(id);
-    setPanel("evidence");
+    navigate("evidence", { source: id });
   };
   const statusControl = (
     <>
@@ -206,11 +260,11 @@ export default function App() {
       </section>
       <div className="quick-map">
         <span>{t("focus")}</span>
-        <button onClick={() => setPanel("methodology")}>
+        <button onClick={() => navigate("methodology")}>
           {t("structure")} ↗
         </button>
-        <button onClick={() => setPanel("evidence")}>{t("verify")} ↗</button>
-        <button onClick={() => setPanel("collaboration")}>
+        <button onClick={() => navigate("evidence")}>{t("verify")} ↗</button>
+        <button onClick={() => navigate("collaboration")}>
           {t("participate")} ↗
         </button>
       </div>
@@ -220,7 +274,7 @@ export default function App() {
             key={p}
             aria-current={panel === p ? "page" : undefined}
             className={panel === p ? "current" : ""}
-            onClick={() => setPanel(p)}
+            onClick={() => navigate(p)}
           >
             {dual(p)}
           </button>
@@ -236,6 +290,15 @@ export default function App() {
       ) : (
         atlas && (
           <>
+            {panel === "overview" && (
+              <QuestionOverview
+                atlas={atlas}
+                language={l}
+                questionId={overviewQuestion}
+                onNode={openOverviewNode}
+                onSource={openSource}
+              />
+            )}
             {panel === "atlas" && (
               <>
                 <div className="notice">◈ {text(atlas.disclaimer, l)}</div>
@@ -408,6 +471,23 @@ export default function App() {
                         </h2>
                         <div className="status">{t(node.epistemicStatus)}</div>
                         <div className="badge">{t(node.contentStatus)}</div>
+                        {isOverviewNode(node.id) && (
+                          <button
+                            className="primary overview-entry"
+                            onClick={() =>
+                              navigate("overview", {
+                                question: overviewQuestionId,
+                              })
+                            }
+                          >
+                            {t(
+                              node.id === overviewQuestionId
+                                ? "openOverview"
+                                : "backOverview",
+                            )}{" "}
+                            →
+                          </button>
+                        )}
                         <p className="summary">{text(node.summary, l)}</p>
                         <h3>{t("context")}</h3>
                         <p>{text(node.details, l)}</p>
@@ -548,7 +628,7 @@ export default function App() {
                     </p>
                     <button
                       className="primary"
-                      onClick={() => setPanel("atlas")}
+                      onClick={() => navigate("atlas")}
                     >
                       {t("atlas")} →
                     </button>
@@ -591,7 +671,7 @@ export default function App() {
                           className="primary"
                           onClick={() => {
                             setDomain(d.id);
-                            setPanel("atlas");
+                            navigate("atlas");
                           }}
                         >
                           {t("explore")} →
@@ -646,6 +726,14 @@ export default function App() {
                   <span className="eyebrow">04 / PROVENANCE</span>
                   <h2>{dual("evidence")}</h2>
                   <p>{t("evidenceWarning")}</p>
+                  <button
+                    className="primary"
+                    onClick={() =>
+                      navigate("overview", { question: overviewQuestionId })
+                    }
+                  >
+                    {t("backOverview")}
+                  </button>
                 </div>
                 <div className="evidence-layout">
                   <aside className="evidence-sidebar">
@@ -656,7 +744,7 @@ export default function App() {
                       <button
                         key={s.id}
                         className={sourceId === s.id ? "selected-paper" : ""}
-                        onClick={() => setSourceId(s.id)}
+                        onClick={() => openSource(s.id)}
                       >
                         {s.year} · {s.title}
                       </button>
