@@ -10,12 +10,14 @@ export function QuestionOverview({
   questionId,
   onNode,
   onSource,
+  onCompare,
 }: {
   atlas: Atlas;
   language: Language;
   questionId: string;
   onNode: (id: string) => void;
   onSource: (id: string) => void;
+  onCompare: () => void;
 }) {
   const overview = buildQuestionOverview(atlas, questionId);
   const t = (key: Parameters<typeof ui>[0]) => ui(key, l);
@@ -59,6 +61,9 @@ export function QuestionOverview({
         <p>{t("overviewScope")}</p>
         <div className="notice">{t("overviewEvidenceNote")}</div>
         <p className="overview-observables">{t("overviewObservables")}</p>
+        <button className="primary" onClick={onCompare}>
+          {t("compareStudies")} →
+        </button>{" "}
         <button
           className="primary"
           onClick={() => onNode(overview.question.id)}

@@ -12,6 +12,12 @@
 
 ## Status and counts | 状态与统计
 
+**FRA-02 — [Cross-study comparison / 跨研究比较](comparisons/q-density-cross-study-comparison.md):** Five-study comparison of conditions, observables, methods, bounded findings and further verification. FRA02-C01–C05 are FRA synthesis, not additional source findings. / 对照五篇研究的条件、观测量、方法、有边界发现及进一步验证；FRA02-C01–C05 为 FRA 综合分析，不是原论文新增 finding。
+
+**EN** Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; no new Release and no public deployment of this PR. In this branch’s local build, use `?view=comparison&question=q-density` or **Compare Studies** in the FRA-01 overview. Source evidence, graph nodes and return navigation remain connected. Counts remain **5 / 5 / 0**.
+
+**中文** 已在功能分支实现，PR 待审查；未创建新 Release，公开网站尚未部署此 PR。本分支本地构建入口为 `?view=comparison&question=q-density` 或 FRA-01 总览中的**比较相关研究**，可进入来源证据、图谱节点并返回总览。统计保持 **5 / 5 / 0**。
+
 | Status / 状态                                                              | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                   |
 | -------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | [Indexed Papers / 已收录论文](#indexed-papers)                             | **5**                        | Traceable paper records / 可追溯论文记录                                                                                         |

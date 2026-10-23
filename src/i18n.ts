@@ -1,5 +1,49 @@
-import type { Language } from "./model";
+import type { Language } from "./model.ts";
 export const labels = {
+  compareStudies: ["比较相关研究", "Compare Studies"],
+  comparisonTitle: [
+    "电子密度峰化：跨研究比较",
+    "Electron-density peaking: cross-study comparison",
+  ],
+  comparisonScope: [
+    "对照五篇研究的条件、观测量、方法和证据性质。展开原文发现查看具体定位、假设与限制。",
+    "Compare conditions, observables, methods and evidence across five studies. Expand source findings for precise locators, assumptions and limits.",
+  ],
+  comparisonNote: [
+    "原文发现来自现有 Atlas 记录。FRA 跨研究判断另列于完整科研记录，不是原论文新增发现；五篇研读不等于五次独立验证。",
+    "Source findings come from existing Atlas records. FRA cross-study judgments are separate in the full research record, not new findings attributed to the papers; five studies do not equal five independent validations.",
+  ],
+  comparisonRecord: [
+    "完整双语比较研究与 FRA02-C01–C05",
+    "Full bilingual comparison and FRA02-C01–C05",
+  ],
+  comparisonJudgments: ["FRA 跨研究综合分析", "FRA cross-study synthesis"],
+  comparisonGuide: [
+    "FRA02-C01–C05：观测量不可直接互换；经验关联不唯一识别因果；扰动扩散与峰化可同时增强；解释、拟合与独立预测须区分；综述不能重复计为独立实验。完整推理、证据对应及待执行验证见科研记录。",
+    "FRA02-C01–C05: observables are not interchangeable; correlation does not uniquely identify causation; perturbative diffusion and peaking can both increase; explanation, fitting and independent prediction differ; a survey is not another independent experiment. See the research record for reasoning, evidence links and proposed tests.",
+  ],
+  comparisonStudy: ["研究与证据性质", "Study and evidence type"],
+  comparisonConditions: [
+    "装置、条件与粒子源",
+    "System, conditions and particle source",
+  ],
+  comparisonObservable: [
+    "观测量、坐标与平均",
+    "Observable, coordinate and averaging",
+  ],
+  comparisonMethods: ["方法与工具", "Methods and tools"],
+  comparisonFindings: ["原文发现与贡献", "Source findings and contributions"],
+  comparisonLimits: ["假设与适用边界", "Assumptions and applicability limits"],
+  comparisonNext: [
+    "跨研究关系与进一步验证",
+    "Cross-study relationships and next verification",
+  ],
+  comparisonEvidence: ["打开来源证据", "Open source evidence"],
+  comparisonReview: ["原论文研究评议", "Paper research study"],
+  comparisonUnavailable: [
+    "暂无该问题的研究比较",
+    "No study comparison for this question",
+  ],
   openOverview: ["查看研究总览", "Open Research Overview"],
   backOverview: ["返回研究总览", "Return to Research Overview"],
   backAtlas: ["返回图谱", "Back to Atlas"],
