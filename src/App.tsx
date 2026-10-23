@@ -22,6 +22,7 @@ import frameworkData from "./content/framework.json";
 import { ui, dual } from "./i18n";
 import { CitationList, SourceDetail } from "./Evidence";
 import { QuestionOverview } from "./QuestionOverview";
+import { StudyComparison } from "./StudyComparison";
 import { isOverviewNode, overviewQuestionId } from "./questionOverviewData";
 import { contributionUrl, repository } from "./collaboration";
 import "./App.css";
@@ -35,12 +36,14 @@ const panels = [
   "evidence",
   "collaboration",
 ] as const;
-type Panel = (typeof panels)[number] | "overview";
+type Panel = (typeof panels)[number] | "overview" | "comparison";
 function locationPanel(): Panel {
   // Existing node/edge hashes take precedence, including links from other panels.
   if (hashId()) return "atlas";
   const view = new URL(location.href).searchParams.get("view");
-  return view === "overview" || panels.some((p) => p === view)
+  return view === "overview" ||
+    view === "comparison" ||
+    panels.some((p) => p === view)
     ? (view as Panel)
     : "atlas";
 }
@@ -103,7 +106,7 @@ export default function App() {
       else url.searchParams.set("view", next);
       url.searchParams.delete("question");
       url.searchParams.delete("source");
-      if (next === "overview")
+      if (next === "overview" || next === "comparison")
         url.searchParams.set(
           "question",
           options.question || overviewQuestionId,
@@ -297,6 +300,21 @@ export default function App() {
                 questionId={overviewQuestion}
                 onNode={openOverviewNode}
                 onSource={openSource}
+                onCompare={() =>
+                  navigate("comparison", { question: overviewQuestion })
+                }
+              />
+            )}
+            {panel === "comparison" && (
+              <StudyComparison
+                atlas={atlas}
+                language={l}
+                questionId={overviewQuestion}
+                onNode={openOverviewNode}
+                onSource={openSource}
+                onOverview={() =>
+                  navigate("overview", { question: overviewQuestion })
+                }
               />
             )}
             {panel === "atlas" && (

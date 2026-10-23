@@ -7,6 +7,12 @@
 
 [**Research a Paper / 研究一篇论文**](docs/workflows/research-dialogue-prompt.md) · [**Submit Research / 提交研究成果**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)
 
+**FRA-02 — Cross-study comparison / 跨研究比较：** [Full bilingual research record / 完整双语科研记录](docs/literature/comparisons/q-density-cross-study-comparison.md). Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; this is not a new Release and the public site has not deployed this PR. / 已在功能分支实现，PR 待审查；非正式新 Release，公开网站尚未部署此 PR。
+
+**EN** In a local build of this branch, open `?view=comparison&question=q-density`, or choose **Compare Studies** from the [FRA-01 overview](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density). The comparison links to source evidence, graph nodes and the overview. Version 0.2.0 / V0.2 and scientific verification states are unchanged.
+
+**中文** 在此分支的本地构建中打开 `?view=comparison&question=q-density`，或从 [FRA-01 总览](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density)选择**比较相关研究**。比较页连接来源证据、图谱节点与总览。版本 0.2.0 / V0.2 及科学核验状态保持不变。
+
 > **EN** — Fusion is a scientific challenge shared by humanity. Many of its hardest problems lie at the intersection of disciplines. Fusion Research Atlas (FRA) is an open, collaborative, evidence-driven and evolving fusion research platform to expose the questions that matter, trace what the evidence actually shows, identify what remains unexplained, and invite researchers from different fields to develop and test new explanations together.
 >
 > **中文** — 聚变研究是人类共同面对的重大科学挑战，许多关键困难位于不同学科的交汇处。Fusion Research Atlas（FRA）是一个开放协作、科学证据驱动、持续演化的聚变科学研究平台：将真正重要的科学问题清晰呈现出来，追踪证据究竟支持什么、尚有哪些现象无法解释，并吸引不同专业背景的研究者共同提出和检验新的科学解释。

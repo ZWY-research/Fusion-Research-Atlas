@@ -1,6 +1,13 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import {
+  buildStudyComparison,
+  comparisonStudies,
+  comparisonRecordPath,
+} from "../src/studyComparisonData.ts";
+import { labels } from "../src/i18n.ts";
 import {
   atlasSchema,
   parseAtlas,
@@ -22,6 +29,144 @@ const data = read("../public/data/electron-density.json"),
   legacy = read("./fixtures/v0.1.json"),
   snapshots = read("./fixtures/crossref-metadata.json"),
   framework = read("../src/content/framework.json");
+
+test("FRA-02 resolves five sources and every selected finding with live conditions, citations and limits", () => {
+  const atlas = parseAtlas(data);
+  const before = structuredClone(atlas);
+  const result = buildStudyComparison(atlas, "q-density")!;
+  assert.equal(result.studies.length, 5);
+  assert.deepEqual(result.missing, []);
+  assert.equal(new Set(comparisonStudies.map((s) => s.sourceId)).size, 5);
+  for (const study of result.studies) {
+    assert.equal(
+      study.source,
+      atlas.sources.find((s) => s.id === study.sourceId),
+    );
+    assert.equal(study.findings.length, study.findingIds.length);
+    assert.equal(new Set(study.findingIds).size, study.findingIds.length);
+    for (const { finding, relatedNodes, citation } of study.findings) {
+      assert.equal(
+        finding,
+        study.source.reportedFindings.find((f) => f.id === finding.id),
+      );
+      assert.ok(citation, finding.id + " needs an existing citation");
+      assert.equal(citation.sourceId, study.sourceId);
+      assert.equal(citation.findingId, finding.id);
+      assert.ok(
+        [...atlas.nodes, ...atlas.edges].some((item) =>
+          item.citations.includes(citation),
+        ),
+      );
+      assert.ok(
+        relatedNodes.every((n) =>
+          n.citations.some(
+            (c) => c.sourceId === study.sourceId && c.findingId === finding.id,
+          ),
+        ),
+      );
+    }
+  }
+  assert.deepEqual(atlas, before);
+  atlas.sources[0].reportedFindings[0].statement.en = "Live source statement";
+  atlas.sources[0].limitations.en = "Live limits";
+  const updated = buildStudyComparison(atlas, "q-density")!.studies[0];
+  assert.equal(
+    updated.findings[0].finding.statement.en,
+    "Live source statement",
+  );
+  assert.equal(updated.source.limitations.en, "Live limits");
+});
+
+test("FRA-02 preserves main scientific data, schema, IDs and 5/5/0 verification counts", () => {
+  // Semantic JSON hash avoids Git checkout line-ending differences. Baseline:
+  // main 4fabbf6d198e4870ca7fd86efbd64a29bfa09802.
+  const digest = (s: string) => createHash("sha256").update(s).digest("hex");
+  assert.equal(
+    digest(JSON.stringify(data)),
+    "1e70dc6a4a3cedc9ed51250c982128066d13d04537c96e0ba4e1782aba5138c8",
+  );
+  assert.equal(
+    digest(
+      readFileSync(new URL("../src/model.ts", import.meta.url), "utf8").replace(
+        /\r\n/g,
+        "\n",
+      ),
+    ),
+    "68d77e42ca243b043bcaa0b55070842194d93af9fc8d6b29f36ec3a3c1419fd4",
+  );
+  assert.equal(data.nodes.length, 31);
+  assert.equal(data.edges.length, 53);
+  assert.equal(data.sources.length, 5);
+  assert.equal(
+    data.sources.filter(
+      (s: { readingScope: string }) => s.readingScope === "full_text",
+    ).length,
+    5,
+  );
+  assert.ok(
+    data.sources.every(
+      (s: { verificationStatus: { independent: string } }) =>
+        s.verificationStatus.independent === "not_checked",
+    ),
+  );
+  assert.ok(
+    data.sources.every((s: { reportedFindings: { id: string }[] }) =>
+      s.reportedFindings.every((f) => !f.id.startsWith("FRA02-")),
+    ),
+  );
+});
+
+test("FRA-02 bilingual dimensions and study metadata link to the complete synthesis without attributing it to authors", () => {
+  const record = readFileSync(
+    new URL("../" + comparisonRecordPath, import.meta.url),
+    "utf8",
+  );
+  for (const study of comparisonStudies) {
+    for (const value of [study.evidenceType, study.observable, study.methods]) {
+      assert.ok(value.zh.trim() && value.en.trim());
+      assert.notEqual(value.zh, value.en);
+    }
+    for (const id of study.findingIds) assert.ok(record.includes(id), id);
+    assert.ok(record.includes("../papers/" + study.reviewFile));
+  }
+  for (const [key, value] of Object.entries(labels).filter(
+    ([key]) => key.startsWith("comparison") || key === "compareStudies",
+  )) {
+    assert.ok(value[0].trim() && value[1].trim(), key);
+    assert.notEqual(value[0], value[1], key);
+  }
+  for (const id of [
+    "FRA02-C01",
+    "FRA02-C02",
+    "FRA02-C03",
+    "FRA02-C04",
+    "FRA02-C05",
+  ])
+    assert.ok(record.includes(id));
+  assert.match(record, /not graph `finding-\*`/);
+  assert.match(record, /not_checked/);
+  assert.match(record, /尚不能宣称获得普适/);
+});
+
+test("FRA-02 handles unknown questions and missing records without substituting unrelated science", () => {
+  const atlas = parseAtlas(data);
+  assert.equal(buildStudyComparison(atlas, "unknown"), null);
+  assert.equal(buildStudyComparison(atlas, "p-peaking"), null);
+  assert.equal(
+    buildStudyComparison({ ...atlas, nodes: [] }, "q-density"),
+    null,
+  );
+  const missingSource = buildStudyComparison(
+    { ...atlas, sources: atlas.sources.slice(1) },
+    "q-density",
+  )!;
+  assert.equal(missingSource.studies.length, 4);
+  assert.deepEqual(missingSource.missing, ["paper-angioni-2003"]);
+  atlas.sources[0].reportedFindings.shift();
+  const missingFinding = buildStudyComparison(atlas, "q-density")!;
+  assert.deepEqual(missingFinding.missing, ["paper-angioni-2003/finding-2003"]);
+  assert.equal(missingFinding.studies[0].findings.length, 4);
+});
 
 test("question overview resolves six stable sections and only existing node/finding IDs", () => {
   const a = parseAtlas(data),
