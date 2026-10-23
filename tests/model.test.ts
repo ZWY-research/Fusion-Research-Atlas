@@ -6,6 +6,7 @@ import {
   buildStudyComparison,
   comparisonStudies,
   comparisonRecordPath,
+  comparisonRecordUrl,
 } from "../src/studyComparisonData.ts";
 import { labels } from "../src/i18n.ts";
 import {
@@ -29,6 +30,13 @@ const data = read("../public/data/electron-density.json"),
   legacy = read("./fixtures/v0.1.json"),
   snapshots = read("./fixtures/crossref-metadata.json"),
   framework = read("../src/content/framework.json");
+
+test("FRA-02 published comparison URL stays on main after feature-branch deletion", () => {
+  assert.equal(
+    comparisonRecordUrl,
+    "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/main/docs/literature/comparisons/q-density-cross-study-comparison.md",
+  );
+});
 
 test("FRA-02 resolves five sources and every selected finding with live conditions, citations and limits", () => {
   const atlas = parseAtlas(data);

@@ -3,9 +3,9 @@ import type { Atlas, Citation, Localized } from "./model.ts";
 export const comparisonQuestionId = "q-density";
 export const comparisonRecordPath =
   "docs/literature/comparisons/q-density-cross-study-comparison.md";
-// Branch link keeps the new record accessible during PR review, before merge.
+// Stable published-document URL survives deletion of the feature branch.
 export const comparisonRecordUrl =
-  "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/feat/fra-02-cross-study-comparison/" +
+  "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/main/" +
   comparisonRecordPath;
 
 type StudyDefinition = {

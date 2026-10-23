@@ -1,10 +1,9 @@
 import { test, expect } from "@playwright/test";
-import {
-  comparisonStudies,
-  comparisonRecordUrl,
-} from "../../src/studyComparisonData.ts";
+import { comparisonStudies } from "../../src/studyComparisonData.ts";
 
 const route = "?view=comparison&question=q-density";
+const publishedRecordUrl =
+  "https://github.com/ZWY-research/Fusion-Research-Atlas/blob/main/docs/literature/comparisons/q-density-cross-study-comparison.md";
 const screenshots =
   process.env.FRA_SCREENSHOT_DIR || "test-results/screenshots";
 
@@ -75,7 +74,7 @@ test("FRA-02 links every study to existing evidence, DOI and the reviewed paper 
       name: "完整双语比较研究与 FRA02-C01–C05",
       exact: false,
     }),
-  ).toHaveAttribute("href", comparisonRecordUrl);
+  ).toHaveAttribute("href", publishedRecordUrl);
 });
 
 test("FRA-02 finding details reuse locators and citations and open related graph nodes with filters cleared", async ({
@@ -177,6 +176,19 @@ for (const language of ["zh", "en"] as const) {
         exact: true,
       }),
     ).toBeVisible();
+    const recordLinks = page.locator(
+      '.study-comparison a[href*="q-density-cross-study-comparison.md"]',
+    );
+    await expect(recordLinks).toHaveCount(2);
+    await expect(recordLinks.nth(0)).toHaveAttribute(
+      "href",
+      publishedRecordUrl,
+    );
+    await expect(recordLinks.nth(1)).toHaveAttribute(
+      "href",
+      publishedRecordUrl +
+        "#6-cross-study-relationship-register--跨研究关系登记",
+    );
     await expect(page.locator(".comparison-table thead th")).toHaveText(
       language === "zh"
         ? [
