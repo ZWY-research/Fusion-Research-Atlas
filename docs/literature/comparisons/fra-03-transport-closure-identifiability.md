@@ -153,7 +153,7 @@ $$
 
 ## 6. C: nonlinear closures sharing a steady state and tangent / 同稳态、同切线的二阶竞争闭合
 
-For F₀∈C² in (n,p), λ∈C¹(I), and the same n₀, define / 对同一背景定义：
+For F₀∈C² jointly in (n,p,r), λ∈C²(I), and the same n₀, define / 为满足第 3 节的充分正则性条件，取 F₀ 关于 (n,p,r) 联合 C²、λ∈C²(I)，对同一背景定义：
 
 $$
 F_\lambda(n,p;r)=F_0(n,p;r)+\lambda(r)[n-n_0(r)]^2.
