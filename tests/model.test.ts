@@ -11,12 +11,176 @@ import {
 } from "../src/model.ts";
 import { normalizeDoi, doiUrl, compareMetadata } from "../src/doi.ts";
 import { contributionKinds, contributionUrl } from "../src/collaboration.ts";
+import {
+  buildQuestionOverview,
+  questionOverviewSections,
+  isOverviewNode,
+} from "../src/questionOverviewData.ts";
 const read = (p: string) =>
   JSON.parse(readFileSync(new URL(p, import.meta.url), "utf8"));
 const data = read("../public/data/electron-density.json"),
   legacy = read("./fixtures/v0.1.json"),
   snapshots = read("./fixtures/crossref-metadata.json"),
   framework = read("../src/content/framework.json");
+
+test("question overview resolves six stable sections and only existing node/finding IDs", () => {
+  const a = parseAtlas(data),
+    overview = buildQuestionOverview(a, "q-density")!;
+  assert.deepEqual(
+    overview.sections.map((s) => s.id),
+    ["question", "knowledge", "mechanisms", "evidence", "questions", "next"],
+  );
+  assert.ok(overview.sections.every((s) => s.missing.length === 0));
+  for (const section of questionOverviewSections) {
+    assert.equal(new Set(section.nodeIds).size, section.nodeIds.length);
+    for (const id of section.nodeIds)
+      assert.ok(a.nodes.some((n) => n.id === id));
+    const keys = section.findings.map((r) => r.sourceId + "/" + r.findingId);
+    assert.equal(new Set(keys).size, keys.length);
+    for (const ref of section.findings)
+      assert.ok(
+        a.sources
+          .find((s) => s.id === ref.sourceId)
+          ?.reportedFindings.some((f) => f.id === ref.findingId),
+      );
+  }
+  assert.equal(isOverviewNode("q-density"), true);
+  assert.equal(isOverviewNode("h-pinch"), false);
+});
+
+test("overview reads live Atlas text and never mutates source records or verification states", () => {
+  const a = parseAtlas(data),
+    before = structuredClone(a);
+  const result = buildQuestionOverview(a, "q-density")!;
+  assert.deepEqual(a, before);
+  assert.equal(
+    result.question,
+    a.nodes.find((n) => n.id === "q-density"),
+  );
+  const live = a.nodes.find((n) => n.id === "k-diiid-source-transport")!;
+  live.summary.en = "Runtime summary from the authoritative graph";
+  const liveFinding = a.sources[0].reportedFindings.find(
+    (f) => f.id === "finding-a03-incremental-flux",
+  )!;
+  liveFinding.statement.zh = "运行时来源发现";
+  const updated = buildQuestionOverview(a, "q-density")!;
+  assert.equal(
+    updated.sections[1].nodes.find((n) => n.id === live.id),
+    live,
+  );
+  assert.equal(
+    updated.sections[2].findings.find((f) => f.finding.id === liveFinding.id)!
+      .finding,
+    liveFinding,
+  );
+  assert.deepEqual(
+    updated.sources.map((s) => s.verificationStatus),
+    before.sources.map((s) => s.verificationStatus),
+  );
+});
+
+test("overview keeps demonstrations in definitions and hypotheses unverified", () => {
+  const a = parseAtlas(data),
+    overview = buildQuestionOverview(a, "q-density")!;
+  const demos = overview.sections.flatMap((s) =>
+    s.nodes
+      .filter((n) => n.contentStatus === "demonstration")
+      .map((n) => [s.id, n.id]),
+  );
+  assert.deepEqual(demos, [
+    ["question", "q-density"],
+    ["question", "p-peaking"],
+  ]);
+  assert.ok(
+    overview.sections
+      .filter((s) => s.id !== "question")
+      .every((s) =>
+        s.nodes.every((n) => n.contentStatus === "research_record"),
+      ),
+  );
+  const candidate = overview.sections[2].nodes[0];
+  assert.equal(candidate.id, "h-diiid-coupled-turbulence");
+  assert.equal(candidate.epistemicStatus, "candidate_hypothesis");
+  assert.ok(candidate.citations.every((c) => !c.claimVerified));
+  assert.ok(
+    overview.sections[5].nodes.every(
+      (n) => n.kind === "method" && n.epistemicStatus === "research_plan",
+    ),
+  );
+  assert.ok(
+    overview.sources.every(
+      (s) => s.verificationStatus.independent === "not_checked",
+    ),
+  );
+  candidate.contentStatus = "demonstration";
+  const changed = buildQuestionOverview(a, "q-density")!;
+  assert.equal(changed.sections[2].nodes.length, 0);
+  assert.ok(changed.sections[2].missing.includes(candidate.id));
+});
+
+test("overview reports missing mappings and does not substitute an unknown question", () => {
+  const a = parseAtlas(data);
+  assert.equal(buildQuestionOverview(a, "unknown"), null);
+  assert.equal(buildQuestionOverview(a, "q-perturbative-steady"), null);
+  a.nodes = a.nodes.filter((n) => n.id !== "g-flux-identification");
+  a.edges = a.edges.filter(
+    (e) =>
+      e.source !== "g-flux-identification" &&
+      e.target !== "g-flux-identification",
+  );
+  a.sources[0].reportedFindings = a.sources[0].reportedFindings.filter(
+    (f) => f.id !== "finding-a03-collision-ablation",
+  );
+  for (const item of [...a.nodes, ...a.edges])
+    item.citations = item.citations.filter(
+      (c) => c.findingId !== "finding-a03-collision-ablation",
+    );
+  const overview = buildQuestionOverview(parseAtlas(a), "q-density")!;
+  assert.equal(overview.sections.length, 6);
+  assert.ok(overview.sections[4].missing.includes("g-flux-identification"));
+  assert.ok(
+    overview.sections[3].missing.includes(
+      "paper-angioni-2003/finding-a03-collision-ablation",
+    ),
+  );
+});
+
+test("all five overview sources and findings retain exact original associations", () => {
+  const a = parseAtlas(data),
+    overview = buildQuestionOverview(a, "q-density")!;
+  assert.deepEqual(
+    overview.sources.map((s) => s.id),
+    a.sources.map((s) => s.id),
+  );
+  for (const section of overview.sections)
+    for (const entry of section.findings) {
+      assert.equal(
+        a.sources.find((s) => s.id === entry.source.id),
+        entry.source,
+      );
+      assert.equal(
+        entry.source.reportedFindings.find((f) => f.id === entry.finding.id),
+        entry.finding,
+      );
+      assert.ok(entry.relatedNodes.length > 0);
+      assert.ok(
+        entry.relatedNodes.every(
+          (n) =>
+            n.contentStatus === "research_record" &&
+            n.citations.some(
+              (c) =>
+                c.sourceId === entry.source.id &&
+                c.findingId === entry.finding.id,
+            ),
+        ),
+      );
+      assert.ok(
+        entry.citation &&
+          entry.citation.sourceId === entry.source.id &&
+          entry.citation.findingId === entry.finding.id,
+      );
+    }
+});
 test("legacy migration preserves every identity, endpoint, position and method type", () => {
   const a = parseAtlas(legacy);
   assert.deepEqual(

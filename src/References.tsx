@@ -4,10 +4,12 @@ export function References({
   entries,
   language,
   error,
+  referencePrefix = "ref-",
 }: {
   entries: ReturnType<typeof natureReferences>;
   language: Language;
   error: string;
+  referencePrefix?: string;
 }) {
   if (error) return <p role="alert">{error}</p>;
   if (!entries.length) return null;
@@ -21,7 +23,7 @@ export function References({
         <div
           className="reference-entry"
           key={entry.sourceId}
-          id={"ref-" + entry.sourceId}
+          id={referencePrefix + entry.sourceId}
           data-source-id={entry.sourceId}
         >
           <div dangerouslySetInnerHTML={{ __html: entry.html }} />

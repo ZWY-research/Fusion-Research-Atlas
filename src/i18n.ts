@@ -1,5 +1,47 @@
 import type { Language } from "./model";
 export const labels = {
+  openOverview: ["查看研究总览", "Open Research Overview"],
+  backOverview: ["返回研究总览", "Return to Research Overview"],
+  backAtlas: ["返回图谱", "Back to Atlas"],
+  viewGraphNode: ["查看图谱节点", "View graph node"],
+  overviewScope: [
+    "在指定装置、物理区域、运行状态与粒子源条件下，研究托卡马克电子密度剖面形成、峰化、碰撞性、非对角通量、湍流输运及粒子平衡。",
+    "Study tokamak electron-density profiles and peaking, collisionality, off-diagonal flux, turbulent transport and particle balance within specified devices, regions, regimes and source conditions.",
+  ],
+  overviewEvidenceNote: [
+    "已有认识有适用条件，候选机制仍待判别。来源主张已核查不表示 FRA 完成独立实验或数值复现；研究计划不表示已执行。",
+    "Knowledge has applicability conditions and candidate mechanisms remain to be distinguished. Checked source claims do not establish FRA’s independent experimental or numerical reproduction; plans are not completed work.",
+  ],
+  overviewObservables: [
+    "观测量边界：全局峰化因子与局部 R/L_ne 不同；比较前须匹配定义、坐标和物理条件。",
+    "Observable boundary: global peaking factors differ from local R/L_ne; match definitions, coordinates and physical conditions before comparison.",
+  ],
+  overviewSections: ["研究总览栏目", "Research overview sections"],
+  overviewDefinitionNote: [
+    "示例定义入口，不是实测实验结果。",
+    "Demonstration definition, not a measured experimental result.",
+  ],
+  overviewDetails: ["科学语境与证据", "Scientific context and evidence"],
+  overviewConditions: [
+    "条件、定位与原节点",
+    "Conditions, locators and original nodes",
+  ],
+  overviewRelatedQuestion: ["相关问题与缺口", "Related questions and gaps"],
+  overviewReportedFinding: ["来源报告的发现", "Source-reported finding"],
+  overviewSourceClaim: ["来源主张核查", "Source claim check"],
+  overviewEvidenceKind: ["证据", "Evidence"],
+  overviewMissing: [
+    "部分关联记录暂不可用：",
+    "Some related records are unavailable:",
+  ],
+  overviewUnavailable: [
+    "暂无该问题的研究总览",
+    "No research overview for this question",
+  ],
+  overviewUnavailableNote: [
+    "请返回图谱浏览已有科学问题。",
+    "Return to the atlas to browse the available scientific questions.",
+  ],
   atlas: ["交互图谱", "Research Atlas"],
   about: ["关于 FRA", "About FRA"],
   domains: ["研究领域", "Scientific Domains"],

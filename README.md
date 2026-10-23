@@ -200,6 +200,20 @@ Start with the [**GitHub contribution forms / GitHub 贡献入口**](https://git
 
 For technical details / 技术细节：[Data & Evidence Model / 数据与证据模型](docs/data-model.md).
 
+### FRA-01: Research Question Overview | 科学问题研究总览
+
+**EN** Implemented on this feature branch for PR review, with `q-density` as the first case; this does not announce a production deployment or a new release. The node-detail action **Open Research Overview** opens six sections: Scientific Question, Established Knowledge, Candidate Mechanisms, Key Evidence, Open Questions and Next Verification. A small curated ID map in `src/questionOverviewData.ts` selects existing graph nodes and source/finding references; labels, summaries, details, conditions, citations and verification states are read dynamically from the existing Atlas data. Scientific records and the 31-node / 53-relationship / 5-source dataset remain unchanged, as do the 5/5/0 paper counts.
+
+**中文** 本功能在当前分支实现并提交 PR 待审查，首个案例为 `q-density`；不表示生产网站已部署，也不是新版本发布。节点详情中的**查看研究总览**打开科学问题、已有认识、候选机制、关键证据、未解决问题和下一步研究六栏。`src/questionOverviewData.ts` 仅策划节点与 source/finding ID 映射，标题、摘要、详情、条件、引用和核查状态均动态取自既有 Atlas 数据。科学记录、31 节点／53 关系／5 来源及文献统计 5/5/0 保持不变。
+
+**EN** The shareable route is `?view=overview&question=q-density` at the site base path. After merge and deployment, it can be opened at [the overview URL](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density). The same query works on the local development/preview server. Node actions return to the atlas, select the original hash-linked node and clear hiding filters; source actions reuse Evidence & Verification. Back/forward and language switching are supported, and existing `#q-density` links still work. Unknown questions show an unavailable overview with a return action. Reference numbers use the existing Nature renderer, with separate anchors for each card’s citation scope.
+
+**中文** 可分享入口是站点基础路径下的 `?view=overview&question=q-density`；合并并部署后可使用[总览地址](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density)，相同查询也适用于本地开发／预览服务器。节点操作返回图谱、选中原哈希深链接对象并解除隐藏筛选；来源操作复用证据与核验页面。支持浏览器前进后退和语言切换，旧 `#q-density` 链接继续有效。未知问题显示不可用提示与返回入口。引用沿用现有 Nature 渲染，仅为各卡片的引用范围分配独立锚点。
+
+**EN** Demonstration definitions, conditional findings, candidate hypotheses and unperformed plans retain their original states. Global peaking factors and local `R/L_ne` are distinguished; source claim checking is not independent reproduction. FRA-02 cross-paper comparison tables, submission infrastructure and additional research directions are outside this implementation.
+
+**中文** 演示定义、有条件发现、候选假设和未执行计划保留原有状态；区分全局峰化因子与局部 `R/L_ne`，不将来源主张核查视作独立复现。本次不包含 FRA-02 跨论文比较表、投稿基础设施或其他研究方向。
+
 ## Run locally | 本地运行
 
 **EN** The current website uses React, TypeScript, Vite, Cytoscape.js, and GitHub Pages. Node.js 24 and npm are required.\

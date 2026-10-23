@@ -106,11 +106,13 @@ export function CitationList({
   sources,
   language: l,
   onSource,
+  referencePrefix = "ref-",
 }: {
   citations: Citation[];
   sources: Source[];
   language: Language;
   onSource: (id: string) => void;
+  referencePrefix?: string;
 }) {
   const { entries, error } = useReferences(
     sources,
@@ -145,11 +147,11 @@ export function CitationList({
                   <sup>
                     <a
                       className="citation-number"
-                      href={"#ref-" + s.id}
+                      href={"#" + referencePrefix + s.id}
                       onClick={(event) => {
                         event.preventDefault();
                         document
-                          .getElementById("ref-" + s.id)
+                          .getElementById(referencePrefix + s.id)
                           ?.scrollIntoView({ block: "start" });
                       }}
                       data-source-id={s.id}
@@ -182,7 +184,12 @@ export function CitationList({
           );
         })
       )}
-      <References entries={entries} language={l} error={error} />
+      <References
+        entries={entries}
+        language={l}
+        error={error}
+        referencePrefix={referencePrefix}
+      />
     </>
   );
 }
