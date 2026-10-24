@@ -1,0 +1,53 @@
+{
+  "model": "reduced kinetic resonance model; prescribed, not gyrokinetic or experimental",
+  "parameters": {
+    "g_n": 2.0,
+    "g_e": 4.0,
+    "c_star": -0.1,
+    "c_d": 0.5,
+    "f_t": 0.4,
+    "gamma": 0.15,
+    "nu": 0.05
+  },
+  "all_parameters_dimensionless": true,
+  "scan": {
+    "start": 0.2,
+    "stop": 1.6,
+    "points": 81
+  },
+  "quadrature": {
+    "alpha": 0.5,
+    "orders": [
+      40,
+      80,
+      160,
+      240,
+      320,
+      640,
+      1280,
+      2560
+    ],
+    "published_scan_order": 2560,
+    "quad_epsabs_epsrel": 2e-12,
+    "quad_limit": 400,
+    "brentq_xtol": 5e-14
+  },
+  "finite_difference_steps": [
+    0.001,
+    0.0001
+  ],
+  "energy_density_grid": {
+    "start": 0,
+    "stop": 24,
+    "points_per_frequency": 1601,
+    "integrals": "adaptive on [0,infinity); plot displays [0,8]"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "floating_point": "float64/complex128"
+  },
+  "script_sha256_lf": "b32e4ada3445558607a7c673ba8da9ca3b11f44fde00c39bba2dcccff267af2f"
+}

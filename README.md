@@ -7,9 +7,11 @@
 
 [**Research a Paper / 研究一篇论文**](docs/workflows/research-dialogue-prompt.md) · [**Submit Research / 提交研究成果**](https://github.com/ZWY-research/Fusion-Research-Atlas/issues/new?template=literature-submission.md)
 
+**FRA-04B1 — [Reduced kinetic electron flux response / 约化动理学电子通量响应](docs/literature/comparisons/fra-04b1-electron-kinetic-flux.md):** Executed complex energy integrals, signed flux and fixed-mode gradient response, with quadrature convergence and energy decomposition; a dimensionless prescribed model. / 已执行复数能量积分、有符号通量与固定模态梯度响应计算，含求积收敛及能量分解；采用指定无量纲模型。
+
 **FRA-03 — [Transport-closure identifiability / 输运闭合可辨识性](docs/literature/comparisons/fra-03-transport-closure-identifiability.md):** Mathematical proofs and reproducible dimensionless calculations connect steady balance, tangent response and finite-amplitude discrimination; no experimental closure or graph verification status is promoted. / 通过数学证明及可复现无量纲计算联系稳态平衡、切线响应与有限幅度判别，不提升实验闭合或图谱核验状态。
 
-**FRA-02 — Cross-study comparison / 跨研究比较：** [Full bilingual research record / 完整双语科研记录](docs/literature/comparisons/q-density-cross-study-comparison.md). Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; this is not a new Release and the public site has not deployed this PR. / 已在功能分支实现，PR 待审查；非正式新 Release，公开网站尚未部署此 PR。
+**FRA-02 — Cross-study comparison / 跨研究比较：** [Full bilingual research record / 完整双语科研记录](docs/literature/comparisons/q-density-cross-study-comparison.md). [PR #14](https://github.com/ZWY-research/Fusion-Research-Atlas/pull/14) merged on 23 October 2026; this status records the merge only. / [PR #14](https://github.com/ZWY-research/Fusion-Research-Atlas/pull/14) 已于 2026 年 10 月 23 日合并；此处仅记录合并状态。
 
 **EN** In a local build of this branch, open `?view=comparison&question=q-density`, or choose **Compare Studies** from the [FRA-01 overview](https://zwy-research.github.io/Fusion-Research-Atlas/?view=overview&question=q-density). The comparison links to source evidence, graph nodes and the overview. Version 0.2.0 / V0.2 and scientific verification states are unchanged.
 

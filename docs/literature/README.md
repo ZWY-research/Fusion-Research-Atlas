@@ -12,13 +12,15 @@
 
 ## Status and counts | 状态与统计
 
+**FRA-04B1 — [Reduced kinetic electron flux response / 约化动理学电子通量响应](comparisons/fra-04b1-electron-kinetic-flux.md):** Reproducible complex energy integrals distinguish a fixed-mode gradient-response zero from a signed-flux zero, with convergence and weighted energy decomposition. This prescribed dimensionless model adds no completed paper review or independent physical verification. / 可复现复数能量积分区分固定模态梯度响应零点与有符号通量零点，含收敛及加权能量分解；指定无量纲模型不增加完成论文评议或独立物理验证统计。
+
 **FRA-03 — [Transport-closure identifiability / 输运闭合可辨识性](comparisons/fra-03-transport-closure-identifiability.md):** Conditional proofs and prescribed dimensionless computations of steady nonuniqueness, tangent-response rank and nonlinear second harmonics. Method references are scoped within the note; they do not add completed literature studies or independent physical verification. / 包含稳态非唯一性、切线响应秩及非线性二次谐波的条件性证明与指定无量纲计算；方法参考的阅读范围另列，不增加已完成文献研读或独立物理验证统计。
 
 **FRA-02 — [Cross-study comparison / 跨研究比较](comparisons/q-density-cross-study-comparison.md):** Five-study comparison of conditions, observables, methods, bounded findings and further verification. FRA02-C01–C05 are FRA synthesis, not additional source findings. / 对照五篇研究的条件、观测量、方法、有边界发现及进一步验证；FRA02-C01–C05 为 FRA 综合分析，不是原论文新增 finding。
 
-**EN** Implemented on `feat/fra-02-cross-study-comparison`, pending PR review; no new Release and no public deployment of this PR. In this branch’s local build, use `?view=comparison&question=q-density` or **Compare Studies** in the FRA-01 overview. Source evidence, graph nodes and return navigation remain connected. Counts remain **5 / 5 / 0**.
+**EN** FRA-02 [PR #14](https://github.com/ZWY-research/Fusion-Research-Atlas/pull/14) merged on 23 October 2026. In a local build, use `?view=comparison&question=q-density` or **Compare Studies** in the FRA-01 overview. Source evidence, graph nodes and return navigation remain connected. Counts remain **5 / 5 / 0**.
 
-**中文** 已在功能分支实现，PR 待审查；未创建新 Release，公开网站尚未部署此 PR。本分支本地构建入口为 `?view=comparison&question=q-density` 或 FRA-01 总览中的**比较相关研究**，可进入来源证据、图谱节点并返回总览。统计保持 **5 / 5 / 0**。
+**中文** FRA-02 [PR #14](https://github.com/ZWY-research/Fusion-Research-Atlas/pull/14) 已于 2026 年 10 月 23 日合并。本地构建入口为 `?view=comparison&question=q-density` 或 FRA-01 总览中的**比较相关研究**，可进入来源证据、图谱节点并返回总览。统计保持 **5 / 5 / 0**。
 
 | Status / 状态                                                              | Distinct papers / 去重论文数 | Meaning / 含义                                                                                                                   |
 | -------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
