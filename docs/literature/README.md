@@ -12,6 +12,8 @@
 
 ## Status and counts | 状态与统计
 
+**FRA-04B2 — [Early ECH pump-out identifiability / 早期ECH密度泵出可辨识性](comparisons/fra-04b2-ech-pumpout-identifiability.md):** INCONCLUSIVE: reported timing does not support ITG/TEM conversion as a necessary onset condition, while potential spectral weights and signed response kernels remain nonunique. Preserves 32 local claims and pending Wang figure-image verification; adds no completed study or independent verification. FRA-04B1 remains in [OPEN PR #16](https://github.com/ZWY-research/Fusion-Research-Atlas/pull/16), separate from this note. / 已有时序不支持转换为必要启动条件，但谱权重与有符号核仍不可唯一分离；保留32项局部主张和Wang原图待核查状态，不增加完成研读或独立验证统计。FRA-04B1仍为独立未合并PR。
+
 **FRA-03 — [Transport-closure identifiability / 输运闭合可辨识性](comparisons/fra-03-transport-closure-identifiability.md):** Conditional proofs and prescribed dimensionless computations of steady nonuniqueness, tangent-response rank and nonlinear second harmonics. Method references are scoped within the note; they do not add completed literature studies or independent physical verification. / 包含稳态非唯一性、切线响应秩及非线性二次谐波的条件性证明与指定无量纲计算；方法参考的阅读范围另列，不增加已完成文献研读或独立物理验证统计。
 
 **FRA-02 — [Cross-study comparison / 跨研究比较](comparisons/q-density-cross-study-comparison.md):** Five-study comparison of conditions, observables, methods, bounded findings and further verification. FRA02-C01–C05 are FRA synthesis, not additional source findings. / 对照五篇研究的条件、观测量、方法、有边界发现及进一步验证；FRA02-C01–C05 为 FRA 综合分析，不是原论文新增 finding。
